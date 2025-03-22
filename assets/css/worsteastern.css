@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+:root {
+    --primary: #A0D39A;
+    --onPrimary: #00325a;
+    --primaryContainer: #235024;
+    --onPrimaryContainer: #d2e4ff;
+    --secondary: #B9CCB4;
+    --onSecondary: #253141;
+    --secondaryContainer: #3c4858;
+    --onSecondaryContainer: #d7e3f8;
+    --tertiary: #d7bde4;
+    --onTertiary: #3b2947;
+    --tertiaryContainer: #533f5f;
+    --onTertiaryContainer: #f3daff;
+    --background: #10140F;
+    --onBackground: #e3e2e6;
+    --surface: #1a1c1e;
+    --onSurface: #e3e2e6;
+    --outline: #8d9199;
+    --surfaceVarient: #43474e;
+    --onSurfaceVarient: #c3c6cf;
+
+    --fontPrimary: 'Inter', sans-serif;
+    --audiowide: 'Audiowide', sans-serif;
+
+}
+
+body {
+    background-color: var(--background);
+    font-family: var(--fontPrimary);
+    font-weight: 400;
+    color: var(--onPrimaryContainer);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary);
+}
+
+#header-title, #header-subtitle {
+    color: var(--onPrimaryContainer);
+}
+
+#header-title {
+    font-family: var(--audiowide);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
