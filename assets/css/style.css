@@ -38,3 +38,44 @@ h1, h2, h3, h4, h5, h6 {
 #header-title, #header-subtitle {
     color: var(--onPrimaryContainer);
 }
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.btn {
+    border-radius: 65px;
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--onPrimary);
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+.bold-title {
+    font-weight: 600;
+}
+
+.navbar {
+    background-color: var(--primaryContainer) !important;
+}
+
+.card {
+    border-radius: 25px !important;
+    background-color: var(--primaryContainer);
+    border-color: var(--primaryContainer)
+}
+
+.card-title {
+    color: var(--primary);
+}
+
+.card-text {
+    color: var(--onPrimaryContainer);
+}
+
+.card-img-top {
+    border-radius: 25px;
+}
