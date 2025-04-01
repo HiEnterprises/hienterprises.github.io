@@ -3,23 +3,24 @@
 :root {
     --primary: rgb(228 195 108);
     --onPrimary: rgb(61 46 0);
-    --primaryContainer: #253141;
-    --onPrimaryContainer: #d2e4ff;
-    --secondary: #bbc7db;
-    --onSecondary: #253141;
-    --secondaryContainer: #3c4858;
-    --onSecondaryContainer: #d7e3f8;
-    --tertiary: #d7bde4;
-    --onTertiary: #3b2947;
-    --tertiaryContainer: #533f5f;
-    --onTertiaryContainer: #f3daff;
-    --background: #1a1c1e;
-    --onBackground: #e3e2e6;
-    --surface: #1a1c1e;
-    --onSurface: #e3e2e6;
-    --outline: #8d9199;
-    --surfaceVarient: #43474e;
-    --onSurfaceVarient: #c3c6cf;
+    --primaryContainer: rgb(44 34 0);
+    --onPrimaryContainer: white;
+    --secondary: rgb(213 197 160);
+    --onSecondary: rgb(57 47 21);
+    --secondaryContainer: rgb(81 70 42);
+    --onSecondaryContainer: rgb(242 225 187);
+    --tertiary: rgb(174 207 173);
+    --onTertiary: rgb(26 54 30);
+    --tertiaryContainer: rgb(48 77 51);
+    --onTertiaryContainer: rgb(201 236 200);
+    --background: rgb(22 19 11);
+    --onBackground: rgb(234 225 212);
+    --surface: rgb(22 19 11);
+    --onSurface: rgb(234 225 212);
+    --outline: rgb(152 144 128);
+    --surfaceVarient: rgb(76 70 57);
+    --onSurfaceVarient: rgb(207 197 180);
+
     --title-colour: rgba(241, 194, 50, 1);
 
     --caveat: 'Caveat', cursive;
@@ -29,9 +30,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--onPrimaryContainer) !important;
 }
 
+p {
+    color: var(--onSurface)
+}
+
 #header-title {
     font-family: var(--caveat);
-    color: var(--title-colour) !important;
 }
 
 .display-6 {
@@ -41,4 +45,27 @@ h1, h2, h3, h4, h5, h6 {
 
 p a {
     color: var(--onPrimaryContainer);
+}
+
+.card {
+    background-color: var(--primaryContainer);
+    border-color: var(--primaryContainer)
+}
+
+.card-title {
+    color: var(--primary);
+}
+
+.card-text {
+    color: var(--onPrimaryContainer);
+}
+
+.card-img-top {
+    border-radius: 25px;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary);
+    color: var(--onSecondary);
+    border-color: var(--secondary);
 }

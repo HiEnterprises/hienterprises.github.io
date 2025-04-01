@@ -89,3 +89,12 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
     margin-right: 5px;
 }
+
+.joinTop {
+    border-radius: 25px 25px 6px 6px !important;
+    margin-bottom: 3px;
+}
+
+.joinBottom {
+    border-radius: 6px 6px 25px 25px !important;
+}
