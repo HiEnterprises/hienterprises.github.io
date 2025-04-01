@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+:root {
+    --title-colour: rgba(241, 194, 50, 1);
+
+    --caveat: 'Caveat', cursive;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--onPrimaryContainer) !important;
+}
+
+#header-title {
+    font-family: var(--caveat);
+    color: var(--title-colour) !important;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+p a {
+    color: var(--onPrimaryContainer);
+}
+
+.btn {
+    border-radius: 65px;
+    background-color: var(--onPrimaryContainer);
+    border-color: var(--onPrimaryContainer);
+    color: var(--onPrimary);
+}
+
+.btn-outline-primary {
+    background-color: var(--background) !important;
+    color: var(--onPrimaryContainer) !important;
+}
+
+.border-primary {
+    border-color: var(--onPrimaryContainer) !important;
+}
