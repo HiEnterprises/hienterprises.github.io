@@ -69,3 +69,8 @@ p a {
     color: var(--onSecondary);
     border-color: var(--secondary);
 }
+
+.yellow {
+    color: var(--title-colour) !important;
+    font-family: var(--caveat)
+}
