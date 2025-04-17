@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
     --primary: #a0c9ff;
@@ -21,7 +21,7 @@
     --surfaceVarient: #43474e;
     --onSurfaceVarient: #c3c6cf;
 
-    --fontPrimary: 'SUSE', sans-serif;
+    --fontPrimary: 'Inter', sans-serif;
 }
 
 body {
