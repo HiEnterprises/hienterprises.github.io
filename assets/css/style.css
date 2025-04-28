@@ -70,13 +70,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar {
-    background-color: var(--primaryContainer) !important;
+    background-color: var(--surface) !important;
 }
 
 .card {
     border-radius: 25px !important;
     background-color: var(--primaryContainer);
-    border-color: var(--primaryContainer)
+    border-color: var(--primaryContainer);
 }
 
 .card-title {
