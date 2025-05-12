@@ -50,6 +50,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--onPrimary);
 }
 
+.btn:hover {
+    background-color: var(--secondary);
+    color: var(--onSecondary);
+    border-color: var(--secondary);
+}
+
 .btn-outline-primary {
     background-color: var(--background) !important;
     color: var(--onBackground) !important;
