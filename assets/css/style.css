@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 .card {
     border-radius: 25px !important;
     background-color: var(--primaryContainer);
-    border-color: var(--primaryContainer)
+    border-color: var(--primaryContainer);
 }
 
 .card-title {
@@ -89,6 +89,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-img-top {
     border-radius: 25px;
+}
+
+.tertiaryCard {
+    background-color: var(--tertiaryContainer);
+    border-color: var(--tertiaryContainer);
+}
+
+.tertiaryCard .card-title {
+    color: var(--tertiary);
+}
+
+.tertiaryCard .card-text {
+    color: var(--onTertiaryContainer);
 }
 
 .material-symbols-rounded {
