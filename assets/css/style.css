@@ -494,3 +494,43 @@ body > header + section.container.mt-5 + section.container.mt-5 { animation-dela
     transform: translateY(0);
   }
 }
+
+/* --- New styles for Play Store like page --- */
+
+/* App Icon at the top */
+.app-icon {
+    width: 120px; /* Adjust size as needed */
+    height: 120px;
+    border-radius: 20%; /* Slightly rounded square like Play Store */
+    box-shadow: var(--shadow-md);
+    object-fit: cover;
+}
+
+/* Screenshot Cards */
+.screenshot-card .card-img-top {
+    aspect-ratio: 9/16; /* Portrait aspect ratio for mobile screenshots */
+    object-fit: cover;
+    border-radius: var(--border-radius-lg); /* Keep border-radius consistent */
+}
+
+.screenshot-card:hover .card-img-top {
+    transform: scale(1.01); /* Less aggressive zoom for screenshots */
+}
+
+/* What's New list styling */
+.list-group-flush .list-group-item {
+    background-color: transparent !important;
+    border-color: rgba(var(--onPrimaryContainer), 0.1) !important;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 0.95rem;
+    color: var(--onSurface);
+}
+
+.list-group-flush .list-group-item:last-child {
+    border-bottom: 0 !important;
+}
+
+.text-warning .material-symbols-rounded {
+    color: #FFC107; /* Standard warning yellow for stars */
+}
