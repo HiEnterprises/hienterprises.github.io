@@ -1,167 +1,194 @@
 <!doctype html>
-    <html lang="en">
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>The Highland Cafe™</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Highland Cafe™ | Home</title>
+        
         <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="../assets/css/style.css" rel="stylesheet">
-        <link href="../assets/css/hicafe.css" rel="stylesheet">
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        
+        <script>
+            // Custom Tailwind configuration for HiCafe
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary': 'rgb(228 195 108)',
+                            'on-primary': 'rgb(61 46 0)',
+                            'primary-container': 'rgb(44 34 0)',
+                            'on-primary-container': 'rgb(255 255 255)',
+                            'secondary': 'rgb(213 197 160)',
+                            'on-secondary': 'rgb(57 47 21)',
+                            'background': 'rgb(22 19 11)',
+                            'on-background': 'rgb(234 225 212)',
+                            'surface': 'rgb(22 19 11)',
+                            'on-surface': 'rgb(234 225 212)',
+                            'surface-variant': 'rgb(76 70 57)',
+                            'on-surface-variant': 'rgb(207 197 180)',
+                            'outline': 'rgb(152 144 128)',
+                            'title-yellow': 'rgba(241, 194, 50, 1)',
+                        },
+                        fontFamily: {
+                            sans: ['Inter', 'sans-serif'],
+                            caveat: ['Caveat', 'cursive'],
+                        },
+                    }
+                }
+            }
+        </script>
     </head>
-    <body>
-        <header>
-            <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="../assets/pics/hicafe/logo.png" alt="Logo" height="24" class="d-inline-block align-text-top">
-                        The Highland Cafe™
+    <body class="bg-background text-on-background font-sans">
+
+        <header class="bg-surface/90 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-outline/20">
+            <nav class="container mx-auto px-4 lg:px-6 py-3">
+                <div class="flex justify-between items-center">
+                    <a class="flex items-center gap-3" href="#">
+                        <img src="../assets/pics/hicafe/logo.png" alt="HiCafe Logo" class="h-8 w-auto">
+                        <span class="text-xl font-bold text-on-surface whitespace-nowrap">The Highland Cafe™</span>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-on-surface-variant hover:bg-surface-variant focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="reviews.html">Reviews</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact-us.html">Contact us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="chef.html">Chef</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="menu.html">Menu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://sites.google.com/view/cafefiesta-by-thc">CafeFiesta™</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../hiosmobile/download.html">Mobile App</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html">< Back to HiEnterprises™</a>
-                            </li>
-                        </ul>
+                    
+                    <div class="hidden lg:flex lg:items-center lg:space-x-6">
+                        <a href="#" class="text-primary font-bold transition-colors">Home</a>
+                        <a href="reviews.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Reviews</a>
+                        <a href="contact-us.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Contact Us</a>
+                        <a href="chef.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Chef</a>
+                        <a href="menu.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Menu</a>
+                        <a href="../harmony/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Mobile App</a>
+                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">← Back to HiEnterprises™</a>
                     </div>
+                </div>
+                
+                <div id="mobile-menu" class="hidden lg:hidden mt-4 space-y-2">
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium bg-primary-container text-white">Home</a>
+                    <a href="reviews.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Reviews</a>
+                    <a href="contact-us.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Contact Us</a>
+                    <a href="chef.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Chef</a>
+                    <a href="menu.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Menu</a>
+                    <a href="../harmony/home.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Mobile App</a>
+                    <hr class="border-outline/50">
+                    <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-outline hover:bg-surface-variant">← Back to HiEnterprises™</a>
                 </div>
             </nav>
-
-            <div
-                id="header-image"
-                class="p-4 text-center bg-image"
-                style="
-                    position: relative;
-                    background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');
-                    height: 50vh;
-                    background-size: cover;
-                    background-position: center bottom;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;">
-                    <div
-                    style="
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(0, 0, 0, 0.5);
-                        z-index: 1;
-                    ">
-                </div>
-                    <div
-                        class="text-white"
-                        style="
-                            position: relative;
-                            z-index: 2;
-                        ">
-                    <h1 class="display-3 bold-title" id="header-title">The Highland Cafe™</h1>
-                    <h6 class="mb-3" id="header-subtitle">by The Highland Cafe™ Enterprises</h6>
-                </div>
-            </div>
         </header>
-        <section class="container mt-5">
-            <h1 class="display-6 mb-3">Welcome to the greatest restaurant experience ever.</h1>
-            <h1 class="display-6" style="font-weight: 600;">Welcome to The Highland Cafe™.</h1>
-            <img class="img-fluid w-75 d-block mx-auto mt-5" src="../assets/pics/hicafe/logo.png">
-        </section>
-        <section class="container mt-5">
-            <hr class="border border-primary border-1 opacity-100 mb-5">
-            <h2 class="text-center mt-5">Our Brilliant Restaurant Reviews, as seen on Dougal Maps</h2>
-            <div class="container text-center mt-5">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
-                    <div class="col mb-3">
-                        <p>★ ☆ ☆ ☆ ☆</p>
-                        <p class="fst-italic">'My chicken was raw, almost got salmonella, will not be visiting again'</p>
-                        <p class="fw-bold">Dougal Maps</p>
-                    </div>
-                    <div class="col mb-3">
-                        <p>★ ☆ ☆ ☆ ☆</p>
-                        <p class="fst-italic"> 'The staff were rude and they overcharged me'</p>
-                        <p class="fw-bold">Dougal Maps</p>
-                    </div>
-                    <div class="col mb-3">
-                        <p>★ ☆ ☆ ☆ ☆</p>
-                        <p class="fst-italic">'I didn't get served, so I just left'</p>
-                        <p class="fw-bold">Dougal Maps</p>
-                    </div>
-                    <div class="col mb-3">
-                        <p>★ ☆ ☆ ☆ ☆</p>
-                        <p class="fst-italic">'Simply awful'</p>
-                        <p class="fw-bold">Dougal Maps</p>
-                    </div>
-                    <div class="col mb-3">
-                           <p>★ ☆ ☆ ☆ ☆</p>
-                        <p class="fst-italic">'One of the staff got hit in the head with a pan, will not be risking my life again'</p>
-                        <p class="fw-bold">Dougal Maps</p>
+
+        <main>
+            <section class="relative">
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
+                <div class="min-h-[50vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-center text-white p-4" style="background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');">
+                    <div class="relative z-20">
+                        <h1 class="text-6xl md:text-8xl font-caveat text-white">The Highland Cafe™</h1>
+                        <p class="mt-2 text-lg text-on-background/80">by The Highland Cafe™ Enterprises</p>
                     </div>
                 </div>
-            </div>
-            <a class="btn btn-primary d-block" href="reviews.html">More Great Reviews!</a>
-        </section>
-        <section class="container mt-5">
-            <div class="text-center">
-                <div class="row row-cols-1 row-cols-md-3 row-cols-mg-3">
-                    <div class="col mb-3">
-                        <div class="card">
-                            <img class="card-img-top" src="../assets/pics/hicafe/home/hiosmobile.png">
-                            <div class="card-body">
-                                <h3 class="card-title">Download HiOSMobile</h3>
-                                <a class="btn btn-primary d-block" href="../hiosmobile/download.html">HiOSMobile</a>
-                            </div>
+            </section>
+            
+            <section class="py-16 sm:py-20">
+                <div class="container mx-auto px-4 lg:px-6 text-center">
+                    <h2 class="font-caveat text-5xl md:text-6xl text-title-yellow">Welcome to the greatest restaurant experience ever.</h2>
+                    <h2 class="font-caveat text-5xl md:text-6xl text-title-yellow mt-2">Welcome to The Highland Cafe™.</h2>
+                    <img class="w-3/4 md:w-1/2 lg:w-1/3 mx-auto block mt-8" src="../assets/pics/hicafe/logo.png" alt="The Highland Cafe Logo">
+                </div>
+            </section>
+            
+            <section class="py-16 sm:py-20 bg-primary-container/30">
+                <div class="container mx-auto px-4 lg:px-6">
+                    <h2 class="text-4xl font-bold text-center text-on-primary-container">Our Brilliant Restaurant Reviews</h2>
+                    <p class="text-center text-on-surface-variant mt-2">...as seen on Dougal Maps</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 text-center mt-12">
+                        <div>
+                            <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
+                            <p class="italic text-on-surface-variant mt-2">'My chicken was raw, almost got salmonella, will not be visiting again'</p>
+                            <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
+                            <p class="italic text-on-surface-variant mt-2">'The staff were rude and they overcharged me'</p>
+                            <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
+                            <p class="italic text-on-surface-variant mt-2">'I didn't get served, so I just left'</p>
+                            <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
+                            <p class="italic text-on-surface-variant mt-2">'Simply awful'</p>
+                            <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
+                            <p class="italic text-on-surface-variant mt-2">'One of the staff got hit in the head with a pan, will not be risking my life again'</p>
+                            <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
                         </div>
                     </div>
-                    <div class="col mb-3">
-                        <div class="card">
-                            <img class="card-img-top" src="../assets/pics/hicafe/home/menu.png">
-                            <div class="card-body">
-                                <h3 class="card-title">View Our Menus Online</h3>
-                                <a class="btn btn-primary d-block" href="menu.html">Menus</a>
+                    <div class="text-center mt-12">
+                        <a href="reviews.html" class="inline-block bg-primary text-on-primary font-bold py-2 px-6 rounded-md hover:bg-secondary hover:text-on-secondary transition-colors">
+                            More Great Reviews!
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="py-16 sm:py-20">
+                <div class="container mx-auto px-4 lg:px-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-primary-container rounded-lg overflow-hidden text-center flex flex-col">
+                            <img class="w-full h-48 object-cover" src="../assets/pics/hicafe/home/hiosmobile.png" alt="Mobile App">
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <h3 class="text-2xl font-bold text-primary">Download Harmony</h3>
+                                <a href="../harmony/home.html" class="mt-4 w-full bg-primary text-on-primary font-bold py-2 px-6 rounded-md hover:bg-secondary hover:text-on-secondary transition-colors">
+                                    Mobile App
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col mb-3">
-                        <div class="card">
-                            <img class="card-img-top" src="../assets/pics/hicafe/home/hienterprises.png">
-                            <div class="card-body">
-                                <h3 class="card-title">HiEnterprises™ website</h3>
-                                <a class="btn btn-primary d-block" href="../index.html">HiEnterprises™ Website</a>
+                        <div class="bg-primary-container rounded-lg overflow-hidden text-center flex flex-col">
+                            <img class="w-full h-48 object-cover" src="../assets/pics/hicafe/home/menu.png" alt="Restaurant Menu">
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <h3 class="text-2xl font-bold text-primary">View Our Menus Online</h3>
+                                <a href="menu.html" class="mt-4 w-full bg-primary text-on-primary font-bold py-2 px-6 rounded-md hover:bg-secondary hover:text-on-secondary transition-colors">
+                                    Menus
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-primary-container rounded-lg overflow-hidden text-center flex flex-col">
+                            <img class="w-full h-48 object-cover" src="../assets/pics/hicafe/home/hienterprises.png" alt="HiEnterprises Logo">
+                            <div class="p-6 flex-grow flex flex-col justify-between">
+                                <h3 class="text-2xl font-bold text-primary">HiEnterprises™ Website</h3>
+                                <a href="../index.html" class="mt-4 w-full bg-primary text-on-primary font-bold py-2 px-6 rounded-md hover:bg-secondary hover:text-on-secondary transition-colors">
+                                    HiEnterprises™
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
+        </main>
+        
+        <footer class="bg-primary-container/50 py-8">
+            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
+                <p>© 2021-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
             </div>
-        </section>
-        <footer class="text-center mt-5">
-            <p style="font-size: x-small;">Copyright © The Highland Cafe™ Ltd. 2021-2025. All Rights Reserved.</p>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+        <script>
+            // JavaScript for mobile menu toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
     </body>
 </html>

@@ -1,117 +1,158 @@
 <!doctype html>
-    <html lang="en">
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>weB&B</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>weB&B | Home</title>
+        
         <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="../assets/css/style.css" rel="stylesheet">
-        <link href="../assets/css/worsteastern.css" rel="stylesheet">
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        
+        <script>
+            // Custom Tailwind configuration for weB&B
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary': '#A0D39A',
+                            'on-primary': '#00325a',
+                            'primary-container': '#253141',
+                            'on-primary-container': '#d2e4ff',
+                            'secondary': '#B9CCB4',
+                            'on-secondary': '#253141',
+                            'tertiary': '#d7bde4',
+                            'background': '#10140F',
+                            'on-background': '#e3e2e6',
+                            'surface': '#1a1c1e',
+                            'on-surface': '#e3e2e6',
+                            'surface-variant': '#43474e',
+                            'on-surface-variant': '#c3c6cf',
+                            'outline': '#8d9199',
+                        },
+                        fontFamily: {
+                            sans: ['Inter', 'sans-serif'],
+                            audiowide: ['Audiowide', 'sans-serif'],
+                        },
+                    }
+                }
+            }
+        </script>
     </head>
-    <body>
-        <header>
-            <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="../assets/pics/worsteastern/logo.png" alt="Logo" height="24" class="d-inline-block align-text-top">
-                        weB&B
+    <body class="bg-background text-on-background font-sans">
+
+        <header class="bg-surface/80 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+            <nav class="container mx-auto px-4 lg:px-6 py-3">
+                <div class="flex justify-between items-center">
+                    <a class="flex items-center gap-2" href="#">
+                        <img src="../assets/pics/worsteastern/logo.png" alt="weB&B Logo" class="h-8 w-auto">
+                        <span class="text-2xl font-audiowide text-on-surface">weB&B</span>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-on-surface-variant hover:bg-surface-variant focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="rooms.html">Rooms</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="howtogetthere.html">Staying with us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="how-to-reserve-room.html">How to reserve room</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="hios-mobile-app.html">weB&B App</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html">< Back to HiEnterprises™</a>
-                            </li>
-                        </ul>
+                    
+                    <div class="hidden lg:flex lg:items-center lg:space-x-6">
+                        <a href="#" class="text-primary font-bold transition-colors">Home</a>
+                        <a href="rooms.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Rooms</a>
+                        <a href="howtogetthere.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Staying with us</a>
+                        <a href="how-to-reserve-room.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">How to Reserve</a>
+                        <a href="hios-mobile-app.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">weB&B App</a>
+                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">&larr; Back to HiEnterprises™</a>
                     </div>
+                </div>
+                
+                <div id="mobile-menu" class="hidden lg:hidden mt-4 space-y-2">
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium bg-primary-container text-on-primary-container">Home</a>
+                    <a href="rooms.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Rooms</a>
+                    <a href="howtogetthere.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Staying with us</a>
+                    <a href="how-to-reserve-room.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">How to Reserve</a>
+                    <a href="hios-mobile-app.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">weB&B App</a>
+                    <hr class="border-outline/50">
+                    <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-outline hover:bg-surface-variant">&larr; Back to HiEnterprises™</a>
                 </div>
             </nav>
-
-            <div
-                id="header-image"
-                class="p-4 text-center bg-image"
-                style="
-                    position: relative;
-                    background-image: url('../assets/pics/worsteastern/backdrop.jpg');
-                    height: 50vh;
-                    background-size: cover;
-                    background-position: center bottom;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;">
-                    <div
-                        class="text-white"
-                        style="
-                            position: relative;
-                            z-index: 2;
-                        ">
-                    <h1 class="display-3" id="header-title">weB&B</h1>
-                    <h6 class="mb-3" id="header-subtitle">by The Highland Cafe™</h6>
-                </div>
-            </div>
         </header>
-        <section class="container mt-5">
-            <h1 class="display-6 mb-3" style="font-weight: 600;">Welcome to our hotel experience.</h1>
-            <h1 class="display-6 mb-3">Welcome to weB&B.</h1>
-            <p> Our hotels give the quality stay any average member of the general public and business man/woman communities who wants to stay with us.</p>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/7By-gcfB_iY?si=2x-ITvGkD1PDqIZm"></iframe>
-            </div>
-        </section>
-        <section class="container mt-5">
-            <hr class="border border-primary border-1 opacity-100">
-            <div class="mt-5">
-                <div class="row row-col mb-3s-1 row-col mb-3s-md-1 row-col mb-3s-lg-3">
-                    <div class="col mb-3">
-                        <div class="card">
-                            <img class="card-img-top w-100" src="../assets/pics/worsteastern/home/1.jpg">
-                            <div class="card-body">
-                                <p class="card-text">Okay-ish rooms</p>
-                            </div>
+
+        <main>
+            <section class="relative">
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
+                <div class="min-h-[50vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-center text-white p-4" style="background-image: url('../assets/pics/worsteastern/backdrop.jpg');">
+                    <div class="relative z-20">
+                        <h1 class="text-5xl md:text-7xl font-audiowide">weB&B</h1>
+                        <p class="mt-2 text-lg text-on-background/80">by The Highland Cafe™</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-16 sm:py-20">
+                <div class="container mx-auto px-4 lg:px-6">
+                    <div class="max-w-4xl mx-auto text-center">
+                        <h2 class="text-3xl font-bold tracking-tight text-on-surface sm:text-4xl">Welcome to our hotel experience.</h2>
+                        <p class="mt-4 text-xl text-on-surface-variant">Our hotels give the quality stay any average member of the general public and business man/woman communities who wants to stay with us.</p>
+                    </div>
+
+                    <div class="mt-12 max-w-4xl mx-auto">
+                        <div class="relative w-full aspect-video">
+                            <iframe 
+                                class="absolute top-0 left-0 w-full h-full border-0 rounded-lg shadow-2xl"
+                                src="https://www.youtube.com/embed/7By-gcfB_iY?si=2x-ITvGkD1PDqIZm"
+                                title="Promotional Video"
+                                allowfullscreen>
+                            </iframe>
                         </div>
                     </div>
-                    <div class="col mb-3">
-                        <div class="card">
-                            <img class="card-img-top w-100" src="../assets/pics/worsteastern/home/2.jpg">
-                            <div class="card-body">
-                                <p class="card-text">average bathrooms</p>
+                </div>
+            </section>
+            
+            <section class="pb-16 sm:pb-20">
+                <div class="container mx-auto px-4 lg:px-6">
+                    <hr class="border-primary/50 border-1 opacity-100 mb-12">
+                     <div class="grid gap-8 md:grid-cols-3">
+                        <div class="bg-surface-variant/50 rounded-lg overflow-hidden shadow-lg">
+                            <img class="h-56 w-full object-cover" src="../assets/pics/worsteastern/home/1.jpg" alt="Hotel room">
+                            <div class="p-6">
+                                <p class="text-lg text-on-surface-variant">Okay-ish rooms</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col mb-3">
-                        <div class="card">
-                            <img class="card-img-top w-100" src="../assets/pics/worsteastern/home/3.jpg">
-                            <div class="card-body">
-                                <p class="card-text">Fantastic food, by The Highland Cafe(tm)</p>
+                        <div class="bg-surface-variant/50 rounded-lg overflow-hidden shadow-lg">
+                            <img class="h-56 w-full object-cover" src="../assets/pics/worsteastern/home/2.jpg" alt="Hotel bathroom">
+                            <div class="p-6">
+                                <p class="text-lg text-on-surface-variant">Average bathrooms</p>
+                            </div>
+                        </div>
+                        <div class="bg-surface-variant/50 rounded-lg overflow-hidden shadow-lg">
+                            <img class="h-56 w-full object-cover" src="../assets/pics/worsteastern/home/3.jpg" alt="Plated food">
+                            <div class="p-6">
+                                <p class="text-lg text-on-surface-variant">Fantastic food, by The Highland Cafe™</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
+
+        </main>
+
+        <footer class="bg-surface py-8">
+            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
+                <p>&copy; 2021 The Highland Cafe™ Ltd. All Rights Reserved.</p>
             </div>
-        </section>
-        <footer class="text-center mt-5">
-            <p style="font-size: x-small;">Copyright © The Highland Cafe™ Ltd. 2021. All Rights Reserved.</p>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+
+        <script>
+            // JavaScript for mobile menu toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
     </body>
 </html>

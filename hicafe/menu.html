@@ -1,88 +1,127 @@
 <!doctype html>
-    <html lang="en">
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Highland Cafe™ | Menu</title>
+        
         <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="../assets/css/style.css" rel="stylesheet">
-        <link href="../assets/css/hicafe.css" rel="stylesheet">
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        
+        <script>
+            // Custom Tailwind configuration for HiCafe
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary': 'rgb(228 195 108)',
+                            'on-primary': 'rgb(61 46 0)',
+                            'primary-container': 'rgb(44 34 0)',
+                            'on-primary-container': 'rgb(255 255 255)',
+                            'secondary': 'rgb(213 197 160)',
+                            'on-secondary': 'rgb(57 47 21)',
+                            'background': 'rgb(22 19 11)',
+                            'on-background': 'rgb(234 225 212)',
+                            'surface': 'rgb(22 19 11)',
+                            'on-surface': 'rgb(234 225 212)',
+                            'surface-variant': 'rgb(76 70 57)',
+                            'on-surface-variant': 'rgb(207 197 180)',
+                            'outline': 'rgb(152 144 128)',
+                            'title-yellow': 'rgba(241, 194, 50, 1)',
+                        },
+                        fontFamily: {
+                            sans: ['Inter', 'sans-serif'],
+                            caveat: ['Caveat', 'cursive'],
+                        },
+                    }
+                }
+            }
+        </script>
     </head>
-    <body>
-        <header>
-            <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="../assets/pics/hicafe/logo.png" alt="Logo" height="24" class="d-inline-block align-text-top">
-                        The Highland Cafe™
+    <body class="bg-background text-on-background font-sans">
+
+        <header class="bg-surface/90 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-outline/20">
+            <nav class="container mx-auto px-4 lg:px-6 py-3">
+                <div class="flex justify-between items-center">
+                    <a class="flex items-center gap-3" href="home.html">
+                        <img src="../assets/pics/hicafe/logo.png" alt="HiCafe Logo" class="h-8 w-auto">
+                        <span class="text-xl font-bold text-on-surface whitespace-nowrap">The Highland Cafe™</span>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-on-surface-variant hover:bg-surface-variant focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="home.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="reviews.html">Reviews</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact-us.html">Contact us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="chef.html">Chef</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="menu.html">Menu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://sites.google.com/view/cafefiesta-by-thc">CafeFiesta™</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../hiosmobile/download.html">Mobile App</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html">< Back to HiEnterprises™</a>
-                            </li>
-                        </ul>
+                    
+                    <div class="hidden lg:flex lg:items-center lg:space-x-6">
+                        <a href="home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Home</a>
+                        <a href="reviews.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Reviews</a>
+                        <a href="contact-us.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Contact Us</a>
+                        <a href="chef.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Chef</a>
+                        <a href="#" class="text-primary font-bold transition-colors">Menu</a>
+                        <a href="../harmony/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Mobile App</a>
+                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">← Back to HiEnterprises™</a>
                     </div>
                 </div>
-            </nav>
-
-            <div
-                id="header-image"
-                class="p-4 text-center bg-image"
-                style="
-                    position: relative;
-                    background-image: url('../assets/pics/hicafe/menu/menus.png');
-                    height: 50vh;
-                    background-size: cover;
-                    background-position: center bottom;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;">
-                    <div
-                        class="text-white"
-                        style="
-                            position: relative;
-                            z-index: 2;
-                        ">
+                
+                <div id="mobile-menu" class="hidden lg:hidden mt-4 space-y-2">
+                    <a href="home.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Home</a>
+                    <a href="reviews.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Reviews</a>
+                    <a href="contact-us.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Contact Us</a>
+                    <a href="chef.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Chef</a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium bg-primary-container text-white">Menu</a>
+                    <a href="../harmony/home.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Mobile App</a>
+                    <hr class="border-outline/50">
+                    <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-outline hover:bg-surface-variant">← Back to HiEnterprises™</a>
                 </div>
-            </div>
+            </nav>
         </header>
-        <section class="container mt-5">
-            <h1 class="display-3 yellow text-center">View our menus below.</h1>
-            <a class="btn btn-primary d-block" href="https://www.dropbox.com/scl/fo/7gmlnnjcau1np91ee83ht/AJN5i_THAIhHAoMVKqtVZ_s?rlkey=33w724yp3xqnocswhk5o2xwqx&e=1&st=4zyb42da&dl=0" target="_blank">download the menu folder</a>
-            <h1 class="display-3 yellow mt-5">View our menus below.</h1>
-            <a class="btn btn-primary d-block" href="https://www.dropbox.com/scl/fo/7gmlnnjcau1np91ee83ht/AJN5i_THAIhHAoMVKqtVZ_s?rlkey=33w724yp3xqnocswhk5o2xwqx&e=1&st=4zyb42da&dl=0" target="_blank">download the menu folder</a>
-        </section>
-        <footer class="text-center mt-5">
-            <p style="font-size: x-small;">Copyright © The Highland Cafe™ Ltd. 2021-2025. All Rights Reserved.</p>
+
+        <main>
+            <section class="relative">
+                <div class="min-h-[50vh] bg-cover bg-center bg-no-repeat" style="background-image: url('../assets/pics/hicafe/menu/menus.png');">
+                </div>
+            </section>
+            
+            <section class="py-16 sm:py-20">
+                <div class="container mx-auto px-4 lg:px-6 text-center">
+                    <div class="space-y-16">
+                        <div>
+                            <h1 class="font-caveat text-6xl text-title-yellow">View our menus below.</h1>
+                            <a href="https://www.dropbox.com/scl/fo/7gmlnnjcau1np91ee83ht/AJN5i_THAIhHAoMVKqtVZ_s?rlkey=33w724yp3xqnocswhk5o2xwqx&e=1&st=4zyb42da&dl=0" target="_blank" class="mt-6 inline-block bg-primary text-on-primary font-bold py-3 px-8 rounded-md hover:bg-secondary hover:text-on-secondary transition-colors text-lg shadow-lg">
+                                Download the Menu Folder
+                            </a>
+                        </div>
+                        <div>
+                            <h1 class="font-caveat text-6xl text-title-yellow">View our menus below.</h1>
+                            <a href="https://www.dropbox.com/scl/fo/7gmlnnjcau1np91ee83ht/AJN5i_THAIhHAoMVKqtVZ_s?rlkey=33w724yp3xqnocswhk5o2xwqx&e=1&st=4zyb42da&dl=0" target="_blank" class="mt-6 inline-block bg-primary text-on-primary font-bold py-3 px-8 rounded-md hover:bg-secondary hover:text-on-secondary transition-colors text-lg shadow-lg">
+                                Download the Menu Folder
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="bg-primary-container/50 py-8">
+            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
+                <p>© 2021-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
+            </div>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+        <script>
+            // JavaScript for mobile menu toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
     </body>
 </html>

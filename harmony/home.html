@@ -1,165 +1,198 @@
 <!doctype html>
-    <html lang="en">
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Harmony | Home</title>
+        
         <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="../assets/css/style.css" rel="stylesheet">
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <script>
+            // Custom Tailwind configuration for Harmony (Colors and Fonts ONLY)
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary': '#a0c9ff',
+                            'on-primary': '#00325a',
+                            'primary-container': '#253141',
+                            'on-primary-container': '#d2e4ff',
+                            'secondary': '#bbc7db',
+                            'on-secondary': '#253141',
+                            'tertiary': '#d7bde4',
+                            'on-tertiary': '#3b2947',
+                            'tertiary-container': '#533f5f',
+                            'on-tertiary-container': '#f3daff',
+                            'background': '#1a1c1e',
+                            'on-background': '#e3e2e6',
+                            'surface': '#1a1c1e',
+                            'on-surface': '#e3e2e6',
+                            'outline': '#8d9199',
+                            'surface-variant': '#43474e',
+                            'on-surface-variant': '#c3c6cf',
+                        },
+                        fontFamily: {
+                            sans: ['Outfit', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        </script>
     </head>
-    <body>
-        <header>
-            <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hiosbadge.png" alt="Logo" height="24" class="d-inline-block align-text-top">
-                        Harmony
+    <body class="bg-background text-on-background font-sans">
+
+        <header class="bg-primary-container shadow-md sticky top-0 z-50">
+            <nav class="container mx-auto px-4 lg:px-6">
+                <div class="flex justify-between items-center py-3">
+                    <a class="flex items-center gap-2" href="#">
+                        <img src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hiosbadge.png" alt="Harmony Logo" class="h-8 w-auto">
+                        <span class="text-2xl font-bold text-primary">Harmony</span>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-on-primary-container hover:bg-primary/10 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="android.html">For Android</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="macos.html">For MacOS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="windows.html">For Windows</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://thehighlandcafe.github.io/harmony" target="_blank">For Web</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="himaterial.html">HiMaterial</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html">< Back to HiEnterprises™</a>
-                            </li>
-                        </ul>
+                    
+                    <div class="hidden lg:flex lg:items-center lg:space-x-6">
+                        <a href="#" class="px-3 py-2 text-primary font-semibold">Home</a>
+                        <a href="android.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">For Android</a>
+                        <a href="macos.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">For macOS</a>
+                        <a href="windows.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">For Windows</a>
+                        <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">For Web</a>
+                        <a href="himaterial.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">HiMaterial</a>
+                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">← Back to HiEnterprises™</a>
                     </div>
+                </div>
+                
+                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2">
+                    <a href="#" class="block px-3 py-2 rounded-md font-semibold bg-primary/10 text-primary">Home</a>
+                    <a href="android.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">For Android</a>
+                    <a href="macos.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">For macOS</a>
+                    <a href="windows.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">For Windows</a>
+                    <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">For Web</a>
+                    <a href="himaterial.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">HiMaterial</a>
+                    <hr class="border-outline/50 my-2">
+                    <a href="../index.html" class="block px-3 py-2 rounded-md text-outline hover:bg-primary/10">← Back to HiEnterprises™</a>
                 </div>
             </nav>
-
-            <div
-                id="header-image"
-                class="p-4 text-center bg-image"
-                style="
-                    position: relative;
-                    background-image: url('../assets/pics/hiosmobile-site/backdrop.jpg');
-                    height: 50vh;
-                    background-size: cover;
-                    background-position: center bottom;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;">
-                    <div
-                        class="text-white"
-                        style="
-                            position: relative;
-                            z-index: 2;
-                        ">
-                    <h1 class="display-3 bold-title" id="header-title">Harmony</h1>
-                    <h6 class="mb-3" id="header-subtitle">by The Highland Cafe™</h6>
-                </div>
-            </div>
         </header>
-        <section class="container mt-5">
-            <h1 class="display-6 mb-3">Welcome to the greatest digital experiences from The Highland Cafe™.</h1>
-            <h1 class="display-6" style="font-weight: 600;">Welcome to Harmony.</h1>
-        </section>
-        <section class="container mt-5">
-            <hr class="border border-primary border-1 opacity-100 mb-5">
-            <h1>Downloads</h1>
-            <div class="container text-center p-2">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-md-2">
-                    <div class="col pb-3">
-                        <div class="card">
-                            <img class="card-img-top w-100" src="../assets/pics/harmony/android.jpg">
-                            <div class="card-body">
-                                <h2 class="card-title">Harmony for Android</h2>
-                                <p class="card-text">Our main app for Android! It is the best place to order food and more at The Highland Cafe™ brands!</p>
-                                <a class="btn btn-primary d-block" href="android.html">Download for Android</a>
-                            </div>
+
+        <main>
+            <section class="relative">
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
+                <div class="min-h-[50vh] bg-cover bg-center flex items-center justify-center text-center text-white p-4" style="background-image: url('../assets/pics/hiosmobile-site/backdrop.jpg');">
+                    <div class="relative z-20 space-y-2">
+                        <h1 class="text-5xl md:text-7xl font-bold">Harmony</h1>
+                        <p class="text-xl md:text-2xl text-on-primary-container">by The Highland Cafe™</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="container mx-auto px-4 lg:px-6 py-16 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold text-primary">Welcome to the greatest digital experiences.</h2>
+                    <p class="mt-4 text-xl text-on-surface-variant">From The Highland Cafe™, welcome to Harmony.</p>
+                </div>
+            </section>
+            
+            <section class="container mx-auto px-4 lg:px-6 pb-16">
+                <hr class="border-primary/20 max-w-4xl mx-auto my-12">
+                <h2 class="text-4xl font-bold text-center mb-12">Downloads</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-primary-container rounded-lg shadow-lg overflow-hidden">
+                        <img class="aspect-video w-full object-cover" src="../assets/pics/harmony/android.jpg" alt="Android Interface">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-primary">Harmony for Android</h3>
+                            <p class="mt-2 text-on-primary-container">Our main app for Android! It is the best place to order food and more at The Highland Cafe™ brands!</p>
+                            <a href="android.html" class="inline-block mt-6 bg-primary text-on-primary font-semibold py-2 px-6 rounded-lg hover:bg-secondary hover:text-on-secondary transition-colors">Learn More</a>
                         </div>
                     </div>
-                    <div class="col pb-3">
-                        <div class="card">
-                            <img class="card-img-top w-100" src="../assets/pics/harmony/mac.jpg">
-                            <div class="card-body">
-                                <h2 class="card-title">Harmony for MacOS</h2>
-                                <p class="card-text">Our main app for MacOS! It is the best place to order food and more at The Highland Cafe™ brands!</p>
-                                <a class="btn btn-primary d-block" href="macos.html">Download for MacOS</a>
-                            </div>
+                     <div class="bg-primary-container rounded-lg shadow-lg overflow-hidden">
+                        <img class="aspect-video w-full object-cover" src="../assets/pics/harmony/mac.jpg" alt="macOS Interface">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-primary">Harmony for macOS</h3>
+                            <p class="mt-2 text-on-primary-container">Our main app for macOS! It is the best place to order food and more at The Highland Cafe™ brands!</p>
+                            <a href="macos.html" class="inline-block mt-6 bg-primary text-on-primary font-semibold py-2 px-6 rounded-lg hover:bg-secondary hover:text-on-secondary transition-colors">Learn More</a>
+                        </div>
+                    </div>
+                     <div class="bg-primary-container rounded-lg shadow-lg overflow-hidden">
+                        <img class="aspect-video w-full object-cover" src="../assets/pics/harmony/windows.jpg" alt="Windows Interface">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-primary">Harmony for Windows</h3>
+                            <p class="mt-2 text-on-primary-container">Our main app for Windows! It is the best place to order food and more at The Highland Cafe™ brands!</p>
+                            <a href="windows.html" class="inline-block mt-6 bg-primary text-on-primary font-semibold py-2 px-6 rounded-lg hover:bg-secondary hover:text-on-secondary transition-colors">Learn More</a>
+                        </div>
+                    </div>
+                     <div class="bg-primary-container rounded-lg shadow-lg overflow-hidden">
+                        <img class="aspect-video w-full object-cover" src="../assets/pics/harmony/web.jpg" alt="Web Browser Interface">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-primary">Harmony for Web</h3>
+                            <p class="mt-2 text-on-primary-container">Our main app for the Web! It is the best place to order food and more at The Highland Cafe™ brands!</p>
+                            <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="inline-block mt-6 bg-primary text-on-primary font-semibold py-2 px-6 rounded-lg hover:bg-secondary hover:text-on-secondary transition-colors">Visit Website</a>
                         </div>
                     </div>
                 </div>
-                                <div class="row row-cols-1 row-cols-md-2 row-cols-md-2">
-                    <div class="col pb-3">
-                        <div class="card">
-                            <img class="card-img-top w-100" src="../assets/pics/harmony/windows.jpg">
-                            <div class="card-body">
-                                <h2 class="card-title">Harmony for Windows</h2>
-                                <p class="card-text">Our main app for Windows! It is the best place to order food and more at The Highland Cafe™ brands!</p>
-                                <a class="btn btn-primary d-block" href="windows.html">Download for Android</a>
-                            </div>
+            </section>
+
+            <section class="container mx-auto px-4 lg:px-6 pb-16">
+                 <hr class="border-primary/20 max-w-4xl mx-auto my-12">
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <h2 class="text-3xl font-bold text-primary">Looking for the new HiCard app?</h2>
+                        <p class="mt-2 text-on-surface-variant">Although developed by the Harmony team, HiCard is a separate service. You can download the HiCard app now.</p>
+                        <div class="mt-6 flex flex-wrap gap-4">
+                            <a href="https://github.com/aarjay123/hicard" class="bg-tertiary-container text-on-tertiary-container font-semibold py-2 px-6 rounded-lg transition-colors hover:opacity-80">HiCard for Android</a>
+                            <a href="https://thehighlandcafe.github.io/hicard/" class="bg-tertiary-container text-on-tertiary-container font-semibold py-2 px-6 rounded-lg transition-colors hover:opacity-80">HiCard for Web</a>
                         </div>
                     </div>
-                    <div class="col pb-3">
-                        <div class="card">
-                            <img class="card-img-top w-100" src="../assets/pics/harmony/web.jpg">
-                            <div class="card-body">
-                                <h2 class="card-title">Harmony for Web</h2>
-                                <p class="card-text">Our main app for MacOS! It is the best place to order food and more at The Highland Cafe™ brands!</p>
-                                <a class="btn btn-primary d-block" href="https://thehighlandcafe.github.io/harmony" target="_blank">Visit Harmony for Web</a>
-                            </div>
+                     <div>
+                        <h2 class="text-3xl font-bold text-primary">Looking for HiOSMobile?</h2>
+                        <p class="mt-2 text-on-surface-variant">HiOSMobile will soon be deprecated in favour of the new Harmony apps. You can find out more from the old HiOSMobile site below.</p>
+                        <div class="mt-6">
+                            <a href="../hiosmobile/home.html" class="bg-tertiary-container text-on-tertiary-container font-semibold py-2 px-6 rounded-lg transition-colors hover:opacity-80">HiOSMobile Site</a>
                         </div>
                     </div>
+                 </div>
+            </section>
+
+            <section class="container mx-auto px-4 lg:px-6 pb-16">
+                <hr class="border-primary/20 max-w-4xl mx-auto my-12">
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold">Our apps are open source.</h2>
+                    <p class="mt-2 max-w-2xl mx-auto text-on-surface-variant">Until recently, only HarmonyCore has been open source. Since late August 2023, we have made the extra effort to publish all our source code on GitHub.</p>
                 </div>
+                <div class="mt-8 max-w-lg mx-auto rounded-md overflow-hidden border border-outline/20">
+                    <a href="https://github.com/aarjay123/harmonyapp" target="_blank" class="block p-4 bg-surface-variant hover:bg-primary-container border-b border-outline/20 transition-colors">
+                        <span class="font-semibold text-on-surface">Harmony</span>
+                    </a>
+                    <a href="https://github.com/thehighlandcafe/hioswebcore" target="_blank" class="block p-4 bg-surface-variant hover:bg-primary-container transition-colors">
+                        <span class="font-semibold text-on-surface">HarmonyCore</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="bg-primary-container/50 py-8 mt-12">
+            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
+                <p>© 2021-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
             </div>
-            <h2 class="mt-5">Looking for the new HiCard app?</h2>
-            <p>Although the HiCard app is developed by the HiOSMobile team, HiCard is a seperate service to HiOSMobile.<br>
-                However, you can click a link below to download the HiCard app now.
-            </p>
-            <div class="container text-center">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-md-2">
-                    <div class="col pb-3">
-                        <div class="d-grid gap-2">
-                            <a class="btn btn-primary" href="https://github.com/aarjay123/hicard">HiCard for Android</a>
-                        </div>
-                    </div>
-                    <div class="col pb-3">
-                        <a class="btn btn-primary d-block" href="https://thehighlandcafe.github.io/hicard/">HiCard for Web</a>
-                    </div>
-                </div>
-            </div>
-            <h2 class="mt-5">Looking for HiOSMobile?</h2>
-            <p>HiOSMobile will soon be deprecated, in favour of the new Harmony apps.<br>
-                You can find out more from the HiOSMobile site below.
-            </p>
-            <a class="btn btn-primary d-block" href="../hiosmobile/home.html">HiOSMobile site</a>
-        </section>
-        <section class="container mt-5">
-            <h1 class="text-center">Our apps are open source.</h1>
-            <p class="lead text-center" style="font-size: medium;">Until recently, only HarmonyCore has been open source and available to look at on GitHub.
-                Since late August 2023 we have made the extra effort to publish all our source code on GitHub.</p>
-            <p class="fw-bold mt-2">GitHub source code links:</p>
-            <ul class="list-group">
-                <a href="https://github.com/aarjay123/harmonyapp" class="list-group-item list-group-item-action">Harmony</a>
-                <a href="https://github.com/thehighlandcafe/hioswebcore" class="list-group-item list-group-item-action">HarmonyCore</a>
-            </ul>
-        </section>
-        <footer class="text-center mt-5">
-            <p style="font-size: x-small;">Copyright © The Highland Cafe™ Ltd. 2021-2025. All Rights Reserved.</p>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+        <script>
+            // JavaScript for mobile menu toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
     </body>
 </html>

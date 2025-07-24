@@ -2,153 +2,150 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Harmony for Android - Auto-Update with Obtainium</title>
-        <!-- Favicon -->
-        <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png" onerror="this.onerror=null;this.src='https://placehold.co/32x32/000000/FFFFFF?text=H';">
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <!-- Custom Styles -->
-        <link href="../assets/css/style.css" rel="stylesheet">
-        <style>
-            /* Basic styles for demonstration if style.css is not available */
-            .bold-title {
-                font-weight: 700;
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Harmony | Auto-Update with Obtainium</title>
+        
+        <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <script>
+            // Custom Tailwind configuration for Harmony (Colors and Fonts ONLY)
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary': '#a0c9ff',
+                            'on-primary': '#00325a',
+                            'primary-container': '#253141',
+                            'on-primary-container': '#d2e4ff',
+                            'secondary': '#bbc7db',
+                            'on-secondary': '#253141',
+                            'tertiary': '#d7bde4',
+                            'on-tertiary': '#3b2947',
+                            'tertiary-container': '#533f5f',
+                            'on-tertiary-container': '#f3daff',
+                            'background': '#1a1c1e',
+                            'on-background': '#e3e2e6',
+                            'surface': '#1a1c1e',
+                            'on-surface': '#e3e2e6',
+                            'outline': '#8d9199',
+                            'surface-variant': '#43474e',
+                            'on-surface-variant': '#c3c6cf',
+                        },
+                        fontFamily: {
+                            sans: ['Outfit', 'sans-serif'],
+                        }
+                    }
+                }
             }
-            body {
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
-            }
-            main {
-                flex: 1;
-            }
-        </style>
+        </script>
     </head>
-    <body>
-        <header>
-            <!-- Navbar -->
-            <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="home.html">
-                        <img src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hiosbadge.png" alt="Logo" height="24" class="d-inline-block align-text-top" onerror="this.onerror=null;this.src='https://placehold.co/100x24/000000/FFFFFF?text=Harmony';">
-                        Harmony
+    <body class="bg-background text-on-background font-sans">
+
+        <header class="bg-primary-container shadow-md sticky top-0 z-50">
+            <nav class="container mx-auto px-4 lg:px-6">
+                <div class="flex justify-between items-center py-3">
+                    <a class="flex items-center gap-2" href="home.html">
+                        <img src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hiosbadge.png" alt="Harmony Logo" class="h-8 w-auto">
+                        <span class="text-2xl font-bold text-primary">Harmony</span>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-on-primary-container hover:bg-primary/10 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="home.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="android.html">For Android</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="macos.html">For MacOS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="windows.html">For Windows</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://thehighlandcafe.github.io/harmony" target="_blank">For Web</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="himaterial.html">HiMaterial</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html">&lt; Back to HiEnterprises™</a>
-                            </li>
-                        </ul>
+                    
+                    <div class="hidden lg:flex lg:items-center lg:space-x-6">
+                        <a href="home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">Home</a>
+                        <a href="android.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">For Android</a>
+                        <a href="macos.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">For macOS</a>
+                        <a href="windows.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">For Windows</a>
+                        <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">For Web</a>
+                        <a href="himaterial.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">HiMaterial</a>
+                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">← Back to HiEnterprises™</a>
                     </div>
                 </div>
-            </nav>
-
-            <!-- Header Image -->
-            <div
-                id="header-image"
-                class="p-4 text-center bg-image"
-                style="
-                    position: relative;
-                    background-image: url('../assets/pics/hiosmobile-site/backdrop.jpg');
-                    height: 50vh;
-                    background-size: cover;
-                    background-position: center bottom;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;">
-                    <div
-                        class="text-white"
-                        style="
-                            position: relative;
-                            z-index: 2;
-                        ">
-                    <h1 class="display-3 bold-title" id="header-title">Auto-Update with Obtainium</h1>
-                    <p class="lead">The recommended way to keep Harmony for Android up-to-date.</p>
+                
+                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2">
+                    <a href="home.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">Home</a>
+                    <a href="android.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">For Android</a>
+                    <a href="macos.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">For macOS</a>
+                    <a href="windows.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">For Windows</a>
+                    <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">For Web</a>
+                    <a href="himaterial.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">HiMaterial</a>
+                    <hr class="border-outline/50 my-2">
+                    <a href="../index.html" class="block px-3 py-2 rounded-md text-outline hover:bg-primary/10">← Back to HiEnterprises™</a>
                 </div>
-            </div>
+            </nav>
         </header>
 
-        <main class="container mt-5">
-            <!-- Instructions Section -->
-            <section class="container mt-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <h2 class="text-center mb-4">How to Set Up Auto-Updates</h2>
-                        <p>Obtainium is a free and open-source app that allows you to automatically download and install updates for your apps directly from their source. This is the easiest way to keep Harmony up-to-date without having to manually check for new versions.</p>
-                        
-                        <ol class="list-group list-group-numbered mt-4">
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Install Obtainium</div>
-                                    First, you need to install <b>Obtainium</b> on your Android device. You can download the latest APK directly from their official GitHub page.
-                                    <a href="https://github.com/ImranR98/Obtainium/releases/latest" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Download Obtainium</a>
-                                </div>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Add Harmony</div>
-                                    Open Obtainium and tap the floating <b>Add App</b> button (the '+' icon) at the bottom right of the screen.
-                                </div>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Enter the App Source URL</div>
-                                    In the "App Source URL" field, enter the URL for Harmony's GitHub repository:
-                                    <br>
-                                    <code class="user-select-all bg-light p-1 rounded d-block my-2">https://github.com/aarjay123/harmonyapp</code>
-                                </div>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">Confirm and Add</div>
-                                    Obtainium will automatically fetch the app's details from GitHub. Review the information and tap the <b>Add</b> button at the bottom to finalize. You can also configure advanced options here if you wish.
-                                </div>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                <div class="ms-2 me-auto">
-                                    <div class="fw-bold">All Set!</div>
-                                    That's it! Harmony is now being tracked by Obtainium. The app will periodically check for new releases in the background and send you a notification when an update is ready to be installed.
-                                </div>
-                            </li>
-                        </ol>
-
-                        <div class="d-grid gap-2 mt-5">
-                            <a class="btn btn-primary" href="android.html">Back to the Main Android Page</a>
-                        </div>
+        <main>
+            <section class="relative">
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
+                <div class="min-h-[50vh] bg-cover bg-center flex items-center justify-center text-center text-white p-4" style="background-image: url('../assets/pics/hiosmobile-site/backdrop.jpg');">
+                    <div class="relative z-20">
+                        <h1 class="text-5xl md:text-7xl font-bold">Auto-Update with Obtainium</h1>
+                        <p class="text-xl mt-2 text-on-primary-container">The recommended way to keep Harmony for Android up-to-date.</p>
                     </div>
                 </div>
             </section>
+            
+            <div class="container mx-auto px-4 lg:px-6 py-16">
+                <section class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center text-primary mb-4">How to Set Up Auto-Updates</h2>
+                    <p class="text-center text-on-surface-variant">Obtainium is a free and open-source app that allows you to automatically download and install updates for your apps directly from their source. This is the easiest way to keep Harmony up-to-date without having to manually check for new versions.</p>
+                    
+                    <ol class="mt-8 space-y-4">
+                        <li class="bg-surface-variant p-4 rounded-lg">
+                            <div class="font-bold text-on-background">1. Install Obtainium</div>
+                            <p class="mt-1 text-on-surface-variant">First, you need to install <b>Obtainium</b> on your Android device. You can download the latest APK directly from their official GitHub page.</p>
+                            <a href="https://github.com/ImranR98/Obtainium/releases/latest" target="_blank" class="inline-block mt-2 border border-primary text-primary text-sm font-semibold py-1 px-3 rounded-md hover:bg-primary/10 transition-colors">Download Obtainium</a>
+                        </li>
+                        <li class="bg-surface-variant p-4 rounded-lg">
+                            <div class="font-bold text-on-background">2. Add Harmony</div>
+                            <p class="mt-1 text-on-surface-variant">Open Obtainium and tap the floating <b>Add App</b> button (the '+' icon) at the bottom right of the screen.</p>
+                        </li>
+                        <li class="bg-surface-variant p-4 rounded-lg">
+                            <div class="font-bold text-on-background">3. Enter the App Source URL</div>
+                            <p class="mt-1 text-on-surface-variant">In the "App Source URL" field, enter the URL for Harmony's GitHub repository:</p>
+                            <code class="block select-all bg-primary-container text-on-primary-container p-2 rounded-md my-2 font-mono text-sm">https://github.com/aarjay123/harmonyapp</code>
+                        </li>
+                        <li class="bg-surface-variant p-4 rounded-lg">
+                            <div class="font-bold text-on-background">4. Confirm and Add</div>
+                            <p class="mt-1 text-on-surface-variant">Obtainium will automatically fetch the app's details from GitHub. Review the information and tap the <b>Add</b> button at the bottom to finalize. You can also configure advanced options here if you wish.</p>
+                        </li>
+                        <li class="bg-surface-variant p-4 rounded-lg">
+                            <div class="font-bold text-on-background">5. All Set!</div>
+                            <p class="mt-1 text-on-surface-variant">That's it! Harmony is now being tracked by Obtainium. The app will periodically check for new releases in the background and send you a notification when an update is ready to be installed.</p>
+                        </li>
+                    </ol>
+
+                    <div class="text-center mt-12">
+                        <a href="android.html" class="inline-block bg-primary text-on-primary font-semibold py-3 px-8 rounded-lg hover:bg-secondary hover:text-on-secondary transition-colors shadow-lg">Back to the Main Android Page</a>
+                    </div>
+                </section>
+            </div>
         </main>
 
-        <footer class="text-center mt-5 py-3">
-            <p style="font-size: x-small;">Copyright © The Highland Cafe™ Ltd. 2021-2025. All Rights Reserved.</p>
+        <footer class="bg-primary-container/50 py-8 mt-12">
+            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
+                <p>© 2021-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
+            </div>
         </footer>
-        <!-- Bootstrap JS Bundle -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+        <script>
+            // JavaScript for mobile menu toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
     </body>
 </html>
-
