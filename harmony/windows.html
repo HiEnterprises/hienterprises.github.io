@@ -2,144 +2,174 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Harmony for Windows</title>
+        
         <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="../assets/css/style.css" rel="stylesheet">
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <script>
+            // Custom Tailwind configuration for Harmony (Colors and Fonts ONLY)
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary': '#a0c9ff',
+                            'on-primary': '#00325a',
+                            'primary-container': '#253141',
+                            'on-primary-container': '#d2e4ff',
+                            'secondary': '#bbc7db',
+                            'on-secondary': '#253141',
+                            'tertiary': '#d7bde4',
+                            'on-tertiary': '#3b2947',
+                            'tertiary-container': '#533f5f',
+                            'on-tertiary-container': '#f3daff',
+                            'background': '#1a1c1e',
+                            'on-background': '#e3e2e6',
+                            'surface': '#1a1c1e',
+                            'on-surface': '#e3e2e6',
+                            'outline': '#8d9199',
+                            'surface-variant': '#43474e',
+                            'on-surface-variant': '#c3c6cf',
+                        },
+                        fontFamily: {
+                            sans: ['Outfit', 'sans-serif'],
+                        }
+                    }
+                }
+            }
+        </script>
     </head>
-    <body>
-        <header>
-            <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="home.html">
-                        <img src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hiosbadge.png" alt="Logo" height="24" class="d-inline-block align-text-top">
-                        Harmony
+    <body class="bg-background text-on-background font-sans">
+
+        <header class="bg-primary-container shadow-md sticky top-0 z-50">
+            <nav class="container mx-auto px-4 lg:px-6">
+                <div class="flex justify-between items-center py-3">
+                    <a class="flex items-center gap-2" href="home.html">
+                        <img src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hiosbadge.png" alt="Harmony Logo" class="h-8 w-auto">
+                        <span class="text-2xl font-bold text-primary">Harmony</span>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-on-primary-container hover:bg-primary/10 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="home.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="android.html">For Android</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="macos.html">For MacOS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="windows.html">For Windows</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://thehighlandcafe.github.io/harmony" target="_blank">For Web</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="himaterial.html">HiMaterial</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html">< Back to HiEnterprises™</a>
-                            </li>
-                        </ul>
+                    
+                    <div class="hidden lg:flex lg:items-center lg:space-x-6">
+                        <a href="home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">Home</a>
+                        <a href="android.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">For Android</a>
+                        <a href="macos.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">For macOS</a>
+                        <a href="#" class="px-3 py-2 text-primary font-semibold">For Windows</a>
+                        <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">For Web</a>
+                        <a href="himaterial.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">HiMaterial</a>
+                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">← Back to HiEnterprises™</a>
                     </div>
+                </div>
+                
+                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2">
+                    <a href="home.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">Home</a>
+                    <a href="android.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">For Android</a>
+                    <a href="macos.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">For macOS</a>
+                    <a href="#" class="block px-3 py-2 rounded-md font-semibold bg-primary/10 text-primary">For Windows</a>
+                    <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">For Web</a>
+                    <a href="himaterial.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">HiMaterial</a>
+                    <hr class="border-outline/50 my-2">
+                    <a href="../index.html" class="block px-3 py-2 rounded-md text-outline hover:bg-primary/10">← Back to HiEnterprises™</a>
                 </div>
             </nav>
-
-            <div
-                id="header-image"
-                class="p-4 text-center bg-image"
-                style="
-                    position: relative;
-                    background-image: url('../assets/pics/hiosmobile-site/backdrop.jpg');
-                    height: 50vh;
-                    background-size: cover;
-                    background-position: center bottom;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;">
-                    <div
-                        class="text-white"
-                        style="
-                            position: relative;
-                            z-index: 2;
-                        ">
-                    <h1 class="display-3 bold-title" id="header-title">Harmony for Windows</h1>
-                </div>
-            </div>
         </header>
-        <main class="container mt-5">
-            <section class="container mt-5">
-                <div class="accordion" id="windowsInstructionsAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWindows" aria-expanded="false" aria-controls="collapseWindows">
-                                How to Download & Install Harmony for Windows
-                            </button>
-                        </h2>
-                        <div id="collapseWindows" class="accordion-collapse collapse show" data-bs-parent="#windowsInstructionsAccordion">
-                            <div class="accordion-body">
-                                <ol class="list-group list-group-numbered">
-                                    <li class="list-group-item">
-                                        On your Windows device, open this website and download the latest <b>harmony-windows.zip</b> file from the releases tab <a href="https://github.com/aarjay123/harmonyapp/releases/latest" target="_blank">(here)</a>.
-                                    </li>
-                                    <li class="list-group-item">
-                                        Once downloaded, unzip the file. This will create a new folder containing the Harmony application and its dependencies.
-                                    </li>
-                                    <li class="list-group-item">
-                                        You can place this folder anywhere on your computer, such as your Program Files directory or your Desktop. We recommend also creating a shortcut either on your desktop or in your start menu folder to quickly access Harmony.
-                                    </li>
-                                    <li class="list-group-item">
-                                        Open the Harmony folder and double-click the `Harmony.exe` file to launch the application. You might be prompted by Windows Defender SmartScreen; click "More info" then "Run anyway" since the app is safe and open-source.
-                                    </li>
+
+        <main>
+            <section class="relative">
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
+                <div class="min-h-[50vh] bg-cover bg-center flex items-center justify-center text-center text-white p-4" style="background-image: url('../assets/pics/hiosmobile-site/backdrop.jpg');">
+                    <div class="relative z-20">
+                        <h1 class="text-5xl md:text-7xl font-bold">Harmony for Windows</h1>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="container mx-auto px-4 lg:px-6 py-16 space-y-16">
+                <section>
+                    <div class="max-w-4xl mx-auto border border-outline/20 rounded-lg">
+                        <div id="accordion-item">
+                            <h2 id="accordion-button">
+                                <button type="button" class="flex justify-between items-center w-full p-5 font-medium text-left text-on-background bg-surface-variant hover:bg-primary-container/50 transition-colors">
+                                    <span>How to Download & Install Harmony for Windows</span>
+                                    <svg class="w-6 h-6 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-content" class="p-5 border-t border-outline/20">
+                                <ol class="list-decimal list-inside space-y-4 text-on-surface-variant">
+                                    <li>On your Windows device, open this website and download the latest <b class="font-semibold text-on-background">harmony-windows.zip</b> file from the releases tab <a href="https://github.com/aarjay123/harmonyapp/releases/latest" target="_blank" class="text-primary hover:underline">here</a>.</li>
+                                    <li>Once downloaded, unzip the file. This will create a new folder containing the Harmony application and its dependencies.</li>
+                                    <li>You can place this folder anywhere on your computer, such as your Program Files directory or your Desktop. We recommend also creating a shortcut either on your desktop or in your start menu folder to quickly access Harmony.</li>
+                                    <li>Open the Harmony folder and double-click the <b class="font-semibold text-on-background">`Harmony.exe`</b> file to launch the application. You might be prompted by Windows Defender SmartScreen; click "More info" then "Run anyway" since the app is safe and open-source.</li>
                                 </ol>
-                                <p class="fst-italic mt-3">*Please note that an internet connection is required to access all HarmonyCore services.</p>
+                                <p class="italic text-sm text-outline mt-6">*Please note that an internet connection is required to access all HarmonyCore services.</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section class="container mt-5">
-                <h1 class="display-5 text-center bold-title">Download Harmony for Windows</h1>
-                <p class="text-center" style="font-size: small;">Compatible with Windows devices running Windows 10 and above.</p>
-                <div class="d-grid gap-2">
-                    <a class="btn btn-primary" href="https://github.com/aarjay123/harmonyapp/releases/latest/download/harmony-windows.zip" target="_blank">Download Latest Version (ZIP)</a>
-                </div>
-            </section>
-
-            <section class="container mt-5">
-                <h1>What's New?</h1>
-                <div class="text-center">
-                    <div class="row row-cols-2 row-cols-md-2 row-cols-lg-2">
-                        <div class="col pb-3">
-                            <div class="d-grid gap-2">
-                                <a class="left-button btn btn-outline-primary" href="https://github.com/aarjay123/harmonyapp/commits/" target="_blank">Harmony App GitHub Changelog</a>
-                            </div>
-                        </div>
-                        <div class="col pb-3">
-                            <div class="d-grid gap-2">
-                                <a class="right-button btn btn-outline-primary" href="https://github.com/thehighlandcafe/hioswebcore/commits/main" target="_blank">HarmonyCore GitHub Changelog</a>
-                            </div>
-                        </div>
+                </section>
+                
+                <section class="text-center">
+                    <h2 class="text-4xl font-bold text-primary">Download Harmony for Windows</h2>
+                    <p class="mt-2 text-on-surface-variant">Compatible with Windows devices running Windows 10 and above.</p>
+                    <div class="mt-6">
+                        <a href="https://github.com/aarjay123/harmonyapp/releases/latest/download/harmony-windows.zip" target="_blank" class="inline-block bg-primary text-on-primary font-semibold py-3 px-8 rounded-lg hover:bg-secondary hover:text-on-secondary transition-colors shadow-lg">Download Latest Version (ZIP)</a>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="container mt-5">
-                <h1 class="display-3">Introducing our new design language, HiMaterial 6!</h1>
-                <p>To find out more, check below.</p>
-                <div class="d-grid gap-2">
-                    <a class="btn btn-primary" href="himaterial.html">HiMaterial</a>
-                </div>
-            </section>
+                <section>
+                    <h2 class="text-3xl font-bold text-center">What's New?</h2>
+                    <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://github.com/aarjay123/harmonyapp/commits/" target="_blank" class="w-full sm:w-auto text-center border-2 border-primary text-primary font-semibold py-2 px-6 rounded-lg hover:bg-primary/10 transition-colors">Harmony App GitHub Changelog</a>
+                        <a href="https://github.com/thehighlandcafe/hioswebcore/commits/main" target="_blank" class="w-full sm:w-auto text-center border-2 border-primary text-primary font-semibold py-2 px-6 rounded-lg hover:bg-primary/10 transition-colors">HarmonyCore GitHub Changelog</a>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2 class="text-3xl font-bold text-primary">Introducing our new design language, HiMaterial 6!</h2>
+                    <p class="mt-2 max-w-2xl text-on-surface-variant">To find out more, check below.</p>
+                    <div class="mt-6">
+                        <a href="himaterial.html" class="inline-block bg-primary text-on-primary font-semibold py-2 px-6 rounded-lg hover:bg-secondary hover:text-on-secondary transition-colors">Learn about HiMaterial</a>
+                    </div>
+                </section>
+            </div>
         </main>
-        <footer class="text-center mt-5">
-            <p style="font-size: x-small;">Copyright © The Highland Cafe™ Ltd. 2021-2025. All Rights Reserved.</p>
+
+        <footer class="bg-primary-container/50 py-8 mt-12">
+            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
+                <p>© 2021-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
+            </div>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+        <script>
+            // JavaScript for mobile menu toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // JavaScript for Accordion
+            const accordionButton = document.getElementById('accordion-button');
+            const accordionContent = document.getElementById('accordion-content');
+            const accordionChevron = accordionButton.querySelector('svg');
+
+            // Default state for this page is collapsed, so we add the hidden class initially
+            accordionContent.classList.add('hidden');
+            
+            accordionButton.addEventListener('click', () => {
+                accordionContent.classList.toggle('hidden');
+                accordionChevron.classList.toggle('rotate-180');
+            });
+        </script>
     </body>
 </html>

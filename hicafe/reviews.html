@@ -1,462 +1,228 @@
 <!doctype html>
-    <html lang="en">
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Highland Cafe™ | Reviews</title>
+        
         <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="../assets/css/style.css" rel="stylesheet">
-        <link href="../assets/css/hicafe.css" rel="stylesheet">
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        
+        <script>
+            // Custom Tailwind configuration for HiCafe
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary': 'rgb(228 195 108)',
+                            'on-primary': 'rgb(61 46 0)',
+                            'primary-container': 'rgb(44 34 0)',
+                            'on-primary-container': 'rgb(255 255 255)',
+                            'secondary': 'rgb(213 197 160)',
+                            'on-secondary': 'rgb(57 47 21)',
+                            'background': 'rgb(22 19 11)',
+                            'on-background': 'rgb(234 225 212)',
+                            'surface': 'rgb(22 19 11)',
+                            'on-surface': 'rgb(234 225 212)',
+                            'surface-variant': 'rgb(76 70 57)',
+                            'on-surface-variant': 'rgb(207 197 180)',
+                            'outline': 'rgb(152 144 128)',
+                            'title-yellow': 'rgba(241, 194, 50, 1)',
+                        },
+                        fontFamily: {
+                            sans: ['Inter', 'sans-serif'],
+                            caveat: ['Caveat', 'cursive'],
+                        },
+                    }
+                }
+            }
+        </script>
     </head>
-    <body>
-        <header>
-            <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="../assets/pics/hicafe/logo.png" alt="Logo" height="24" class="d-inline-block align-text-top">
-                        The Highland Cafe™
+    <body class="bg-background text-on-background font-sans">
+
+        <header class="bg-surface/90 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-outline/20">
+            <nav class="container mx-auto px-4 lg:px-6 py-3">
+                <div class="flex justify-between items-center">
+                    <a class="flex items-center gap-3" href="home.html">
+                        <img src="../assets/pics/hicafe/logo.png" alt="HiCafe Logo" class="h-8 w-auto">
+                        <span class="text-xl font-bold text-on-surface whitespace-nowrap">The Highland Cafe™</span>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-on-surface-variant hover:bg-surface-variant focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="home.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="reviews.html">Reviews</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact-us.html">Contact us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="chef.html">Chef</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="menu.html">Menu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://sites.google.com/view/cafefiesta-by-thc">CafeFiesta™</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../hiosmobile/download.html">Mobile App</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html">< Back to HiEnterprises™</a>
-                            </li>
-                        </ul>
+                    
+                    <div class="hidden lg:flex lg:items-center lg:space-x-6">
+                        <a href="home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Home</a>
+                        <a href="#" class="text-primary font-bold transition-colors">Reviews</a>
+                        <a href="contact-us.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Contact Us</a>
+                        <a href="chef.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Chef</a>
+                        <a href="menu.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Menu</a>
+                        <a href="../harmony/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Mobile App</a>
+                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">← Back to HiEnterprises™</a>
                     </div>
+                </div>
+                
+                <div id="mobile-menu" class="hidden lg:hidden mt-4 space-y-2">
+                    <a href="home.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Home</a>
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium bg-primary-container text-white">Reviews</a>
+                    <a href="contact-us.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Contact Us</a>
+                    <a href="chef.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Chef</a>
+                    <a href="menu.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Menu</a>
+                    <a href="../harmony/home.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Mobile App</a>
+                    <hr class="border-outline/50">
+                    <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-outline hover:bg-surface-variant">← Back to HiEnterprises™</a>
                 </div>
             </nav>
-
-            <div
-                id="header-image"
-                class="p-4 text-center bg-image"
-                style="
-                    position: relative;
-                    background-image: url('../assets/pics/hicafe/logo.png');
-                    height: 50vh;
-                    background-size: cover;
-                    background-position: center bottom;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;">
-                    <div
-                    style="
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(0, 0, 0, 0.5);
-                        z-index: 1;
-                    ">
-                </div>
-                    <div
-                        class="text-white"
-                        style="
-                            position: relative;
-                            z-index: 2;
-                        ">
-                    <h1 class="display-3 bold-title" id="header-title">Reviews</h1>
-                </div>
-            </div>
         </header>
-        <section class="container mt-5">
-            <h3 class="text-center">Take a look below at some of our amazing reviews!</h3>
-            <div class="text-center mt-5">
-                <!--First row-->
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'My chicken was raw, almost got salmonella, will not be visiting again'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'i can asure you we kook chicken's to prefect temprature so It must be some thing you aet some were eles. NB'</p>
-                            </div>
-                        </div>
+
+        <main>
+            <section class="relative">
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
+                <div class="min-h-[50vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-center text-white p-4" style="background-image: url('../assets/pics/hicafe/logo.png');">
+                    <div class="relative z-20">
+                        <h1 class="text-6xl md:text-8xl font-caveat text-white">Reviews</h1>
                     </div>
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'The staff are rude and they overcharged me'</p>
-                                <p class="fw-bold">Dougal Maps</p>
+                </div>
+            </section>
+            
+            <section class="py-16 sm:py-20">
+                <div class="container mx-auto px-4 lg:px-6">
+                    <h2 class="text-3xl font-bold text-center text-on-surface">Take a look below at some of our amazing reviews!</h2>
+                    
+                    <div class="mt-12 space-y-12">
+                        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                            <div>
+                                <div class="bg-primary-container p-6 rounded-t-lg">
+                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
+                                    <p class="italic text-on-surface-variant mt-2 text-sm">'My chicken was raw, almost got salmonella, will not be visiting again'</p>
+                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
+                                </div>
+                                <div class="bg-surface-variant p-4 rounded-b-lg text-sm">
+                                    <p class="font-bold text-on-surface">Response:</p>
+                                    <p class="italic text-on-surface-variant">'i can asure you we kook chicken's to prefect temprature so It must be some thing you aet some were eles. NB'</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="bg-primary-container p-6 rounded-t-lg">
+                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
+                                    <p class="italic text-on-surface-variant mt-2 text-sm">'The staff are rude and they overcharged me'</p>
+                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
+                                </div>
+                                <div class="bg-surface-variant p-4 rounded-b-lg text-sm">
+                                    <p class="font-bold text-on-surface">Response:</p>
+                                    <p class="italic text-on-surface-variant">'we had good mannerizmz so i dont know what yoy are taking about. BC'</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="bg-primary-container p-6 rounded-t-lg">
+                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
+                                    <p class="italic text-on-surface-variant mt-2 text-sm">'I didn't get served, so I just left'</p>
+                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
+                                </div>
+                                <div class="bg-surface-variant p-4 rounded-b-lg text-sm">
+                                    <p class="font-bold text-on-surface">Response:</p>
+                                    <p class="italic text-on-surface-variant">'soz we like very buzy on dat dae so liek yeah. we dont like wantn peoples like like youse comin' so yeah. JB'</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="bg-primary-container p-6 rounded-t-lg">
+                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
+                                    <p class="italic text-on-surface-variant mt-2 text-sm">'Simply awful'</p>
+                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
+                                </div>
+                                <div class="bg-surface-variant p-4 rounded-b-lg text-sm">
+                                    <p class="font-bold text-on-surface">Response:</p>
+                                    <p class="italic text-on-surface-variant">'You are looking in a mirror for definite. SH'</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'we had good mannerizmz so i dont know what yoy are taking about. BC'</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                             <div>
+                                <div class="bg-primary-container p-6 rounded-t-lg">
+                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
+                                    <p class="italic text-on-surface-variant mt-2 text-sm">'One of the staff got hit in the head with a pan, will not be risking my life again'</p>
+                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
+                                </div>
+                                <div class="bg-surface-variant p-4 rounded-b-lg text-sm">
+                                    <p class="font-bold text-on-surface">Response:</p>
+                                    <p class="italic text-on-surface-variant">'YOU ARE A DUMB WE NOT EVER WANT TO SEE YOU EVER AGAIN IN OUR RESTRANT THANKS PR'</p>
+                                </div>
+                            </div>
+                             <div>
+                                <div class="bg-primary-container p-6 rounded-t-lg">
+                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
+                                    <p class="italic text-on-surface-variant mt-2 text-sm">'I got screamed at by this guy called Patrick. I almost had a heart attack as I am 97. DO NOT COME HERE!'</p>
+                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
+                                </div>
+                                <div class="bg-surface-variant p-4 rounded-b-lg text-sm">
+                                    <p class="font-bold text-on-surface">Response:</p>
+                                    <p class="italic text-on-surface-variant">'go back to you old fokes home you noob NB'</p>
+                                </div>
+                            </div>
+                             <div>
+                                <div class="bg-primary-container p-6 rounded-t-lg">
+                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
+                                    <p class="italic text-on-surface-variant mt-2 text-sm">'My daughter got severe salmonella from the kids' chamomile ice cream; the customer support was useless so don't expect compensation'</p>
+                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
+                                </div>
+                                <div class="bg-surface-variant p-4 rounded-b-lg text-sm">
+                                    <p class="font-bold text-on-surface">Response:</p>
+                                    <p class="italic text-on-surface-variant">'we keep our ices in the frij so they are nice and cold so no samonela, no were near chicken. BC'</p>
+                                </div>
+                            </div>
+                             <div>
+                                <div class="bg-primary-container p-6 rounded-t-lg">
+                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
+                                    <p class="italic text-on-surface-variant mt-2 text-sm">'A full-on scam show they're running down in Birmingham'</p>
+                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
+                                </div>
+                                <div class="bg-surface-variant p-4 rounded-b-lg text-sm">
+                                    <p class="font-bold text-on-surface">Response:</p>
+                                    <p class="italic text-on-surface-variant">'WE ARE LEGIT BUSNESS ASK ANYONE LIKE DE-ADVERTISEMENT COMPANIE RAINBOW OR NUGGETOS WE LEGIT ALRIGHT?!! PR'</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'I didn't get served, so I just left'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'soz we like very buzy on dat dae so liek yeah. we dont like wantn peoples like like youse comin' so yeah. JB'</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'Simply awful'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'You are looking in a mirror for definite. SH'</p>
+                        
+                        <div class="max-w-4xl mx-auto">
+                           <div>
+                                <div class="bg-primary-container p-6 rounded-t-lg">
+                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
+                                    <p class="italic text-on-surface-variant mt-2 text-sm leading-relaxed">'We came here after a long flight from Alicante and we arrived at around 23:00. We were carrying quite a few bags and when we came into the hotel reception we were greeted by a strong smell of cigarette smoke. I read a few other reviews saying that the fire alarm went off, so I'm guessing it went off due to someone smoking in the reception area. We were also greeted by a small sign telling us that the reception had been permanently moved to the bar next door. How annoying! That meant we had to walk back out of the reception and go over to the bar next door in the cold and the dark. The room was nice and clean and they had put in an extra single bed for us which was nice. In the morning, we went over to the bar next door for continental breakfast and a cooked breakfast. It was nice, but the pancakes weren't freshly made to order, probably just packet pancakes put in the microwave. The full English breakfast wasn't the best. The bacon was hard and very very salty. They only gave us a cup of tea instead of a pot of tea, which wasn't great. I would rate it 2 stars but the cigarette smoke smell in the entrance room wasn't nice.'</p>
+                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
+                                </div>
+                                <div class="bg-surface-variant p-4 rounded-b-lg text-sm">
+                                    <p class="font-bold text-on-surface">Response:</p>
+                                    <p class="italic text-on-surface-variant">'soz i like had like been having a like ciggaret in like the recepsion yester like day morning so like yeah JB'</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!--Second row-->
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'One of the staff got hit in the head with a pan, will not be risking my life again'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'YOU ARE A DUMB WE NOT EVER WANT TO SEE YOU EVER AGAIN IN OUR RESTRANT THANKS PR'</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'I got screamed at by this guy called Patrick. I almost had a heart attack as I am 97. DO NOT COME HERE!'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'go back to you old fokes home you noob NB'</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'My daughter got severe salmonella from the kids' chamomile ice cream; the customer support was useless so don't expect compensation'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'we keep our ices in the frij so they are nice and cold so no samonela, no were near chicken. BC'</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'A full-on scam show they're running down in Birmingham'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'WE ARE LEGIT BUSNESS ASK ANYONE LIKE DE-ADVERTISEMENT COMPANIE RAINBOW OR NUGGETOS WE LEGIT ALRIGHT?!! PR'</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Third row-->
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'The americano was weak and rank - even worse than knockoff Nescafe'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'I can assure you that we use expensive italian instant coffee for the americano's, espressos', lattes and capicconos, so there youse go. SM'</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'Overpriced and poor service'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">''we can tell you since inflashion has hitted the uk our pruices havent rised much only to keep us in business so there thats sue to rise cost living our service is top standard NB'</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'I got here 3 mins after breakfast hour finished and they denied me any service'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'thats like due to our like policy like yeah. if you like dont like like it then you can like go to like henryeta like henry JB'</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'My Tesla got scraped with keys by hooligans nearby and they didn't compensate me - horrible'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'policy: clik link's now. <a href="https://sites.google.com/view/thehighlandcafe/more-information#h.kkqo2pgovettBC">https://sites.google.com/view/thehighlandcafe/more-information#h.kkqo2pgovettBC</a>'</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Fourth row - single large review-->
-                <div class="row">
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">
-                                    'We came here after a long flight from Alicante and we arrived at around 23:00.
-                                    We were carrying quite a few bags and when we came into the hotel reception we were greeted by a strong smell of cigarette smoke.
-                                    I read a few other reviews saying that the fire alarm went off, so I'm guessing it went off due to someone smoking in the reception area.
-                                    We were also greeted by a small sign telling us that the reception had been permanently moved to the bar next door. How annoying!
-                                    That meant we had to walk back out of the reception and go over to the bar next door in the cold and the dark.
-                                    The room was nice and clean and they had put in an extra single bed for us which was nice.
-                                    In the morning, we went over to the bar next door for continental breakfast and a cooked breakfast.
-                                    It was nice, but the pancakes weren't freshly made to order, probably just packet pancakes put in the microwave.
-                                    The full English breakfast wasn't the best. The bacon was hard and very very salty.
-                                    They only gave us a cup of tea instead of a pot of tea, which wasn't great.
-                                    I would rate it 2 stars but the cigarette smoke smell in the entrance room wasn't nice.'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'soz i like had like been having a like ciggaret in like the recepsion yester like day morning so like yeah JB'</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Fifth row-->
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'Horrible. Smoothie nasty fry up has yucky pizza and only 3 beans.<br><br>Waiter steals car keys.<br><br>Too expensive.<br><br>Go elsewhere.'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'so0ory, we only needed to get into car to get your lisense to proove you were 18 + to buy the beans. NB'</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'Worst lunch of me whole life !<br><br>Service was awful, waitress unfriendly, and soup horrible! Coffee was just Nescafé and was 4£ a pop! Will not be returning.<br><br>Just another rubbish highland cafe places. will be going to costa next time.<br><br>Just another one of them highland cafe scam things'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'Don't go to the costa it is garbage, come back soon! SM'</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'Because the meal was so terrible, I decided to quietly not tip them, but one of the waiters saw and so became very harassing towards my wife on our honeymoon. She broke up with me afterwards. Never again.'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'GOOD.MAYBE YOU HAVE LE\RNED FOR NEXT TIME YOYU NOT TIP US!!!!; PR'</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'This restaurant use to be great. I'm not sure if they switched owners but it has gone down hill from food to service. The last two times we visited the dim sum was not fresh and chicken was cold. Very disappointed we use to love this restaurant.'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'Our dim sum comes straight from tesco ready meals so nothing shold be wrong with it. That's where we have always got it from. We did get a new microwave recently though. SM'</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Sixth row - single large review-->
-                <div class="row">
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">
-                                    The room was nice and clean, but the breakfast was horrendous. The staff members were rude, and there was a shortage of hot food. The apple juice was horrible and we asked for tea, and it was just black tea in a small mug. We asked for two pots of tea and they never came. We had to ask another time for tea and it finally came 10 minutes later. We complained to reception and asked if we would be able to speak to the manager. They said that they would send the manager over to our table, but they never came. Over all, this hotel was rubbish, and we will never come to a worst eastern again. We should have gone to the premier Inn down the road because the rooms are usually nicer there and the breakfast is nicer and the staff members are a lot more friendly.
-
-                                    <br><br>this really is what the name is: it is the "worst" hotel in the whole of the "eastern" united kingdom.
-
-                                    <br><br>I advise you check this hotel out on Google maps before coming here, and I advise that you should go to a premier Inn because they're much nicer.
-
-                                    <br><br>I did some research on Google to see what the difference between Worst Eastern and Hotels by the highland Cafe is, and it said that they focused on "friendliness and comfort" but that's a pile of rubbish.
-
-                                    <br><br>Also, by the way the elevators in this hotel are probably the worst I've ever seen in my life because when you press the up or down buttons, the lift doesn't even come to the floor you are on so we had to use the stairs.'
-                                </p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'i can ashoor you the lifts had been serviced a few days back but thanksc.our shef cooks a lot of hot food for bekfast. BC'</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Seventh row-->
-                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3">
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'I had ordered a plate of the chicken turkey beef dinosaurs shaped breadcrumb with chips for my 6 year old son. WHen it arrived there was only 1/2 a chip, since the waiter serving us had eaten them all. What a waste of my money.'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'Zee chip's was delish muchas gracias NB'</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'One of the staff was coughing on my mom's dessert, and later that week, my whole family tested positive for Covid and my mom died later that week. This was in 2020 btw.'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'sorry i had corona back in 2020. i can send you the covid statement? here you go! <a href="https://drive.google.com/file/d/1foOkUz3lnnpu1D-8pAWBiLHEY4GVoszV/view?usp=sharing">https://drive.google.com/file/d/1foOkUz3lnnpu1D-8pAWBiLHEY4GVoszV/view?usp=sharing</a> BC'</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col pb-3">
-                        <div class="joinTop card">
-                            <div class="card-body">
-                                <p>★ ☆ ☆ ☆ ☆</p>
-                                <p class="fst-italic">'I was gonna propose to my girlfriend, so I put the ring in her drink. She was drinking her wine out of that cup, and so I asked her "have you found my gift yet?" she said no. It turned out a waiter had stolen the ring. Awful.'</p>
-                                <p class="fw-bold">Dougal Maps</p>
-                            </div>
-                        </div>
-                        <div class="joinBottom card">
-                            <div class="card-body">
-                                <p class="fw-bold">Response:</p>
-                                <p class="fst-italic">'thx for da ring bro, looks good on my finger's! NB'</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </section>
+        </main>
+        
+        <footer class="bg-primary-container/50 py-8">
+            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
+                <p>© 2021-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
             </div>
-        </section>
-        <footer class="text-center mt-5">
-            <p style="font-size: x-small;">Copyright © The Highland Cafe™ Ltd. 2021-2025. All Rights Reserved.</p>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+        <script>
+            // JavaScript for mobile menu toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
     </body>
 </html>
