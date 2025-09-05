@@ -14,52 +14,57 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         
-        <!-- Custom CSS -->
-        <!--link href="assets/css/style.css" rel="stylesheet"-->
-        
+        <!-- Your custom Tailwind config (MUST come BEFORE the Tailwind script) -->
         <script src="assets/js/tailwind-config-main.js"></script>
+        <link rel="stylesheet" href="assets/css/fonts.css">
     </head>
-    <body class="bg-gray-50 text-gray-800">
+    <body class="bg-background text-on-background font-sans">
 
-        <header class="bg-white shadow-sm sticky top-0 z-50">
-            <nav class="container mx-auto px-4 lg:px-6 py-3">
-                <div class="flex justify-between items-center">
+        <!-- Header & Navigation -->
+        <header class="bg-surface-variant/50 backdrop-blur-sm shadow-md sticky top-0 z-50">
+            <nav class="container mx-auto px-4 lg:px-6">
+                <div class="flex justify-between items-center py-3">
+                    <!-- Logo -->
                     <a class="flex items-center gap-2" href="index.html">
-                        <img src="assets/logo.jpg" alt="Logo" class="h-8 w-auto">
-                        <span class="text-xl font-semibold text-gray-700">HiEnterprises™</span>
+                        <img src="assets/logo.jpg" alt="Logo" class="h-8 w-auto rounded-md">
+                        <span class="text-xl font-semibold text-on-surface">HiEnterprises™</span>
                     </a>
                     
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-on-surface-variant hover:bg-primary/10 focus:outline-none">
                         <span class="sr-only">Open main menu</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                     
-                    <div class="hidden lg:flex lg:items-center lg:space-x-8">
-                        <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Home</a>
-                        <a href="#" class="text-blue-600 font-semibold transition-colors">Blog</a>
-                        <a href="worsteastern/home.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">weB&B</a>
-                        <a href="hicafe/home.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">HiCafe™</a>
-                        <a href="hicard/home.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">HiCard</a>
-                        <a href="brands.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Our Brands</a>
-                        <a href="harmony/home.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-semibold">Mobile App</a>
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex lg:items-center lg:space-x-6">
+                        <a href="index.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Home</a>
+                        <a href="#" class="text-primary font-semibold transition-colors">Blog</a>
+                        <a href="worsteastern/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">weB&B</a>
+                        <a href="hicafe/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">HiCafe™</a>
+                        <a href="hicard/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">HiCard</a>
+                        <a href="brands.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Our Brands</a>
+                        <a href="harmony/home.html" class="bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity text-sm font-semibold">Mobile App</a>
                     </div>
                 </div>
                 
-                <div id="mobile-menu" class="hidden lg:hidden mt-4 space-y-2">
-                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100">Home</a>
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600">Blog</a>
-                    <a href="worsteastern/home.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100">weB&B</a>
-                    <a href="hicafe/home.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100">HiCafe™</a>
-                    <a href="hicard/home.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100">HiCard</a>
-                    <a href="brands.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100">Our Brands</a>
-                    <a href="harmony/home.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100">Mobile App</a>
+                <!-- Mobile Navigation Menu -->
+                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2">
+                    <a href="index.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">Home</a>
+                    <a href="#" class="block px-3 py-2 rounded-md font-semibold bg-primary/10 text-primary">Blog</a>
+                    <a href="worsteastern/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">weB&B</a>
+                    <a href="hicafe/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">HiCafe™</a>
+                    <a href="hicard/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">HiCard</a>
+                    <a href="brands.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">Our Brands</a>
+                    <a href="harmony/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">Mobile App</a>
                 </div>
             </nav>
         </header>
 
         <main>
+            <!-- Hero Section -->
             <section class="relative">
-                <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
                 <div class="min-h-[40vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-center text-white p-4" style="background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');">
                     <div class="relative z-20">
                         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Our Blog</h1>
@@ -67,17 +72,18 @@
                 </div>
             </section>
 
+            <!-- Blog Feed Section -->
             <section class="py-16 sm:py-20">
                 <div class="container mx-auto px-4 lg:px-6">
                     <div class="text-center">
-                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Welcome to our new blog feed!</h2>
-                        <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600">Take a look below to see updates, statements, and more from our fantastic company!</p>
+                        <h2 class="text-3xl font-bold tracking-tight text-on-surface sm:text-4xl">Welcome to our new blog feed!</h2>
+                        <p class="mt-4 max-w-2xl mx-auto text-xl text-on-surface-variant">Take a look below to see updates, statements, and more from our fantastic company!</p>
                     </div>
                     
                     <div class="mt-12 max-w-5xl mx-auto">
-                        <div class="relative w-full" style="padding-top: 100%;">
-                            <iframe 
-                                class="absolute top-0 left-0 w-full h-full border-0 rounded-lg shadow-xl"
+                        <div class="relative w-full aspect-w-1 aspect-h-1 md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9">
+                             <iframe 
+                                class="w-full h-[80vh] border-2 border-surface-variant rounded-lg shadow-xl"
                                 src="https://hienterprises.blogspot.com/search/label/Company%20Update">
                             </iframe>
                         </div>
@@ -86,10 +92,10 @@
             </section>
         </main>
 
-        <footer class="bg-gray-800 text-white py-8">
-            <div class="container mx-auto px-4 lg:px-6 text-center text-gray-400">
+        <!-- Footer -->
+        <footer class="bg-surface-variant/30 text-white py-8">
+            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
                 <p>&copy; 2017-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
-                <p class="text-sm mt-2">A modern website built with love (and Tailwind CSS).</p>
             </div>
         </footer>
 

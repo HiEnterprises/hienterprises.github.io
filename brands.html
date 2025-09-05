@@ -7,60 +7,58 @@
         
         <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
         
-        <!-- Tailwind CSS -->
         <script src="https://cdn.tailwindcss.com"></script>
-        
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         
-        <!-- Custom CSS -->
-        <!--link href="assets/css/style.css" rel="stylesheet"-->
-        
         <script src="assets/js/tailwind-config-main.js"></script>
+        <link rel="stylesheet" href="assets/css/fonts.css">
+        
     </head>
-    <body class="bg-gray-50 text-gray-800">
+    <body class="bg-background text-on-background font-sans">
 
-        <header class="bg-white shadow-sm sticky top-0 z-50">
-            <nav class="container mx-auto px-4 lg:px-6 py-3">
-                <div class="flex justify-between items-center">
+        <header class="bg-surface-variant/50 backdrop-blur-sm shadow-md sticky top-0 z-50">
+            <nav class="container mx-auto px-4 lg:px-6">
+                <div class="flex justify-between items-center py-3">
                     <a class="flex items-center gap-2" href="index.html">
-                        <img src="assets/logo.jpg" alt="Logo" class="h-8 w-auto">
-                        <span class="text-xl font-semibold text-gray-700">HiEnterprises™</span>
+                        <img src="assets/logo.jpg" alt="Logo" class="h-8 w-auto rounded-md">
+                        <span class="text-xl font-semibold text-on-surface">HiEnterprises™</span>
                     </a>
                     
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-on-surface-variant hover:bg-primary/10 focus:outline-none">
                         <span class="sr-only">Open main menu</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                     
-                    <div class="hidden lg:flex lg:items-center lg:space-x-8">
-                        <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Home</a>
-                        <a href="blog.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Blog</a>
-                        <a href="worsteastern/home.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">weB&B</a>
-                        <a href="hicafe/home.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">HiCafe™</a>
-                        <a href="hicard/home.html" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">HiCard</a>
-                        <a href="#" class="text-blue-600 font-semibold transition-colors">Our Brands</a>
-                        <a href="harmony/home.html" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors text-sm font-semibold">Mobile App</a>
+                    <div class="hidden lg:flex lg:items-center lg:space-x-6">
+                        <a href="index.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Home</a>
+                        <a href="blog.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Blog</a>
+                        <a href="worsteastern/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">weB&B</a>
+                        <a href="hicafe/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">HiCafe™</a>
+                        <a href="hicard/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">HiCard</a>
+                        <a href="#" class="text-primary font-semibold transition-colors">Our Brands</a>
+                        <a href="harmony/home.html" class="bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity text-sm font-semibold">Mobile App</a>
                     </div>
                 </div>
                 
-                <div id="mobile-menu" class="hidden lg:hidden mt-4 space-y-2">
-                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100">Home</a>
-                    <a href="blog.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100">Blog</a>
-                    <a href="worsteastern/home.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100">weB&B</a>
-                    <a href="hicafe/home.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100">HiCafe™</a>
-                    <a href="hicard/home.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100">HiCard</a>
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-600">Our Brands</a>
-                    <a href="harmony/home.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-100">Mobile App</a>
+                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2">
+                    <a href="index.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">Home</a>
+                    <a href="blog.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">Blog</a>
+                    <a href="worsteastern/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">weB&B</a>
+                    <a href="hicafe/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">HiCafe™</a>
+                    <a href="hicard/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">HiCard</a>
+                    <a href="#" class="block px-3 py-2 rounded-md font-semibold bg-primary/10 text-primary">Our Brands</a>
+                    <a href="harmony/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">Mobile App</a>
                 </div>
             </nav>
         </header>
 
         <main>
             <section class="relative">
-                <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
-                <div class="min-h-[40vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-center text-white p-4" style="background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');">
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
+                <div class="min-h-[60vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-center text-white p-4" style="background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');">
                     <div class="relative z-20">
                         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Our Brands</h1>
                     </div>
@@ -70,117 +68,117 @@
             <section class="py-16 sm:py-20">
                 <div class="container mx-auto px-4 lg:px-6">
                     <div class="text-center">
-                        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Explore Our Portfolio</h2>
-                        <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600">We have a lot of brands under our company. Take a look below to explore them.</p>
+                        <h2 class="text-3xl font-bold tracking-tight text-on-surface sm:text-4xl">Explore Our Portfolio</h2>
+                        <p class="mt-4 max-w-2xl mx-auto text-xl text-on-surface-variant">We have a lot of brands under our company. Take a look below to explore them.</p>
                     </div>
                     
                     <div class="mt-16">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-8 border-b-2 border-blue-200 pb-2">Food & Shopping</h3>
+                        <h3 class="text-2xl font-bold text-on-surface mb-8 border-b-2 border-primary/20 pb-2">Food & Shopping</h3>
                         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                                <img class="h-48 w-full object-contain p-4" src="assets/pics/brands/hicafe.png" alt="HiCafe Logo">
+                            <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
+                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/hicafe.png" alt="HiCafe Logo">
                                 <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-gray-800">HiCafe™</h4>
-                                    <p class="mt-2 text-gray-600 flex-grow">This is our main restaurant brand, the food brand you know and love!</p>
-                                    <a href="hicafe/home.html" class="mt-4 block w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold">Visit HiCafe™</a>
+                                    <h4 class="text-xl font-semibold text-on-surface-variant">HiCafe™</h4>
+                                    <p class="mt-2 text-on-surface-variant flex-grow">This is our main restaurant brand, the food brand you know and love!</p>
+                                    <a href="hicafe/home.html" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit HiCafe™</a>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                                <img class="h-48 w-full object-contain p-4" src="assets/pics/brands/cafefiesta.png" alt="CafeFiesta Logo">
+                            <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
+                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/cafefiesta.png" alt="CafeFiesta Logo">
                                 <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-gray-800">CafeFiesta™</h4>
-                                    <p class="mt-2 text-gray-600 flex-grow">This is our brand new coffee-focused brand!</p>
-                                    <a href="https://sites.google.com/view/cafefiesta-by-thc" class="mt-4 block w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold">Visit CafeFiesta™</a>
+                                    <h4 class="text-xl font-semibold text-on-surface-variant">CafeFiesta™</h4>
+                                    <p class="mt-2 text-on-surface-variant flex-grow">This is our brand new coffee-focused brand!</p>
+                                    <a href="https://sites.google.com/view/cafefiesta-by-thc" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit CafeFiesta™</a>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                                <img class="h-48 w-full object-contain p-4" src="assets/pics/brands/foodhall.png" alt="FoodHall Logo">
+                            <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
+                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/foodhall.png" alt="FoodHall Logo">
                                 <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-gray-800">FoodHall™</h4>
-                                    <p class="mt-2 text-gray-600 flex-grow">Our supermarkets. Massive in British, Massive in Quality.</p>
-                                    <a href="https://sites.google.com/view/hifoodhall" class="mt-4 block w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold">Visit FoodHall™</a>
+                                    <h4 class="text-xl font-semibold text-on-surface-variant">FoodHall™</h4>
+                                    <p class="mt-2 text-on-surface-variant flex-grow">Our supermarkets. Massive in British, Massive in Quality.</p>
+                                    <a href="https://sites.google.com/view/hifoodhall" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit FoodHall™</a>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                                <img class="h-48 w-full object-contain p-4" src="assets/pics/brands/rewards.png" alt="HiCard Logo">
+                            <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
+                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/rewards.png" alt="HiCard Logo">
                                 <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-gray-800">HiCard</h4>
-                                    <p class="mt-2 text-gray-600 flex-grow">This is our amazing rewards programme and card!</p>
-                                    <a href="hicard/home.html" class="mt-4 block w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold">Visit HiCard</a>
+                                    <h4 class="text-xl font-semibold text-on-surface-variant">HiCard</h4>
+                                    <p class="mt-2 text-on-surface-variant flex-grow">This is our amazing rewards programme and card!</p>
+                                    <a href="hicard/home.html" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit HiCard</a>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                                <img class="h-48 w-full object-contain p-4" src="assets/pics/brands/hicola.png" alt="Highland Cola Logo">
+                            <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
+                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/hicola.png" alt="Highland Cola Logo">
                                 <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-gray-800">Highland Cola™</h4>
-                                    <p class="mt-2 text-gray-600 flex-grow">This is our company that makes sodas and more!</p>
-                                    <a href="https://sites.google.com/view/highlandcola" class="mt-4 block w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold">Visit Highland Cola™</a>
+                                    <h4 class="text-xl font-semibold text-on-surface-variant">Highland Cola™</h4>
+                                    <p class="mt-2 text-on-surface-variant flex-grow">This is our company that makes sodas and more!</p>
+                                    <a href="https://sites.google.com/view/highlandcola" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit Highland Cola™</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-16">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-8 border-b-2 border-blue-200 pb-2">Hotels & Accommodation</h3>
+                        <h3 class="text-2xl font-bold text-on-surface mb-8 border-b-2 border-primary/20 pb-2">Hotels & Accommodation</h3>
                         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                                <img class="h-48 w-full object-contain p-4" src="assets/pics/brands/worsteastern.png" alt="weB&B Logo">
+                            <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
+                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/worsteastern.png" alt="weB&B Logo">
                                 <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-gray-800">weB&B</h4>
-                                    <p class="mt-2 text-gray-600 flex-grow">This is the best hotel experience from The Highland Cafe™!</p>
-                                    <a href="worsteastern/home.html" class="mt-4 block w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold">Visit weB&B</a>
+                                    <h4 class="text-xl font-semibold text-on-surface-variant">weB&B</h4>
+                                    <p class="mt-2 text-on-surface-variant flex-grow">This is the best hotel experience from The Highland Cafe™!</p>
+                                    <a href="worsteastern/home.html" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit weB&B</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-16">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-8 border-b-2 border-blue-200 pb-2">Technology</h3>
+                        <h3 class="text-2xl font-bold text-on-surface mb-8 border-b-2 border-primary/20 pb-2">Technology</h3>
                         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                                <img class="h-48 w-full object-contain p-4" src="assets/pics/brands/hiosmobile.png" alt="Harmony Logo">
+                            <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
+                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/hiosmobile.png" alt="Harmony Logo">
                                 <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-gray-800">Harmony</h4>
-                                    <p class="mt-2 text-gray-600 flex-grow">Download our apps like Harmony from here!</p>
-                                    <a href="harmony/home.html" class="mt-4 block w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold">Visit Harmony</a>
+                                    <h4 class="text-xl font-semibold text-on-surface-variant">Harmony</h4>
+                                    <p class="mt-2 text-on-surface-variant flex-grow">Download our apps like Harmony from here!</p>
+                                    <a href="harmony/home.html" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit Harmony</a>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                                <img class="h-48 w-full object-contain p-4" src="assets/pics/brands/hioswebcore.png" alt="HarmonyCore Logo">
+                            <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
+                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/hioswebcore.png" alt="HarmonyCore Logo">
                                 <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-gray-800">HarmonyCore</h4>
-                                    <p class="mt-2 text-gray-600 flex-grow">This is the software that powers all our app experiences!</p>
-                                    <a href="https://hiosbythc.home.blog" class="mt-4 block w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold">Visit HarmonyCore</a>
+                                    <h4 class="text-xl font-semibold text-on-surface-variant">HarmonyCore</h4>
+                                    <p class="mt-2 text-on-surface-variant flex-grow">This is the software that powers all our app experiences!</p>
+                                    <a href="https://hiosbythc.home.blog" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit HarmonyCore</a>
                                 </div>
                             </div>
-                            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                                <img class="h-48 w-full object-contain p-4" src="assets/pics/brands/hitech.png" alt="HiTech Logo">
+                            <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
+                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/hitech.png" alt="HiTech Logo">
                                 <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-gray-800">HiTech</h4>
-                                    <p class="mt-2 text-gray-600 flex-grow">This is our technology brand, the best ever tech to improve your life!</p>
-                                    <a href="https://sites.google.com/view/hitech-by-thehighlandcafe" class="mt-4 block w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold">Visit HiTech</a>
+                                    <h4 class="text-xl font-semibold text-on-surface-variant">HiTech</h4>
+                                    <p class="mt-2 text-on-surface-variant flex-grow">This is our technology brand, the best ever tech to improve your life!</p>
+                                    <a href="https://sites.google.com/view/hitech-by-thehighlandcafe" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit HiTech</a>
                                 </div>
                             </div>
-                             <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                                <img class="h-48 w-full object-contain p-4" src="assets/pics/brands/tvstream.png" alt="TVStream Logo">
+                             <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
+                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/tvstream.png" alt="TVStream Logo">
                                 <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-gray-800">TVStream</h4>
-                                    <p class="mt-2 text-gray-600 flex-grow">Formerly HiTV+, this is our awesome TV streaming service!</p>
-                                    <a href="https://sites.google.com/view/hitvstream" class="mt-4 block w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold">Visit TVStream</a>
+                                    <h4 class="text-xl font-semibold text-on-surface-variant">TVStream</h4>
+                                    <p class="mt-2 text-on-surface-variant flex-grow">Formerly HiTV+, this is our awesome TV streaming service!</p>
+                                    <a href="https://sites.google.com/view/hitvstream" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit TVStream</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-16">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-8 border-b-2 border-blue-200 pb-2">Politics</h3>
+                        <h3 class="text-2xl font-bold text-on-surface mb-8 border-b-2 border-primary/20 pb-2">Politics</h3>
                         <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                            <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                                <img class="h-48 w-full object-contain p-4" src="assets/pics/brands/hiparty.png" alt="HiParty Logo">
+                            <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
+                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/hiparty.png" alt="HiParty Logo">
                                 <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-gray-800">HiParty™</h4>
-                                    <p class="mt-2 text-gray-600 flex-grow">Our brilliant political party. Your Priorities, Our Mission.</p>
-                                    <a href="https://sites.google.com/view/thehighlandparty" class="mt-4 block w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors font-semibold">Visit The Highland Party™</a>
+                                    <h4 class="text-xl font-semibold text-on-surface-variant">HiParty™</h4>
+                                    <p class="mt-2 text-on-surface-variant flex-grow">Our brilliant political party. Your Priorities, Our Mission.</p>
+                                    <a href="https://sites.google.com/view/thehighlandparty" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit The Highland Party™</a>
                                 </div>
                             </div>
                         </div>
@@ -190,10 +188,9 @@
             </section>
         </main>
 
-        <footer class="bg-gray-800 text-white py-8">
-            <div class="container mx-auto px-4 lg:px-6 text-center text-gray-400">
+        <footer class="bg-surface-variant/30 text-white py-8">
+            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
                 <p>&copy; 2017-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
-                <p class="text-sm mt-2">A modern website built with love (and Tailwind CSS).</p>
             </div>
         </footer>
 
