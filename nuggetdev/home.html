@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta clarset="utf-8">
-        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>nuggetdev</title>
 
         <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
@@ -163,5 +163,21 @@
                 </div>
             </section>
         </main>
+        <!-- Footer -->
+        <footer class="bg-surface-variant/30 text-white py-8">
+            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
+                <p>Copyright &copy; The Highland Cafe™ Ltd. 2024. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+        <script>
+            // JavaScript for mobile menu toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
     </body>
 </html>
