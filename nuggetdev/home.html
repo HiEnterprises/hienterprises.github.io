@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta clarset="utf-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>nuggetdev</title>
+
+        <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+        <script src="../assets/js/tailwind-config-nuggetdev.js"></script>
+    </head>
+    <body class="bg-background text-on-background font-sans">
+
+        <header class="bg-primary-container shadow-md sticky top-0 z-50">
+            <nav class="container mx-auto px-4 lg:px-6">
+                <div class="flex justify-between items-center py-3">
+                    <a class="flex items-center gap-2" href="#">
+                        <img src="../assets/pics/nuggetdev/nuggetdev.png" alt="nuggetdev Logo" class="h-8 w-auto">
+                        <span class="text-2xl font-bold text-primary">Harmony</span>
+                    </a>
+
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-on-primary-container hover:bg-primary/10 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+
+                    <div class="hidden lg:flex lg:items-center lg:space-x-6">
+                        <a href="../harmony/home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">Harmony</a>
+                        <a href="../hiosmobile/home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">HiOSMobile (Discontinued)</a>
+                        <a href="../harmony/himaterial.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">HiMaterial (Discontinued)</a>
+                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">← Back to HiEnterprises™</a>
+                    </div>
+                </div>
+
+                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2">
+                    <a href="../harmony/home.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">Harmony</a>
+                    <a href="../hiosmobile/home.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">HiOSMobile (Discontinued)</a>
+                    <a href="../harmony/himaterial.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">HiMaterial (Discontinued)</a>
+                    <hr class="border-outline/50 my-2">
+                    <a href="../index.html" class="block px-3 py-2 rounded-md text-outline hover:bg-primary/10">← Back to HiEnterprises™</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="relative">
+                <div class="absolute inset-0 bg-black/60 z-10"></div>
+                <div class="min-h-[50vh] bg-cover bg-center flex items-center justify-center text-white p-4" style="background-image: url('../assets/pics/nuggetdev/backdrop.jpg');">
+                    <div class="relative z-20 space-y-2">
+                        <h1 class="text-5xl md:text-7xl font-bold">nuggetdev</h1>
+                        <p class="text-xl md:text-2xl text-on-primary-container">by The Highland Cafe™</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="container mx-auto px-4 lg:px-6 py-16 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold text-primary">The brains behind multiple great tech experiences.</h2>
+                    <p class="mt-4 text-xl text-on-surface-variant">We are a brand, by The Highland Cafe™️ Enterprises, that prides itself in providing brilliant experiences across many devices.</p>
+                </div>
+            </section>
+
+            <!-- Our Projects - Active Projects -->
+            <section class="py-16 sm:py-20">
+                <div class="container mx-auto px-4 lg:px-6">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-bold tracking-tight text-on-surface sm:text-4xl">Our Projects</h2>
+                        <p class="mt-3 max-w-2xl mx-auto text-lg text-on-surface-variant">Active Projects</p>
+                    </div>
+                    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                        <!-- Project Card -->
+                        <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+                            <img class="h-48 w-full object-contain p-4 bg-white/90" src="../assets/pics/brands/hiosmobile.png" alt="Harmony Logo">
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-semibold text-on-surface-variant">Harmony</h3>
+                                <p>The main app by the Highland Cafe™, engineered by us at nuggetdev.</p>
+                                <a href="hicafe/home.html" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Harmony</a>
+                            </div>
+                        </div>
+                        <!-- Project Card -->
+                        <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+                            <img class="h-48 w-full object-contain p-4 bg-white/90" src="../assets/pics/nuggetdev/nuggetos.png" alt="novaOS Logo">
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-semibold text-on-surface-variant">novaOS</h3>
+                                <p>The upcoming Linux distro by nuggetdev. The simple, fun Linux distro.</p>
+                                <a href="https://sites.google.com/view/nuggetos" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">novaOS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Discontinued projects-->
+            <section class="py-16 sm:py-20">
+                <div class="container mx-auto px-4 lg:px-6">
+                    <div class="text-center">
+                        <p class="mt-3 max-w-2xl mx-auto text-lg text-on-surface-variant">Discontinued Projects</p>
+                    </div>
+                    <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                        <!-- Project Card -->
+                        <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+                            <img class="h-48 w-full object-contain p-4 bg-white/90" src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/logo_new.png" alt="Harmony Logo">
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-semibold text-on-surface-variant">HiOSMobile</h3>
+                                <p>Discontinued May 2025</p>
+                            </div>
+                        </div>
+                        <!-- Project Card -->
+                        <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+                            <img class="h-48 w-full object-contain p-4 bg-white/90" src="../assets/pics/hiosmobile-site/home/lite.png" alt="novaOS Logo">
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-semibold text-on-surface-variant">HiOSMobileWeb</h3>
+                                <p>Discontinued May 2025</p>
+                            </div>
+                        </div>
+                        <!-- Project Card -->
+                        <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+                            <img class="h-48 w-full object-contain p-4 bg-white/90" src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hioslogo-new.png" alt="Harmony Logo">
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-semibold text-on-surface-variant">HiOSDesktop</h3>
+                                <p>Discontinued June 2024</p>
+                            </div>
+                        </div>
+                        <!-- Project Card -->
+                        <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+                            <img class="h-48 w-full object-contain p-4 bg-white/90" src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/logo_hiosunified2.png" alt="Harmony Logo">
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-semibold text-on-surface-variant">HiOSUnified2</h3>
+                                <p>Discontinued February 2024</p>
+                            </div>
+                        </div>
+                        <!-- Project Card -->
+                        <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+                            <img class="h-48 w-full object-contain p-4 bg-white/90" src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/wenew.png" alt="Harmony Logo">
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-semibold text-on-surface-variant">HiOSUnified</h3>
+                                <p>Discontinued February 2023</p>
+                            </div>
+                        </div>
+                        <!-- Project Card -->
+                        <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+                            <img class="h-48 w-full object-contain p-4 bg-white/90" src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/we_dark.png" alt="Harmony Logo">
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-semibold text-on-surface-variant">WorstEastern App</h3>
+                                <p>Discontinued May 2022</p>
+                            </div>
+                        </div>
+                        <!-- Project Card -->
+                        <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+                            <img class="h-48 w-full object-contain p-4 bg-white/90" src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logo.png" alt="Harmony Logo">
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-semibold text-on-surface-variant">HiOS</h3>
+                                <p>Discontinued March 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
