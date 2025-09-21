@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +9,13 @@
         
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="../assets/css/fonts.css">
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="../assets/css/m3.css">
 
         <script src="../assets/js/tailwind-config-harmony.js"></script>
     </head>
-    <body class="bg-background text-on-background font-sans">
+    <body class="bg-background text-on-background antialiased">
 
-        <header class="bg-primary-container shadow-md sticky top-0 z-50">
+        <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
             <nav class="container mx-auto px-4 lg:px-6">
                 <div class="flex justify-between items-center py-3">
                     <a class="flex items-center gap-2" href="home.html">
@@ -25,56 +23,53 @@
                         <span class="text-2xl font-bold text-primary">Harmony</span>
                     </a>
                     
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-on-primary-container hover:bg-primary/10 focus:outline-none">
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-full text-on-primary-container hover:bg-primary/10 focus:outline-none">
                         <span class="sr-only">Open main menu</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                     
-                    <div class="hidden lg:flex lg:items-center lg:space-x-6">
-                        <a href="home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">Home</a>
-                        <a href="#" class="px-3 py-2 text-primary font-semibold">For Android</a>
-                        <!--a href="macos.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">For macOS</a>
-                        <a href="windows.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">For Windows</a-->
-                        <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">For Web</a>
-                        <a href="himaterial.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors">HiMaterial</a>
-                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">← Back to HiEnterprises™</a>
+                    <div class="hidden lg:flex lg:items-center lg:space-x-2 bg-primary-container/50 backdrop-blur-sm px-4 py-2 rounded-full">
+                        <a href="home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Home</a>
+                        <a href="#" class="px-3 py-2 text-primary font-semibold rounded-full bg-primary/10">For Android</a>
+                        <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">For Web</a>
+                        <a href="himaterial.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">HiMaterial</a>
+                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">← HiEnterprises™</a>
                     </div>
                 </div>
                 
-                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2">
-                    <a href="home.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">Home</a>
-                    <a href="#" class="block px-3 py-2 rounded-md font-semibold bg-primary/10 text-primary">For Android</a>
-                    <!--a href="macos.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">For macOS</a>
-                    <a href="windows.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">For Windows</a-->
-                    <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">For Web</a>
-                    <a href="himaterial.html" class="block px-3 py-2 rounded-md text-on-primary-container hover:bg-primary/10 hover:text-primary">HiMaterial</a>
+                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2 bg-primary-container rounded-2xl mt-2 p-2">
+                    <a href="home.html" class="block px-3 py-2 rounded-xl text-on-primary-container hover:bg-primary/10 hover:text-primary">Home</a>
+                    <a href="#" class="block px-3 py-2 rounded-xl font-semibold bg-primary/10 text-primary">For Android</a>
+                    <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="block px-3 py-2 rounded-xl text-on-primary-container hover:bg-primary/10 hover:text-primary">For Web</a>
+                    <a href="himaterial.html" class="block px-3 py-2 rounded-xl text-on-primary-container hover:bg-primary/10 hover:text-primary">HiMaterial</a>
                     <hr class="border-outline/50 my-2">
-                    <a href="../index.html" class="block px-3 py-2 rounded-md text-outline hover:bg-primary/10">← Back to HiEnterprises™</a>
+                    <a href="../index.html" class="block px-3 py-2 rounded-xl text-outline hover:bg-primary/10">← Back to HiEnterprises™</a>
                 </div>
             </nav>
         </header>
 
         <main>
-            <section class="relative">
+            <section class="relative h-[60vh] flex items-center justify-center text-center text-white p-4 overflow-hidden">
                 <div class="absolute inset-0 bg-black/60 z-10"></div>
-                <div class="min-h-[50vh] bg-cover bg-center flex items-center justify-center text-center text-white p-4" style="background-image: url('../assets/pics/hiosmobile-site/backdrop.jpg');">
-                    <div class="relative z-20">
-                        <h1 class="text-5xl md:text-7xl font-bold">Harmony for Android</h1>
-                    </div>
+                <div class="absolute inset-0 hero-bg-animate bg-cover bg-center" style="background-image: url('../assets/pics/hiosmobile-site/backdrop.jpg');"></div>
+                <div class="relative z-20 space-y-2">
+                    <h1 class="text-6xl md:text-8xl font-extrabold opacity-0 animate-fade-in" style="animation: fade-in 1s ease-out 0.2s forwards;">Harmony for Android</h1>
                 </div>
+                <style>
+                    @keyframes fade-in { to { opacity: 1; transform: translateY(0); } }
+                    .animate-fade-in { opacity: 0; transform: translateY(10px); }
+                </style>
             </section>
             
             <div class="container mx-auto px-4 lg:px-6 py-16 space-y-16">
-                <section>
-                    <div class="max-w-4xl mx-auto border border-outline/20 rounded-lg">
+                <section class="max-w-4xl mx-auto animate-on-scroll">
+                    <div class="border border-outline/20 rounded-3xl overflow-hidden">
                         <div id="accordion-item">
-                            <h2 id="accordion-button">
-                                <button type="button" class="flex justify-between items-center w-full p-5 font-medium text-left text-on-background bg-surface-variant hover:bg-primary-container/50 transition-colors">
-                                    <span>How to Download & Install Harmony for Android</span>
-                                    <svg class="w-6 h-6 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                                </button>
-                            </h2>
-                            <div id="accordion-content" class="p-5 border-t border-outline/20">
+                            <button type="button" id="accordion-button" class="flex justify-between items-center w-full p-5 font-medium text-left text-on-background bg-surface-variant hover:bg-primary-container/50 transition-colors">
+                                <span class="text-lg">How to Download & Install</span>
+                                <svg class="w-6 h-6 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div id="accordion-content" class="hidden p-5 border-t border-outline/20">
                                 <ol class="list-decimal list-inside space-y-4 text-on-surface-variant">
                                     <li>On your Android device, open this website, and download the latest <b class="font-semibold text-on-background">.apk</b> file from the releases tab <a href="https://github.com/aarjay123/harmonyapp/releases/latest" target="_blank" class="text-primary hover:underline">here</a>.</li>
                                     <li>Once downloaded, go into the <b class="font-semibold text-on-background">Files app</b> (works with any files app), go to your <b class="font-semibold text-on-background">Downloads</b> folder, then tap on the file you just downloaded.</li>
@@ -88,56 +83,38 @@
                     </div>
                 </section>
                 
-                <section class="text-center">
+                <section class="text-center animate-on-scroll" style="transition-delay: 150ms;">
                     <h2 class="text-4xl font-bold text-primary">Download Harmony for Android</h2>
                     <p class="mt-2 text-on-surface-variant">Compatible with Android devices running Android 7 (SDK 24) and above.</p>
                     <div class="mt-6">
-                        <a href="https://github.com/aarjay123/harmonyapp/releases/latest/download/harmony.apk" target="_blank" class="inline-block bg-primary text-on-primary font-semibold py-3 px-8 rounded-lg hover:bg-secondary hover:text-on-secondary transition-colors shadow-lg">Download Latest Version (APK)</a>
+                        <a href="https://github.com/aarjay123/harmonyapp/releases/latest/download/harmony.apk" target="_blank" class="inline-block bg-primary text-on-primary font-semibold py-3 px-8 rounded-full hover:bg-secondary hover:text-on-secondary transition-all duration-300 shadow-lg hover:shadow-xl">Download Latest Version (APK)</a>
                     </div>
                 </section>
 
-                <section>
+                <section class="animate-on-scroll">
                     <h2 class="text-3xl font-bold text-center">What's New?</h2>
                     <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="https://github.com/aarjay123/harmonyapp/commits/" target="_blank" class="w-full sm:w-auto text-center border-2 border-primary text-primary font-semibold py-2 px-6 rounded-lg hover:bg-primary/10 transition-colors">Harmony App GitHub Changelog</a>
-                        <a href="https://github.com/thehighlandcafe/hioswebcore/commits/main" target="_blank" class="w-full sm:w-auto text-center border-2 border-primary text-primary font-semibold py-2 px-6 rounded-lg hover:bg-primary/10 transition-colors">HarmonyCore GitHub Changelog</a>
+                        <a href="https://github.com/aarjay123/harmonyapp/commits/" target="_blank" class="w-full sm:w-auto text-center border-2 border-primary text-primary font-semibold py-3 px-6 rounded-full transition-transform hover:scale-105 hover:bg-primary/10">Harmony App GitHub Changelog</a>
+                        <a href="https://github.com/thehighlandcafe/hioswebcore/commits/main" target="_blank" class="w-full sm:w-auto text-center border-2 border-primary text-primary font-semibold py-3 px-6 rounded-full transition-transform hover:scale-105 hover:bg-primary/10">HarmonyCore GitHub Changelog</a>
                     </div>
                 </section>
                 
-                <section>
+                <section class="animate-on-scroll">
                     <h2 class="text-3xl font-bold text-primary">Introducing our new design language, HiMaterial 6!</h2>
                     <p class="mt-2 max-w-2xl text-on-surface-variant">To find out more, check below.</p>
                     <div class="mt-6">
-                        <a href="himaterial.html" class="inline-block bg-primary text-on-primary font-semibold py-2 px-6 rounded-lg hover:bg-secondary hover:text-on-secondary transition-colors">Learn about HiMaterial</a>
+                        <a href="himaterial.html" class="inline-block bg-primary text-on-primary font-semibold py-3 px-8 rounded-full hover:bg-secondary hover:text-on-secondary transition-all duration-300 shadow-lg hover:shadow-xl">Learn about HiMaterial</a>
                     </div>
                 </section>
             </div>
         </main>
 
-        <footer class="bg-primary-container/50 py-8 mt-12">
+        <footer class="bg-surface-container py-12 mt-12">
             <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
                 <p>© 2021-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
             </div>
         </footer>
 
-        <script>
-            // JavaScript for mobile menu toggle
-            const menuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // JavaScript for Accordion
-            const accordionButton = document.getElementById('accordion-button');
-            const accordionContent = document.getElementById('accordion-content');
-            const accordionChevron = accordionButton.querySelector('svg');
-            
-            accordionButton.addEventListener('click', () => {
-                accordionContent.classList.toggle('hidden');
-                accordionChevron.classList.toggle('rotate-180');
-            });
-        </script>
+        <script src="../assets/js/app.js" defer></script>
     </body>
 </html>

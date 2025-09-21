@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +14,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
         <script src="../assets/js/tailwind-config-hicafe.js"></script>
+        <link rel="stylesheet" href="../assets/css/m3.css">
     </head>
     <body class="bg-background text-on-background font-sans">
 
-        <header class="bg-surface/90 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-outline/20">
+        <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
             <nav class="container mx-auto px-4 lg:px-6 py-3">
                 <div class="flex justify-between items-center">
                     <a class="flex items-center gap-3" href="#">
@@ -25,47 +26,50 @@
                         <span class="text-xl font-bold text-on-surface whitespace-nowrap">The Highland Cafe™</span>
                     </a>
                     
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-on-surface-variant hover:bg-surface-variant focus:outline-none">
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-full text-on-surface-variant hover:bg-surface-variant focus:outline-none">
                         <span class="sr-only">Open main menu</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                     
-                    <div class="hidden lg:flex lg:items-center lg:space-x-6">
-                        <a href="#" class="text-primary font-bold transition-colors">Home</a>
-                        <a href="reviews.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Reviews</a>
-                        <a href="contact-us.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Contact Us</a>
-                        <a href="chef.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Chef</a>
-                        <a href="menu.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Menu</a>
-                        <a href="../harmony/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Mobile App</a>
+                    <div class="hidden lg:flex lg:items-center lg:space-x-2 bg-primary-container/50 backdrop-blur-sm px-4 py-2 rounded-full">
+                        <a href="#" class="px-3 py-2 text-primary font-bold rounded-full bg-primary/10">Home</a>
+                        <a href="reviews.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Reviews</a>
+                        <a href="contact-us.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Contact Us</a>
+                        <a href="chef.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Chef</a>
+                        <a href="menu.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Menu</a>
+                        <a href="../harmony/home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Mobile App</a>
                         <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">← Back to HiEnterprises™</a>
                     </div>
                 </div>
                 
-                <div id="mobile-menu" class="hidden lg:hidden mt-4 space-y-2">
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium bg-primary-container text-white">Home</a>
-                    <a href="reviews.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Reviews</a>
-                    <a href="contact-us.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Contact Us</a>
-                    <a href="chef.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Chef</a>
-                    <a href="menu.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Menu</a>
-                    <a href="../harmony/home.html" class="block px-3 py-2 rounded-md text-base font-medium text-on-surface-variant hover:bg-surface-variant">Mobile App</a>
-                    <hr class="border-outline/50">
-                    <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-outline hover:bg-surface-variant">← Back to HiEnterprises™</a>
+                <div id="mobile-menu" class="hidden lg:hidden mt-4 space-y-2 bg-primary-container rounded-2xl p-2">
+                    <a href="#" class="block px-3 py-2 rounded-xl font-medium bg-primary/10 text-primary">Home</a>
+                    <a href="reviews.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Reviews</a>
+                    <a href="contact-us.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Contact Us</a>
+                    <a href="chef.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Chef</a>
+                    <a href="menu.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Menu</a>
+                    <a href="../harmony/home.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Mobile App</a>
+                    <hr class="border-outline/50 my-2">
+                    <a href="../index.html" class="block px-3 py-2 rounded-xl font-medium text-outline hover:bg-primary/10">← Back to HiEnterprises™</a>
                 </div>
             </nav>
         </header>
 
         <main>
-            <section class="relative">
+            <section class="relative h-[60vh] flex items-center justify-center text-center text-white p-4 overflow-hidden">
                 <div class="absolute inset-0 bg-black/60 z-10"></div>
-                <div class="min-h-[50vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-center text-white p-4" style="background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');">
-                    <div class="relative z-20">
-                        <h1 class="text-6xl md:text-8xl font-caveat text-white">The Highland Cafe™</h1>
-                        <p class="mt-2 text-lg text-on-background/80">by The Highland Cafe™ Enterprises</p>
-                    </div>
+                <div class="absolute inset-0 hero-bg-animate bg-cover bg-center bg-no-repeat" style="background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');"></div>
+                <div class="relative z-20 space-y-2">
+                    <h1 class="text-6xl md:text-8xl font-caveat text-white opacity-0 animate-fade-in" style="animation: fade-in 1s ease-out 0.2s forwards;">The Highland Cafe™</h1>
+                    <p class="text-lg text-on-background/80 opacity-0 animate-fade-in" style="animation: fade-in 1s ease-out 0.5s forwards;">by The Highland Cafe™ Enterprises</p>
                 </div>
+                 <style>
+                    @keyframes fade-in { to { opacity: 1; transform: translateY(0); } }
+                    .animate-fade-in { opacity: 0; transform: translateY(10px); }
+                </style>
             </section>
             
-            <section class="py-16 sm:py-20">
+            <section class="py-16 sm:py-20 animate-on-scroll">
                 <div class="container mx-auto px-4 lg:px-6 text-center">
                     <h2 class="font-caveat text-5xl md:text-6xl text-title-yellow">Welcome to the greatest restaurant experience ever.</h2>
                     <h2 class="font-caveat text-5xl md:text-6xl text-title-yellow mt-2">Welcome to The Highland Cafe™.</h2>
@@ -73,71 +77,71 @@
                 </div>
             </section>
             
-            <section class="py-16 sm:py-20 bg-primary-container/30">
+            <section class="py-16 sm:py-20 bg-primary-container/30 animate-on-scroll">
                 <div class="container mx-auto px-4 lg:px-6">
                     <h2 class="text-4xl font-bold text-center text-on-primary-container">Our Brilliant Restaurant Reviews</h2>
                     <p class="text-center text-on-surface-variant mt-2">...as seen on Dougal Maps</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 text-center mt-12">
-                        <div>
+                        <div class="animate-on-scroll">
                             <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
                             <p class="italic text-on-surface-variant mt-2">'My chicken was raw, almost got salmonella, will not be visiting again'</p>
                             <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
                         </div>
-                        <div>
+                        <div class="animate-on-scroll" style="transition-delay: 100ms;">
                             <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
                             <p class="italic text-on-surface-variant mt-2">'The staff were rude and they overcharged me'</p>
                             <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
                         </div>
-                        <div>
+                        <div class="animate-on-scroll" style="transition-delay: 200ms;">
                             <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
                             <p class="italic text-on-surface-variant mt-2">'I didn't get served, so I just left'</p>
                             <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
                         </div>
-                        <div>
+                        <div class="animate-on-scroll" style="transition-delay: 300ms;">
                             <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
                             <p class="italic text-on-surface-variant mt-2">'Simply awful'</p>
                             <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
                         </div>
-                        <div>
+                        <div class="animate-on-scroll" style="transition-delay: 400ms;">
                             <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
                             <p class="italic text-on-surface-variant mt-2">'One of the staff got hit in the head with a pan, will not be risking my life again'</p>
                             <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
                         </div>
                     </div>
-                    <div class="text-center mt-12">
-                        <a href="reviews.html" class="inline-block bg-primary text-on-primary font-bold py-2 px-6 rounded-md hover:bg-secondary hover:text-on-secondary transition-colors">
+                    <div class="text-center mt-12 animate-on-scroll">
+                        <a href="reviews.html" class="inline-block bg-primary text-on-primary font-bold py-3 px-8 rounded-full hover:opacity-90 transition-opacity shadow-lg transform hover:scale-105">
                             More Great Reviews!
                         </a>
                     </div>
                 </div>
             </section>
             
-            <section class="py-16 sm:py-20">
+            <section class="py-16 sm:py-20 animate-on-scroll">
                 <div class="container mx-auto px-4 lg:px-6">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="bg-primary-container rounded-lg overflow-hidden text-center flex flex-col">
+                        <div class="bg-primary-container rounded-2xl overflow-hidden text-center flex flex-col shadow-xl transform hover:-translate-y-1 transition-transform">
                             <img class="w-full h-48 object-cover" src="../assets/pics/hicafe/home/hiosmobile.png" alt="Mobile App">
                             <div class="p-6 flex-grow flex flex-col justify-between">
                                 <h3 class="text-2xl font-bold text-primary">Download Harmony</h3>
-                                <a href="../harmony/home.html" class="mt-4 w-full bg-primary text-on-primary font-bold py-2 px-6 rounded-md hover:bg-secondary hover:text-on-secondary transition-colors">
+                                <a href="../harmony/home.html" class="mt-4 w-full bg-primary text-on-primary font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-on-secondary transition-colors">
                                     Mobile App
                                 </a>
                             </div>
                         </div>
-                        <div class="bg-primary-container rounded-lg overflow-hidden text-center flex flex-col">
+                        <div class="bg-primary-container rounded-2xl overflow-hidden text-center flex flex-col shadow-xl transform hover:-translate-y-1 transition-transform">
                             <img class="w-full h-48 object-cover" src="../assets/pics/hicafe/home/menu.png" alt="Restaurant Menu">
                             <div class="p-6 flex-grow flex flex-col justify-between">
                                 <h3 class="text-2xl font-bold text-primary">View Our Menus Online</h3>
-                                <a href="menu.html" class="mt-4 w-full bg-primary text-on-primary font-bold py-2 px-6 rounded-md hover:bg-secondary hover:text-on-secondary transition-colors">
+                                <a href="menu.html" class="mt-4 w-full bg-primary text-on-primary font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-on-secondary transition-colors">
                                     Menus
                                 </a>
                             </div>
                         </div>
-                        <div class="bg-primary-container rounded-lg overflow-hidden text-center flex flex-col">
+                        <div class="bg-primary-container rounded-2xl overflow-hidden text-center flex flex-col shadow-xl transform hover:-translate-y-1 transition-transform">
                             <img class="w-full h-48 object-cover" src="../assets/pics/hicafe/home/hienterprises.png" alt="HiEnterprises Logo">
                             <div class="p-6 flex-grow flex flex-col justify-between">
                                 <h3 class="text-2xl font-bold text-primary">HiEnterprises™ Website</h3>
-                                <a href="../index.html" class="mt-4 w-full bg-primary text-on-primary font-bold py-2 px-6 rounded-md hover:bg-secondary hover:text-on-secondary transition-colors">
+                                <a href="../index.html" class="mt-4 w-full bg-primary text-on-primary font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-on-secondary transition-colors">
                                     HiEnterprises™
                                 </a>
                             </div>
@@ -147,20 +151,12 @@
             </section>
         </main>
         
-        <footer class="bg-primary-container/50 py-8">
+        <footer class="bg-surface-container py-12 mt-12">
             <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
                 <p>© 2021-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
             </div>
         </footer>
 
-        <script>
-            // JavaScript for mobile menu toggle
-            const menuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        </script>
+        <script src="../assets/js/app.js" defer></script>
     </body>
 </html>

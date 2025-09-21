@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +14,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         
-        <!-- Your custom Tailwind config (MUST come BEFORE the Tailwind script) -->
+        <!-- Your custom Tailwind config and styles -->
         <script src="assets/js/tailwind-config-main.js"></script>
         <link rel="stylesheet" href="assets/css/fonts.css">
+        <link rel="stylesheet" href="assets/css/m3.css">
     </head>
-    <body class="bg-background text-on-background font-sans">
+    <body class="bg-background text-on-background antialiased">
 
         <!-- Header & Navigation -->
-        <header class="bg-surface-variant/50 backdrop-blur-sm shadow-md sticky top-0 z-50">
+        <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
             <nav class="container mx-auto px-4 lg:px-6">
                 <div class="flex justify-between items-center py-3">
                     <!-- Logo -->
@@ -31,49 +32,52 @@
                     </a>
                     
                     <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-on-surface-variant hover:bg-primary/10 focus:outline-none">
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-full text-on-surface-variant hover:bg-primary/10 focus:outline-none">
                         <span class="sr-only">Open main menu</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                     
                     <!-- Desktop Navigation -->
-                    <div class="hidden lg:flex lg:items-center lg:space-x-6">
-                        <a href="index.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Home</a>
-                        <a href="#" class="text-primary font-semibold transition-colors">Blog</a>
-                        <a href="worsteastern/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">weB&B</a>
-                        <a href="hicafe/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">HiCafe™</a>
-                        <a href="hicard/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">HiCard</a>
-                        <a href="brands.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Our Brands</a>
-                        <a href="harmony/home.html" class="bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity text-sm font-semibold">Mobile App</a>
+                    <div class="hidden lg:flex lg:items-center lg:space-x-2 bg-primary-container/50 backdrop-blur-sm px-4 py-2 rounded-full">
+                        <a href="index.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Home</a>
+                        <a href="#" class="px-3 py-2 text-primary font-semibold rounded-full bg-primary/10">Blog</a>
+                        <a href="worsteastern/home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">weB&B</a>
+                        <a href="hicafe/home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">HiCafe™</a>
+                        <a href="hicard/home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">HiCard</a>
+                        <a href="brands.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Our Brands</a>
+                        <a href="harmony/home.html" class="ml-2 bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity text-sm font-semibold">Mobile App</a>
                     </div>
                 </div>
                 
                 <!-- Mobile Navigation Menu -->
-                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2">
-                    <a href="index.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">Home</a>
-                    <a href="#" class="block px-3 py-2 rounded-md font-semibold bg-primary/10 text-primary">Blog</a>
-                    <a href="worsteastern/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">weB&B</a>
-                    <a href="hicafe/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">HiCafe™</a>
-                    <a href="hicard/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">HiCard</a>
-                    <a href="brands.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">Our Brands</a>
-                    <a href="harmony/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">Mobile App</a>
+                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2 bg-primary-container rounded-2xl mt-2 p-2">
+                    <a href="index.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">Home</a>
+                    <a href="#" class="block px-3 py-2 rounded-xl font-semibold bg-primary/10 text-primary">Blog</a>
+                    <a href="worsteastern/home.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">weB&B</a>
+                    <a href="hicafe/home.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">HiCafe™</a>
+                    <a href="hicard/home.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">HiCard</a>
+                    <a href="brands.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">Our Brands</a>
+                    <a href="harmony/home.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">Mobile App</a>
                 </div>
             </nav>
         </header>
 
         <main>
             <!-- Hero Section -->
-            <section class="relative">
+            <section class="relative h-[60vh] flex items-center justify-center text-center text-white p-4 overflow-hidden">
                 <div class="absolute inset-0 bg-black/60 z-10"></div>
-                <div class="min-h-[40vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-center text-white p-4" style="background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');">
-                    <div class="relative z-20">
-                        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Our Blog</h1>
-                    </div>
+                <div class="absolute inset-0 hero-bg-animate bg-cover bg-center bg-no-repeat" style="background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');"></div>
+                <div class="relative z-20">
+                    <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight opacity-0 animate-fade-in" style="animation: fade-in 1s ease-out 0.2s forwards;">Our Blog</h1>
                 </div>
+                 <style>
+                    @keyframes fade-in { to { opacity: 1; transform: translateY(0); } }
+                    .animate-fade-in { opacity: 0; transform: translateY(10px); }
+                </style>
             </section>
 
             <!-- Blog Feed Section -->
-            <section class="py-16 sm:py-20">
+            <section class="py-16 sm:py-20 animate-on-scroll">
                 <div class="container mx-auto px-4 lg:px-6">
                     <div class="text-center">
                         <h2 class="text-3xl font-bold tracking-tight text-on-surface sm:text-4xl">Welcome to our new blog feed!</h2>
@@ -81,9 +85,9 @@
                     </div>
                     
                     <div class="mt-12 max-w-5xl mx-auto">
-                        <div class="relative w-full aspect-w-1 aspect-h-1 md:aspect-w-4 md:aspect-h-3 lg:aspect-w-16 lg:aspect-h-9">
+                        <div class="relative w-full">
                              <iframe 
-                                class="w-full h-[80vh] border-2 border-surface-variant rounded-lg shadow-xl"
+                                class="w-full h-[80vh] border-2 border-surface-variant rounded-2xl shadow-xl"
                                 src="https://hienterprises.blogspot.com/search/label/Company%20Update">
                             </iframe>
                         </div>
@@ -93,20 +97,12 @@
         </main>
 
         <!-- Footer -->
-        <footer class="bg-surface-variant/30 text-white py-8">
+        <footer class="bg-surface-container py-12 mt-12">
             <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
                 <p>&copy; 2017-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
             </div>
         </footer>
 
-        <script>
-            // JavaScript for mobile menu toggle
-            const menuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        </script>
+        <script src="assets/js/app.js" defer></script>
     </body>
 </html>

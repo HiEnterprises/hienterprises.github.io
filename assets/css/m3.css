@@ -1,0 +1,25 @@
+            /* Ken Burns effect for hero background */
+            .hero-bg-animate {
+                animation: zoom-in 20s ease-out infinite;
+            }
+            @keyframes zoom-in {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+                100% { transform: scale(1); }
+            }
+
+            /* Classes for scroll-triggered animations */
+            .animate-on-scroll {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+            .animate-on-scroll.is-visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            
+            /* Carousel transition */
+            .carousel-item {
+                transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            }

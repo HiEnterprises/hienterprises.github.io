@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,15 +15,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         
-        <!-- Your custom Tailwind config (MUST come BEFORE the Tailwind script) -->
+        <!-- Your custom Tailwind config -->
         <script src="assets/js/tailwind-config-main.js"></script>
         <link rel="stylesheet" href="assets/css/fonts.css">
+        <link rel="stylesheet" href="assets/css/m3.css">
         
     </head>
-    <body class="bg-background text-on-background font-sans">
+    <body class="bg-background text-on-background antialiased">
 
         <!-- Header & Navigation -->
-        <header class="bg-surface-variant/50 backdrop-blur-sm shadow-md sticky top-0 z-50">
+        <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
             <nav class="container mx-auto px-4 lg:px-6">
                 <div class="flex justify-between items-center py-3">
                     <!-- Logo -->
@@ -33,65 +34,68 @@
                     </a>
                     
                     <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-on-surface-variant hover:bg-primary/10 focus:outline-none">
+                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-full text-on-surface-variant hover:bg-primary/10 focus:outline-none">
                         <span class="sr-only">Open main menu</span>
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                     </button>
                     
                     <!-- Desktop Navigation -->
-                    <div class="hidden lg:flex lg:items-center lg:space-x-6">
-                        <a href="#" class="text-primary font-semibold transition-colors">Home</a>
-                        <a href="blog.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Blog</a>
-                        <a href="worsteastern/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">weB&B</a>
-                        <a href="hicafe/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">HiCafe™</a>
-                        <a href="hicard/home.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">HiCard</a>
-                        <a href="brands.html" class="text-on-surface-variant hover:text-primary font-medium transition-colors">Our Brands</a>
-                        <a href="harmony/home.html" class="bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity text-sm font-semibold">Mobile App</a>
+                    <div class="hidden lg:flex lg:items-center lg:space-x-2 bg-primary-container/50 backdrop-blur-sm px-4 py-2 rounded-full">
+                        <a href="#" class="px-3 py-2 text-primary font-semibold rounded-full bg-primary/10">Home</a>
+                        <a href="blog.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Blog</a>
+                        <a href="worsteastern/home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">weB&B</a>
+                        <a href="hicafe/home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">HiCafe™</a>
+                        <a href="hicard/home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">HiCard</a>
+                        <a href="brands.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Our Brands</a>
+                        <a href="harmony/home.html" class="ml-2 bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity text-sm font-semibold">Mobile App</a>
                     </div>
                 </div>
                 
                 <!-- Mobile Navigation Menu -->
-                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2">
-                    <a href="#" class="block px-3 py-2 rounded-md font-semibold bg-primary/10 text-primary">Home</a>
-                    <a href="blog.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">Blog</a>
-                    <a href="worsteastern/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">weB&B</a>
-                    <a href="hicafe/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">HiCafe™</a>
-                    <a href="hicard/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">HiCard</a>
-                    <a href="brands.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">Our Brands</a>
-                    <a href="harmony/home.html" class="block px-3 py-2 rounded-md text-on-surface-variant hover:bg-primary/10 hover:text-primary">Mobile App</a>
+                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2 bg-primary-container rounded-2xl mt-2 p-2">
+                    <a href="#" class="block px-3 py-2 rounded-xl font-semibold bg-primary/10 text-primary">Home</a>
+                    <a href="blog.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">Blog</a>
+                    <a href="worsteastern/home.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">weB&B</a>
+                    <a href="hicafe/home.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">HiCafe™</a>
+                    <a href="hicard/home.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">HiCard</a>
+                    <a href="brands.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">Our Brands</a>
+                    <a href="harmony/home.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">Mobile App</a>
                 </div>
             </nav>
         </header>
 
         <main>
             <!-- Hero Section -->
-            <section class="relative">
+            <section class="relative h-screen flex items-center justify-center text-center text-white p-4 overflow-hidden">
                 <div class="absolute inset-0 bg-black/60 z-10"></div>
-                <div class="min-h-[60vh] bg-cover bg-center bg-no-repeat flex items-center justify-center text-center text-white p-4" style="background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');">
-                    <div class="relative z-20">
-                        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
-                            <span class="block">The Highland Cafe™</span>
-                            <span class="block text-primary">Enterprises</span>
-                        </h1>
-                        <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-on-primary-container">Quality Food, At Its Best.</p>
-                    </div>
+                <div class="absolute inset-0 hero-bg-animate bg-cover bg-center bg-no-repeat" style="background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');"></div>
+                <div class="relative z-20 space-y-2">
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight opacity-0 animate-fade-in" style="animation: fade-in 1s ease-out 0.2s forwards;">
+                        <span class="block">The Highland Cafe™</span>
+                        <span class="block text-primary">Enterprises</span>
+                    </h1>
+                    <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-on-primary-container opacity-0 animate-fade-in" style="animation: fade-in 1s ease-out 0.5s forwards;">Quality Food, At Its Best.</p>
                 </div>
+                 <style>
+                    @keyframes fade-in { to { opacity: 1; transform: translateY(0); } }
+                    .animate-fade-in { opacity: 0; transform: translateY(10px); }
+                </style>
             </section>
 
             <!-- Introduction Section -->
-            <section class="py-16 sm:py-20">
+            <section class="py-16 sm:py-20 animate-on-scroll">
                 <div class="container mx-auto px-4 lg:px-6 text-center">
                     <h2 class="text-3xl font-bold tracking-tight text-on-surface sm:text-4xl">A wonderful organisation based in Birmingham, UK.</h2>
                     <p class="mt-4 text-xl text-on-surface-variant">We pride ourselves in making good quality experiences!</p>
                     <div class="mt-10">
-                        <img class="rounded-lg shadow-xl mx-auto w-full max-w-4xl" src="assets/pics/home/brand-portfolio.png" alt="Brand Portfolio">
+                        <img class="rounded-2xl shadow-xl mx-auto w-full max-w-4xl" src="assets/pics/home/brand-portfolio.png" alt="Brand Portfolio">
                         <p class="mt-4 text-sm text-outline italic">The Highland Cafe™ Enterprises' portfolio of brands, February 2025</p>
                     </div>
                 </div>
             </section>
 
             <!-- "Positive" Reviews Section -->
-            <section class="bg-surface-variant/20 py-16 sm:py-20">
+            <section class="bg-surface-variant/20 py-16 sm:py-20 animate-on-scroll">
                 <div class="container mx-auto px-4 lg:px-6">
                     <div class="text-center">
                         <h2 class="text-3xl font-bold tracking-tight text-on-surface sm:text-4xl">Rave Reviews From Our Customers</h2>
@@ -99,31 +103,31 @@
                     </div>
                     <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
                         <!-- Review Card -->
-                        <div class="bg-surface-variant p-6 rounded-lg shadow-sm">
+                        <div class="bg-surface-variant p-6 rounded-2xl shadow-sm">
                             <div class="flex items-center text-yellow-400">★<span class="text-outline">★★★★</span></div>
                             <p class="mt-4 text-on-surface-variant italic">"A No Internet popup keeps appearing, preventing me from actually using the app."</p>
                             <p class="mt-4 font-semibold text-on-surface">- HiOSMobile User</p>
                         </div>
                         <!-- Review Card -->
-                        <div class="bg-surface-variant p-6 rounded-lg shadow-sm">
+                        <div class="bg-surface-variant p-6 rounded-2xl shadow-sm">
                              <div class="flex items-center text-yellow-400">★<span class="text-outline">★★★★</span></div>
                             <p class="mt-4 text-on-surface-variant italic">"The room was disgusting, Days Inn would be better than this dump."</p>
                             <p class="mt-4 font-semibold text-on-surface">- weB&B Guest</p>
                         </div>
                         <!-- Review Card -->
-                        <div class="bg-surface-variant p-6 rounded-lg shadow-sm">
+                        <div class="bg-surface-variant p-6 rounded-2xl shadow-sm">
                              <div class="flex items-center text-yellow-400">★<span class="text-outline">★★★★</span></div>
                             <p class="mt-4 text-on-surface-variant italic">"I bought a seemingly fresh pack of fruit one day, and the next day it was rotting and mouldy!"</p>
                             <p class="mt-4 font-semibold text-on-surface">- FoodHall Shopper</p>
                         </div>
                         <!-- Review Card -->
-                        <div class="bg-surface-variant p-6 rounded-lg shadow-sm">
+                        <div class="bg-surface-variant p-6 rounded-2xl shadow-sm">
                             <div class="flex items-center text-yellow-400">★<span class="text-outline">★★★★</span></div>
                             <p class="mt-4 text-on-surface-variant italic">"Simply abysmal, and horrendously overpriced."</p>
                             <p class="mt-4 font-semibold text-on-surface">- The Highland Cafe™ Patron</p>
                         </div>
                         <!-- Review Card -->
-                        <div class="bg-surface-variant p-6 rounded-lg shadow-sm">
+                        <div class="bg-surface-variant p-6 rounded-2xl shadow-sm">
                             <div class="flex items-center text-yellow-400">★<span class="text-outline">★★★★</span></div>
                             <p class="mt-4 text-on-surface-variant italic">"The coffee was poor and tasteless, and the cake I had was last week's, so it was too dry to eat!"</p>
                             <p class="mt-4 font-semibold text-on-surface">- CafeFiesta Customer</p>
@@ -133,7 +137,7 @@
             </section>
 
             <!-- Our Brands Section -->
-            <section class="py-16 sm:py-20">
+            <section class="py-16 sm:py-20 animate-on-scroll">
                 <div class="container mx-auto px-4 lg:px-6">
                     <div class="text-center">
                         <h2 class="text-3xl font-bold tracking-tight text-on-surface sm:text-4xl">Our Portfolio of Brands</h2>
@@ -141,7 +145,7 @@
                     </div>
                     <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                         <!-- Brand Card -->
-                        <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+                        <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
                             <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/hicafe.png" alt="HiCafe Logo">
                             <div class="p-6 text-center">
                                 <h3 class="text-xl font-semibold text-on-surface-variant">HiCafe™</h3>
@@ -149,7 +153,7 @@
                             </div>
                         </div>
                         <!-- Brand Card -->
-                        <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+                        <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
                             <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/cafefiesta.png" alt="CafeFiesta Logo">
                             <div class="p-6 text-center">
                                 <h3 class="text-xl font-semibold text-on-surface-variant">CafeFiesta™</h3>
@@ -157,7 +161,7 @@
                             </div>
                         </div>
                         <!-- Brand Card -->
-                        <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+                        <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
                             <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/worsteastern.png" alt="weB&B Logo">
                             <div class="p-6 text-center">
                                 <h3 class="text-xl font-semibold text-on-surface-variant">weB&B</h3>
@@ -165,7 +169,7 @@
                             </div>
                         </div>
                         <!-- Brand Card -->
-                        <div class="bg-surface-variant rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+                        <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
                             <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/hiosmobile.png" alt="Harmony Logo">
                             <div class="p-6 text-center">
                                 <h3 class="text-xl font-semibold text-on-surface-variant">Harmony</h3>
@@ -177,7 +181,7 @@
             </section>
 
             <!-- Partners Section -->
-            <section class="bg-surface-variant/20 py-16 sm:py-20">
+            <section class="bg-surface-variant/20 py-16 sm:py-20 animate-on-scroll">
                 <div class="container mx-auto px-4 lg:px-6">
                     <div class="text-center">
                         <h2 class="text-3xl font-bold tracking-tight text-on-surface sm:text-4xl">Our Trusted Partners</h2>
@@ -185,7 +189,7 @@
                     </div>
                     <div class="mt-12 grid gap-8 md:grid-cols-1 lg:grid-cols-3">
                         <!-- Partner Card -->
-                        <div class="bg-surface-variant rounded-lg overflow-hidden shadow-sm">
+                        <div class="bg-surface-variant rounded-2xl overflow-hidden shadow-sm">
                             <div class="bg-white"><img class="h-48 w-full object-contain p-4" src="assets/pics/brands/hidev.png" alt="HiDev Logo"></div>
                             <div class="p-6">
                                 <h3 class="text-xl font-semibold text-on-surface-variant">HiDev</h3>
@@ -194,7 +198,7 @@
                             </div>
                         </div>
                         <!-- Partner Card -->
-                        <div class="bg-surface-variant rounded-lg overflow-hidden shadow-sm">
+                        <div class="bg-surface-variant rounded-2xl overflow-hidden shadow-sm">
                             <div class="bg-white"><img class="h-48 w-full object-contain p-4" src="assets/pics/brands/de-ad.png" alt="De-Advertisement Company Rainbow Logo"></div>
                             <div class="p-6">
                                 <h3 class="text-xl font-semibold text-on-surface-variant">De-Advertisement Co.</h3>
@@ -203,7 +207,7 @@
                             </div>
                         </div>
                         <!-- Partner Card -->
-                        <div class="bg-surface-variant rounded-lg overflow-hidden shadow-sm">
+                        <div class="bg-surface-variant rounded-2xl overflow-hidden shadow-sm">
                            <div class="bg-white"><img class="h-48 w-full object-contain p-4" src="assets/pics/brands/swanora.png" alt="Swanora Fashion Logo"></div>
                             <div class="p-6">
                                 <h3 class="text-xl font-semibold text-on-surface-variant">Swanora Fashion</h3>
@@ -216,9 +220,9 @@
             </section>
 
             <!-- Careers Section -->
-            <section class="py-16 sm:py-20">
+            <section class="py-16 sm:py-20 animate-on-scroll">
                 <div class="container mx-auto px-4 lg:px-6">
-                    <div class="bg-primary-container rounded-2xl p-8 md:p-12 lg:p-16 text-center lg:text-left lg:flex lg:items-center lg:justify-between">
+                    <div class="bg-primary-container rounded-3xl p-8 md:p-12 lg:p-16 text-center lg:text-left lg:flex lg:items-center lg:justify-between">
                         <div class="text-on-primary-container">
                             <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Join Our Team</h2>
                             <p class="mt-3 max-w-2xl text-on-primary-container/80 text-lg">Wanting to join our wonderful team? We're always looking for new talent.</p>
@@ -233,20 +237,12 @@
         </main>
 
         <!-- Footer -->
-        <footer class="bg-surface-variant/30 text-white py-8">
+        <footer class="bg-surface-container py-12 mt-12">
             <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
                 <p>&copy; 2017-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
             </div>
         </footer>
 
-        <script>
-            // JavaScript for mobile menu toggle
-            const menuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        </script>
+        <script src="assets/js/app.js" defer></script>
     </body>
 </html>
