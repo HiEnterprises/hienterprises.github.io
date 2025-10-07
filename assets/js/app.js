@@ -86,14 +86,19 @@ if (animatedElements.length > 0) {
 // Select the elements for the accordion
 const accordionButton = document.getElementById('accordion-button');
 const accordionContent = document.getElementById('accordion-content');
-const accordionIcon = accordionButton.querySelector('svg');
 
-// Add a click event listener to the button
-accordionButton.addEventListener('click', () => {
-        // Toggle the 'hidden' class on the content to show/hide it
-        accordionContent.classList.toggle('hidden');
-                        
-        // Toggle the 'rotate-180' class on the SVG icon
-        accordionIcon.classList.toggle('rotate-180');
-    }
-)
+
+if (accordionButton && accordionContent) {
+    const accordionIcon = accordionButton.querySelector('svg');
+    // Add a click event listener to the button
+    accordionButton.addEventListener('click', () => {
+            // Toggle the 'hidden' class on the content to show/hide it
+            accordionContent.classList.toggle('hidden');
+                            
+            // Toggle the 'rotate-180' class on the SVG icon
+            if(accordionIcon) {
+                accordionIcon.classList.toggle('rotate-180');
+            }
+        }
+    )
+}
