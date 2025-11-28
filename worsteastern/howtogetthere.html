@@ -1,137 +1,96 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>weB&B | Staying with us</title>
-        
-        <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
-        
-        <script src="https://cdn.tailwindcss.com"></script>
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-        
-        <script>
-            // Custom Tailwind configuration for weB&B
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            'primary': '#A0D39A',
-                            'on-primary': '#00325a',
-                            'primary-container': '#253141',
-                            'on-primary-container': '#d2e4ff',
-                            'secondary': '#B9CCB4',
-                            'on-secondary': '#253141',
-                            'tertiary': '#d7bde4',
-                            'background': '#10140F',
-                            'on-background': '#e3e2e6',
-                            'surface': '#1a1c1e',
-                            'on-surface': '#e3e2e6',
-                            'surface-variant': '#43474e',
-                            'on-surface-variant': '#c3c6cf',
-                            'outline': '#8d9199',
-                            'surface-container': '#1f2428'
-                        },
-                        fontFamily: {
-                            sans: ['Inter', 'sans-serif'],
-                            audiowide: ['Audiowide', 'sans-serif'],
-                        },
-                    }
-                }
-            }
-        </script>
-        <link rel="stylesheet" href="../assets/css/m3.css">
+        <link rel="icon" href="../assets/logo.jpg">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../assets/css/styles.css">
+        <link rel="stylesheet" href="../assets/css/worsteastern.css">
     </head>
-    <body class="bg-background text-on-background font-sans">
-
-        <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
-            <nav class="container mx-auto px-4 lg:px-6 py-3">
-                <div class="flex justify-between items-center">
-                    <a class="flex items-center gap-2" href="home.html">
-                        <img src="../assets/pics/worsteastern/logo.png" alt="weB&B Logo" class="h-8 w-auto">
-                        <span class="text-2xl font-audiowide text-on-surface">weB&B</span>
-                    </a>
-                    
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-full text-on-surface-variant hover:bg-surface-variant focus:outline-none">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    </button>
-                    
-                    <div class="hidden lg:flex lg:items-center lg:space-x-2 bg-primary-container/50 backdrop-blur-sm px-4 py-2 rounded-full">
-                        <a href="home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Home</a>
-                        <a href="rooms.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Rooms</a>
-                        <a href="#" class="px-3 py-2 text-primary font-bold rounded-full bg-primary/10">Staying with us</a>
-                        <a href="how-to-reserve-room.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">How to Reserve</a>
-                        <a href="hios-mobile-app.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">weB&B App</a>
-                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">&larr; Back to HiEnterprises™</a>
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2 text-on-surface" href="home.html">
+                    <img src="../assets/pics/worsteastern/logo.png" alt="Logo" height="32">
+                    <span>weB&B</span>
+                </a>
+                <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#webNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="webNav">
+                    <div class="nav-pill-container d-flex flex-column flex-lg-row mt-3 mt-lg-0 text-center">
+                        <a href="home.html" class="nav-link">Home</a>
+                        <a href="rooms.html" class="nav-link">Rooms</a>
+                        <a href="#" class="nav-link active">Staying with us</a>
+                        <a href="how-to-reserve-room.html" class="nav-link">How to Reserve</a>
+                        <a href="hios-mobile-app.html" class="nav-link">weB&B App</a>
+                        <a href="../index.html" class="nav-link small text-outline">Back to HiEnterprises</a>
                     </div>
                 </div>
-                
-                <div id="mobile-menu" class="hidden lg:hidden mt-4 space-y-2 bg-primary-container rounded-2xl p-2">
-                    <a href="home.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Home</a>
-                    <a href="rooms.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Rooms</a>
-                    <a href="#" class="block px-3 py-2 rounded-xl font-medium bg-primary/10 text-primary">Staying with us</a>
-                    <a href="how-to-reserve-room.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">How to Reserve</a>
-                    <a href="hios-mobile-app.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">weB&B App</a>
-                    <hr class="border-outline/50 my-2">
-                    <a href="../index.html" class="block px-3 py-2 rounded-xl font-medium text-outline hover:bg-primary/10">&larr; Back to HiEnterprises™</a>
-                </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
 
         <main>
-            <section class="relative h-[60vh] flex items-center justify-center text-center text-white p-4 overflow-hidden">
-                <div class="absolute inset-0 bg-black/60 z-10"></div>
-                <div class="absolute inset-0 hero-bg-animate bg-cover bg-center bg-no-repeat" style="background-image: url('../assets/pics/worsteastern/staying-with-us/car.jpg');"></div>
-                <div class="relative z-20">
-                    <h1 class="text-6xl md:text-8xl font-audiowide opacity-0 animate-fade-in" style="animation: fade-in 1s ease-out 0.2s forwards;">How to Travel to weB&B</h1>
+            <section class="hero-section" style="height: 60vh;">
+                <div class="hero-bg" style="background-image: url('../assets/pics/worsteastern/staying-with-us/car.jpg');"></div>
+                <div class="hero-overlay"></div>
+                <div class="container z-1">
+                    <h1 class="display-1 animate-fade-in">How to Travel to weB&B</h1>
                 </div>
-                 <style>
-                    @keyframes fade-in { to { opacity: 1; transform: translateY(0); } }
-                    .animate-fade-in { opacity: 0; transform: translateY(10px); }
-                </style>
             </section>
 
-            <section class="py-16 sm:py-20">
-                <div class="container mx-auto px-4 lg:px-6">
-
-                    <div class="max-w-4xl mx-auto animate-on-scroll">
-                        <h2 class="text-4xl font-bold text-on-surface mb-6">About weB&B</h2>
-                        <div class="text-lg text-on-surface-variant space-y-4">
+            <section class="py-5 container">
+                <!-- About weB&B Section -->
+                <div class="row justify-content-center animate-fade-in delay-200">
+                    <div class="col-lg-10">
+                        <h2 class="fw-bold mb-4 text-on-surface">About weB&B</h2>
+                        <div class="fs-5 text-on-surface-variant">
                             <p>weB&B is <u>the</u> hotel brand by The Highland Cafe™. Whatever your budget, we've got a room that will most definitely suit <u>you</u>!</p>
                             <p>We'll be partying down at the swanky weB&B hotel. We've reserved the Penthouse Ballroom from 6 p.m.</p>
                             <p>When you arrive, please make sure you tell the receptionist you are staying here and they will direct you to your toom. They will show you to a lift that will take you directly to the room.</p>
                         </div>
                     </div>
+                </div>
 
-                    <div class="my-16 animate-on-scroll">
-                        <hr class="border-primary/20 max-w-4xl mx-auto">
-                        <img class="w-full mt-12 rounded-2xl shadow-xl" src="../assets/pics/worsteastern/staying-with-us/cars.jpg" alt="Cars parked in front of a modern building">
+                <!-- Cars Image -->
+                <div class="row justify-content-center my-5">
+                    <div class="col-lg-10">
+                        <hr class="border-secondary opacity-25 mb-5">
+                        <img class="img-fluid rounded-4 shadow-lg w-100" src="../assets/pics/worsteastern/staying-with-us/cars.jpg" alt="Cars parked in front of a modern building">
                     </div>
+                </div>
 
-                    <div class="max-w-6xl mx-auto animate-on-scroll">
-                        <hr class="border-primary/20">
-                        <h2 class="text-4xl font-bold text-on-surface mt-12 mb-6">Wanting to visit?</h2>
-                        <p class="text-lg text-on-surface-variant mb-12">Visit us by searching weB&B on Google Maps and finding the location. Then start the directions by clicking the "start" button (see detailed diagrams please).</p>
+                <!-- Directions Grid -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <hr class="border-secondary opacity-25 mb-5">
+                        <h2 class="fw-bold mb-4 text-on-surface">Wanting to visit?</h2>
+                        <p class="fs-5 text-on-surface-variant mb-5">Visit us by searching weB&B on Google Maps and finding the location. Then start the directions by clicking the "start" button (see detailed diagrams please).</p>
 
-                        <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-8 text-center">
-                            <div class="flex flex-col items-center">
-                                <span class="text-5xl font-bold text-primary mb-2">1.</span>
-                                <img class="w-full rounded-2xl shadow-xl" src="../assets/pics/worsteastern/staying-with-us/1.png" alt="Step one of directions">
+                        <div class="row g-5 align-items-center text-center">
+                            <!-- Step 1 -->
+                            <div class="col-md-4">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span class="display-4 fw-bold text-primary-custom mb-3">1.</span>
+                                    <img class="img-fluid rounded-4 shadow-lg w-100" src="../assets/pics/worsteastern/staying-with-us/1.png" alt="Step one of directions">
+                                </div>
                             </div>
 
-                            <div class="flex justify-center">
-                               <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-                                 <img class="w-24 h-auto transform transition-transform hover:scale-110" src="../assets/pics/worsteastern/staying-with-us/arrow.png" alt="Arrow pointing to the next step">
+                            <!-- Arrow -->
+                            <div class="col-md-4">
+                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="d-inline-block transition-transform hover-scale">
+                                    <img class="img-fluid" style="width: 120px;" src="../assets/pics/worsteastern/staying-with-us/arrow.png" alt="Arrow pointing to the next step">
                                 </a>
                             </div>
 
-                            <div class="flex flex-col items-center">
-                                <span class="text-5xl font-bold text-primary mb-2">2.</span>
-                                <img class="w-full rounded-2xl shadow-xl" src="../assets/pics/worsteastern/staying-with-us/2.png" alt="Step two of directions">
+                            <!-- Step 2 -->
+                            <div class="col-md-4">
+                                <div class="d-flex flex-column align-items-center">
+                                    <span class="display-4 fw-bold text-primary-custom mb-3">2.</span>
+                                    <img class="img-fluid rounded-4 shadow-lg w-100" src="../assets/pics/worsteastern/staying-with-us/2.png" alt="Step two of directions">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -139,12 +98,17 @@
             </section>
         </main>
 
-        <footer class="bg-surface-container py-12 mt-12">
-            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
+        <footer class="bg-primary-container py-5 mt-5">
+            <div class="container text-center text-outline">
                 <p>&copy; 2021 The Highland Cafe™ Ltd. All Rights Reserved.</p>
             </div>
         </footer>
 
-        <script src="../assets/js/app.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <style>
+            /* Quick inline style for the arrow hover effect since we can't use Tailwind's hover:scale */
+            .hover-scale { transition: transform 0.3s ease; }
+            .hover-scale:hover { transform: scale(1.1); }
+        </style>
     </body>
 </html>

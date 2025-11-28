@@ -1,260 +1,220 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Harmony | HiMaterial</title>
-        
-        <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
-        
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="../assets/css/fonts.css">
-        <link rel="stylesheet" href="../assets/css/m3.css">
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony | HiMaterial</title>
+    <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/harmony.css">
+</head>
+<body>
 
-        <script src="../assets/js/tailwind-config-harmony.js"></script>
-    </head>
-    <body class="bg-background text-on-background antialiased">
-
-        <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
-            <nav class="container mx-auto px-4 lg:px-6">
-                <div class="flex justify-between items-center py-3">
-                    <a class="flex items-center gap-2" href="home.html">
-                        <img src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hiosbadge.png" alt="Harmony Logo" class="h-8 w-auto">
-                        <span class="text-2xl font-bold text-primary">Harmony</span>
-                    </a>
-                    
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-full text-on-primary-container hover:bg-primary/10 focus:outline-none">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    </button>
-                    
-                    <div class="hidden lg:flex lg:items-center lg:space-x-2 bg-primary-container/50 backdrop-blur-sm px-4 py-2 rounded-full">
-                        <a href="home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Home</a>
-                        <a href="android.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">For Android</a>
-                        <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">For Web</a>
-                        <a href="#" class="px-3 py-2 text-primary font-semibold rounded-full bg-primary/10">HiMaterial</a>
-                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">← HiEnterprises™</a>
-                    </div>
-                </div>
-                
-                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2 bg-primary-container rounded-2xl mt-2 p-2">
-                    <a href="home.html" class="block px-3 py-2 rounded-xl text-on-primary-container hover:bg-primary/10 hover:text-primary">Home</a>
-                    <a href="android.html" class="block px-3 py-2 rounded-xl text-on-primary-container hover:bg-primary/10 hover:text-primary">For Android</a>
-                    <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="block px-3 py-2 rounded-xl text-on-primary-container hover:bg-primary/10 hover:text-primary">For Web</a>
-                    <a href="#" class="block px-3 py-2 rounded-xl font-semibold bg-primary/10 text-primary">HiMaterial</a>
-                    <hr class="border-outline/50 my-2">
-                    <a href="../index.html" class="block px-3 py-2 rounded-xl text-outline hover:bg-primary/10">← Back to HiEnterprises™</a>
-                </div>
-            </nav>
-        </header>
-
-        <main>
-            <section class="relative h-[60vh] flex items-center justify-center text-center text-white p-4 overflow-hidden">
-                <div class="absolute inset-0 bg-black/60 z-10"></div>
-                <div class="absolute inset-0 hero-bg-animate bg-cover bg-center" style="background-image: url('../assets/pics/hiosmobile-site/backdrop.jpg');"></div>
-                <div class="relative z-20 space-y-2">
-                    <h1 class="text-6xl md:text-8xl font-extrabold opacity-0 animate-fade-in" style="animation: fade-in 1s ease-out 0.2s forwards;">HiMaterial</h1>
-                </div>
-                <style>
-                    @keyframes fade-in { to { opacity: 1; transform: translateY(0); } }
-                    .animate-fade-in { opacity: 0; transform: translateY(10px); }
-                </style>
-            </section>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 text-on-surface" href="home.html">
+                <img src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hiosbadge.png" alt="Harmony Logo" height="32">
+                <span class="fw-bold text-primary-custom">Harmony</span>
+            </a>
             
-            <section class="container mx-auto px-4 lg:px-6 pt-16 animate-on-scroll">
-                 <div class="max-w-5xl mx-auto bg-error-container p-6 rounded-3xl border border-error/50 shadow-lg flex items-start gap-4">
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-error flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
-                          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h2 class="text-xl font-bold text-on-error-container">Notice: HiMaterial Deprecation</h2>
-                        <p class="mt-1 text-on-error-container">HiMaterial has been deprecated and has been replaced by Google's Material 3 in the Flutter app, Harmony.</p>
-                    </div>
-                 </div>
+            <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#harmNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="harmNav">
+                <div class="nav-pill-container d-flex flex-column flex-lg-row mt-3 mt-lg-0 text-center">
+                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="android.html" class="nav-link">For Android</a>
+                    <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="nav-link">For Web</a>
+                    <a href="#" class="nav-link active">HarmonyUX</a>
+                    <a href="../index.html" class="nav-link small text-outline">← HiEnterprises™</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-section" style="height: 60vh;">
+            <div class="hero-bg" style="background-image: url('../assets/pics/hiosmobile-site/backdrop.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="container position-relative z-1 text-center">
+                <h1 class="display-1 fw-bold text-white animate-fade-in">HarmonyUX</h1>
+            </div>
+        </section>
+
+        <div class="container py-5">
+            <!-- Intro Section -->
+            <section class="text-center mb-5 animate-fade-in">
+                <h2 class="display-4 fw-bold text-primary-custom mb-3">Welcome to the future of UX.</h2>
+                <p class="fs-4 text-on-surface-variant">Welcome to HarmonyUX</p>
             </section>
 
-            <div class="container mx-auto px-4 lg:px-6 pt-8 pb-16">
-                <div class="max-w-5xl mx-auto space-y-16">
-                    <section class="text-center animate-on-scroll">
-                        <h2 class="text-4xl md:text-5xl font-bold text-primary">Welcome to the future of UX.</h2>
-                        <p class="mt-2 text-2xl text-on-surface-variant">Welcome to HiMaterial.</p>
-                    </section>
+            <div class="row justify-content-center mb-5 animate-fade-in delay-100">
+                <div class="col-lg-10">
+                    <div class="card bg-primary-container border-0 shadow-lg rounded-4 p-4">
+                        <div class="card-body">
+                            <h3 class="h2 fw-bold text-primary mb-3">What is HarmonyUX?</h3>
+                            <p class="fs-5 text-on-primary-container lh-lg mb-0">
+                                HarmonyUX is the core design philosophy for every app by The Highland Cafe™️ Enterprises in active development. Inspired loosely by Google's Material Design v3, we strive to create and communicate a pleasant and visually appealing experience to all our customers when they use our apps and software experiences. A replacement for HiOSUX and HiMaterial.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                    <section class="animate-on-scroll">
-                        <h2 class="text-4xl font-bold text-primary">What is HiMaterial?</h2>
-                        <p class="mt-4 text-lg text-on-surface-variant">HiMaterial is the core design philosophy for every app by The Highland Cafe™️ Enterprises. Inspired loosely by Google's Material Design v3, we strive to create and communicate a pleasant and visually appealing experience to all our customers when they use our apps and software experiences.</p>
-                    </section>
+            <hr class="border-secondary opacity-25 my-5">
+
+            <!-- Timeline / Versions Section -->
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
                     
-                    <section class="space-y-12">
-                        <h2 class="text-4xl font-bold text-primary border-b-2 border-primary/20 pb-2 animate-on-scroll">HiMaterial Versions</h2>
+                    <!-- HarmonyUX 1 -->
+                    <section class="mb-5 animate-fade-in">
+                        <h2 class="h2 fw-bold text-on-surface mb-4 border-bottom border-secondary pb-2 d-inline-block">HarmonyUX Era</h2>
+                        <div class="card border-0 bg-surface-variant rounded-4 mb-4">
+                            <div class="card-body p-4">
+                                <h3 class="h3 fw-bold text-primary-custom">HarmonyUX 1</h3>
+                                <p class="text-on-surface-variant mb-0">HarmonyUX 1 was released in November 2025 and was the first version of our new Harmony design language that replaced Google's Material 3 (used in versions 3.0.0 - 3.4.1), and HiMaterial used on HiOSMobile (versions 1.0 - 2.6.2.2). Defined by its sliver layouts, rounded cards, and coloured shadows at the tops of pages, it is the latest and greatest in design by the nuggetdev team.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- HiMaterial Era -->
+                    <section class="animate-fade-in delay-100">
+                        <h2 class="h2 fw-bold text-on-surface mb-4 border-bottom border-secondary pb-2 d-inline-block">HiMaterial Era</h2>
                         
-                        <div class="animate-on-scroll">
-                            <h3 class="text-3xl font-semibold text-on-background">HiMaterial 1</h3>
-                            <p class="mt-2 text-on-surface-variant">HiMaterial 1 was released in December 2021 and was the first version of our new HiMaterial design language that replaced HiOSUX, which was used on the first version of HiOSDesktop.</p>
-                            <img class="mt-4 rounded-2xl shadow-xl w-full max-w-xs" src="../assets/pics/hiosmobile-site/himaterial/himaterial1.png" alt="HiMaterial 1">
-                        </div>
-
-                        <div class="animate-on-scroll">
-                            <h3 class="text-3xl font-semibold text-on-background">HiMaterial 2</h3>
-                            <p class="mt-2 text-on-surface-variant">HiMaterial 2 was the second iteration of our main design language; HiMaterial 2 debuted on HiOSMobile version 1.2, and the new HiOSUnified software.</p>
-                            <img class="mt-4 rounded-2xl shadow-xl w-full max-w-xs" src="../assets/pics/hiosmobile-site/himaterial/himaterial2.png" alt="HiMaterial 2">
-                            <img class="mt-4 rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/hiosunified.png" alt="HiOS Unified">
-                        </div>
-                        
-                        <div class="animate-on-scroll">
-                            <h3 class="text-3xl font-semibold text-on-background">HiMaterial 3</h3>
-                            <p class="mt-2 text-on-surface-variant">HiMaterial 3 was a game changing update to the design language of HiOSMobile. This included the debut of the HiOSMobile dark theme, along with the first opaque card-focused design, that made the app look properly professional for the first time.</p>
-                            <p class="mt-4 text-on-surface-variant"><b class="font-semibold text-on-background">Wanting to test out HiMaterial 3? Try the legacy version of HiOSMobileWeb!</b><br>
-                                <a href="https://aarjay123.github.io/hiosmobileweb" class="text-primary hover:underline">HiOSMobileWeb with HiMaterial 3</a>
+                        <!-- HiMaterial 6 -->
+                        <div class="mb-5">
+                            <h3 class="h3 fw-bold text-on-surface mb-3">HiMaterial 6</h3>
+                            <p class="text-on-surface-variant mb-4">
+                                HiMaterial 6 was a massive overhaul of HiOSMobile's design language; HiMaterial 6 was designed with inspiration taken from Google's leaked upcoming Material 3 Expressive design, and HiMaterial 2. HiMaterial 6 had all of the refinements made in all of version 5's updates, but with the added design changes of 6.<br><br>
+                                This update re-introduced the concept to HiOSCore of a background image with blurred cards, which were last present in HiMaterial 2. There are a list of pre-defined wallpapers, but users can upload their own.<br><br>
+                                The font was also changed back to Outfit, and every component was converted to Bootstrap (from v5.3).
                             </p>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 items-center">
-                                <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial3.1.png" alt="HiMaterial 3.1">
-                                <img class="rounded-2xl shadow-xl w-full max-w-sm mx-auto" src="../assets/pics/hiosmobile-site/himaterial/himaterial3.2.png" alt="HiMaterial 3.2">
+                            <div class="row g-3">
+                                <div class="col-6 col-md-4"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial6/1.png" alt="HiMaterial 6 Home"></div>
+                                <div class="col-6 col-md-4"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial6/2.png" alt="HiMaterial 6 Top Page"></div>
+                                <div class="col-6 col-md-4"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial6/3.png" alt="HiMaterial 6 Sub Page"></div>
+                                <div class="col-6 col-md-4"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial6/4.png" alt="HiMaterial 6 Hotel"></div>
+                                <div class="col-6 col-md-4"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial6/5.png" alt="HiMaterial 6 Settings"></div>
+                                <div class="col-6 col-md-4"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial6/6.png" alt="HiMaterial 6 Backgrounds"></div>
                             </div>
                         </div>
 
-                        <div class="animate-on-scroll">
-                             <h3 class="text-3xl font-semibold text-on-background">HiMaterial 4</h3>
-                             <p class="mt-2 text-on-surface-variant">HiMaterial 4 had less major design updates, and was a very welcome refinement based on user feedback on HiMaterial 3. This update included a fully light light-mode, and a fully dark dark-mode.</p>
-                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
-                                <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial4-1.png" alt="HiMaterial 4 example 1">
-                                <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial4-2.png" alt="HiMaterial 4 example 2">
-                                <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial4-3.png" alt="HiMaterial 4 example 3">
-                             </div>
-                             <img class="mt-4 rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/hiosunified2.png" alt="HiOS Unified 2">
-                             <p class="text-center text-sm text-outline mt-2">HiOSUnified2</p>
+                        <!-- HiMaterial 5.2 -->
+                        <div class="mb-5">
+                            <h3 class="h3 fw-bold text-on-surface mb-3">HiMaterial 5.2</h3>
+                            <p class="text-on-surface-variant mb-4">
+                                HiMaterial 5.2 was another minor, but meaningful design language update. We decided to change the bottom navigation bar to be docked to the bottom, but rounded at each corner, to give a more visually pleasing feeling. We also did this because the system navigation bar was black, which didn't look very good with the white floating nav bar in light mode.<br><br>
+                                We also changed the font family of the app and HiOSWebCore to SUSE from Outfit, to make it in line with all of The Highland Cafe™️ Enterprises' other projects.<br><br>
+                                We have also updated some design elements such as the bottom 'More' flyout in HiOSMobile Lite to match its Android app counterpart.
+                            </p>
+                            <div class="row g-3">
+                                <div class="col-6 col-md-3"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_2-1.png" alt="HiMaterial 5.2 Home"></div>
+                                <div class="col-6 col-md-3"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_2-2.png" alt="HiMaterial 5.2 Restaurant"></div>
+                                <div class="col-6 col-md-3"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_2-3.png" alt="HiMaterial 5.2 Hotel"></div>
+                                <div class="col-6 col-md-3"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_2-5.png" alt="HiMaterial 5.2 Settings"></div>
+                            </div>
                         </div>
-                        
-                        <div class="animate-on-scroll">
-                            <h3 class="text-3xl font-semibold text-on-background">HiMaterial 5</h3>
-                            <p class="mt-2 text-on-surface-variant space-y-4">
-                                <span>HiMaterial 5 was a huge update that bridged the gap between Google's Material Design v3, and the HiOSMobile app design. With this new HiMaterial 5 design, it came with the new top navigation back buttons, and the left-aligned titles. This update also brought the new high-quality native buttons, and departs from the png navigation buttons at the bottom and top. We also changed some of our design elements recently to better match the Material 3 guidelines, and we made the CSS design files more streamlined with variables defining colours rather than defining them over and over again for every element. Around the time of creating this iteration of HiMaterial, we also created native Settings, Help Center, and feedback pages. We went through a few different fonts with this design, such as Cantarell and Prompt, but we settled on Outfit since it fitted the rest of the The Highland Cafe™️ Enterprises' design philosophy at the time.</span>
-                            </p>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
-                               <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5-1.png" alt="HiMaterial 5 example 1">
-                               <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5-2.png" alt="HiMaterial 5 example 2">
-                               <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5-3.png" alt="HiMaterial 5 example 3">
-                               <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5-4.png" alt="HiMaterial 5 example 4">
-                               <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5-5.png" alt="HiMaterial 5 example 5">
-                               <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5-6.png" alt="HiMaterial 5 example 6">
-                            </div>
 
-                            <h4 class="text-2xl font-semibold text-on-background mt-8">HiMaterial 5.1</h4>
-                            <p class="mt-2 text-on-surface-variant">HiMaterial 5.1 was more of a minor update based on HiMaterial 5, with minor but welcome improvements and tweaks to the overall design language. With this design update, we have made tweaks such as changing the new Dashboard screen back to the original Homescreen, changing the button designs, applying custom colours to specific brand pages such as weB&B (formerly WorstEastern) where we changed the theme to green to match the brand's colour scheme, streamlined the HiMaterial CSS files, making all the corners more rounded, and making the design more accessible.</p>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_1-1.png" alt="HiMaterial 5.1 example 1">
-                                    <p class="text-center text-sm text-outline mt-2">Welcome/Home page</p>
-                                </div>
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_1-2.png" alt="HiMaterial 5.1 example 2">
-                                    <p class="text-center text-sm text-outline mt-2">Restaurant page with overhauled buttons</p>
-                                </div>
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_1-3.png" alt="HiMaterial 5.1 example 3">
-                                    <p class="text-center text-sm text-outline mt-2">Hotel page with new colour scheme</p>
-                                </div>
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_1-4.png" alt="HiMaterial 5.1 example 4">
-                                    <p class="text-center text-sm text-outline mt-2">Room Key with more rounded corners</p>
+                        <!-- HiMaterial 5.1 -->
+                        <div class="mb-5">
+                            <h3 class="h3 fw-bold text-on-surface mb-3">HiMaterial 5.1</h3>
+                            <p class="text-on-surface-variant mb-4">
+                                HiMaterial 5.1 was more of a minor update based on HiMaterial 5, with minor but welcome improvements and tweaks to the overall design language. With this design update, we have made tweaks such as changing the new Dashboard screen back to the original Homescreen, changing the button designs, applying custom colours to specific brand pages such as weB&B (formerly WorstEastern) where we changed the theme to green to match the brand's colour scheme, streamlined the HiMaterial CSS files, making all the corners more rounded, and making the design more accessible.
+                            </p>
+                            <div class="row g-3">
+                                <div class="col-6 col-md-3"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_1-1.png" alt="HiMaterial 5.1 Home"></div>
+                                <div class="col-6 col-md-3"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_1-3.png" alt="HiMaterial 5.1 Hotel"></div>
+                            </div>
+                        </div>
+
+                        <!-- HiMaterial 5 -->
+                        <div class="mb-5">
+                            <h3 class="h3 fw-bold text-on-surface mb-3">HiMaterial 5</h3>
+                            <p class="text-on-surface-variant mb-4">
+                                HiMaterial 5 was a huge update that bridged the gap between Google's Material Design v3, and the HiOSMobile app design. With this new HiMaterial 5 design, it came with the new top navigation back buttons, and the left-aligned titles. This update also brought the new high-quality native buttons, and departs from the png navigation buttons at the bottom and top. We also changed some of our design elements recently to better match the Material 3 guidelines, and we made the CSS design files more streamlined with variables defining colours rather than defining them over and over again for every element. Around the time of creating this iteration of HiMaterial, we also created native Settings, Help Center, and feedback pages. We went through a few different fonts with this design, such as Cantarell and Prompt, but we settled on Outfit since it fitted the rest of the The Highland Cafe™️ Enterprises' design philosophy at the time.
+                            </p>
+                            <div class="row g-3">
+                                <div class="col-6 col-md-4"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial5-1.png" alt="HiMaterial 5 Example"></div>
+                                <div class="col-6 col-md-4"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial5-2.png" alt="HiMaterial 5 Example"></div>
+                                <div class="col-6 col-md-4"><img class="img-fluid rounded-3 shadow-sm hover-lift" src="../assets/pics/hiosmobile-site/himaterial/himaterial5-4.png" alt="HiMaterial 5 Example"></div>
+                            </div>
+                        </div>
+
+                        <!-- Older Versions (Grid for compactness) -->
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card h-100 bg-surface-variant border-0 rounded-4">
+                                    <div class="card-body">
+                                        <h4 class="h5 fw-bold text-on-surface">HiMaterial 4</h4>
+                                        <p class="small text-on-surface-variant">HiMaterial 4 had less major design updates, and was a very welcome refinement based on user feedback on HiMaterial 3. This update included a fully light light-mode, and a fully dark dark-mode.</p>
+                                        <img class="img-fluid rounded-3 mt-2 shadow-sm" src="../assets/pics/hiosmobile-site/himaterial/hiosunified2.png" alt="HiOS Unified 2">
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <h4 class="text-2xl font-semibold text-on-background mt-8">HiMaterial 5.2</h4>
-                            <p class="mt-2 text-on-surface-variant space-y-4">
-                                <span>HiMaterial 5.2 was another minor, but meaningful design language update. We decided to change the bottom navigation bar to be docked to the bottom, but rounded at each corner, to give a more visually pleasing feeling. We also did this because the system navigation bar was black, which didn't look very good with the white floating nav bar in light mode.</span>
-                                <span>We also changed the font family of the app and HiOSWebCore to SUSE from Outfit, to make it in line with all of The Highland Cafe™️ Enterprises' other projects.</span>
-                                <span>We have also updated some design elements such as the bottom 'More' flyout in HiOSMobile Lite to match its Android app counterpart.</span>
-                            </p>
-                             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_2-1.png" alt="HiMaterial 5.2 example 1">
-                                    <p class="text-center text-sm text-outline mt-2">Welcome/Home page</p>
+                            <div class="col-md-6">
+                                <div class="card h-100 bg-surface-variant border-0 rounded-4">
+                                    <div class="card-body">
+                                        <h4 class="h5 fw-bold text-on-surface">HiMaterial 3</h4>
+                                        <p class="small text-on-surface-variant">HiMaterial 3 was a game changing update to the design language of HiOSMobile. This included the debut of the HiOSMobile dark theme, along with the first opaque card-focused design, that made the app look properly professional for the first time.</p>
+                                        <div class="row g-2 mt-2">
+                                            <div class="col-6"><img class="img-fluid rounded-3 shadow-sm" src="../assets/pics/hiosmobile-site/himaterial/himaterial3.1.png" alt="HM3"></div>
+                                            <div class="col-6"><img class="img-fluid rounded-3 shadow-sm" src="../assets/pics/hiosmobile-site/himaterial/himaterial3.2.png" alt="HM3"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_2-2.png" alt="HiMaterial 5.2 example 2">
-                                    <p class="text-center text-sm text-outline mt-2">Updated Restaurant page</p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 bg-surface-variant border-0 rounded-4">
+                                    <div class="card-body">
+                                        <h4 class="h5 fw-bold text-on-surface">HiMaterial 2</h4>
+                                        <p class="small text-on-surface-variant">HiMaterial 2 was the second iteration of our main design language; HiMaterial 2 debuted on HiOSMobile version 1.2, and the new HiOSUnified software.</p>
+                                        <img class="img-fluid rounded-3 mt-2 shadow-sm" src="../assets/pics/hiosmobile-site/himaterial/hiosunified.png" alt="HM2">
+                                    </div>
                                 </div>
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_2-3.png" alt="HiMaterial 5.2 example 3">
-                                    <p class="text-center text-sm text-outline mt-2">Updated Hotel page</p>
-                                </div>
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_2-4.png" alt="HiMaterial 5.2 example 4">
-                                    <p class="text-center text-sm text-outline mt-2">Updated Room Key</p>
-                                </div>
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_2-5.png" alt="HiMaterial 5.2 example 5">
-                                    <p class="text-center text-sm text-outline mt-2">Modernised Settings page</p>
-                                </div>
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_2-6.png" alt="HiMaterial 5.2 example 6">
-                                    <p class="text-center text-sm text-outline mt-2">Modernised Help Center</p>
-                                </div>
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_2-7.png" alt="HiMaterial 5.2 example 7">
-                                    <p class="text-center text-sm text-outline mt-2">HiOSMobile Lite - Updated 'More' menu</p>
-                                </div>
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial5_2-8.png" alt="HiMaterial 5.2 example 8">
-                                    <p class="text-center text-sm text-outline mt-2">HiOSMobile Lite - Updated Settings page</p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100 bg-surface-variant border-0 rounded-4">
+                                    <div class="card-body">
+                                        <h4 class="h5 fw-bold text-on-surface">HiMaterial 1</h4>
+                                        <p class="small text-on-surface-variant">HiMaterial 1 was released in December 2021 and was the first version of our new HiMaterial design language that replaced HiOSUX, which was used on the first version of HiOSDesktop.</p>
+                                        <img class="img-fluid rounded-3 mt-2 shadow-sm w-50 mx-auto d-block" src="../assets/pics/hiosmobile-site/himaterial/himaterial1.png" alt="HM1">
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="animate-on-scroll">
-                            <h3 class="text-3xl font-semibold text-on-background">HiMaterial 6</h3>
-                            <p class="mt-2 text-on-surface-variant space-y-4">
-                                <span>HiMaterial 6 was a massive overhaul of HiOSMobile's design language; HiMaterial 6 was designed with inspiration taken from Google's leaked upcoming Material 3 Expressive design, and HiMaterial 2. HiMaterial 6 had all of the refinements made in all of version 5's updates, but with the added design changes of 6.</span>
-                                <span>This update re-introduced the concept to HiOSCore of a background image with blurred cards, which were last present in HiMaterial 2. There are a list of pre-defined wallpapers, but users can upload their own.</span>
-                                <span>The font was also changed back to Outfit, and every component was converted to Bootstrap (from v5.3).</span>
-                            </p>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-4">
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial6/1.png" alt="HiMaterial 6 example 1">
-                                    <p class="text-center text-sm text-outline mt-2">Welcome/Home page</p>
-                                </div>
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial6/2.png" alt="HiMaterial 6 example 2">
-                                    <p class="text-center text-sm text-outline mt-2">A top-level page</p>
-                                </div>
-                                <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial6/3.png" alt="HiMaterial 6 example 3">
-                                    <p class="text-center text-sm text-outline mt-2">A sub-page</p>
-                                </div>
-                                 <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial6/4.png" alt="HiMaterial 6 example 4">
-                                    <p class="text-center text-sm text-outline mt-2">Updated Hotel page</p>
-                                </div>
-                                 <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial6/5.png" alt="HiMaterial 6 example 5">
-                                    <p class="text-center text-sm text-outline mt-2">New appearance settings</p>
-                                </div>
-                                 <div>
-                                    <img class="rounded-2xl shadow-xl w-full" src="../assets/pics/hiosmobile-site/himaterial/himaterial6/6.png" alt="HiMaterial 6 example 6">
-                                    <p class="text-center text-sm text-outline mt-2">Pre-defined background options</p>
-                                </div>
-                            </div>
-                            <div class="mt-8">
-                                <a href="https://github.com/thehighlandcafe/hioswebcore/tree/main/assets/css" class="inline-block bg-primary text-on-primary font-semibold py-3 px-8 rounded-full hover:bg-secondary hover:text-on-secondary transition-all duration-300 shadow-lg hover:shadow-xl">HiMaterial Source Code</a>
-                            </div>
-                        </div>
                     </section>
                 </div>
             </div>
-        </main>
-        
-        <footer class="bg-surface-container py-12 mt-12">
-            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
-                <p>© 2021-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
-            </div>
-        </footer>
+        </div>
+    </main>
 
-        <script src="../assets/js/app.js" defer></script>
-    </body>
+    <footer class="bg-surface-variant py-5 mt-auto">
+        <div class="container text-center text-outline">
+            <p class="mb-0">© 2021-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        .hover-lift { transition: transform 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-3px); }
+        .delay-100 { animation-delay: 0.1s; }
+    </style>
+</body>
 </html>

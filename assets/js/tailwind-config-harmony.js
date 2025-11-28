@@ -21,7 +21,7 @@ tailwind.config = {
                 'on-surface-variant': '#c3c6cf',
             },
             fontFamily: {
-                sans: ['Selawik', 'sans-serif'],
+                sans: ['Inter', 'sans-serif'],
             }
         }
     }

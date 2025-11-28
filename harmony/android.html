@@ -1,120 +1,160 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Harmony for Android</title>
-        
-        <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
-        
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="../assets/css/fonts.css">
-        <link rel="stylesheet" href="../assets/css/m3.css">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony for Android</title>
+    <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/harmony.css">
+</head>
+<body>
 
-        <script src="../assets/js/tailwind-config-harmony.js"></script>
-    </head>
-    <body class="bg-background text-on-background antialiased">
-
-        <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
-            <nav class="container mx-auto px-4 lg:px-6">
-                <div class="flex justify-between items-center py-3">
-                    <a class="flex items-center gap-2" href="home.html">
-                        <img src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hiosbadge.png" alt="Harmony Logo" class="h-8 w-auto">
-                        <span class="text-2xl font-bold text-primary">Harmony</span>
-                    </a>
-                    
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-full text-on-primary-container hover:bg-primary/10 focus:outline-none">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    </button>
-                    
-                    <div class="hidden lg:flex lg:items-center lg:space-x-2 bg-primary-container/50 backdrop-blur-sm px-4 py-2 rounded-full">
-                        <a href="home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Home</a>
-                        <a href="#" class="px-3 py-2 text-primary font-semibold rounded-full bg-primary/10">For Android</a>
-                        <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">For Web</a>
-                        <a href="himaterial.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">HiMaterial</a>
-                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">← HiEnterprises™</a>
-                    </div>
-                </div>
-                
-                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2 bg-primary-container rounded-2xl mt-2 p-2">
-                    <a href="home.html" class="block px-3 py-2 rounded-xl text-on-primary-container hover:bg-primary/10 hover:text-primary">Home</a>
-                    <a href="#" class="block px-3 py-2 rounded-xl font-semibold bg-primary/10 text-primary">For Android</a>
-                    <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="block px-3 py-2 rounded-xl text-on-primary-container hover:bg-primary/10 hover:text-primary">For Web</a>
-                    <a href="himaterial.html" class="block px-3 py-2 rounded-xl text-on-primary-container hover:bg-primary/10 hover:text-primary">HiMaterial</a>
-                    <hr class="border-outline/50 my-2">
-                    <a href="../index.html" class="block px-3 py-2 rounded-xl text-outline hover:bg-primary/10">← Back to HiEnterprises™</a>
-                </div>
-            </nav>
-        </header>
-
-        <main>
-            <section class="relative h-[60vh] flex items-center justify-center text-center text-white p-4 overflow-hidden">
-                <div class="absolute inset-0 bg-black/60 z-10"></div>
-                <div class="absolute inset-0 hero-bg-animate bg-cover bg-center" style="background-image: url('../assets/pics/hiosmobile-site/backdrop.jpg');"></div>
-                <div class="relative z-20 space-y-2">
-                    <h1 class="text-6xl md:text-8xl font-extrabold opacity-0 animate-fade-in" style="animation: fade-in 1s ease-out 0.2s forwards;">Harmony for Android</h1>
-                </div>
-                <style>
-                    @keyframes fade-in { to { opacity: 1; transform: translateY(0); } }
-                    .animate-fade-in { opacity: 0; transform: translateY(10px); }
-                </style>
-            </section>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 text-on-surface" href="home.html">
+                <img src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hiosbadge.png" alt="Harmony Logo" height="32">
+                <span class="fw-bold text-primary-custom">Harmony</span>
+            </a>
             
-            <div class="container mx-auto px-4 lg:px-6 py-16 space-y-16">
-                <section class="max-w-4xl mx-auto animate-on-scroll">
-                    <div class="border border-outline/20 rounded-3xl overflow-hidden">
-                        <div id="accordion-item">
-                            <button type="button" id="accordion-button" class="flex justify-between items-center w-full p-5 font-medium text-left text-on-background bg-surface-variant hover:bg-primary-container/50 transition-colors">
-                                <span class="text-lg">How to Download & Install</span>
-                                <svg class="w-6 h-6 shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                            </button>
-                            <div id="accordion-content" class="hidden p-5 border-t border-outline/20">
-                                <ol class="list-decimal list-inside space-y-4 text-on-surface-variant">
-                                    <li>On your Android device, open this website, and download the latest <b class="font-semibold text-on-background">.apk</b> file from the releases tab <a href="https://github.com/aarjay123/harmonyapp/releases/latest" target="_blank" class="text-primary hover:underline">here</a>.</li>
-                                    <li>Once downloaded, go into the <b class="font-semibold text-on-background">Files app</b> (works with any files app), go to your <b class="font-semibold text-on-background">Downloads</b> folder, then tap on the file you just downloaded.</li>
-                                    <li>If you haven't installed an apk with the files app, it should prompt you to allow the app to install 'Unknown Apps' - toggle that on, and Google Play may prompt you to scan the file. Just accept as the app is safe and open-source.</li>
-                                    <li>It will now prompt you and ask if you want to install or update Harmony. Tap <b class="font-semibold text-on-background">Install</b>.</li>
-                                    <li>It's then installed, and you can enjoy!</li>
-                                </ol>
-                                <p class="italic text-sm text-outline mt-6">*Please note that an internet connection is required to access all Harmony services.</p>
+            <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#harmNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="harmNav">
+                <div class="nav-pill-container d-flex flex-column flex-lg-row mt-3 mt-lg-0 text-center">
+                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="#" class="nav-link active">For Android</a>
+                    <a href="https://thehighlandcafe.github.io/harmony" target="_blank" class="nav-link">For Web</a>
+                    <a href="himaterial.html" class="nav-link">HarmonyUX</a>
+                    <a href="../index.html" class="nav-link small text-outline">← HiEnterprises™</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-section" style="height: 60vh;">
+            <div class="hero-bg" style="background-image: url('../assets/pics/hiosmobile-site/backdrop.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="container position-relative z-1 text-center">
+                <h1 class="display-1 fw-bold text-white animate-fade-in">Harmony for Android</h1>
+            </div>
+        </section>
+
+        <section class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- App Header Info -->
+                    <div class="d-flex align-items-start gap-4 mb-5">
+                        <img src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hiosbadge.png" alt="Harmony Icon" class="rounded-4 shadow-sm" width="120" height="120">
+                        <div>
+                            <h1 class="display-5 fw-bold text-on-surface mb-1">Harmony</h1>
+                            <p class="text-primary-custom fs-5 mb-2">The Highland Cafe™</p>
+                            <span class="badge bg-surface-variant text-on-surface-variant border border-secondary fw-normal px-3 py-2 rounded-pill">Productivity</span>
+                        </div>
+                    </div>
+
+                    <!-- Download Action -->
+                    <div class="d-grid gap-3 mb-5">
+                        <a href="https://github.com/aarjay123/harmonyapp/releases/latest/" class="btn btn-primary btn-lg rounded-pill py-3 fw-bold shadow-lg">
+                            Download APK
+                        </a>
+                        <p class="text-center text-outline small">Compatible with Android 7.0+</p>
+                    </div>
+
+                    <hr class="border-secondary opacity-25 my-5">
+
+                    <!-- Description -->
+                    <div class="mb-5">
+                        <h2 class="h4 fw-bold text-on-surface mb-3">About this app</h2>
+                        <p class="text-on-surface-variant lh-lg">
+                            Harmony is the ultimate companion app for all The Highland Cafe™ services. Order food, manage your account, and stay connected with everything HiEnterprises has to offer, all from a single, unified interface designed with our latest HarmonyUX design language.
+                        </p>
+                    </div>
+
+                    <!-- What's New -->
+                    <div class="mb-5">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h2 class="h4 fw-bold text-on-surface mb-0">What's New</h2>
+                            <a href="https://github.com/aarjay123/harmonyapp/commits/" target="_blank" class="text-primary-custom text-decoration-none small fw-bold">Version History</a>
+                        </div>
+                        <div class="p-4 bg-surface-variant rounded-4">
+                            <p class="text-on-surface-variant mb-0">
+                                Check out the latest updates and improvements on our GitHub repository. We are constantly working to improve your experience.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Installation Guide Accordion -->
+                    <div class="accordion border-0" id="installAccordion">
+                        <div class="accordion-item bg-transparent border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-surface-variant text-on-surface rounded-4 shadow-sm fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    How to Install (Sideload)
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#installAccordion">
+                                <div class="accordion-body bg-surface-variant mt-2 rounded-4 text-on-surface-variant">
+                                    <ol class="ps-3 mb-0">
+                                        <li class="mb-2">Download the <strong>.apk</strong> file from the latest GitHub release page using the button above.</li>
+                                        <li class="mb-2">Open the downloaded file from your notifications or File Manager.</li>
+                                        <li class="mb-2">If prompted, allow installation from "Unknown Sources" in your settings.</li>
+                                        <li class="mb-0">Tap <strong>Install</strong> and enjoy!</li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </section>
-                
-                <section class="text-center animate-on-scroll" style="transition-delay: 150ms;">
-                    <h2 class="text-4xl font-bold text-primary">Download Harmony for Android</h2>
-                    <p class="mt-2 text-on-surface-variant">Compatible with Android devices running Android 7 (SDK 24) and above.</p>
-                    <div class="mt-6">
-                        <a href="https://github.com/aarjay123/harmonyapp/releases/latest/download/harmony.apk" target="_blank" class="inline-block bg-primary text-on-primary font-semibold py-3 px-8 rounded-full hover:bg-secondary hover:text-on-secondary transition-all duration-300 shadow-lg hover:shadow-xl">Download Latest Version (APK)</a>
-                    </div>
-                </section>
 
-                <section class="animate-on-scroll">
-                    <h2 class="text-3xl font-bold text-center">What's New?</h2>
-                    <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="https://github.com/aarjay123/harmonyapp/commits/" target="_blank" class="w-full sm:w-auto text-center border-2 border-primary text-primary font-semibold py-3 px-6 rounded-full transition-transform hover:scale-105 hover:bg-primary/10">Harmony App GitHub Changelog</a>
-                        <a href="https://github.com/thehighlandcafe/hioswebcore/commits/main" target="_blank" class="w-full sm:w-auto text-center border-2 border-primary text-primary font-semibold py-3 px-6 rounded-full transition-transform hover:scale-105 hover:bg-primary/10">HarmonyCore GitHub Changelog</a>
+                    <hr class="border-secondary opacity-25 my-5">
+
+                    <!-- Additional Info -->
+                    <div>
+                        <h2 class="h4 fw-bold text-on-surface mb-3">App Info</h2>
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <p class="text-outline small mb-1">Provider</p>
+                                <p class="text-on-surface fw-medium">The Highland Cafe™</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-outline small mb-1">Compatibility</p>
+                                <p class="text-on-surface fw-medium">Android 7.0+</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-outline small mb-1">Category</p>
+                                <p class="text-on-surface fw-medium">Productivity</p>
+                            </div>
+                            <div class="col-6">
+                                <p class="text-outline small mb-1">Language</p>
+                                <p class="text-on-surface fw-medium">English</p>
+                            </div>
+                        </div>
                     </div>
-                </section>
-                
-                <section class="animate-on-scroll">
-                    <h2 class="text-3xl font-bold text-primary">Introducing our new design language, HiMaterial 6!</h2>
-                    <p class="mt-2 max-w-2xl text-on-surface-variant">To find out more, check below.</p>
-                    <div class="mt-6">
-                        <a href="himaterial.html" class="inline-block bg-primary text-on-primary font-semibold py-3 px-8 rounded-full hover:bg-secondary hover:text-on-secondary transition-all duration-300 shadow-lg hover:shadow-xl">Learn about HiMaterial</a>
-                    </div>
-                </section>
+
+                </div>
             </div>
-        </main>
+        </section>
+    </main>
 
-        <footer class="bg-surface-container py-12 mt-12">
-            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
-                <p>© 2021-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
-            </div>
-        </footer>
+    <footer class="bg-surface-variant py-5 mt-auto">
+        <div class="container text-center text-outline">
+            <p class="mb-0">Copyright © The Highland Cafe™ Ltd. 2021-2025. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-        <script src="../assets/js/app.js" defer></script>
-    </body>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

@@ -1,162 +1,181 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Highland Cafe™ | Home</title>
-        
         <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
         
-        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Bootstrap 5 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-        <script src="../assets/js/tailwind-config-hicafe.js"></script>
-        <link rel="stylesheet" href="../assets/css/m3.css">
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="../assets/css/styles.css">
+        <link rel="stylesheet" href="../assets/css/hicafe.css"> 
     </head>
-    <body class="bg-background text-on-background font-sans">
+    <body>
 
-        <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
-            <nav class="container mx-auto px-4 lg:px-6 py-3">
-                <div class="flex justify-between items-center">
-                    <a class="flex items-center gap-3" href="#">
-                        <img src="../assets/pics/hicafe/logo.png" alt="HiCafe Logo" class="h-8 w-auto">
-                        <span class="text-xl font-bold text-on-surface whitespace-nowrap">The Highland Cafe™</span>
-                    </a>
-                    
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-full text-on-surface-variant hover:bg-surface-variant focus:outline-none">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    </button>
-                    
-                    <div class="hidden lg:flex lg:items-center lg:space-x-2 bg-primary-container/50 backdrop-blur-sm px-4 py-2 rounded-full">
-                        <a href="#" class="px-3 py-2 text-primary font-bold rounded-full bg-primary/10">Home</a>
-                        <a href="reviews.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Reviews</a>
-                        <a href="contact-us.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Contact Us</a>
-                        <a href="chef.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Chef</a>
-                        <a href="menu.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Menu</a>
-                        <a href="../harmony/home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Mobile App</a>
-                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">← Back to HiEnterprises™</a>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-3 text-on-surface" href="#">
+                    <img src="../assets/pics/hicafe/logo.png" alt="HiCafe Logo" height="32">
+                    <span class="fw-bold text-nowrap">The Highland Cafe™</span>
+                </a>
+                <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#hicafeNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="hicafeNav">
+                    <div class="nav-pill-container d-flex flex-column flex-lg-row mt-3 mt-lg-0 text-center">
+                        <a href="#" class="nav-link active">Home</a>
+                        <a href="reviews.html" class="nav-link">Reviews</a>
+                        <a href="contact-us.html" class="nav-link">Contact Us</a>
+                        <a href="chef.html" class="nav-link">Chef</a>
+                        <a href="menu.html" class="nav-link">Menu</a>
+                        <a href="../harmony/home.html" class="nav-link">Mobile App</a>
+                        <a href="../index.html" class="nav-link small text-outline">← Back to HiEnterprises™</a>
                     </div>
                 </div>
-                
-                <div id="mobile-menu" class="hidden lg:hidden mt-4 space-y-2 bg-primary-container rounded-2xl p-2">
-                    <a href="#" class="block px-3 py-2 rounded-xl font-medium bg-primary/10 text-primary">Home</a>
-                    <a href="reviews.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Reviews</a>
-                    <a href="contact-us.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Contact Us</a>
-                    <a href="chef.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Chef</a>
-                    <a href="menu.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Menu</a>
-                    <a href="../harmony/home.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Mobile App</a>
-                    <hr class="border-outline/50 my-2">
-                    <a href="../index.html" class="block px-3 py-2 rounded-xl font-medium text-outline hover:bg-primary/10">← Back to HiEnterprises™</a>
-                </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
 
         <main>
-            <section class="relative h-[60vh] flex items-center justify-center text-center text-white p-4 overflow-hidden">
-                <div class="absolute inset-0 bg-black/60 z-10"></div>
-                <div class="absolute inset-0 hero-bg-animate bg-cover bg-center bg-no-repeat" style="background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');"></div>
-                <div class="relative z-20 space-y-2">
-                    <h1 class="text-6xl md:text-8xl font-caveat text-white opacity-0 animate-fade-in" style="animation: fade-in 1s ease-out 0.2s forwards;">The Highland Cafe™</h1>
-                    <p class="text-lg text-on-background/80 opacity-0 animate-fade-in" style="animation: fade-in 1s ease-out 0.5s forwards;">by The Highland Cafe™ Enterprises</p>
-                </div>
-                 <style>
-                    @keyframes fade-in { to { opacity: 1; transform: translateY(0); } }
-                    .animate-fade-in { opacity: 0; transform: translateY(10px); }
-                </style>
-            </section>
-            
-            <section class="py-16 sm:py-20 animate-on-scroll">
-                <div class="container mx-auto px-4 lg:px-6 text-center">
-                    <h2 class="font-caveat text-5xl md:text-6xl text-title-yellow">Welcome to the greatest restaurant experience ever.</h2>
-                    <h2 class="font-caveat text-5xl md:text-6xl text-title-yellow mt-2">Welcome to The Highland Cafe™.</h2>
-                    <img class="w-3/4 md:w-1/2 lg:w-1/3 mx-auto block mt-8" src="../assets/pics/hicafe/logo.png" alt="The Highland Cafe Logo">
+            <!-- Hero Section -->
+            <section class="hero-section" style="height: 60vh;">
+                <div class="hero-bg" style="background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');"></div>
+                <div class="hero-overlay"></div>
+                <div class="container position-relative z-1 text-center">
+                    <h1 class="display-1 font-caveat text-white animate-fade-in">The Highland Cafe™</h1>
+                    <p class="lead mt-2 animate-fade-in delay-200 text-light opacity-75">by The Highland Cafe™ Enterprises</p>
                 </div>
             </section>
-            
-            <section class="py-16 sm:py-20 bg-primary-container/30 animate-on-scroll">
-                <div class="container mx-auto px-4 lg:px-6">
-                    <h2 class="text-4xl font-bold text-center text-on-primary-container">Our Brilliant Restaurant Reviews</h2>
-                    <p class="text-center text-on-surface-variant mt-2">...as seen on Dougal Maps</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 text-center mt-12">
-                        <div class="animate-on-scroll">
-                            <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
-                            <p class="italic text-on-surface-variant mt-2">'My chicken was raw, almost got salmonella, will not be visiting again'</p>
-                            <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
+
+            <!-- Introduction Section -->
+            <section class="py-5 container text-center">
+                <div class="row justify-content-center animate-fade-in">
+                    <div class="col-lg-10">
+                        <h2 class="font-caveat display-4 text-title-yellow">Welcome to the greatest restaurant experience ever.</h2>
+                        <h2 class="font-caveat display-4 text-title-yellow mt-2">Welcome to The Highland Cafe™.</h2>
+                        <img class="img-fluid w-50 d-block mx-auto mt-4" src="../assets/pics/hicafe/logo.png" alt="The Highland Cafe Logo" style="max-width: 300px;">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reviews Section -->
+            <section class="py-5 bg-primary-container bg-opacity-25 animate-fade-in">
+                <div class="container">
+                    <h2 class="text-center fw-bold text-on-primary-container mb-2">Our Brilliant Restaurant Reviews</h2>
+                    <p class="text-center text-on-surface-variant mb-5">...as seen on Dougal Maps</p>
+                    
+                    <div class="row g-4 text-center">
+                        <!-- Review 1 -->
+                        <div class="col-sm-6 col-lg">
+                            <div class="animate-fade-in">
+                                <p class="fs-4 text-warning">★<span class="text-outline">☆☆☆☆</span></p>
+                                <p class="fst-italic text-on-surface-variant mt-2">'My chicken was raw, almost got salmonella, will not be visiting again'</p>
+                                <p class="fw-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
+                            </div>
                         </div>
-                        <div class="animate-on-scroll" style="transition-delay: 100ms;">
-                            <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
-                            <p class="italic text-on-surface-variant mt-2">'The staff were rude and they overcharged me'</p>
-                            <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
+                        <!-- Review 2 -->
+                        <div class="col-sm-6 col-lg">
+                            <div class="animate-fade-in delay-100">
+                                <p class="fs-4 text-warning">★<span class="text-outline">☆☆☆☆</span></p>
+                                <p class="fst-italic text-on-surface-variant mt-2">'The staff were rude and they overcharged me'</p>
+                                <p class="fw-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
+                            </div>
                         </div>
-                        <div class="animate-on-scroll" style="transition-delay: 200ms;">
-                            <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
-                            <p class="italic text-on-surface-variant mt-2">'I didn't get served, so I just left'</p>
-                            <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
+                        <!-- Review 3 -->
+                        <div class="col-sm-6 col-lg">
+                            <div class="animate-fade-in delay-200">
+                                <p class="fs-4 text-warning">★<span class="text-outline">☆☆☆☆</span></p>
+                                <p class="fst-italic text-on-surface-variant mt-2">'I didn't get served, so I just left'</p>
+                                <p class="fw-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
+                            </div>
                         </div>
-                        <div class="animate-on-scroll" style="transition-delay: 300ms;">
-                            <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
-                            <p class="italic text-on-surface-variant mt-2">'Simply awful'</p>
-                            <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
+                        <!-- Review 4 -->
+                        <div class="col-sm-6 col-lg">
+                            <div class="animate-fade-in delay-300">
+                                <p class="fs-4 text-warning">★<span class="text-outline">☆☆☆☆</span></p>
+                                <p class="fst-italic text-on-surface-variant mt-2">'Simply awful'</p>
+                                <p class="fw-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
+                            </div>
                         </div>
-                        <div class="animate-on-scroll" style="transition-delay: 400ms;">
-                            <p class="text-2xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
-                            <p class="italic text-on-surface-variant mt-2">'One of the staff got hit in the head with a pan, will not be risking my life again'</p>
-                            <p class="font-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
+                        <!-- Review 5 -->
+                        <div class="col-sm-6 col-lg">
+                            <div class="animate-fade-in delay-400">
+                                <p class="fs-4 text-warning">★<span class="text-outline">☆☆☆☆</span></p>
+                                <p class="fst-italic text-on-surface-variant mt-2">'One of the staff got hit in the head with a pan, will not be risking my life again'</p>
+                                <p class="fw-bold text-on-surface mt-2">- Dougal Maps Reviewer</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="text-center mt-12 animate-on-scroll">
-                        <a href="reviews.html" class="inline-block bg-primary text-on-primary font-bold py-3 px-8 rounded-full hover:opacity-90 transition-opacity shadow-lg transform hover:scale-105">
+                    
+                    <div class="text-center mt-5 animate-fade-in">
+                        <a href="reviews.html" class="btn btn-nav-cta px-4 py-2 rounded-pill shadow hover-scale">
                             More Great Reviews!
                         </a>
                     </div>
                 </div>
             </section>
-            
-            <section class="py-16 sm:py-20 animate-on-scroll">
-                <div class="container mx-auto px-4 lg:px-6">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="bg-primary-container rounded-2xl overflow-hidden text-center flex flex-col shadow-xl transform hover:-translate-y-1 transition-transform">
-                            <img class="w-full h-48 object-cover" src="../assets/pics/hicafe/home/hiosmobile.png" alt="Mobile App">
-                            <div class="p-6 flex-grow flex flex-col justify-between">
-                                <h3 class="text-2xl font-bold text-primary">Download Harmony</h3>
-                                <a href="../harmony/home.html" class="mt-4 w-full bg-primary text-on-primary font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-on-secondary transition-colors">
-                                    Mobile App
-                                </a>
+
+            <!-- Features Grid -->
+            <section class="py-5 animate-fade-in">
+                <div class="container">
+                    <div class="row g-4">
+                        <!-- App Card -->
+                        <div class="col-md-4">
+                            <div class="card h-100 bg-primary-container border-0 overflow-hidden text-center shadow hover-lift">
+                                <img src="../assets/pics/hicafe/home/hiosmobile.png" class="card-img-top object-fit-cover" alt="Mobile App" style="height: 200px;">
+                                <div class="card-body d-flex flex-column justify-content-between p-4">
+                                    <h3 class="h4 fw-bold text-primary">Download Harmony</h3>
+                                    <a href="../harmony/home.html" class="btn btn-nav-cta w-100 mt-3 rounded-pill">Mobile App</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="bg-primary-container rounded-2xl overflow-hidden text-center flex flex-col shadow-xl transform hover:-translate-y-1 transition-transform">
-                            <img class="w-full h-48 object-cover" src="../assets/pics/hicafe/home/menu.png" alt="Restaurant Menu">
-                            <div class="p-6 flex-grow flex flex-col justify-between">
-                                <h3 class="text-2xl font-bold text-primary">View Our Menus Online</h3>
-                                <a href="menu.html" class="mt-4 w-full bg-primary text-on-primary font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-on-secondary transition-colors">
-                                    Menus
-                                </a>
+                        <!-- Menu Card -->
+                        <div class="col-md-4">
+                            <div class="card h-100 bg-primary-container border-0 overflow-hidden text-center shadow hover-lift">
+                                <img src="../assets/pics/hicafe/home/menu.png" class="card-img-top object-fit-cover" alt="Restaurant Menu" style="height: 200px;">
+                                <div class="card-body d-flex flex-column justify-content-between p-4">
+                                    <h3 class="h4 fw-bold text-primary">View Our Menus Online</h3>
+                                    <a href="menu.html" class="btn btn-nav-cta w-100 mt-3 rounded-pill">Menus</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="bg-primary-container rounded-2xl overflow-hidden text-center flex flex-col shadow-xl transform hover:-translate-y-1 transition-transform">
-                            <img class="w-full h-48 object-cover" src="../assets/pics/hicafe/home/hienterprises.png" alt="HiEnterprises Logo">
-                            <div class="p-6 flex-grow flex flex-col justify-between">
-                                <h3 class="text-2xl font-bold text-primary">HiEnterprises™ Website</h3>
-                                <a href="../index.html" class="mt-4 w-full bg-primary text-on-primary font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-on-secondary transition-colors">
-                                    HiEnterprises™
-                                </a>
+                        <!-- Website Card -->
+                        <div class="col-md-4">
+                            <div class="card h-100 bg-primary-container border-0 overflow-hidden text-center shadow hover-lift">
+                                <img src="../assets/pics/hicafe/home/hienterprises.png" class="card-img-top object-fit-cover" alt="HiEnterprises Logo" style="height: 200px;">
+                                <div class="card-body d-flex flex-column justify-content-between p-4">
+                                    <h3 class="h4 fw-bold text-primary">HiEnterprises™ Website</h3>
+                                    <a href="../index.html" class="btn btn-nav-cta w-100 mt-3 rounded-pill">HiEnterprises™</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
         </main>
-        
-        <footer class="bg-surface-container py-12 mt-12">
-            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
-                <p>© 2021-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
+
+        <!-- Footer -->
+        <footer class="bg-primary-container py-5 mt-5">
+            <div class="container text-center text-outline">
+                <p>&copy; 2017-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
             </div>
         </footer>
 
-        <script src="../assets/js/app.js" defer></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <style>
+            /* Custom Hover Animations matching Tailwind's behavior */
+            .hover-scale:hover { transform: scale(1.05); transition: transform 0.2s; }
+            .hover-lift { transition: transform 0.3s ease; }
+            .hover-lift:hover { transform: translateY(-5px); }
+            .delay-100 { animation-delay: 0.1s; }
+            .delay-300 { animation-delay: 0.3s; }
+            .delay-400 { animation-delay: 0.4s; }
+        </style>
     </body>
 </html>

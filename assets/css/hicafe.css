@@ -27,7 +27,17 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--onPrimaryContainer) !important;
+    color: var(--title-colour) !important;
+    font-family: "Caveat", cursive;
+}
+
+.text-primary {
+    color: white !important;
+}
+
+.bg-primary-container {
+    background-color: var(--primaryContainer) !important;
+    color: var(--onPrimaryContainer);
 }
 
 p {
@@ -36,6 +46,7 @@ p {
 
 #header-title {
     font-family: var(--caveat);
+    color: var(--title-colour);
 }
 
 .display-6 {

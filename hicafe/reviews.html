@@ -1,196 +1,225 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Highland Cafe™ | Reviews</title>
-        
         <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
         
-        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Bootstrap 5 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         
+        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
         
-        <script src="../assets/js/tailwind-config-hicafe.js"></script>
-        <link rel="stylesheet" href="../assets/css/m3.css">
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="../assets/css/styles.css">
+        <link rel="stylesheet" href="../assets/css/hicafe.css"> 
     </head>
-    <body class="bg-background text-on-background font-sans">
+    <body>
 
-        <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
-            <nav class="container mx-auto px-4 lg:px-6 py-3">
-                <div class="flex justify-between items-center">
-                    <a class="flex items-center gap-3" href="home.html">
-                        <img src="../assets/pics/hicafe/logo.png" alt="HiCafe Logo" class="h-8 w-auto">
-                        <span class="text-xl font-bold text-on-surface whitespace-nowrap">The Highland Cafe™</span>
-                    </a>
-                    
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-full text-on-surface-variant hover:bg-surface-variant focus:outline-none">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    </button>
-                    
-                    <div class="hidden lg:flex lg:items-center lg:space-x-2 bg-primary-container/50 backdrop-blur-sm px-4 py-2 rounded-full">
-                        <a href="home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Home</a>
-                        <a href="#" class="px-3 py-2 text-primary font-bold rounded-full bg-primary/10">Reviews</a>
-                        <a href="contact-us.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Contact Us</a>
-                        <a href="chef.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Chef</a>
-                        <a href="menu.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Menu</a>
-                        <a href="../harmony/home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Mobile App</a>
-                        <a href="../index.html" class="text-sm text-outline hover:text-white transition-colors ml-4">← Back to HiEnterprises™</a>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-3 text-on-surface" href="home.html">
+                    <img src="../assets/pics/hicafe/logo.png" alt="HiCafe Logo" height="32">
+                    <span class="fw-bold text-nowrap">The Highland Cafe™</span>
+                </a>
+                <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#hicafeNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="hicafeNav">
+                    <div class="nav-pill-container d-flex flex-column flex-lg-row mt-3 mt-lg-0 text-center">
+                        <a href="home.html" class="nav-link">Home</a>
+                        <a href="#" class="nav-link active">Reviews</a>
+                        <a href="contact-us.html" class="nav-link">Contact Us</a>
+                        <a href="chef.html" class="nav-link">Chef</a>
+                        <a href="menu.html" class="nav-link">Menu</a>
+                        <a href="../harmony/home.html" class="nav-link">Mobile App</a>
+                        <a href="../index.html" class="nav-link small text-outline">← Back to HiEnterprises™</a>
                     </div>
                 </div>
-                
-                <div id="mobile-menu" class="hidden lg:hidden mt-4 space-y-2 bg-primary-container rounded-2xl p-2">
-                    <a href="home.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Home</a>
-                    <a href="#" class="block px-3 py-2 rounded-xl font-medium bg-primary/10 text-primary">Reviews</a>
-                    <a href="contact-us.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Contact Us</a>
-                    <a href="chef.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Chef</a>
-                    <a href="menu.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Menu</a>
-                    <a href="../harmony/home.html" class="block px-3 py-2 rounded-xl font-medium text-on-primary-container hover:bg-primary/10">Mobile App</a>
-                    <hr class="border-outline/50 my-2">
-                    <a href="../index.html" class="block px-3 py-2 rounded-xl font-medium text-outline hover:bg-primary/10">← Back to HiEnterprises™</a>
-                </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
 
         <main>
-            <section class="relative h-[60vh] flex items-center justify-center text-center text-white p-4 overflow-hidden">
-                <div class="absolute inset-0 bg-black/60 z-10"></div>
-                <div class="absolute inset-0 hero-bg-animate bg-cover bg-center bg-no-repeat" style="background-image: url('../assets/pics/hicafe/logo.png');"></div>
-                <div class="relative z-20">
-                    <h1 class="text-6xl md:text-8xl font-caveat text-white opacity-0 animate-fade-in" style="animation: fade-in 1s ease-out 0.2s forwards;">Reviews</h1>
+            <!-- Hero Section -->
+            <section class="hero-section" style="height: 60vh;">
+                <div class="hero-bg" style="background-image: url('../assets/pics/hicafe/logo.png'); filter: brightness(0.3);"></div>
+                <div class="hero-overlay"></div>
+                <div class="container position-relative z-1 text-center">
+                    <h1 class="display-1 font-caveat text-white animate-fade-in">Reviews</h1>
                 </div>
-                 <style>
-                    @keyframes fade-in { to { opacity: 1; transform: translateY(0); } }
-                    .animate-fade-in { opacity: 0; transform: translateY(10px); }
-                </style>
             </section>
-            
-            <section class="py-16 sm:py-20 animate-on-scroll">
-                <div class="container mx-auto px-4 lg:px-6">
-                    <h2 class="text-3xl font-bold text-center text-on-surface">Take a look below at some of our amazing reviews!</h2>
-                    
-                    <div class="mt-12 space-y-12">
-                        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-                            <div class="animate-on-scroll">
-                                <div class="bg-primary-container p-6 rounded-t-2xl">
-                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
-                                    <p class="italic text-on-surface-variant mt-2 text-sm">'My chicken was raw, almost got salmonella, will not be visiting again'</p>
-                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
-                                </div>
-                                <div class="bg-surface-variant p-4 rounded-b-2xl text-sm">
-                                    <p class="font-bold text-on-surface">Response:</p>
-                                    <p class="italic text-on-surface-variant">'i can asure you we kook chicken's to prefect temprature so It must be some thing you aet some were eles. NB'</p>
-                                </div>
-                            </div>
-                            <div class="animate-on-scroll" style="transition-delay: 100ms;">
-                                <div class="bg-primary-container p-6 rounded-t-2xl">
-                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
-                                    <p class="italic text-on-surface-variant mt-2 text-sm">'The staff are rude and they overcharged me'</p>
-                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
-                                </div>
-                                <div class="bg-surface-variant p-4 rounded-b-2xl text-sm">
-                                    <p class="font-bold text-on-surface">Response:</p>
-                                    <p class="italic text-on-surface-variant">'we had good mannerizmz so i dont know what yoy are taking about. BC'</p>
-                                </div>
-                            </div>
-                            <div class="animate-on-scroll" style="transition-delay: 200ms;">
-                                <div class="bg-primary-container p-6 rounded-t-2xl">
-                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
-                                    <p class="italic text-on-surface-variant mt-2 text-sm">'I didn't get served, so I just left'</p>
-                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
-                                </div>
-                                <div class="bg-surface-variant p-4 rounded-b-2xl text-sm">
-                                    <p class="font-bold text-on-surface">Response:</p>
-                                    <p class="italic text-on-surface-variant">'soz we like very buzy on dat dae so liek yeah. we dont like wantn peoples like like youse comin' so yeah. JB'</p>
-                                </div>
-                            </div>
-                            <div class="animate-on-scroll" style="transition-delay: 300ms;">
-                                <div class="bg-primary-container p-6 rounded-t-2xl">
-                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
-                                    <p class="italic text-on-surface-variant mt-2 text-sm">'Simply awful'</p>
-                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
-                                </div>
-                                <div class="bg-surface-variant p-4 rounded-b-2xl text-sm">
-                                    <p class="font-bold text-on-surface">Response:</p>
-                                    <p class="italic text-on-surface-variant">'You are looking in a mirror for definite. SH'</p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-                             <div class="animate-on-scroll">
-                                <div class="bg-primary-container p-6 rounded-t-2xl">
-                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
-                                    <p class="italic text-on-surface-variant mt-2 text-sm">'One of the staff got hit in the head with a pan, will not be risking my life again'</p>
-                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
-                                </div>
-                                <div class="bg-surface-variant p-4 rounded-b-2xl text-sm">
-                                    <p class="font-bold text-on-surface">Response:</p>
-                                    <p class="italic text-on-surface-variant">'YOU ARE A DUMB WE NOT EVER WANT TO SEE YOU EVER AGAIN IN OUR RESTRANT THANKS PR'</p>
-                                </div>
+            <section class="py-5 container">
+                <div class="text-center mb-5 animate-fade-in">
+                    <h2 class="fw-bold text-on-surface">Take a look below at some of our amazing reviews!</h2>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <!-- Review 1 -->
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card h-100 border-0 shadow-sm animate-fade-in hover-lift">
+                            <div class="card-header bg-primary-container text-white border-0 py-3">
+                                <div class="fs-5 text-warning mb-2">★<span class="text-outline opacity-50">☆☆☆☆</span></div>
+                                <p class="fst-italic small mb-2">'My chicken was raw, almost got salmonella, will not be visiting again'</p>
+                                <p class="fw-bold small mb-0">- Dougal Maps</p>
                             </div>
-                             <div class="animate-on-scroll" style="transition-delay: 100ms;">
-                                <div class="bg-primary-container p-6 rounded-t-2xl">
-                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
-                                    <p class="italic text-on-surface-variant mt-2 text-sm">'I got screamed at by this guy called Patrick. I almost had a heart attack as I am 97. DO NOT COME HERE!'</p>
-                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
-                                </div>
-                                <div class="bg-surface-variant p-4 rounded-b-2xl text-sm">
-                                    <p class="font-bold text-on-surface">Response:</p>
-                                    <p class="italic text-on-surface-variant">'go back to you old fokes home you noob NB'</p>
-                                </div>
-                            </div>
-                             <div class="animate-on-scroll" style="transition-delay: 200ms;">
-                                <div class="bg-primary-container p-6 rounded-t-2xl">
-                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
-                                    <p class="italic text-on-surface-variant mt-2 text-sm">'My daughter got severe salmonella from the kids' chamomile ice cream; the customer support was useless so don't expect compensation'</p>
-                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
-                                </div>
-                                <div class="bg-surface-variant p-4 rounded-b-2xl text-sm">
-                                    <p class="font-bold text-on-surface">Response:</p>
-                                    <p class="italic text-on-surface-variant">'we keep our ices in the frij so they are nice and cold so no samonela, no were near chicken. BC'</p>
-                                </div>
-                            </div>
-                             <div class="animate-on-scroll" style="transition-delay: 300ms;">
-                                <div class="bg-primary-container p-6 rounded-t-2xl">
-                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
-                                    <p class="italic text-on-surface-variant mt-2 text-sm">'A full-on scam show they're running down in Birmingham'</p>
-                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
-                                </div>
-                                <div class="bg-surface-variant p-4 rounded-b-2xl text-sm">
-                                    <p class="font-bold text-on-surface">Response:</p>
-                                    <p class="italic text-on-surface-variant">'WE ARE LEGIT BUSNESS ASK ANYONE LIKE DE-ADVERTISEMENT COMPANIE RAINBOW OR NUGGETOS WE LEGIT ALRIGHT?!! PR'</p>
-                                </div>
+                            <div class="card-body bg-surface-variant text-on-surface-variant">
+                                <p class="fw-bold text-on-surface mb-1">Response:</p>
+                                <p class="fst-italic small mb-0">'i can asure you we kook chicken's to prefect temprature so It must be some thing you aet some were eles. NB'</p>
                             </div>
                         </div>
-                        
-                        <div class="max-w-4xl mx-auto animate-on-scroll">
-                           <div>
-                                <div class="bg-primary-container p-6 rounded-t-2xl">
-                                    <p class="text-xl text-yellow-400">★<span class="text-outline">☆☆☆☆</span></p>
-                                    <p class="italic text-on-surface-variant mt-2 text-sm leading-relaxed">'We came here after a long flight from Alicante and we arrived at around 23:00. We were carrying quite a few bags and when we came into the hotel reception we were greeted by a strong smell of cigarette smoke. I read a few other reviews saying that the fire alarm went off, so I'm guessing it went off due to someone smoking in the reception area. We were also greeted by a small sign telling us that the reception had been permanently moved to the bar next door. How annoying! That meant we had to walk back out of the reception and go over to the bar next door in the cold and the dark. The room was nice and clean and they had put in an extra single bed for us which was nice. In the morning, we went over to the bar next door for continental breakfast and a cooked breakfast. It was nice, but the pancakes weren't freshly made to order, probably just packet pancakes put in the microwave. The full English breakfast wasn't the best. The bacon was hard and very very salty. They only gave us a cup of tea instead of a pot of tea, which wasn't great. I would rate it 2 stars but the cigarette smoke smell in the entrance room wasn't nice.'</p>
-                                    <p class="font-bold text-on-surface mt-2 text-sm">- Dougal Maps</p>
-                                </div>
-                                <div class="bg-surface-variant p-4 rounded-b-2xl text-sm">
-                                    <p class="font-bold text-on-surface">Response:</p>
-                                    <p class="italic text-on-surface-variant">'soz i like had like been having a like ciggaret in like the recepsion yester like day morning so like yeah JB'</p>
-                                </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card h-100 border-0 shadow-sm animate-fade-in delay-100 hover-lift">
+                            <div class="card-header bg-primary-container text-white border-0 py-3">
+                                <div class="fs-5 text-warning mb-2">★<span class="text-outline opacity-50">☆☆☆☆</span></div>
+                                <p class="fst-italic small mb-2">'The staff are rude and they overcharged me'</p>
+                                <p class="fw-bold small mb-0">- Dougal Maps</p>
+                            </div>
+                            <div class="card-body bg-surface-variant text-on-surface-variant">
+                                <p class="fw-bold text-on-surface mb-1">Response:</p>
+                                <p class="fst-italic small mb-0">'we had good mannerizmz so i dont know what yoy are taking about. BC'</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card h-100 border-0 shadow-sm animate-fade-in delay-200 hover-lift">
+                            <div class="card-header bg-primary-container text-white border-0 py-3">
+                                <div class="fs-5 text-warning mb-2">★<span class="text-outline opacity-50">☆☆☆☆</span></div>
+                                <p class="fst-italic small mb-2">'I didn't get served, so I just left'</p>
+                                <p class="fw-bold small mb-0">- Dougal Maps</p>
+                            </div>
+                            <div class="card-body bg-surface-variant text-on-surface-variant">
+                                <p class="fw-bold text-on-surface mb-1">Response:</p>
+                                <p class="fst-italic small mb-0">'soz we like very buzy on dat dae so liek yeah. we dont like wantn peoples like like youse comin' so yeah. JB'</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card h-100 border-0 shadow-sm animate-fade-in delay-300 hover-lift">
+                            <div class="card-header bg-primary-container text-white border-0 py-3">
+                                <div class="fs-5 text-warning mb-2">★<span class="text-outline opacity-50">☆☆☆☆</span></div>
+                                <p class="fst-italic small mb-2">'Simply awful'</p>
+                                <p class="fw-bold small mb-0">- Dougal Maps</p>
+                            </div>
+                            <div class="card-body bg-surface-variant text-on-surface-variant">
+                                <p class="fw-bold text-on-surface mb-1">Response:</p>
+                                <p class="fst-italic small mb-0">'You are looking in a mirror for definite. SH'</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="row g-4 mb-5">
+                    <!-- Review 5 -->
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card h-100 border-0 shadow-sm animate-fade-in hover-lift">
+                            <div class="card-header bg-primary-container text-white border-0 py-3">
+                                <div class="fs-5 text-warning mb-2">★<span class="text-outline opacity-50">☆☆☆☆</span></div>
+                                <p class="fst-italic small mb-2">'One of the staff got hit in the head with a pan, will not be risking my life again'</p>
+                                <p class="fw-bold small mb-0">- Dougal Maps</p>
+                            </div>
+                            <div class="card-body bg-surface-variant text-on-surface-variant">
+                                <p class="fw-bold text-on-surface mb-1">Response:</p>
+                                <p class="fst-italic small mb-0">'YOU ARE A DUMB WE NOT EVER WANT TO SEE YOU EVER AGAIN IN OUR RESTRANT THANKS PR'</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 6 -->
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card h-100 border-0 shadow-sm animate-fade-in delay-100 hover-lift">
+                            <div class="card-header bg-primary-container text-white border-0 py-3">
+                                <div class="fs-5 text-warning mb-2">★<span class="text-outline opacity-50">☆☆☆☆</span></div>
+                                <p class="fst-italic small mb-2">'I got screamed at by this guy called Patrick. I almost had a heart attack as I am 97. DO NOT COME HERE!'</p>
+                                <p class="fw-bold small mb-0">- Dougal Maps</p>
+                            </div>
+                            <div class="card-body bg-surface-variant text-on-surface-variant">
+                                <p class="fw-bold text-on-surface mb-1">Response:</p>
+                                <p class="fst-italic small mb-0">'go back to you old fokes home you noob NB'</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 7 -->
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card h-100 border-0 shadow-sm animate-fade-in delay-200 hover-lift">
+                            <div class="card-header bg-primary-container text-white border-0 py-3">
+                                <div class="fs-5 text-warning mb-2">★<span class="text-outline opacity-50">☆☆☆☆</span></div>
+                                <p class="fst-italic small mb-2">'My daughter got severe salmonella from the kids' chamomile ice cream; the customer support was useless so don't expect compensation'</p>
+                                <p class="fw-bold small mb-0">- Dougal Maps</p>
+                            </div>
+                            <div class="card-body bg-surface-variant text-on-surface-variant">
+                                <p class="fw-bold text-on-surface mb-1">Response:</p>
+                                <p class="fst-italic small mb-0">'we keep our ices in the frij so they are nice and cold so no samonela, no were near chicken. BC'</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 8 -->
+                    <div class="col-md-6 col-xl-3">
+                        <div class="card h-100 border-0 shadow-sm animate-fade-in delay-300 hover-lift">
+                            <div class="card-header bg-primary-container text-white border-0 py-3">
+                                <div class="fs-5 text-warning mb-2">★<span class="text-outline opacity-50">☆☆☆☆</span></div>
+                                <p class="fst-italic small mb-2">'A full-on scam show they're running down in Birmingham'</p>
+                                <p class="fw-bold small mb-0">- Dougal Maps</p>
+                            </div>
+                            <div class="card-body bg-surface-variant text-on-surface-variant">
+                                <p class="fw-bold text-on-surface mb-1">Response:</p>
+                                <p class="fst-italic small mb-0">'WE ARE LEGIT BUSNESS ASK ANYONE LIKE DE-ADVERTISEMENT COMPANIE RAINBOW OR NUGGETOS WE LEGIT ALRIGHT?!! PR'</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Long Review -->
+                <div class="row justify-content-center animate-fade-in">
+                    <div class="col-lg-10">
+                        <div class="card border-0 shadow-sm hover-lift">
+                            <div class="card-header bg-primary-container text-white border-0 py-4 px-4">
+                                <div class="fs-5 text-warning mb-2">★<span class="text-outline opacity-50">☆☆☆☆</span></div>
+                                <p class="fst-italic mb-3 small lh-lg">'We came here after a long flight from Alicante and we arrived at around 23:00. We were carrying quite a few bags and when we came into the hotel reception we were greeted by a strong smell of cigarette smoke. I read a few other reviews saying that the fire alarm went off, so I'm guessing it went off due to someone smoking in the reception area. We were also greeted by a small sign telling us that the reception had been permanently moved to the bar next door. How annoying! That meant we had to walk back out of the reception and go over to the bar next door in the cold and the dark. The room was nice and clean and they had put in an extra single bed for us which was nice. In the morning, we went over to the bar next door for continental breakfast and a cooked breakfast. It was nice, but the pancakes weren't freshly made to order, probably just packet pancakes put in the microwave. The full English breakfast wasn't the best. The bacon was hard and very very salty. They only gave us a cup of tea instead of a pot of tea, which wasn't great. I would rate it 2 stars but the cigarette smoke smell in the entrance room wasn't nice.'</p>
+                                <p class="fw-bold small mb-0">- Dougal Maps</p>
+                            </div>
+                            <div class="card-body bg-surface-variant text-on-surface-variant p-4">
+                                <p class="fw-bold text-on-surface mb-1">Response:</p>
+                                <p class="fst-italic small mb-0">'soz i like had like been having a like ciggaret in like the recepsion yester like day morning so like yeah JB'</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         </main>
-        
-        <footer class="bg-surface-container py-12 mt-12">
-            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
-                <p>© 2021-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
+
+        <!-- Footer -->
+        <footer class="bg-primary-container py-5 mt-5">
+            <div class="container text-center text-outline">
+                <p>&copy; 2017-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
             </div>
         </footer>
 
-        <script src="../assets/js/app.js" defer></script>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <style>
+            /* Animations */
+            .hover-lift { transition: transform 0.3s ease; }
+            .hover-lift:hover { transform: translateY(-5px); }
+            .delay-100 { animation-delay: 0.1s; }
+            .delay-200 { animation-delay: 0.2s; }
+            .delay-300 { animation-delay: 0.3s; }
+        </style>
     </body>
 </html>

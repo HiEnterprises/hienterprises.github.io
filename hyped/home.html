@@ -1,215 +1,410 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HYPED Energy</title>
-        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
-        <!-- Custom Tailwind Config -->
-        <script src="../assets/js/tailwind-config-hyped.js"></script>
+        
+        <!-- Bootstrap 5 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    </head>
-    <body class="bg-gradient-to-br from-brand-deep-purple to-brand-dark-purple text-brand-light-grey font-sans">
+        
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="../assets/css/styles.css">
+        
+        <style>
+            /* HYPED Theme Overrides */
+            :root {
+                /* Brand Colors */
+                --brand-deep-purple: #1a0b2e;
+                --brand-dark-purple: #2d1b4e;
+                --brand-pink: #ff00ff;
+                --brand-cyan: #00ffff;
+                --brand-light-grey: #e0e0e0;
 
-        <!-- Header --><header class="bg-brand-deep-purple/80 backdrop-blur-sm sticky top-0 left-0 right-0 z-50 shadow-lg">
-            <nav class="container mx-auto px-4 lg:px-6">
-                <div class="flex justify-between items-center py-3">
-                    <a href="#" class="flex items-center gap-2">
-                        <!-- Simple, bold logo using theme colors --><span class="text-3xl font-black text-brand-pink tracking-widest">HYPED</span>
-                    </a>
-                    
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-full text-brand-light-grey hover:bg-brand-pink/10 focus:outline-none">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    </button>
-                    
-                    <div class="hidden lg:flex lg:items-center lg:space-x-2 bg-brand-dark-purple/50 backdrop-blur-sm px-4 py-2 rounded-full">
-                        <a href="#about" class="px-3 py-2 text-brand-light-grey hover:text-brand-cyan transition-colors rounded-full hover:bg-brand-cyan/10">Our Vision</a>
-                        <a href="#cafe" class="px-3 py-2 text-brand-light-grey hover:text-brand-cyan transition-colors rounded-full hover:bg-brand-cyan/10">The Cafe</a>
-                        <a href="#nightclub" class="px-3 py-2 text-brand-light-grey hover:text-brand-cyan transition-colors rounded-full hover:bg-brand-cyan/10">The Nightclub</a>
-                        <a href="#menu" class="px-3 py-2 text-brand-light-grey hover:text-brand-cyan transition-colors rounded-full hover:bg-brand-cyan/10">Artisan Menu</a>
-                        <a href="../index.html" class="text-sm text-gray-400 hover:text-white transition-colors ml-4">← HiEnterprises™</a>
-                    </div>
-                </div>
+                /* Mapping to Main Variables */
+                --primary: var(--brand-cyan);
+                --on-primary: var(--brand-deep-purple);
+                --primary-container: rgba(45, 27, 78, 0.8);
+                --on-primary-container: var(--brand-cyan);
                 
-                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2 bg-brand-deep-purple/95 rounded-2xl mt-2 p-2">
-                    <a href="#about" class="block px-3 py-2 rounded-xl text-brand-light-grey hover:bg-brand-cyan/10 hover:text-brand-cyan">Our Vision</a>
-                    <a href="#cafe" class="block px-3 py-2 rounded-xl text-brand-light-grey hover:bg-brand-cyan/10 hover:text-brand-cyan">The Cafe</a>
-                    <a href="#nightclub" class="block px-3 py-2 rounded-xl text-brand-light-grey hover:bg-brand-cyan/10 hover:text-brand-cyan">The Nightclub</a>
-                    <a href="#menu" class="block px-3 py-2 rounded-xl text-brand-light-grey hover:bg-brand-cyan/10 hover:text-brand-cyan">Artisan Menu</a>
-                    <hr class="border-white/20 my-2">
-                    <a href="../index.html" class="block px-3 py-2 rounded-xl text-gray-400 hover:bg-brand-cyan/10">← Back to HiEnterprises™</a>
-                </div>
-            </nav>
-        </header>
+                --secondary: var(--brand-pink);
+                --on-secondary: var(--brand-deep-purple);
+                
+                --background: var(--brand-deep-purple);
+                --on-background: var(--brand-light-grey);
+                
+                --surface: #130022;
+                --on-surface: #ffffff;
+                --surface-variant: rgba(255, 255, 255, 0.05);
+                --on-surface-variant: #cccccc;
+                
+                --outline: rgba(255, 255, 255, 0.2);
 
-        <!-- Main Content --><main>
-            <!-- Hero Section --><section class="relative min-h-screen flex items-center justify-center text-center py-20 bg-[url('../assets/pics/hyped/products.png')] bg-cover bg-center bg-fixed">
-                <div class="absolute inset-0 bg-gradient-to-br from-brand-deep-purple/90 to-brand-dark-purple/90"></div>
-                <div class="container mx-auto px-6 max-w-5xl relative z-10">
-                    <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tight leading-tight text-brand-cyan animate-pulse font-serif">ELEVATED ENERGY.<br> EXQUISITE TASTE.</h1>
-                    <p class="text-xl md:text-3xl mt-6 max-w-4xl mx-auto text-gray-200">Discover HYPED: Where artisan energy meets culinary excellence and vibrant nightlife.</p>
-                    <p class="font-bold text-2xl md:text-4xl mt-10 text-brand-pink tracking-wide font-serif">"Start your day the HYPED way."</p>
-                    <div class="mt-16 flex flex-col sm:flex-row justify-center items-center gap-6">
-                        <a href="#cafe" class="bg-brand-pink text-brand-deep-purple py-4 px-10 rounded-full text-lg font-semibold transition hover:bg-pink-400 transform hover:-translate-y-1 w-full sm:w-auto">Experience Our Cafe</a>
-                        <a href="#nightclub" class="border border-brand-cyan text-brand-cyan py-4 px-10 rounded-full text-lg font-semibold transition hover:bg-brand-cyan hover:text-brand-deep-purple transform hover:-translate-y-1 w-full sm:w-auto">Step Into The Night</a>
+                /* Fonts */
+                --font-header: 'Playfair Display', serif;
+            }
+
+            /* Specific Styles for HYPED */
+            body {
+                background: linear-gradient(135deg, var(--brand-deep-purple) 0%, #000000 100%);
+            }
+
+            .navbar {
+                background-color: rgba(26, 11, 46, 0.9) !important;
+                border-bottom: 1px solid rgba(255, 0, 255, 0.1);
+            }
+
+            .nav-pill-container {
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+
+            .nav-link {
+                color: var(--brand-light-grey) !important;
+            }
+            .nav-link:hover, .nav-link.active {
+                color: var(--brand-cyan) !important;
+                background-color: rgba(0, 255, 255, 0.1);
+            }
+
+            h1, h2, h3, h4 {
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+
+            .display-1 {
+                font-family: var(--font-main);
+                font-weight: 900;
+                text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            }
+
+            .glow-text-pink {
+                text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+            }
+            .glow-box {
+                box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+                border: 1px solid rgba(0, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+            }
+            
+            .btn-hyped-cyan {
+                background-color: transparent;
+                border: 2px solid var(--brand-cyan);
+                color: var(--brand-cyan);
+                font-weight: 700;
+                text-transform: uppercase;
+                transition: all 0.3s ease;
+            }
+            .btn-hyped-cyan:hover {
+                background-color: var(--brand-cyan);
+                color: var(--brand-deep-purple);
+                box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+            }
+
+            .btn-hyped-pink {
+                background-color: var(--brand-pink);
+                border: 2px solid var(--brand-pink);
+                color: white;
+                font-weight: 700;
+                text-transform: uppercase;
+                transition: all 0.3s ease;
+            }
+            .btn-hyped-pink:hover {
+                background-color: transparent;
+                color: var(--brand-pink);
+                box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+            }
+        </style>
+    </head>
+    <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                    <span class="fs-3 fw-bold text-uppercase" style="color: var(--brand-pink); letter-spacing: 0.1em; font-family: var(--font-main);">HYPED</span>
+                </a>
+                
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#hypedNav">
+                    <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="hypedNav">
+                    <div class="nav-pill-container d-flex flex-column flex-lg-row mt-3 mt-lg-0 text-center">
+                        <a href="#vision" class="nav-link">Our Vision</a>
+                        <a href="#cafe" class="nav-link">The Cafe</a>
+                        <a href="#flavours" class="nav-link">Signature Flavours</a>
+                        <a href="#shop" class="nav-link">Shop</a>
+                        <a href="../index.html" class="nav-link small opacity-75">← HiEnterprises™</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero-section" style="height: 100vh;">
+                <div class="hero-bg" style="background-image: url('../assets/pics/hyped/products.png'); filter: brightness(0.6);"></div>
+                <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(26,11,46,0.3), rgba(26,11,46,1));"></div>
+                <div class="container position-relative z-1 text-center">
+                    <h1 class="display-1 mb-4 animate-fade-in text-white">Elevated Energy.<br> <span style="color: var(--brand-cyan);">Exquisite Taste.</span></h1>
+                    <p class="lead text-white opacity-90 fs-4 mb-5 animate-fade-in delay-200">Discover HYPED: Where artisan energy meets culinary excellence.</p>
+                    <p class="h4 text-uppercase mb-5 glow-text-pink animate-fade-in delay-200" style="color: var(--brand-pink); font-family: var(--font-header);">"Start your day the HYPED way."</p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 animate-fade-in delay-300">
+                        <a href="#cafe" class="btn btn-hyped-pink btn-lg rounded-pill px-5">Experience Our Cafe</a>
+                        <a href="#flavours" class="btn btn-hyped-cyan btn-lg rounded-pill px-5">Explore Flavours</a>
                     </div>
                 </div>
             </section>
 
-            <!-- About Section --><section id="about" class="py-24 bg-gradient-to-br from-brand-deep-purple to-brand-dark-purple">
-                <div class="container mx-auto px-6 text-center max-w-5xl">
-                    <h2 class="text-5xl font-bold mb-4 text-brand-cyan font-serif">Our Vision</h2>
-                    <p class="max-w-3xl mx-auto text-gray-300 text-lg mb-16">HYPED is a pioneering brand dedicated to elevating your everyday. From gourmet energy infusions to sophisticated dining and an exhilarating nightlife, we craft experiences that invigorate body and soul. Every exquisite product is meticulously prepared at our state-of-the-art Gigafactory in the heart of the West Midlands. Current joint executive officers of HYPED are AJ and SJ.</p>
-                    <div class="grid md:grid-cols-3 gap-12">
-                        <div class="bg-white/5 backdrop-blur border border-white/10 shadow-lg p-10 rounded-2xl shadow-glow-pink">
-                            <h3 class="text-3xl font-bold mb-4 font-serif">The Daytime Sanctuary</h3>
-                            <p class="text-gray-400 leading-relaxed">By day, our cafe offers a serene yet stimulating environment. Indulge in artisan energy drinks, premium coffees, and delectable meals designed to fuel your ambition.</p>
+            <!-- Vision Section -->
+            <section id="vision" class="py-5">
+                <div class="container py-5">
+                    <div class="text-center mb-5 animate-fade-in">
+                        <h2 class="display-4 fw-bold" style="color: var(--brand-cyan);">Our Vision</h2>
+                        <p class="lead mx-auto" style="max-width: 800px;">HYPED is a pioneering brand dedicated to elevating your everyday. From gourmet energy infusions to sophisticated dining, we craft experiences that invigorate body and soul.</p>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card h-100 bg-transparent glow-box text-center p-4 animate-fade-in hover-lift">
+                                <div class="card-body">
+                                    <h3 class="h2 font-serif text-white mb-3">The Daytime Sanctuary</h3>
+                                    <p class="text-on-surface-variant">By day, our cafe offers a serene yet stimulating environment. Indulge in artisan energy drinks, premium coffees, and delectable meals designed to fuel your ambition.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-white/5 backdrop-blur border border-white/10 shadow-lg p-10 rounded-2xl shadow-glow-cyan">
-                            <h3 class="text-3xl font-bold mb-4 font-serif">The Evening Éclat</h3>
-                            <p class="text-gray-400 leading-relaxed">As twilight descends, our venue transforms into an exclusive 18+ nightclub and gourmet restaurant. Immerse yourself in a vibrant atmosphere and exquisite 'Energy Mealz'.</p>
+                        <div class="col-md-4">
+                            <div class="card h-100 bg-transparent glow-box text-center p-4 animate-fade-in delay-100 hover-lift" style="border-color: var(--brand-pink); box-shadow: 0 0 15px rgba(255, 0, 255, 0.1);">
+                                <div class="card-body">
+                                    <h3 class="h2 font-serif text-white mb-3">The Artisan Collection</h3>
+                                    <p class="text-on-surface-variant">Explore our curated range of unique energy drinks and gourmet smoothies. Quality and innovation in every creation.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-white/5 backdrop-blur border border-white/10 shadow-lg p-10 rounded-2xl shadow-glow-pink">
-                            <h3 class="text-3xl font-bold mb-4 font-serif">The Artisan Collection</h3>
-                            <p class="text-gray-400 leading-relaxed">Explore our curated range of unique energy drinks, bespoke alcopops, gourmet smoothies, and elegant vaporisers. Quality and innovation in every creation.</p>
+                        <div class="col-md-4">
+                            <div class="card h-100 bg-transparent glow-box text-center p-4 animate-fade-in delay-200 hover-lift">
+                                <div class="card-body">
+                                    <h3 class="h2 font-serif text-white mb-3">Community Driven</h3>
+                                    <p class="text-on-surface-variant">We support the dreamers and the doers. From esports tournaments to creative showcases, HYPED is there to fuel your passion.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Daytime Cafe Section --><section id="cafe" class="relative py-24 bg-[url('../assets/pics/hyped/cafe.png')] bg-cover bg-center bg-fixed">
-                <div class="absolute inset-0 bg-brand-deep-purple/80 to-brand-dark-purple/80"></div>
-                <div class="container mx-auto px-6 max-w-6xl relative z-10">
-                    <h2 class="text-5xl font-bold text-center mb-6 text-brand-pink font-serif">The HYPED Daytime Cafe</h2>
-                    <p class="text-center text-gray-300 text-lg mb-16 max-w-3xl mx-auto">A welcoming space for all ages. Experience a refined yet energetic atmosphere perfect for energising breakfasts, leisurely lunches, and everything in between.</p>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                        <div class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-8">
-                            <h3 class="text-3xl font-bold mb-4 text-brand-cyan font-serif">Signature Infusions</h3>
-                            <ul class="space-y-3 text-gray-300 list-disc list-inside ml-4">
-                                <li><strong>Espresso Elixir:</strong> Rich coffee-infused energy blend.</li>
-                                <li><strong>Rhubarb & Raspberry Royale:</strong> Tart-sweet delight.</li>
-                                <li><strong>Zesty:</strong> Vibrant, zesty blend.</li>
-                                <li><strong>Velvet Cacao:</strong> Luxurious chocolate energy.</li>
-                                <li><strong>Emerald Zest:</strong> Refreshing lime & lemonade.</li>
-                                <li><strong>Summer Blossom:</strong> Strawberry & honeydew melon.</li>
-                            </ul>
+            <!-- Cafe Section -->
+            <section id="cafe" class="py-5 position-relative overflow-hidden">
+                <!-- Background Image with Overlay -->
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: url('../assets/pics/hyped/cafe.png'); background-size: cover; background-position: center; background-attachment: fixed; filter: brightness(0.3); z-index: -1;"></div>
+                
+                <div class="container py-5">
+                    <div class="text-center mb-5 animate-fade-in">
+                        <h2 class="display-4 fw-bold" style="color: var(--brand-pink);">The HYPED Daytime Cafe</h2>
+                        <p class="lead text-white mx-auto" style="max-width: 800px;">A refined yet energetic atmosphere perfect for energising breakfasts, leisurely lunches, and everything in between.</p>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Gourmet Meals -->
+                        <div class="col-lg-6">
+                            <div class="card h-100 bg-dark bg-opacity-75 border-0 rounded-4 animate-fade-in">
+                                <div class="card-body p-5">
+                                    <h3 class="h3 fw-bold mb-4" style="color: var(--brand-cyan);">Gourmet Energy Mealz</h3>
+                                    <p class="text-gray-300 mb-4 leading-relaxed">Dishes subtly infused with natural energisers to tackle your day with vigour.</p>
+                                    <ul class="list-unstyled d-grid gap-3 text-start">
+                                        <li class="d-flex justify-content-between border-bottom border-secondary pb-2">
+                                            <span class="fw-bold text-white">Sunrise Scramble</span>
+                                            <span class="text-secondary small">Spinach & avocado</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between border-bottom border-secondary pb-2">
+                                            <span class="fw-bold text-white">Berry Burst Oats</span>
+                                            <span class="text-secondary small">Overnight oats</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between border-bottom border-secondary pb-2">
+                                            <span class="fw-bold text-white">Artisan Toasties</span>
+                                            <span class="text-secondary small">Gourmet fillings</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between border-bottom border-secondary pb-2">
+                                            <span class="fw-bold text-white">Power Bowls</span>
+                                            <span class="text-secondary small">Quinoa & lean protein</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-8">
-                            <h3 class="text-3xl font-bold mb-4 text-brand-cyan font-serif">Gourmet Energy Mealz</h3>
-                            <p class="text-gray-300 mb-4 leading-relaxed">Dishes subtly infused with natural energisers to tackle your day with vigour.</p>
-                            <ul class="space-y-3 text-gray-300 list-disc list-inside ml-4">
-                                <li><strong>Sunrise Scramble:</strong> Eggs, spinach, avocado.</li>
-                                <li><strong>Berry Burst Oats:</strong> Overnight oats & mixed berries.</li>
-                                <li><strong>Artisan Toasties:</strong> Gourmet fillings & infused dressing.</li>
-                                <li><strong>Power Bowls:</strong> Quinoa, roasted veg & lean protein.</li>
-                            </ul>
-                            <img src="../assets/pics/hyped/products2.png" alt="Variety of gourmet energy meals" class="mt-8 rounded-lg shadow-lg">
+
+                        <!-- Beverages -->
+                        <div class="col-lg-6">
+                            <div class="card h-100 bg-dark bg-opacity-75 border-0 rounded-4 animate-fade-in delay-100">
+                                <div class="card-body p-5">
+                                    <h3 class="h3 fw-bold mb-4" style="color: var(--brand-cyan);">Refined Beverages</h3>
+                                    <p class="text-gray-300 mb-4 leading-relaxed">Organic smoothies and sophisticated hot drinks for every taste.</p>
+                                    <ul class="list-unstyled d-grid gap-3 text-start">
+                                        <li class="d-flex justify-content-between border-bottom border-secondary pb-2">
+                                            <span class="fw-bold text-white">Emerald Green Revitaliser</span>
+                                            <span class="text-secondary small">Spinach, kale, apple</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between border-bottom border-secondary pb-2">
+                                            <span class="fw-bold text-white">Tropical Sunset</span>
+                                            <span class="text-secondary small">Mango & passionfruit</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between border-bottom border-secondary pb-2">
+                                            <span class="fw-bold text-white">HYPED Velvet Hot Chocolate</span>
+                                            <span class="text-secondary small">Rich and luxurious</span>
+                                        </li>
+                                        <li class="d-flex justify-content-between border-bottom border-secondary pb-2">
+                                            <span class="fw-bold text-white">Artisan Teas & Coffees</span>
+                                            <span class="text-secondary small">Classic indulgence</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-8">
-                            <h3 class="text-3xl font-bold mb-4 text-brand-cyan font-serif">Refined Beverages</h3>
-                            <p class="text-gray-300 mb-4 leading-relaxed">Organic smoothies with a bespoke caffeine infusion and sophisticated hot drinks.</p>
-                            <ul class="space-y-3 text-gray-300 list-disc list-inside ml-4">
-                                <li><strong>Emerald Green Revitaliser:</strong> Spinach, kale, apple.</li>
-                                <li><strong>Tropical Sunset:</strong> Mango, passionfruit, pineapple.</li>
-                                <li><strong>HYPED Velvet Hot Chocolate:</strong> Rich and luxurious.</li>
-                                <li><strong>Artisan Teas & Coffees:</strong> Classic indulgence.</li>
-                            </ul>
+                    </div>
+                    
+                    <div class="text-center mt-5">
+                        <img src="../assets/pics/hyped/products2.png" alt="Gourmet Food" class="img-fluid rounded-4 shadow-lg glow-box animate-fade-in delay-200" style="max-height: 400px; width: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Signature Flavours Section -->
+            <section id="flavours" class="py-5 bg-black">
+                <div class="container py-5">
+                    <div class="text-center mb-5 animate-fade-in">
+                        <h2 class="display-4 fw-bold" style="color: var(--brand-cyan);">Signature Flavours</h2>
+                        <p class="lead text-on-surface-variant mb-5">Experience our range of electrifying tastes.</p>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Flavour Cards -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 bg-surface-variant border-0 rounded-4 animate-fade-in hover-lift">
+                                <div class="card-body p-4 text-center">
+                                    <div class="display-3 mb-3">☕</div>
+                                    <h3 class="h4 fw-bold text-white mb-2">Espresso Elixir</h3>
+                                    <p class="text-on-surface-variant small">Rich coffee-infused energy blend.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 bg-surface-variant border-0 rounded-4 animate-fade-in delay-100 hover-lift">
+                                <div class="card-body p-4 text-center">
+                                    <div class="display-3 mb-3">🍓</div>
+                                    <h3 class="h4 fw-bold text-white mb-2">Rhubarb Royale</h3>
+                                    <p class="text-on-surface-variant small">Tart-sweet delight with raspberry.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 bg-surface-variant border-0 rounded-4 animate-fade-in delay-200 hover-lift">
+                                <div class="card-body p-4 text-center">
+                                    <div class="display-3 mb-3">🍋</div>
+                                    <h3 class="h4 fw-bold text-white mb-2">Zesty</h3>
+                                    <p class="text-on-surface-variant small">Vibrant, zesty citrus blend.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 bg-surface-variant border-0 rounded-4 animate-fade-in hover-lift">
+                                <div class="card-body p-4 text-center">
+                                    <div class="display-3 mb-3">🍫</div>
+                                    <h3 class="h4 fw-bold text-white mb-2">Velvet Cacao</h3>
+                                    <p class="text-on-surface-variant small">Luxurious chocolate energy.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 bg-surface-variant border-0 rounded-4 animate-fade-in delay-100 hover-lift">
+                                <div class="card-body p-4 text-center">
+                                    <div class="display-3 mb-3">🍈</div>
+                                    <h3 class="h4 fw-bold text-white mb-2">Summer Blossom</h3>
+                                    <p class="text-on-surface-variant small">Strawberry & honeydew melon.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card h-100 bg-surface-variant border-0 rounded-4 animate-fade-in delay-200 hover-lift">
+                                <div class="card-body p-4 text-center">
+                                    <div class="display-3 mb-3">🧪</div>
+                                    <h3 class="h4 fw-bold text-white mb-2">Craft Your Own</h3>
+                                    <p class="text-on-surface-variant small">Our finely milled powder allows you to prepare a bespoke HYPED energy drink.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Shop / Find Us -->
+            <section id="shop" class="py-5 bg-gradient-to-br from-brand-deep-purple to-brand-dark-purple">
+                <div class="container mx-auto px-6 max-w-5xl text-center">
+                    <h2 class="text-5xl font-bold mb-10 text-brand-pink font-serif">Where to Buy</h2>
+                    <p class="lead text-white mb-12">Available at major retailers nationwide and online.</p>
+                    
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-md-4">
+                            <div class="bg-white/5 backdrop-blur border border-white/10 shadow-lg p-6 rounded-2xl">
+                                <h3 class="h4 text-white">Supermarkets</h3>
+                                <p class="text-gray-400">Find us in the beverage aisle at FoodHall™ and other leading stores.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bg-white/5 backdrop-blur border border-white/10 shadow-lg p-6 rounded-2xl">
+                                <h3 class="h4 text-white">Convenience Stores</h3>
+                                <p class="text-gray-400">Grab a can on the go at local convenience stores and gas stations.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bg-white/5 backdrop-blur border border-white/10 shadow-lg p-6 rounded-2xl">
+                                <h3 class="h4 text-white">Online Store</h3>
+                                <p class="text-gray-400">Order cases directly to your door with free shipping on subscriptions.</p>
+                                <button class="btn btn-sm btn-hyped-cyan mt-3 rounded-pill">Shop Now</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <!-- Nightclub Section --><section id="nightclub" class="relative py-24 bg-[url('../assets/pics/hyped/club.png')] bg-cover bg-center bg-fixed">
-                <div class="absolute inset-0 bg-brand-deep-purple/95 to-brand-dark-purple/95"></div>
-                <div class="container mx-auto px-6 text-center max-w-5xl relative z-10">
-                    <h2 class="text-5xl font-bold mb-6 text-brand-cyan font-serif">The HYPED Nightclub & Restaurant (18+)</h2>
-                    <p class="max-w-3xl mx-auto text-gray-200 text-lg mb-16">As dusk falls, HYPED transforms into an exclusive destination. Experience a pulsating energy, gourmet dining, and our sophisticated range of beverages.</p>
-                    <div class="grid md:grid-cols-2 gap-10 text-left max-w-4xl mx-auto">
-                        <div class="bg-white/5 backdrop-blur border border-white/10 shadow-lg p-10 rounded-2xl shadow-glow-pink">
-                            <h3 class="text-3xl font-bold my-2 font-serif">The Nightlife Experience</h3>
-                            <p class="text-gray-300 leading-relaxed">Immerse yourself in a dynamic soundscape, reminiscent of 'The Bell and the Butterfly' by The Charlatans, with an electrifying visual feast.</p>
-                        </div>
-                        <div class="bg-white/5 backdrop-blur border border-white/10 shadow-lg p-10 rounded-2xl shadow-glow-cyan">
-                            <h3 class="text-3xl font-bold my-2 font-serif">Bar & Evening Delights</h3>
-                            <p class="text-gray-300 leading-relaxed">Our bar features the full HYPED selection, including our exclusive range of crafted alcopops, premium vapes, and late-night 'Energy Mealz'.</p>
-                        </div>
-                    </div>
-                     <div class="mt-16 bg-white/5 backdrop-blur border border-white/10 shadow-lg p-10 rounded-2xl max-w-4xl mx-auto">
-                        <h3 class="text-3xl font-bold mb-4 text-brand-pink font-serif">Artisan Alcopop Collection (18+)</h3>
-                        <p class="text-gray-300 leading-relaxed">Discover our sophisticated twist on classics and innovative new blends: Premium Lager Infusion, Azure Cherry Liqueur, Violet Raspberry Spritzer, Verdant Apple Cider, and many more.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- More Products Section --><section id="menu" class="py-24 bg-gradient-to-br from-brand-deep-purple to-brand-dark-purple">
-                 <div class="container mx-auto px-6 max-w-5xl">
-                    <h2 class="text-5xl font-bold text-center mb-16 text-brand-pink font-serif">The HYPED Artisan Collection</h2>
-                    <div class="grid md:grid-cols-2 gap-10">
-                        <div class="bg-white/5 backdrop-blur border border-white/10 shadow-lg p-10 rounded-2xl shadow-glow-cyan">
-                            <h3 class="text-3xl font-bold mb-4 font-serif">Craft Your Own HYPED</h3>
-                            <p class="text-gray-400 leading-relaxed">For the connoisseur who appreciates creation. Our finely milled powder allows you to prepare a bespoke HYPED energy drink at your leisure for a convenient and customisable boost.</p>
-                        </div>
-                        <div class="bg-white/5 backdrop-blur border border-white/10 shadow-lg p-10 rounded-2xl shadow-glow-cyan">
-                            <h3 class="text-3xl font-bold mb-4 font-serif">HYPED Vaporisers (18+)</h3>
-                            <p class="text-gray-400 leading-relaxed">Experience our iconic flavours in a sophisticated vaporiser format. Designed for discerning adults and available in every original HYPED flavour.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Location Section --><section id="location" class="py-24 text-center">
-                <div class="container mx-auto px-6 max-w-5xl">
-                    <h2 class="text-5xl font-bold mb-6 text-brand-cyan font-serif">Anticipate Our Arrival...</h2>
-                    <p class="text-3xl font-bold text-brand-pink mb-10">Edinburgh, Scotland</p>
-                    <p class="max-w-2xl mx-auto text-gray-300 text-lg mb-12">We are meticulously curating the perfect location in Edinburgh to unveil the full HYPED experience. Prepare for a new era of elevated energy and sophisticated leisure.</p>
-                    <div class="w-full h-96 bg-gray-800 rounded-lg flex items-center justify-center border border-gray-700 shadow-xl overflow-hidden">
-                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113916.14207936199!2d-3.324128038743105!3d55.94121759600908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887b800a5982623%3A0x64f2147b7ce71727!2sEdinburgh!5e0!3m2!1sen!2suk!4v1701389270087!5m2!1sen!2suk" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+            <!-- Location -->
+            <section id="location" class="py-5 bg-dark">
+                <div class="container py-5 text-center">
+                    <h2 class="display-5 fw-bold mb-3" style="color: var(--brand-cyan);">Global HQ</h2>
+                    <p class="h2 fw-bold text-white mb-5 font-serif">Edinburgh, Scotland</p>
+                    <div class="ratio ratio-21x9 rounded-4 overflow-hidden shadow-lg border border-secondary mx-auto" style="max-width: 900px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113916.14207936199!2d-3.324128038743105!3d55.94121759600908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887b800a5982623%3A0x64f2147b7ce71727!2sEdinburgh!5e0!3m2!1sen!2suk!4v1701389270087!5m2!1sen!2suk" loading="lazy"></iframe>
                     </div>
                 </div>
             </section>
         </main>
 
-        <!-- Footer --><footer class="bg-brand-dark-purple py-10 shadow-inner">
-            <div class="container mx-auto px-6 text-center text-gray-400">
-                <p class="text-4xl font-black tracking-widest text-brand-pink mb-4">HYPED</p>
-                <div class="flex justify-center space-x-8 text-lg mb-6">
-                    <a href="https://www.instagram.com/thehighlandcafe/" class="hover:text-white transition-colors">Instagram</a>
-                    <a href="https://www.facebook.com/share/1D2zwHXUAS/" class="hover:text-white transition-colors">Facebook</a>
+        <!-- Footer -->
+        <footer class="py-5" style="background-color: #0d0518; border-top: 1px solid rgba(255,255,255,0.1);">
+            <div class="container text-center">
+                <p class="h3 fw-bold mb-4" style="color: var(--brand-pink); letter-spacing: 0.2em;">HYPED</p>
+                <div class="d-flex justify-content-center gap-4 mb-4">
+                    <a href="https://www.instagram.com/thehighlandcafe/" class="text-white text-decoration-none hover-scale">Instagram</a>
+                    <a href="https://www.facebook.com/share/1D2zwHXUAS/" class="text-white text-decoration-none hover-scale">Facebook</a>
                 </div>
-                <p class="text-sm">&copy; Copyright (c) The Highland Cafe Ltd. 2025. All Rights Reserved</p>
-                <p class="text-xs mt-2 text-gray-500">Curated experiences. Elevated energy.</p>
+                <p class="small text-secondary mb-2">&copy; Copyright (c) The Highland Cafe Ltd. 2025. All Rights Reserved</p>
+                <p class="small text-secondary fst-italic">Fueling ambition.</p>
             </div>
         </footer>
 
-        <script>
-            // JavaScript for mobile menu toggle
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Close mobile menu when a link is clicked
-            const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-            for (let link of mobileMenuLinks) {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            }
-        </script>
-
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <style>
+            .hover-lift { transition: transform 0.3s ease; }
+            .hover-lift:hover { transform: translateY(-8px); }
+            
+            .hover-scale { transition: transform 0.2s ease; display: inline-block; }
+            .hover-scale:hover { transform: scale(1.1); color: var(--brand-cyan) !important; }
+        </style>
     </body>
 </html>

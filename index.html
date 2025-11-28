@@ -1,343 +1,348 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Highland Cafe™ | Home</title>
         
-        <!-- Favicon -->
         <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
         
-        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         
-        <!-- Your custom Tailwind config -->
-        <script src="assets/js/tailwind-config-main.js"></script>
-        <link rel="stylesheet" href="assets/css/fonts.css">
-        <link rel="stylesheet" href="assets/css/m3.css">
-        
+        <link rel="stylesheet" href="assets/css/styles.css">
     </head>
-    <body class="bg-background text-on-background antialiased">
+    <body>
 
-        <!-- Header & Navigation -->
-        <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
-            <nav class="container mx-auto px-4 lg:px-6">
-                <div class="flex justify-between items-center py-3">
-                    <!-- Logo -->
-                    <a class="flex items-center gap-2" href="#">
-                        <img src="assets/logo.jpg" alt="Logo" class="h-8 w-auto rounded-md">
-                        <span class="text-xl font-semibold text-on-surface">HiEnterprises™</span>
-                    </a>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="lg:hidden p-2 rounded-full text-on-surface-variant hover:bg-primary/10 focus:outline-none">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    </button>
-                    
-                    <!-- Desktop Navigation -->
-                    <div class="hidden lg:flex lg:items-center lg:space-x-2 bg-primary-container/50 backdrop-blur-sm px-4 py-2 rounded-full">
-                        <a href="#" class="px-3 py-2 text-primary font-semibold rounded-full bg-primary/10">Home</a>
-                        <a href="blog.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Blog</a>
-                        <a href="worsteastern/home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">weB&B</a>
-                        <a href="hicafe/home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">HiCafe™</a>
-                        <a href="hicard/home.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">HiCard</a>
-                        <a href="brands.html" class="px-3 py-2 text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10">Our Brands</a>
-                        <a href="harmony/home.html" class="ml-2 bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity text-sm font-semibold">Mobile App</a>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2 text-on-surface" href="#">
+                    <img src="assets/logo.jpg" alt="Logo" class="rounded" height="32">
+                    <span>HiEnterprises™</span>
+                </a>
+                
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+                    <div class="nav-pill-container d-flex flex-column flex-lg-row mt-3 mt-lg-0">
+                        <a href="#" class="nav-link active">Home</a>
+                        <a href="blog.html" class="nav-link">Blog</a>
+                        <a href="worsteastern/home.html" class="nav-link">weB&B</a>
+                        <a href="hicafe/home.html" class="nav-link">HiCafe™</a>
+                        <a href="brands.html" class="nav-link">Brands</a>
+                        <a href="harmony/home.html" class="btn-nav-cta ms-lg-2 mt-2 mt-lg-0 text-center">Mobile App</a>
                     </div>
                 </div>
-                
-                <!-- Mobile Navigation Menu -->
-                <div id="mobile-menu" class="hidden lg:hidden pb-4 space-y-2 bg-primary-container rounded-2xl mt-2 p-2">
-                    <a href="#" class="block px-3 py-2 rounded-xl font-semibold bg-primary/10 text-primary">Home</a>
-                    <a href="blog.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">Blog</a>
-                    <a href="worsteastern/home.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">weB&B</a>
-                    <a href="hicafe/home.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">HiCafe™</a>
-                    <a href="hicard/home.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">HiCard</a>
-                    <a href="brands.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">Our Brands</a>
-                    <a href="harmony/home.html" class="block px-3 py-2 rounded-xl text-on-surface-variant hover:bg-primary/10 hover:text-primary">Mobile App</a>
-                </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
 
         <main>
-            <!-- Hero Section -->
-            <section class="relative h-screen flex items-center justify-center text-center text-white p-4 overflow-hidden">
-                <div class="absolute inset-0 bg-black/60 z-10"></div>
-                <div class="absolute inset-0 hero-bg-animate bg-cover bg-center bg-no-repeat" style="background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');"></div>
-                <div class="relative z-20 space-y-2">
-                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight opacity-0 animate-fade-in" style="animation: fade-in 1s ease-out 0.2s forwards;">
-                        <span class="block">The Highland Cafe™</span>
-                        <span class="block text-primary">Enterprises</span>
+            <section class="hero-section">
+                <div class="hero-bg"></div>
+                <div class="hero-overlay"></div>
+                <div class="container position-relative z-1">
+                    <h1 class="display-1 fw-bold animate-fade-in delay-200">
+                        The Highland Cafe™<br>
+                        <span class="text-primary-custom">Enterprises</span>
                     </h1>
-                    <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-on-primary-container opacity-0 animate-fade-in" style="animation: fade-in 1s ease-out 0.5s forwards;">Quality Food, At Its Best.</p>
+                    <p class="lead mt-4 animate-fade-in delay-500 text-on-primary-container">
+                        Quality Food, At Its Best.
+                    </p>
                 </div>
-                 <style>
-                    @keyframes fade-in { to { opacity: 1; transform: translateY(0); } }
-                    .animate-fade-in { opacity: 0; transform: translateY(10px); }
-                </style>
             </section>
 
-            <!-- Introduction Section -->
-            <section class="py-16 sm:py-20 animate-on-scroll">
-                <div class="container mx-auto px-4 lg:px-6 text-center">
-                    <h2 class="text-3xl font-bold tracking-tight text-on-surface sm:text-4xl">A wonderful organisation based in Birmingham, UK.</h2>
-                    <p class="mt-4 text-xl text-on-surface-variant">We pride ourselves in making good quality experiences!</p>
-                    <div class="mt-10">
-                        <img class="rounded-2xl shadow-xl mx-auto w-full max-w-4xl" src="assets/pics/home/brand-portfolio.png" alt="Brand Portfolio">
-                        <p class="mt-4 text-sm text-outline italic">The Highland Cafe™ Enterprises' portfolio of brands, February 2025</p>
+            <section class="py-5">
+                <div class="container text-center py-5">
+                    <h2 class="mb-3">A wonderful organisation based in Birmingham, UK.</h2>
+                    <p class="text-on-surface-variant fs-5">We pride ourselves in making good quality experiences!</p>
+                    <div class="mt-5">
+                        <img class="img-fluid rounded-4 shadow-lg" src="assets/pics/home/brand-portfolio.png" alt="Brand Portfolio">
+                        <p class="mt-3 small text-outline fst-italic">The Highland Cafe™ Enterprises' portfolio of brands, February 2025</p>
                     </div>
                 </div>
             </section>
 
-            <!-- "Positive" Reviews Section -->
-            <section class="bg-surface-variant/20 py-16 sm:py-20 animate-on-scroll">
-                <div class="container mx-auto px-4 lg:px-6">
-                    <div class="text-center">
-                        <h2 class="text-3xl font-bold tracking-tight text-on-surface sm:text-4xl">Rave Reviews From Our Customers</h2>
-                        <p class="mt-3 max-w-2xl mx-auto text-lg text-on-surface-variant">See what people are saying about our family of brands.</p>
-                    </div>
-                    <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-                        <!-- Review Card -->
-                        <div class="bg-surface-variant p-6 rounded-2xl shadow-sm">
-                            <div class="flex items-center text-yellow-400">★<span class="text-outline">★★★★</span></div>
-                            <p class="mt-4 text-on-surface-variant italic">"A No Internet popup keeps appearing, preventing me from actually using the app."</p>
-                            <p class="mt-4 font-semibold text-on-surface">- HiOSMobile User</p>
-                        </div>
-                        <!-- Review Card -->
-                        <div class="bg-surface-variant p-6 rounded-2xl shadow-sm">
-                             <div class="flex items-center text-yellow-400">★<span class="text-outline">★★★★</span></div>
-                            <p class="mt-4 text-on-surface-variant italic">"The room was disgusting, Days Inn would be better than this dump."</p>
-                            <p class="mt-4 font-semibold text-on-surface">- weB&B Guest</p>
-                        </div>
-                        <!-- Review Card -->
-                        <div class="bg-surface-variant p-6 rounded-2xl shadow-sm">
-                             <div class="flex items-center text-yellow-400">★<span class="text-outline">★★★★</span></div>
-                            <p class="mt-4 text-on-surface-variant italic">"I bought a seemingly fresh pack of fruit one day, and the next day it was rotting and mouldy!"</p>
-                            <p class="mt-4 font-semibold text-on-surface">- FoodHall Shopper</p>
-                        </div>
-                        <!-- Review Card -->
-                        <div class="bg-surface-variant p-6 rounded-2xl shadow-sm">
-                            <div class="flex items-center text-yellow-400">★<span class="text-outline">★★★★</span></div>
-                            <p class="mt-4 text-on-surface-variant italic">"Simply abysmal, and horrendously overpriced."</p>
-                            <p class="mt-4 font-semibold text-on-surface">- The Highland Cafe™ Patron</p>
-                        </div>
-                        <!-- Review Card -->
-                        <div class="bg-surface-variant p-6 rounded-2xl shadow-sm">
-                            <div class="flex items-center text-yellow-400">★<span class="text-outline">★★★★</span></div>
-                            <p class="mt-4 text-on-surface-variant italic">"The coffee was poor and tasteless, and the cake I had was last week's, so it was too dry to eat!"</p>
-                            <p class="mt-4 font-semibold text-on-surface">- CafeFiesta Customer</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Our Brands Section -->
-            <section class="py-16 sm:py-20 animate-on-scroll">
-                <div class="container mx-auto px-4 lg:px-6">
-                    <div class="text-center">
-                        <h2 class="text-3xl font-bold tracking-tight text-on-surface sm:text-4xl">Our Portfolio of Brands</h2>
-                        <p class="mt-3 max-w-2xl mx-auto text-lg text-on-surface-variant">We have a lot of brands under our company. Take a look below to explore them.</p>
+            <section class="py-5 bg-surface-variant-20">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2>Rave Reviews From Our Customers</h2>
+                        <p class="text-on-surface-variant fs-5">See what people are saying about our family of brands.</p>
                     </div>
                     
-                    <div class="mt-16 animate-on-scroll">
-                        <h3 class="text-2xl font-bold text-on-surface mb-8 border-b-2 border-primary/20 pb-2">Food & Shopping</h3>
-                        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                            <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
-                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/hicafe.png" alt="HiCafe Logo">
-                                <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-on-surface-variant">HiCafe™</h4>
-                                    <p class="mt-2 text-on-surface-variant flex-grow">This is our main restaurant brand, the food brand you know and love!</p>
-                                    <a href="hicafe/home.html" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit HiCafe™</a>
-                                </div>
-                            </div>
-                            <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
-                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/hyped/hyped.png" alt="HYPED Logo">
-                                <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-on-surface-variant">HYPED</h4>
-                                    <p class="mt-2 text-on-surface-variant flex-grow">Elevated energy cafe, nightclub, and restaurant.</p>
-                                    <a href="hyped/home.html" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit HYPED</a>
-                                </div>
-                            </div>
-                            <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
-                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/cafefiesta.png" alt="CafeFiesta Logo">
-                                <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-on-surface-variant">CafeFiesta™</h4>
-                                    <p class="mt-2 text-on-surface-variant flex-grow">This is our coffee-focused brand!</p>
-                                    <a href="https://sites.google.com/view/cafefiesta-by-thc" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit CafeFiesta™</a>
-                                </div>
-                            </div>
-                            <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
-                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/foodhall.png" alt="FoodHall Logo">
-                                <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-on-surface-variant">FoodHall™</h4>
-                                    <p class="mt-2 text-on-surface-variant flex-grow">Our supermarkets. Massive in British, Massive in Quality.</p>
-                                    <a href="https://sites.google.com/view/hifoodhall" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit FoodHall™</a>
-                                </div>
-                            </div>
-                            <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
-                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/rewards.png" alt="HiCard Logo">
-                                <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-on-surface-variant">HiCard</h4>
-                                    <p class="mt-2 text-on-surface-variant flex-grow">This is our amazing rewards programme and card!</p>
-                                    <a href="hicard/home.html" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit HiCard</a>
-                                </div>
-                            </div>
-                            <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
-                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/hicola.png" alt="Highland Cola Logo">
-                                <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-on-surface-variant">Highland Cola™</h4>
-                                    <p class="mt-2 text-on-surface-variant flex-grow">This is our company that makes sodas and more!</p>
-                                    <a href="https://sites.google.com/view/highlandcola" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit Highland Cola™</a>
-                                </div>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4 col-xl">
+                            <div class="card p-4 h-100">
+                                <div class="text-warning mb-3">★ <span class="text-outline">★★★★</span></div>
+                                <p class="fst-italic">"A No Internet popup keeps appearing, preventing me from actually using the app."</p>
+                                <p class="fw-bold mt-auto mb-0">- HiOSMobile User</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="mt-16 animate-on-scroll">
-                        <h3 class="text-2xl font-bold text-on-surface mb-8 border-b-2 border-primary/20 pb-2">Hotels & Accommodation</h3>
-                        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                            <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
-                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/worsteastern.png" alt="weB&B Logo">
-                                <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-on-surface-variant">weB&B</h4>
-                                    <p class="mt-2 text-on-surface-variant flex-grow">This is the best hotel experience from The Highland Cafe™!</p>
-                                    <a href="worsteastern/home.html" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit weB&B</a>
-                                </div>
+                        <div class="col-md-6 col-lg-4 col-xl">
+                            <div class="card p-4 h-100">
+                                <div class="text-warning mb-3">★ <span class="text-outline">★★★★</span></div>
+                                <p class="fst-italic">"The room was disgusting, Days Inn would be better than this dump."</p>
+                                <p class="fw-bold mt-auto mb-0">- weB&B Guest</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="mt-16 animate-on-scroll">
-                        <h3 class="text-2xl font-bold text-on-surface mb-8 border-b-2 border-primary/20 pb-2">Technology</h3>
-                        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                            <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
-                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/hiosmobile.png" alt="Harmony Logo">
-                                <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-on-surface-variant">Harmony</h4>
-                                    <p class="mt-2 text-on-surface-variant flex-grow">Download Harmony from here!</p>
-                                    <a href="harmony/home.html" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit Harmony</a>
-                                </div>
-                            </div>
-                            <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
-                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/nuggetdev/nuggetdev.png" alt="nuggetdev Logo">
-                                <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-on-surface-variant">nuggetdev</h4>
-                                    <p class="mt-2 text-on-surface-variant flex-grow">The brains behind our tech experiences.</p>
-                                    <a href="nuggetdev/home.html" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit nuggetdev</a>
-                                </div>
-                            </div>
-                            <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
-                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/hioswebcore.png" alt="HarmonyCore Logo">
-                                <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-on-surface-variant">HiOSCore (Discontinued)</h4>
-                                    <p class="mt-2 text-on-surface-variant flex-grow">This is the software that formerly powered all our app experiences!</p>
-                                    <a href="https://hiosbythc.home.blog" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit HarmonyCore</a>
-                                </div>
-                            </div>
-                            <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
-                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/hitech.png" alt="HiTech Logo">
-                                <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-on-surface-variant">HiTech</h4>
-                                    <p class="mt-2 text-on-surface-variant flex-grow">This is our technology brand, the best ever tech to improve your life!</p>
-                                    <a href="https://sites.google.com/view/hitech-by-thehighlandcafe" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit HiTech</a>
-                                </div>
-                            </div>
-                             <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
-                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/tvstream.png" alt="TVStream Logo">
-                                <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-on-surface-variant">TVStream</h4>
-                                    <p class="mt-2 text-on-surface-variant flex-grow">Formerly HiTV+, this is our awesome TV streaming service!</p>
-                                    <a href="https://sites.google.com/view/hitvstream" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit TVStream</a>
-                                </div>
+                        <div class="col-md-6 col-lg-4 col-xl">
+                            <div class="card p-4 h-100">
+                                <div class="text-warning mb-3">★ <span class="text-outline">★★★★</span></div>
+                                <p class="fst-italic">"I bought a seemingly fresh pack of fruit one day, and the next day it was rotting and mouldy!"</p>
+                                <p class="fw-bold mt-auto mb-0">- FoodHall Shopper</p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="mt-16 animate-on-scroll">
-                        <h3 class="text-2xl font-bold text-on-surface mb-8 border-b-2 border-primary/20 pb-2">Politics</h3>
-                        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                            <div class="bg-surface-variant rounded-2xl shadow-lg overflow-hidden flex flex-col transform hover:-translate-y-1 transition-transform duration-300">
-                                <img class="h-48 w-full object-contain p-4 bg-white/90" src="assets/pics/brands/hiparty.png" alt="HiParty Logo">
-                                <div class="p-6 text-center flex-grow flex flex-col">
-                                    <h4 class="text-xl font-semibold text-on-surface-variant">HiParty™</h4>
-                                    <p class="mt-2 text-on-surface-variant flex-grow">Our brilliant political party. Your Priorities, Our Mission.</p>
-                                    <a href="https://sites.google.com/view/thehighlandparty" class="mt-4 inline-block w-full bg-primary text-on-primary px-4 py-2 rounded-full hover:opacity-80 transition-opacity font-semibold">Visit The Highland Party™</a>
-                                </div>
+                        <div class="col-md-6 col-lg-4 col-xl">
+                            <div class="card p-4 h-100">
+                                <div class="text-warning mb-3">★ <span class="text-outline">★★★★</span></div>
+                                <p class="fst-italic">"Simply abysmal, and horrendously overpriced."</p>
+                                <p class="fw-bold mt-auto mb-0">- THC Patron</p>
                             </div>
                         </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <!-- Partners Section -->
-            <section class="bg-surface-variant/20 py-16 sm:py-20 animate-on-scroll">
-                <div class="container mx-auto px-4 lg:px-6">
-                    <div class="text-center">
-                        <h2 class="text-3xl font-bold tracking-tight text-on-surface sm:text-4xl">Our Trusted Partners</h2>
-                        <p class="mt-3 max-w-2xl mx-auto text-lg text-on-surface-variant">We collaborate with industry leaders to deliver the best (and worst) experiences.</p>
-                    </div>
-                    <div class="mt-12 grid gap-8 md:grid-cols-1 lg:grid-cols-3">
-                        <!-- Partner Card -->
-                        <div class="bg-surface-variant rounded-2xl overflow-hidden shadow-sm">
-                            <div class="bg-white"><img class="h-48 w-full object-contain p-4" src="assets/pics/brands/hidev.png" alt="HiDev Logo"></div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-on-surface-variant">HiDev</h3>
-                                <p class="mt-2 text-on-surface-variant">HiDev creates a variety of tech experiences, such as the HiOS apps.</p>
-                                <a href="hidev/home" class="mt-4 inline-block text-primary hover:opacity-80 font-semibold">Their Website →</a>
-                            </div>
-                        </div>
-                        <!-- Partner Card -->
-                        <div class="bg-surface-variant rounded-2xl overflow-hidden shadow-sm">
-                            <div class="bg-white"><img class="h-48 w-full object-contain p-4" src="assets/pics/brands/de-ad.png" alt="De-Advertisement Company Rainbow Logo"></div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-on-surface-variant">De-Advertisement Co.</h3>
-                                <p class="mt-2 text-on-surface-variant">The people which run our astonishingly good customer support services!</p>
-                                <a href="https://sites.google.com/view/de-ad-rainbow" class="mt-4 inline-block text-primary hover:opacity-80 font-semibold">Their Website →</a>
-                            </div>
-                        </div>
-                        <!-- Partner Card -->
-                        <div class="bg-surface-variant rounded-2xl overflow-hidden shadow-sm">
-                           <div class="bg-white"><img class="h-48 w-full object-contain p-4" src="assets/pics/brands/swanora.png" alt="Swanora Fashion Logo"></div>
-                            <div class="p-6">
-                                <h3 class="text-xl font-semibold text-on-surface-variant">Swanora Fashion</h3>
-                                <p class="mt-2 text-on-surface-variant">Be U, Be Different. A forward-thinking fashion company that specialises in high quality jewelry.</p>
-                                <a href="https://sites.google.com/view/swanora" class="mt-4 inline-block text-primary hover:opacity-80 font-semibold">Their Website →</a>
+                        <div class="col-md-6 col-lg-4 col-xl">
+                            <div class="card p-4 h-100">
+                                <div class="text-warning mb-3">★ <span class="text-outline">★★★★</span></div>
+                                <p class="fst-italic">"The coffee was poor and tasteless, and the cake I had was last week's!"</p>
+                                <p class="fw-bold mt-auto mb-0">- CafeFiesta Customer</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Careers Section -->
-            <section class="py-16 sm:py-20 animate-on-scroll">
-                <div class="container mx-auto px-4 lg:px-6">
-                    <div class="bg-primary-container rounded-3xl p-8 md:p-12 lg:p-16 text-center lg:text-left lg:flex lg:items-center lg:justify-between">
-                        <div class="text-on-primary-container">
-                            <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Join Our Team</h2>
-                            <p class="mt-3 max-w-2xl text-on-primary-container/80 text-lg">Wanting to join our wonderful team? We're always looking for new talent.</p>
-                            <a href="https://sites.google.com/view/join-thehighlandcafe" class="mt-8 inline-block bg-primary text-on-primary px-8 py-3 rounded-full hover:opacity-80 transition-opacity font-bold text-lg">Careers @ HiEnterprises™</a>
+            <section class="py-5">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2>Our Portfolio of Brands</h2>
+                        <p class="text-on-surface-variant fs-5">We have a lot of brands under our company. Take a look below to explore them.</p>
+                    </div>
+
+                <!-- Category: Food & Shopping -->
+                <h3 class="border-bottom border-secondary pb-2 mb-4">Food & Shopping</h3>
+                <div class="row g-4 mb-5">
+                    <!-- HiCafe -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper"><img src="assets/pics/brands/hicafe.png" class="card-img-top" alt="HiCafe"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">HiCafe™</h4>
+                                <p>Our main restaurant brand, the food brand you know and love!</p>
+                                <a href="hicafe/home.html" class="btn btn-card">Visit HiCafe™</a>
+                            </div>
                         </div>
-                        <div class="mt-8 lg:mt-0 lg:ml-8 flex-shrink-0">
-                            <img class="w-64 h-auto mx-auto lg:w-80" src="assets/pics/home/careers.png" alt="Careers Illustration">
+                    </div>
+                    <!-- HYPED -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper"><img src="assets/pics/hyped/hyped.png" class="card-img-top" alt="HYPED"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">HYPED</h4>
+                                <p>Elevated energy cafe, nightclub, and restaurant.</p>
+                                <a href="hyped/home.html" class="btn btn-card">Visit HYPED</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CafeFiesta -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper"><img src="assets/pics/brands/cafefiesta.png" class="card-img-top" alt="CafeFiesta"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">CafeFiesta™</h4>
+                                <p>This is our coffee-focused brand!</p>
+                                <a href="https://sites.google.com/view/cafefiesta-by-thc" class="btn btn-card">Visit CafeFiesta™</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FoodHall -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper"><img src="assets/pics/brands/foodhall.png" class="card-img-top" alt="FoodHall"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">FoodHall™</h4>
+                                <p>Our supermarkets. Massive in British, Massive in Quality.</p>
+                                <a href="https://sites.google.com/view/hifoodhall" class="btn btn-card">Visit FoodHall™</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- HiCard -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper"><img src="assets/pics/brands/rewards.png" class="card-img-top" alt="HiCard"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">HiCard</h4>
+                                <p>This is our amazing rewards programme and card!</p>
+                                <a href="hicard/home.html" class="btn btn-card">Visit HiCard</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Highland Cola -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper"><img src="assets/pics/brands/hicola.png" class="card-img-top" alt="Highland Cola"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">Highland Cola™</h4>
+                                <p>This is our company that makes sodas and more!</p>
+                                <a href="https://sites.google.com/view/highlandcola" class="btn btn-card">Visit Highland Cola™</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Hotels & Accommodation -->
+                <h3 class="border-bottom border-secondary pb-2 mb-4">Hotels & Accommodation</h3>
+                <div class="row g-4 mb-5">
+                    <!-- weB&B -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper"><img src="assets/pics/brands/worsteastern.png" class="card-img-top" alt="weB&B"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">weB&B</h4>
+                                <p>This is the best hotel experience from The Highland Cafe™!</p>
+                                <a href="worsteastern/home.html" class="btn btn-card">Visit weB&B</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Technology -->
+                <h3 class="border-bottom border-secondary pb-2 mb-4">Technology</h3>
+                <div class="row g-4 mb-5">
+                    <!-- Harmony -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper"><img src="assets/pics/brands/hiosmobile.png" class="card-img-top" alt="Harmony"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">Harmony</h4>
+                                <p>Download Harmony from here!</p>
+                                <a href="harmony/home.html" class="btn btn-card">Visit Harmony</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- nuggetdev -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper"><img src="assets/pics/nuggetdev/nuggetdev.png" class="card-img-top" alt="nuggetdev"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">nuggetdev</h4>
+                                <p>The brains behind our tech experiences.</p>
+                                <a href="nuggetdev/home.html" class="btn btn-card">Visit nuggetdev</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- HiOSCore -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper"><img src="assets/pics/brands/hioswebcore.png" class="card-img-top" alt="HarmonyCore"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">HiOSCore (Discontinued)</h4>
+                                <p>This is the software that formerly powered all our app experiences!</p>
+                                <a href="https://hiosbythc.home.blog" class="btn btn-card">Visit HarmonyCore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- HiTech -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper"><img src="assets/pics/brands/hitech.png" class="card-img-top" alt="HiTech"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">HiTech</h4>
+                                <p>This is our technology brand, the best ever tech to improve your life!</p>
+                                <a href="https://sites.google.com/view/hitech-by-thehighlandcafe" class="btn btn-card">Visit HiTech</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TVStream -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper"><img src="assets/pics/brands/tvstream.png" class="card-img-top" alt="TVStream"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">TVStream</h4>
+                                <p>Formerly HiTV+, this is our awesome TV streaming service!</p>
+                                <a href="https://sites.google.com/view/hitvstream" class="btn btn-card">Visit TVStream</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category: Politics -->
+                <h3 class="border-bottom border-secondary pb-2 mb-4">Politics</h3>
+                <div class="row g-4 mb-5">
+                    <!-- HiParty -->
+                    <div class="col-sm-6 col-lg-4 col-xl-3">
+                        <div class="card h-100">
+                            <div class="card-img-wrapper"><img src="assets/pics/brands/hiparty.png" class="card-img-top" alt="HiParty"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">HiParty™</h4>
+                                <p>Our brilliant political party. Your Priorities, Our Mission.</p>
+                                <a href="https://sites.google.com/view/thehighlandparty" class="btn btn-card">Visit The Highland Party™</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-5 bg-surface-variant-20">
+                <div class="container">
+                    <div class="text-center mb-5">
+                        <h2>Our Trusted Partners</h2>
+                        <p class="text-on-surface-variant fs-5">We collaborate with industry leaders.</p>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-img-wrapper">
+                                    <img src="assets/pics/brands/de-ad.png" class="card-img-top" alt="De-Advertisement">
+                                </div>
+                                <div class="card-body text-start">
+                                    <h3 class="h5 text-white">De-Advertisement Co.</h3>
+                                    <p>The people which run our astonishingly good customer support services!</p>
+                                    <a href="#" class="text-primary-custom text-decoration-none fw-bold">Their Website →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-img-wrapper">
+                                    <img src="assets/pics/brands/swanora.png" class="card-img-top" alt="Swanora">
+                                </div>
+                                <div class="card-body text-start">
+                                    <h3 class="h5 text-white">Swanora Fashion</h3>
+                                    <p>Be U, Be Different. A forward-thinking fashion company.</p>
+                                    <a href="#" class="text-primary-custom text-decoration-none fw-bold">Their Website →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-5">
+                <div class="container">
+                    <div class="careers-box d-flex flex-column flex-lg-row align-items-center justify-content-between text-center text-lg-start">
+                        <div>
+                            <h2 class="text-white display-5">Join Our Team</h2>
+                            <p class="mt-3 fs-5" style="opacity: 0.8;">Wanting to join our wonderful team? We're always looking for new talent.</p>
+                            <a href="#" class="btn-large-cta">Careers @ HiEnterprises™</a>
+                        </div>
+                        <div class="mt-5 mt-lg-0 ms-lg-5">
+                            <img src="assets/pics/home/careers.png" alt="Careers" class="img-fluid" style="max-width: 300px;">
                         </div>
                     </div>
                 </div>
             </section>
         </main>
 
-        <!-- Footer -->
-        <footer class="bg-surface-container py-12 mt-12">
-            <div class="container mx-auto px-4 lg:px-6 text-center text-outline">
+        <footer class="text-center">
+            <div class="container">
                 <p>&copy; 2017-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
             </div>
         </footer>
 
-        <script src="assets/js/app.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/app.js"></script>
     </body>
 </html>
