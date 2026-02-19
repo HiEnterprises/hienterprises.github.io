@@ -1,0 +1,58 @@
+html {
+	background-color: yellow;
+	font-family: "times new roman";
+	color: red;
+}
+
+#p11 {
+	font-size: 40px;
+	color: #0F9D58;
+}
+
+#p12 {
+	font-size: 40px;
+	color: #4285F4;
+}
+
+#large {
+	font-size: 40px;
+	color: red;
+}
+
+#smaller {
+	font-size: 20px;
+	color: red;
+}
+
+#para {
+	font-size: 20px;
+}
+
+#paraheadings {
+	font-size: 40px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#smallpara {
+	font-size: 10px;
+}
+
+#rightalign {
+	text-align: right;
+}
+
+.wrapper {
+	display: grid;
+ 	grid-template-columns: 400px 400px;
+	justify-content: center;
+}
+
+#office {
+	width: 50%;
+	height: auto;
+}
+
+#logo {
+	width: 45%;
+}

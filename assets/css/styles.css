@@ -1,5 +1,5 @@
 /* assets/css/styles.css */
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght,ROND@6..144,1..1000,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:ital,wght@0,100..700;1,100..700&display=swap');
 
 /*Variables*/
 :root {
@@ -108,6 +108,7 @@ a { text-decoration: none; transition: 0.3s; }
     overflow: hidden;
     color: white;
 }
+
 .hero-bg {
     position: absolute;
     inset: 0;
@@ -116,6 +117,7 @@ a { text-decoration: none; transition: 0.3s; }
     background-position: center;
     z-index: -2;
 }
+
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -149,20 +151,20 @@ a { text-decoration: none; transition: 0.3s; }
     opacity: 0.9;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
 .card-img-wrapper {
-    background-color: rgba(255,255,255, 0.9);
-    padding: 1rem;
     text-align: center;
 }
+
 .card-img-top {
-    height: 192px;
     width: 100%;
     object-fit: contain;
+    border-radius: 25px;
 }
+
+.rounded {
+    border-radius: 25px !important;
+}
+
 .card-body {
     padding: 1.5rem;
     display: flex;
@@ -185,7 +187,8 @@ a { text-decoration: none; transition: 0.3s; }
     font-weight: 600;
     margin-top: auto;
 }
-.btn-card:hover { opacity: 0.85; color: var(--on-primary); }
+
+.btn-card:hover { opacity: 0.85; color: var(--on-secondary); background-color: var(--secondary); }
 
 /* Careers & Footer */
 .careers-box {
