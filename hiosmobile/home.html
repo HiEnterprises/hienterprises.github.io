@@ -3,147 +3,133 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>HiOSMobile™</title>
+        <title>HiOSMobile | Home</title>
         <link rel="icon" href="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/thc.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="../assets/css/style.css" rel="stylesheet">
+        <link href="../assets/css/styles.css" rel="stylesheet">
+        <link href="../assets/css/harmony.css">
     </head>
     <body>
-        <header>
-            <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hiosbadge.png" alt="Logo" height="24" class="d-inline-block align-text-top">
-                        HiOSMobile
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="download.html">For Android</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="lite.html">Lite</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="himaterial.html">HiMaterial</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html">< Back to HiEnterprises™</a>
-                            </li>
-                        </ul>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2 text-on-surface" href="#">
+                    <img src="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hiosbadge.png" alt="Harmony Logo" height="32">
+                    <span class="fw-bold text-primary-custom">HiOSMobile</span>
+                </a>
+                
+                <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#harmNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="harmNav">
+                    <div class="nav-pill-container d-flex flex-column flex-lg-row mt-3 mt-lg-0 text-center">
+                        <a href="#" class="nav-link active">Home</a>
+                        <a href="download.html" class="nav-link">For Android</a>
+                        <a href="lite.html" class="nav-link">Lite</a>
+                        <a href="himaterial.html" class="nav-link">HiMaterial</a>
+                        <a href="../index.html" class="nav-link small text-outline">← HiEnterprises™</a>
                     </div>
                 </div>
-            </nav>
+            </div>
+        </nav>
 
-            <div
-                id="header-image"
-                class="p-4 text-center bg-image"
-                style="
-                    position: relative;
-                    background-image: url('../assets/pics/hiosmobile-site/backdrop.jpg');
-                    height: 50vh;
-                    background-size: cover;
-                    background-position: center bottom;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;">
-                    <div
-                        class="text-white"
-                        style="
-                            position: relative;
-                            z-index: 2;
-                        ">
-                    <h1 class="display-3 bold-title" id="header-title">HiOSMobile</h1>
-                    <h6 class="mb-3" id="header-subtitle">by The Highland Cafe™</h6>
+        <main>
+            <!-- Hero Section -->
+            <section class="hero-section" style="height: 100vh;">
+                <div class="hero-bg" style="background-image: url('../assets/pics/hiosmobile-site/backdrop.jpg');"></div>
+                <div class="hero-overlay"></div>
+                <div class="container position-relative z-1 text-center">
+                    <h1 class="display-1 fw-bold text-white animate-fade-in">HiOSMobile</h1>
+                    <p class="h3 fw-normal text-on-primary-container mt-3 animate-fade-in delay-200">by The Highland Cafe™</p>
                 </div>
-            </div>
-        </header>
-        <section class="container mt-5">
-            <div class="card tertiaryCard">
-                <div class="card-body">
-                    <h1 class="card-title">HiOSMobile is being replaced by Harmony</h1>
-                    <p class="card-text">
-                        We are announcing that from May 31st 2025, HiOSMobile will no longer be updated, and this site will be taken down.<br><br>
-                        This is in light of the development of our new successor to HiOSMobile, named Harmony, which is developed with Flutter, meaning it is easier to maintain and is cross-platform, so the same codebase will work on any device.<br><br>
-                        We sincerely apologise if we have caused you any inconvenience with this, and we want to thank you for being a valued user of the HiOSMobile apps.<br><br>
-                        Best wishes,<br>
-                        The HiDev Team @ The Highland Cafe™
-                    </p>
-                    <a class="btn btn-primary d-block" href="../harmony/home.html" style="background-color: var(--tertiary);color: var(--onTertiary);border: var(--tertiary);">Visit Harmony site</a>
+            </section>
+
+            <!-- Welcome Section -->
+            <section class="py-5 container text-center">
+                <div class="row justify-content-center animate-fade-in">
+                    <div class="col-lg-10">
+                        <h2 class="display-4 fw-bold text-primary-custom mb-3">Welcome to the greatest digital experience from The Highland Cafe™.</h2>
+                        <p class="fs-4 text-on-surface-variant">Welcome to HiOSMobile.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="container mt-5">
-            <h1 class="display-6 mb-3">Welcome to the greatest digital experiences from The Highland Cafe™.</h1>
-            <h1 class="display-6" style="font-weight: 600;">Welcome to HiOSMobile.</h1>
-        </section>
-        <section class="container mt-5">
-            <hr class="border border-primary border-1 opacity-100 mb-5">
-            <h1>Our Apps</h1>
-            <div class="container text-center p-2">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-md-2">
-                    <div class="col pb-3">
-                        <div class="card">
-                            <img class="card-img-top w-100" src="../assets/pics/hiosmobile-site/home/full.png">
-                            <div class="card-body">
-                                <h2 class="card-title">HiOSMobile for Android</h2>
+            </section>
+
+            <!-- Downloads Section -->
+            <section class="py-5 container">
+                <div class="text-center mb-5 animate-fade-in">
+                    <h2 class="fw-bold text-on-surface">Downloads</h2>
+                </div>
+                
+                <div class="row justify-content-center g-4">
+                    <!-- Android Card -->
+                    <div class="col-md-6 col-lg-5">
+                        <div class="card h-100 bg-primary-container border-0 overflow-hidden shadow-lg hover-lift animate-fade-in">
+                            <img src="../assets/pics/hiosmobile-site/home/full.png" class="card-img-top">
+                            <div class="card-body p-4">
+                                <h3 class="h4 fw-bold text-primary mb-3">HiOSMobile for Android</h3>
                                 <p class="card-text">Our main app for Android! It is the best place to order food and more at The Highland Cafe™ brands!</p>
-                                <a class="btn btn-primary d-block" href="download.html">Download HiOSMobile</a>
+                                <a href="download.html" class="btn btn-nav-cta px-4 py-2 rounded-pill shadow-sm">Download HiOSMobile</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col pb-3">
-                        <div class="card">
-                            <img class="card-img-top w-100" src="../assets/pics/hiosmobile-site/home/lite.png">
-                            <div class="card-body">
-                                <h2 class="card-title">HiOSMobile Lite</h2>
+                    
+                    <!-- Web Card -->
+                    <div class="col-md-6 col-lg-5">
+                        <div class="card h-100 bg-primary-container border-0 overflow-hidden shadow-lg hover-lift animate-fade-in delay-100">
+                            <img src="../assets/pics/hiosmobile-site/home/lite.png" class="card-img-top">
+                            <div class="card-body p-4">
+                                <h3 class="h4 fw-bold text-primary mb-3">HiOSMobile for Web</h3>
                                 <p class="card-text">Do you have a iPhone or an Windows Phone? Try HiOSMobile Lite that runs entirely in your browser!</p>
-                                <a class="btn btn-primary d-block" href="lite.html">HiOSMobile Lite</a>
+                                <a href="lite.html" target="_blank" class="btn btn-nav-cta px-4 py-2 rounded-pill shadow-sm">Visit Website</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <h2 class="mt-5">Looking for the new HiCard app?</h2>
-            <p>Although the HiCard app is developed by the HiOSMobile team, HiCard is a seperate service to HiOSMobile.<br>
-                However, you can click a link below to download the HiCard app now.
-            </p>
-            <div class="container text-center">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-md-2">
-                    <div class="col pb-3">
-                        <div class="d-grid gap-2">
-                            <a class="btn btn-primary" href="../hicard/download.html">HiCard for Android</a>
+            </section>
+
+            <!--open source section-->
+            <section class="py-5 container pb-5 mb-5">
+                <hr class="border-secondary opacity-25 my-5 w-75 mx-auto">
+
+                <div class="text-center animate-fade-in">
+                    <h2 class="fw-bold text-on-surface mb-3">Our apps are open source.</h2>
+                    <p class="fs-5 text-on-surface-variant mx-auto" style="max-width: 700px;">Until recently, only HiOSWebCore has been open source and available to look at on GitHub.
+                        Since late August 2023 we have made the extra effort to publish all our source code on GitHub.</p>
+                    </p>
+                </div>
+
+                <div class="row justify-content-center mt-5 animate-fade-in delay-100">
+                    <div class="col-lg-6">
+                        <div class="card border border-secondary rounded-4 overflow-hidden shadow-sm">
+                            <div class="list-group list-group-flush">
+                                <a href="https://github.com/aarjay123/harmony" target="_blank" class="list-group-item list-group-item-action bg-surface-variant text-on-surface border-secondary d-flex justify-content-between align-items-center p-4 transition-colors">
+                                    <span class="fw-semibold fs-5">HiOSMobile for Android</span>
+                                    <span class="text-outline fs-4">→</span>
+                                </a>
+                                <a href="https://github.com/aarjay123/hiosdesktop" target="_blank" class="list-group-item list-group-item-action bg-surface-variant text-on-surface border-secondary d-flex justify-content-between align-items-center p-4 transition-colors">
+                                    <span class="fw-semibold fs-5">HiOSDesktop (development ceased)</span>
+                                    <span class="text-outline fs-4">→</span>
+                                </a>
+                                <a href="https://github.com/aarjay123/hioswebcore" target="_blank" class="list-group-item list-group-item-action bg-surface-variant text-on-surface border-secondary d-flex justify-content-between align-items-center p-4 transition-colors">
+                                    <span class="fw-semibold fs-5">HiOSWebCore</span>
+                                    <span class="text-outline fs-4">→</span>
+                                </a>
+                                <a href="https://github.com/aarjay123/hiosmobileweb" target="_blank" class="list-group-item list-group-item-action bg-surface-variant text-on-surface border-secondary d-flex justify-content-between align-items-center p-4 transition-colors">
+                                    <span class="fw-semibold fs-5">HiOSMobile Lite</span>
+                                    <span class="text-outline fs-4">→</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col pb-3">
-                        <a class="btn btn-primary d-block" href="https://thehighlandcafe.github.io/rewards/">HiCard for Web</a>
-                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="container mt-5">
-            <h1 class="text-center">Our apps are open source.</h1>
-            <p class="lead text-center" style="font-size: medium;">Until recently, only HiOSWebCore has been open source and available to look at on GitHub.
-                Since late August 2023 we have made the extra effort to publish all our source code on GitHub.</p>
-            <p class="fw-bold mt-2">GitHub source code links:</p>
-            <ul class="list-group">
-                <a href="https://github.com/aarjay123/harmony" class="list-group-item list-group-item-action">HiOSMobile for Android</a>
-                <a href="https://github.com/aarjay123/hiosdesktop" class="list-group-item list-group-item-action">HiOSDesktop (development ceased)</a>
-                <a href="https://github.com/thehighlandcafe/hioswebcore" class="list-group-item list-group-item-action">HiOSWebCore</a>
-                <a href="https://github.com/thehighlandcafe/hiosmobileweb" class="list-group-item list-group-item-action">HiOSMobile Lite</a>
-            </ul>
-        </section>
-        <footer class="text-center mt-5">
-            <p style="font-size: x-small;">Copyright © The Highland Cafe™ Ltd. 2021-2025. All Rights Reserved.</p>
-        </footer>
+            </section>
+            <footer class="bg-surface-variant py-5 mt-auto">
+                <div class="container text-center text-outline">
+                    <p class="mb-0">Copyright © The Highland Cafe™ Ltd. 2021-2025. All Rights Reserved.</p>
+                </div>
+            </footer>
+        </main>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
