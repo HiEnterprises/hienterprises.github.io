@@ -1,0 +1,128 @@
+/* =========================================
+   UNIFIED TOP NAV (Glassmorphism)
+   ========================================= */
+
+.unified-top-nav {
+    position: fixed;
+    top: calc(12px + var(--statusbar-pad, 0px));
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    min-height: 60px;
+    width: calc(100% - 32px);
+    max-width: 1108px;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Glass Effect */
+    background-color: var(--glass-tint);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    border-radius: 90px;
+    isolation: isolate;
+}
+
+/* Glass sheen layer */
+.unified-top-nav::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: var(--glass-sheen);
+    opacity: 0.3;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.unified-top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    gap: 4px;
+}
+
+.unified-top-nav ul li {
+    flex: 1;
+    display: flex;
+}
+
+.unified-top-nav ul li a {
+    display: flex;
+    flex-direction: row; /* Side-by-side for desktop */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    width: 100%;
+    color: var(--onPrimaryContainer);
+    background-color: color-mix(in srgb, var(--glass-tint) 40%, transparent);
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+    z-index: 2;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+/* Specific End-Cap Rounding */
+.unified-top-nav ul li:first-child a {
+    border-radius: 60px 15px 15px 60px;
+}
+
+.unified-top-nav ul li:last-child a {
+    border-radius: 15px 60px 60px 15px;
+}
+
+/* States */
+.unified-top-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--secondary);
+}
+
+.unified-top-nav ul li a.active {
+    background-color: var(--primary);
+    color: var(--onPrimary);
+    font-weight: bold;
+}
+
+.unified-top-nav .nav-label {
+    font-size: 1rem;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE BEHAVIOR
+   ========================================= */
+
+@media (max-width: 767px) {
+    .unified-top-nav {
+        min-height: 70px; /* Slightly taller to accommodate stacked text cleanly */
+        padding: 4px 6px;
+        width: calc(
+            100% - 16px
+        ); /* Optional: Slightly wider on very small screens */
+    }
+
+    .unified-top-nav ul {
+        gap: 2px; /* Tighter gap on mobile */
+    }
+
+    .unified-top-nav ul li a {
+        flex-direction: column; /* Stacks icon on top of label */
+        gap: 2px;
+        padding: 6px 2px;
+    }
+
+    .unified-top-nav .nav-label {
+        font-size: 0.65rem; /* Shrinks label text so it fits horizontally */
+        font-weight: 600;
+    }
+}
