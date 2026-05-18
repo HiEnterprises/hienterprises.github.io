@@ -8,7 +8,7 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
-    min-height: 60px;
+    height: 60px;
     width: calc(100% - 32px);
     max-width: 1108px;
     padding: 6px 8px;
@@ -98,31 +98,71 @@
     font-size: 1rem;
 }
 
+.unified-top-nav .nav-brand-item {
+    display: flex;
+    align-items: stretch; /* Forces the list item to stretch to the full height of the navbar */
+}
+
+.unified-top-nav .nav-brand-item a {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+    width: 100%;
+    display: flex; /* Changes from flex to block to allow full image stretch */
+    align-items: stretch;
+    height: 100%;
+
+    background-color: color-mix(
+        in srgb,
+        var(--glass-tint) 40%,
+        transparent
+    ) !important;
+}
+
+.unified-top-nav .nav-brand-item a:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    opacity: 0.9;
+}
+
+.unified-top-nav .nav-brand-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Ensures the most important part of the logo stays centered */
+    display: block; /* Removes the tiny default gap below inline images */
+    border-radius: 0;
+    transition: opacity 0.3s ease;
+}
+
 /* =========================================
    MOBILE RESPONSIVE BEHAVIOR
    ========================================= */
 
 @media (max-width: 767px) {
     .unified-top-nav {
-        min-height: 70px; /* Slightly taller to accommodate stacked text cleanly */
+        min-height: 70px;
         padding: 4px 6px;
-        width: calc(
-            100% - 16px
-        ); /* Optional: Slightly wider on very small screens */
+        width: calc(100% - 16px);
     }
 
     .unified-top-nav ul {
-        gap: 2px; /* Tighter gap on mobile */
+        gap: 2px;
     }
 
     .unified-top-nav ul li a {
-        flex-direction: column; /* Stacks icon on top of label */
+        flex-direction: column;
         gap: 2px;
         padding: 6px 2px;
     }
 
     .unified-top-nav .nav-label {
-        font-size: 0.65rem; /* Shrinks label text so it fits horizontally */
+        font-size: 0.65rem;
         font-weight: 600;
+    }
+
+    /* Lowkey Logo Styles (Mobile) */
+    .unified-top-nav .nav-brand-img {
+        /* Scales down to match the smaller mobile text and icons */
+        margin: auto; /* Centers it vertically next to the stacked icon/text buttons */
     }
 }

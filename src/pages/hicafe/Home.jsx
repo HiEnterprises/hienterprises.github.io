@@ -1,19 +1,8 @@
 import React from "react";
-import { Card, Row, Col, PageHeader } from "../components/HiMaterial";
-import { BrandCard, Footer } from "../components/Web";
+import { Card, Row, Col, PageHeader } from "../../components/HiMaterial";
+import { BrandCard, Footer } from "../../components/Web";
 
-import brandPortfolio from "../assets/pics/home/brand-portfolio.png";
-import hicafe from "../assets/pics/brands/hicafe.png";
-import cafefiesta from "../assets/pics/brands/cafefiesta.png";
-import worsteastern from "../assets/pics/brands/worsteastern.png";
-import hios from "../assets/pics/brands/hiosmobile.png";
-import hicola from "../assets/pics/brands/hicola.png";
-import hiparty from "../assets/pics/brands/hiparty.png";
-import hitech from "../assets/pics/brands/hitech.png";
-import rewards from "../assets/pics/brands/rewards.png";
-import hyped from "../assets/pics/hyped/hyped.png";
-import foodhall from "../assets/pics/brands/foodhall.png";
-import nuggetdev from "../assets/pics/brands/nuggetdev.png";
+import hicafe from "../../assets/pics/brands/hicafe.png";
 
 export default function Home() {
   return (
@@ -43,12 +32,6 @@ export default function Home() {
             title={`We are the parent company of a variety of different brands, from hotel brands to supermarket brands!`}
           >
             <div className="mt-4">
-              <img
-                className="img-fluid roundedImage"
-                src={brandPortfolio}
-                alt="Brand Portfolio"
-                style={{ maxWidth: "100%" }}
-              />
               <p className="mt-3 small fst-italic">
                 The Highland Cafe™ Enterprises' portfolio of brands, February
                 2025
@@ -125,61 +108,47 @@ export default function Home() {
                 buttonText="HiTech HiCafe™"
               />
               <BrandCard
-                imageSrc={cafefiesta}
                 brandName="CafeFiesta™"
                 linkTo="/cafefiesta"
                 buttonText="HiTech CafeFiesta™"
               />
               <BrandCard
-                imageSrc={worsteastern}
                 brandName="weB&B"
                 linkTo="/worsteastern"
                 buttonText="Visit weB&B"
               />
               <BrandCard
-                imageSrc={hios}
                 brandName="HiOS"
                 linkTo="/hios"
                 buttonText="Visit HiOS"
               />
               <BrandCard
-                imageSrc={rewards}
                 brandName="HiRewards"
                 linkTo="/hirewards"
                 buttonText="Visit HiRewards"
               />
               <BrandCard
-                imageSrc={nuggetdev}
                 brandName="nuggetdev"
                 linkTo="/nuggetdev"
                 buttonText="Visit nuggetdev"
               />
               <BrandCard
-                imageSrc={hitech}
                 brandName="HiTech"
                 linkTo="/hitech"
                 buttonText="Visit HiTech"
               />
+              <BrandCard brandName="HYPED" linkTo="/hyped" buttonText="HYPED" />
               <BrandCard
-                imageSrc={hyped}
-                brandName="HYPED"
-                linkTo="/hyped"
-                buttonText="HYPED"
-              />
-              <BrandCard
-                imageSrc={hicola}
                 brandName="Highland Cola™"
                 linkTo="/hicola"
                 buttonText="Visit HiCola™"
               />
               <BrandCard
-                imageSrc={foodhall}
                 brandName="FoodHall"
                 linkTo="https://sites.google.com/view/hifoodhall"
                 buttonText="FoodHall"
               />
               <BrandCard
-                imageSrc={hiparty}
                 brandName="HiParty™"
                 linkTo="https://sites.google.com/view/thehighlandparty"
                 buttonText="Visit The Highland Party™"

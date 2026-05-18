@@ -1094,6 +1094,7 @@ main.container {
         transparent
     );
     color: var(--onTertiaryContainer);
+    border: 0.5px solid var(--outline);
     padding: 10px;
     backdrop-filter: blur(24px);
     text-align: left;

@@ -472,6 +472,6 @@
 /* Increases the safe zone on mobile to account for the stacked icons and text */
 @media (max-width: 767px) {
     .scroll-under-nav {
-        padding-top: 100px;
+        padding-top: 90px;
     }
 }
