@@ -1,0 +1,358 @@
+/* public/assets/css/glass.css */
+
+@font-face {
+    font-family: "Material Symbols Rounded";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/icons.woff2") format("woff2");
+}
+
+/*Variables*/
+:root {
+    --statusbar-pad: env(safe-area-inset-top);
+    --nav-pad-bottom: max(env(safe-area-inset-bottom), 24px);
+
+    --radius-card: 36px;      /* Highly rounded cards */
+    --radius-button: 50rem;   /* Fully rounded pill buttons */
+    --radius-inner: 24px;     /* Highly rounded inner components */
+
+    /* Original Glass Colours */
+    --primary: #a0c9ff;
+    --onPrimary: #00325a;
+    --primaryContainer: #1b2431;
+    --onPrimaryContainer: #d2e4ff;
+    --secondary: #bbc7db;
+    --onSecondary: #253141;
+    --secondaryContainer: #2a3543;
+    --onSecondaryContainer: #d7e3f8;
+    --background: #0d0f12;
+    --onBackground: #e3e2e6;
+    --surface: #0d0f12;
+    --onSurface: #e3e2e6;
+    --outline: rgba(255, 255, 255, 0.12);
+    --surfaceVarient: rgba(255, 255, 255, 0.03);
+    --onSurfaceVarient: #c3c6cf;
+
+    /* Fonts */
+    --fontPrimary: "Google Sans Flex", "Inter", sans-serif;
+}
+
+body {
+    background: #0d0f12 !important;
+    font-family: var(--fontPrimary);
+    color: var(--onBackground);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* --- Organic Blur Blobs (Liquid Backlight) --- */
+.blob-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -10;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.18;
+    animation: drift 25s infinite alternate ease-in-out;
+}
+
+.blob-1 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, #3d5f90 0%, transparent 80%);
+    top: -10%;
+    left: -10%;
+}
+
+.blob-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #715574 0%, transparent 80%);
+    bottom: -10%;
+    right: -10%;
+    animation-delay: -5s;
+}
+
+.blob-3 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, #2a4c5e 0%, transparent 80%);
+    top: 40%;
+    right: 20%;
+    animation-delay: -10s;
+}
+
+@keyframes drift {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(60px, -40px) scale(1.15); }
+    66% { transform: translate(-40px, 80px) scale(0.9); }
+    100% { transform: translate(40px, 40px) scale(1.05); }
+}
+
+/* --- Apple 2026 Liquid Glass Panels (No weird gradients) --- */
+.card, .careers-box, .translucentBox, .translucentAboutBox {
+    position: relative;
+    background: rgba(13, 15, 18, 0.5) !important; /* Flat solid transparency, no gradient */
+    backdrop-filter: blur(30px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(200%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.11) !important;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.15) !important;
+    border-radius: var(--radius-card) !important;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.card:hover {
+    transform: translateY(-6px) scale(1.01) !important;
+    border-color: rgba(255, 255, 255, 0.22) !important;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45), 0 0 30px rgba(160, 201, 255, 0.15) !important;
+}
+
+/* --- Floating Liquid Glass Navigation Bar --- */
+.navbar {
+    top: 16px !important; /* Floating offset */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 90% !important;
+    max-width: 1200px !important;
+    background: rgba(13, 15, 18, 0.55) !important;
+    backdrop-filter: blur(30px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(200%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 50rem !important; /* Rounded capsule layout */
+    padding: 0.5rem 1.5rem !important;
+    z-index: 10000 !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+    transition: all 0.3s ease;
+}
+
+/* Remove desktop pill background, as navbar itself is the glass pill */
+.nav-pill-container {
+    background: transparent !important;
+    border: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .nav-pill-container {
+        flex-direction: row !important;
+        width: auto !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+}
+
+.nav-link {
+    color: #c3c6cf !important;
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    border-radius: 50rem !important;
+    padding: 0.5rem 1rem !important;
+    background: transparent !important;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.nav-link.active {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Liquid Glass Buttons (Pills, Flat transparent gloss) */
+.btn-card, .btn-large-cta, .btn-nav-cta {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    border-radius: var(--radius-button) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 0.6rem 1.5rem !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: none !important;
+    width: 100% !important; /* Full width for cards */
+    display: inline-block !important;
+    text-align: center;
+}
+
+.btn-nav-cta {
+    width: auto !important; /* Compact button in navbar */
+    padding: 0.45rem 1.25rem !important;
+    background: #ffffff !important;
+    color: #0d0f12 !important;
+    border: none !important;
+}
+
+.btn-nav-cta:hover {
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: #0d0f12 !important;
+    transform: scale(1.03) !important;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2) !important;
+}
+
+.btn-card:hover, .btn-large-cta:hover {
+    background: #ffffff !important;
+    color: #0d0f12 !important;
+    border-color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Custom Morphing Hamburger Button */
+.mobile-nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 14px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10000;
+}
+
+.mobile-nav-toggle .line {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: center;
+}
+
+.mobile-nav-toggle.open .line-1 {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-nav-toggle.open .line-2 {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.mobile-nav-toggle.open .line-3 {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Responsive Display */
+@media (max-width: 991.98px) {
+    .desktop-nav {
+        display: none !important;
+    }
+    .mobile-nav-toggle {
+        display: flex !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .desktop-nav {
+        display: flex !important;
+    }
+    .mobile-nav-toggle {
+        display: none !important;
+    }
+}
+
+/* --- Overhauled Mobile Menu Overlay --- */
+.mobile-overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(13, 15, 18, 0.92) !important;
+    backdrop-filter: blur(40px) saturate(220%) !important;
+    -webkit-backdrop-filter: blur(40px) saturate(220%) !important;
+    z-index: 9999 !important; /* Render right below navbar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+}
+
+.mobile-overlay-menu.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-overlay-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+}
+
+.mobile-overlay-link {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.mobile-overlay-menu.open .mobile-overlay-link {
+    animation: slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.mobile-overlay-link:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.mobile-overlay-link.active {
+    color: var(--primary) !important;
+    text-shadow: 0 0 15px rgba(160, 201, 255, 0.3);
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Refined Card Image Formatting (More rounded) --- */
+.card-img-wrapper {
+    position: relative;
+    border-radius: var(--radius-inner) !important;
+    overflow: hidden;
+    margin: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.card-img-top {
+    border-radius: var(--radius-inner) !important;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.04) !important;
+}

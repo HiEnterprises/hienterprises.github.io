@@ -1,0 +1,36 @@
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import useStylesheet from '../hooks/useStylesheet';
+import GlassNavbar from '../components/GlassNavbar';
+
+export default function HiOSMobileLayout() {
+  // Scopes the harmony.css stylesheet dynamically (reused for HiOSMobile layout)
+  useStylesheet('/assets/css/harmony.css');
+
+  const links = [
+    { to: '/hiosmobile', label: 'Home', end: true },
+    { to: '/hiosmobile/download', label: 'For Android' },
+    { to: '/hiosmobile/lite', label: 'Lite' },
+    { to: '/hiosmobile/himaterial', label: 'HiMaterial' },
+    { to: '/', label: '← HiEnterprises™' }
+  ];
+
+  return (
+    <div className="hiosmobile-site-container">
+      <GlassNavbar
+        brandLogo="https://thehighlandcafe.github.io/hioswebcore/assets/pics/logos/hiosbadge.png"
+        brandName="HiOSMobile"
+        brandLink="/hiosmobile"
+        links={links}
+      />
+
+      <Outlet />
+
+      <footer className="bg-surface-variant py-5 mt-auto">
+        <div className="container text-center text-outline">
+          <p className="mb-0">Copyright © The Highland Cafe™ Ltd. 2021-2025. All Rights Reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+}

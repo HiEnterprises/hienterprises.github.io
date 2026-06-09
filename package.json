@@ -1,0 +1,31 @@
+{
+  "name": "hienterprises.github.io",
+  "version": "1.0.0",
+  "description": "This repository contains the source code for the official website of The Highland Cafe™ Enterprises, a organization based in Birmingham, UK.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hienterprises/hienterprises.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hienterprises/hienterprises.github.io/issues"
+  },
+  "homepage": "https://github.com/hienterprises/hienterprises.github.io#readme",
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "gh-pages": "^6.3.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^7.17.0",
+    "vite": "^8.0.16"
+  }
+}
