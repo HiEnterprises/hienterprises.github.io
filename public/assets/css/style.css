@@ -66,7 +66,6 @@
 /* General Body and Typography */
 body {
     background-color: var(--background);
-    font-family: var(--fontPrimary);
     font-weight: 400;
     color: var(--onBackground);
     line-height: 1.65;

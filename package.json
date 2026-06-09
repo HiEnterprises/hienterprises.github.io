@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/hienterprises/hienterprises.github.io#readme",
   "dependencies": {
+    "@fontsource/adwaita-sans": "^5.2.1",
     "@vitejs/plugin-react": "^6.0.2",
     "gh-pages": "^6.3.0",
     "react": "^19.2.7",

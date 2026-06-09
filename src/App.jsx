@@ -1,7 +1,25 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
-// Layouts
+/**
+ * ROUTING GUIDE
+ * 
+ * This app uses Hash Routing (#/) for client-side navigation.
+ * Each route section wraps pages in a Layout component that provides:
+ * - Site-specific navbar branding
+ * - Site-specific CSS styling
+ * - Site-specific navigation links
+ * 
+ * STRUCTURE:
+ * Route path="/brand" → Layout component (e.g., HiCafeLayout)
+ *                    → Nested routes for brand pages
+ * 
+ * The Layout component handles styling via useStylesheet() hook,
+ * which dynamically loads CSS for that brand.
+ */
+
+// ============ LAYOUT COMPONENTS ============
+// Each layout wraps a brand's pages and applies site-specific styling
 import RootLayout from './layouts/RootLayout';
 import HiCafeLayout from './layouts/HiCafeLayout';
 import HarmonyLayout from './layouts/HarmonyLayout';
@@ -10,21 +28,46 @@ import HiOSMobileLayout from './layouts/HiOSMobileLayout';
 import HiTechLayout from './layouts/HiTechLayout';
 import MyladLayout from './layouts/MyladLayout';
 
-// Ported Pages
+// ============ PAGE COMPONENTS ============
+// Naming convention: [BrandName][PageName]
+// All pages for a brand are exported from their Pages.jsx file
+// 
+// To add a new page:
+// 1. Create it in src/pages/[BrandName]/PageName.jsx
+// 2. Export it from pages/[BrandName]/Pages.jsx
+// 3. Import it here
+// 4. Add a route in the appropriate section below
+// 5. Add a nav link in the corresponding Layout file
+
+// Root (Main HiEnterprises Site)
 import { Home, Blog, Brands } from './pages/Root/Pages';
+
+// HiCafe Restaurant
 import { HiCafeHome, HiCafeReviews, HiCafeContactUs, HiCafeChef, HiCafeMenu } from './pages/HiCafe/Pages';
+
+// Harmony Mobile App
 import { HarmonyHome, HarmonyAndroid, HarmonyAutoUpdate, HarmonyHiMaterial, HarmonyMacOS, HarmonyWindows } from './pages/Harmony/Pages';
+
+// WorstEastern / weB&B Hotel
 import { WorstEasternHome, WorstEasternRooms, WorstEasternHowToGetThere, WorstEasternHowToReserve, WorstEasternHiOSMobileApp } from './pages/WorstEastern/Pages';
+
+// HiOSMobile App
 import { HiOSMobileHome, HiOSMobileDownload, HiOSMobileLite, HiOSMobileHiMaterial, HiOSMobileChangelogArchive } from './pages/HiOSMobile/Pages';
+
+// HiTech Electronics
 import { 
   HiTechHome, HiTechPhones, HiTechTablets, HiTechConsoles, HiTechComputers, HiTechTelevisions,
   HiTechBuyX, HiTechPurchase, HiTechConfirmPurchase, HiTechThanksPurchase 
 } from './pages/HiTech/Pages';
+
+// MyLad Retro Tech
 import { 
   MyladHome, MyladMyPhones, MyladRanges, MyladMyPhoneDetail, MyladMyPhoneEDetail, 
   MyladMyTvRanges, MyladMyTendoRanges, MyladAbout, 
   MyladBuyX, MyladPurchase, MyladConfirm, MyladThanks, MyladSnakeGame 
 } from './pages/Mylad/Pages';
+
+// Other Brands (landing pages only)
 import { CafefiestaHome } from './pages/Cafefiesta/Pages';
 import { HicardHome } from './pages/Hicard/Pages';
 import { HypedHome } from './pages/Hyped/Pages';
@@ -34,7 +77,9 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        {/* Root level (Main Site) */}
+        {/* ========================================
+            ROOT LEVEL - MAIN HIENTERPRISES SITE
+            ======================================== */}
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Home />} />
           <Route path="blog" element={<Blog />} />
@@ -44,7 +89,12 @@ export default function App() {
           <Route path="hyped" element={<HypedHome />} />
         </Route>
 
-        {/* HiCafe */}
+        {/* ========================================
+            HICAFE - Restaurant Brand
+            Route: /#/hicafe
+            CSS: /assets/css/hicafe.css (loaded automatically)
+            To add a page: Add component in pages/HiCafe/, import here, add route
+            ======================================== */}
         <Route path="/hicafe" element={<HiCafeLayout />}>
           <Route index element={<HiCafeHome />} />
           <Route path="reviews" element={<HiCafeReviews />} />
@@ -53,19 +103,28 @@ export default function App() {
           <Route path="menu" element={<HiCafeMenu />} />
         </Route>
 
-        {/* Harmony (Bootstrap Layout) */}
+        {/* ========================================
+            HARMONY - Mobile App
+            Route: /#/harmony
+            NOTE: Some Harmony pages render without the layout wrapper
+                  because they use custom Tailwind styling
+            ======================================== */}
         <Route path="/harmony" element={<HarmonyLayout />}>
           <Route index element={<HarmonyHome />} />
           <Route path="android" element={<HarmonyAndroid />} />
           <Route path="himaterial" element={<HarmonyHiMaterial />} />
         </Route>
 
-        {/* Harmony (Tailwind Pages without Bootstrap Layout wrapper) */}
+        {/* These Harmony pages bypass the layout wrapper */}
         <Route path="/harmony/autoupdate" element={<HarmonyAutoUpdate />} />
         <Route path="/harmony/macos" element={<HarmonyMacOS />} />
         <Route path="/harmony/windows" element={<HarmonyWindows />} />
 
-        {/* WorstEastern (weB&B) */}
+        {/* ========================================
+            WORSTEASTERN - weB&B Hotel
+            Route: /#/worsteastern
+            CSS: /assets/css/worsteastern.css
+            ======================================== */}
         <Route path="/worsteastern" element={<WorstEasternLayout />}>
           <Route index element={<WorstEasternHome />} />
           <Route path="rooms" element={<WorstEasternRooms />} />
@@ -74,7 +133,11 @@ export default function App() {
           <Route path="hios-mobile-app" element={<WorstEasternHiOSMobileApp />} />
         </Route>
 
-        {/* HiOSMobile */}
+        {/* ========================================
+            HIOSMOBILE - Legacy Mobile App
+            Route: /#/hiosmobile
+            CSS: /assets/css/hiosmobile.css
+            ======================================== */}
         <Route path="/hiosmobile" element={<HiOSMobileLayout />}>
           <Route index element={<HiOSMobileHome />} />
           <Route path="download" element={<HiOSMobileDownload />} />
@@ -83,7 +146,12 @@ export default function App() {
           <Route path="changelog-archive" element={<HiOSMobileChangelogArchive />} />
         </Route>
 
-        {/* HiTech */}
+        {/* ========================================
+            HITECH - Electronics Retailer
+            Route: /#/hitech
+            CSS: /assets/css/hitech.css
+            NOTE: Includes multi-step checkout flow
+            ======================================== */}
         <Route path="/hitech" element={<HiTechLayout />}>
           <Route index element={<HiTechHome />} />
           <Route path="phones" element={<HiTechPhones />} />
@@ -92,7 +160,7 @@ export default function App() {
           <Route path="computers" element={<HiTechComputers />} />
           <Route path="televisions" element={<HiTechTelevisions />} />
           
-          {/* Checkout Flows */}
+          {/* Checkout Flow - supports both new and legacy URL patterns */}
           <Route path="buynow/buyx" element={<HiTechBuyX />} />
           <Route path="buynow/buyx.html" element={<HiTechBuyX />} />
           <Route path="buynow/purchase" element={<HiTechPurchase />} />
@@ -103,13 +171,18 @@ export default function App() {
           <Route path="buynow/thanksPurchase.html" element={<HiTechThanksPurchase />} />
         </Route>
 
-        {/* MyLad */}
+        {/* ========================================
+            MYLAD - Retro Tech Brand
+            Route: /#/mylad
+            CSS: /mylad/css/style.css
+            NOTE: Includes interactive snake game and multi-step checkout
+            ======================================== */}
         <Route path="/mylad" element={<MyladLayout />}>
           <Route index element={<MyladHome />} />
           <Route path="myphones" element={<MyladMyPhones />} />
           <Route path="mylad-ranges" element={<MyladRanges />} />
           
-          {/* Phone Details */}
+          {/* Product Detail Pages - supports multiple URL patterns for compatibility */}
           <Route path="myphone" element={<MyladMyPhoneDetail />} />
           <Route path="myphone.html" element={<MyladMyPhoneDetail />} />
           <Route path="myphone-detail" element={<MyladMyPhoneDetail />} />
@@ -121,7 +194,7 @@ export default function App() {
           <Route path="mytendo-ranges" element={<MyladMyTendoRanges />} />
           <Route path="about" element={<MyladAbout />} />
           
-          {/* Checkout Flows */}
+          {/* Checkout Flow */}
           <Route path="buynow" element={<MyladBuyX />} />
           <Route path="buyx" element={<MyladBuyX />} />
           <Route path="buyx.html" element={<MyladBuyX />} />
@@ -132,13 +205,17 @@ export default function App() {
           <Route path="thanks" element={<MyladThanks />} />
           <Route path="thanksPurchase.html" element={<MyladThanks />} />
 
-          {/* Snake Game */}
+          {/* Interactive Game */}
           <Route path="snakegame" element={<MyladSnakeGame />} />
           <Route path="snakegame.html" element={<MyladSnakeGame />} />
           <Route path="newsnakegame.html" element={<MyladSnakeGame />} />
         </Route>
 
-        {/* nuggetdev (Tailwind Page, rendered directly) */}
+        {/* ========================================
+            NUGGETDEV - Development Studio
+            Route: /#/nuggetdev
+            NOTE: Renders directly without layout wrapper (custom styling)
+            ======================================== */}
         <Route path="/nuggetdev" element={<NuggetdevHome />} />
       </Routes>
     </Router>
