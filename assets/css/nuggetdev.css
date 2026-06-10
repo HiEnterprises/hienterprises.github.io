@@ -1,0 +1,366 @@
+/* public/assets/css/nuggetdev.css */
+
+:root {
+    /* Dynamic Liquid Glass Blobs for Nuggetdev (Cyan / Dark Teal / Violet) */
+    --blob-color-1: rgba(33, 196, 240, 0.45);
+    --blob-color-2: rgba(0, 78, 99, 0.35);
+    --blob-color-3: rgba(139, 92, 246, 0.25);
+}
+
+.nuggetdev-body {
+    background-color: var(--background);
+    color: var(--on-background);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    padding-bottom: 4rem;
+}
+
+/* Nuggetdev Specific Accent Color overriding standard variables */
+.nuggetdev-site-container {
+    --primary: rgb(33, 196, 240);
+    --onPrimary: rgb(0, 53, 69);
+    --primaryContainer: rgba(0, 78, 99, 0.4);
+    --onPrimaryContainer: rgb(183, 234, 255);
+    --bleed-gradient: linear-gradient(135deg, rgba(33, 196, 240, 0.3), rgba(0, 78, 99, 0.3));
+}
+
+/* Fixed Header Navbar */
+.nuggetdev-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(24, 28, 30, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nuggetdev-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nuggetdev-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.nuggetdev-logo-img {
+    height: 32px;
+    width: auto;
+}
+
+.nuggetdev-logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nuggetdev-menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--on-primary-container);
+    padding: 8px;
+    border-radius: 50%;
+    display: none;
+}
+
+.nuggetdev-menu-button:hover {
+    background-color: rgba(33, 196, 240, 0.1);
+}
+
+/* Desktop Navigation Link Container */
+.nuggetdev-desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: rgba(0, 78, 99, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 6px 18px;
+    border-radius: 50rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nuggetdev-nav-link {
+    font-size: 0.875rem;
+    color: var(--on-primary-container);
+    padding: 4px 12px;
+    border-radius: 50rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.nuggetdev-nav-link:hover {
+    color: var(--primary);
+    background-color: rgba(33, 196, 240, 0.1);
+}
+
+.nuggetdev-nav-back-link {
+    font-size: 0.75rem;
+    color: var(--outline);
+    margin-left: 16px;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.nuggetdev-nav-back-link:hover {
+    color: #ffffff;
+}
+
+/* Mobile Menu Links */
+.nuggetdev-mobile-menu {
+    background-color: rgba(0, 78, 99, 0.95);
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nuggetdev-mobile-link {
+    display: block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: var(--on-primary-container);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.nuggetdev-mobile-link:hover {
+    color: var(--primary);
+    background-color: rgba(33, 196, 240, 0.1);
+}
+
+/* Hero Section */
+.nuggetdev-hero {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.nuggetdev-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('/assets/pics/nuggetdev/backdrop.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.nuggetdev-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.nuggetdev-hero-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nuggetdev-hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .nuggetdev-hero-title {
+        font-size: 5.5rem;
+    }
+}
+
+.nuggetdev-hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--on-primary-container);
+    margin-bottom: 0;
+}
+
+/* Content Layout */
+.nuggetdev-section {
+    padding: 4rem 1.5rem;
+}
+
+.nuggetdev-section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.nuggetdev-section-subtitle {
+    font-size: 1.125rem;
+    color: var(--on-surface-variant);
+    margin-bottom: 0;
+}
+
+/* Grid Layouts */
+.nuggetdev-projects-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .nuggetdev-projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Card Re-Styling */
+.nuggetdev-project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.nuggetdev-card-img-block {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    height: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-inner);
+    margin: var(--spacing-md);
+    overflow: hidden;
+}
+
+.nuggetdev-card-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.nuggetdev-card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.nuggetdev-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.nuggetdev-card-text {
+    font-size: 0.875rem;
+    color: var(--on-surface-variant);
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.nuggetdev-card-btn {
+    margin-top: 1.5rem;
+}
+
+/* Discontinued Section */
+.nuggetdev-discontinued-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+    .nuggetdev-discontinued-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .nuggetdev-discontinued-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.nuggetdev-disc-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 16px !important;
+}
+
+.nuggetdev-disc-img-block {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin: var(--spacing-sm);
+    overflow: hidden;
+}
+
+.nuggetdev-disc-img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.nuggetdev-disc-body {
+    padding: 1rem;
+}
+
+.nuggetdev-disc-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.nuggetdev-disc-date {
+    font-size: 0.75rem;
+    color: var(--on-surface-variant);
+    margin-bottom: 0;
+}
+
+/* Responsive Hamburger Toggle Display */
+@media (max-width: 991.98px) {
+    .nuggetdev-desktop-nav {
+        display: none !important;
+    }
+    .nuggetdev-menu-button {
+        display: block !important;
+    }
+}
+
+.nuggetdev-footer {
+    background: transparent;
+    padding: 2rem var(--spacing-lg);
+    margin-top: 4rem;
+    text-align: center;
+    color: var(--outline);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}

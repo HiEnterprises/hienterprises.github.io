@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+:root {
+    --primary: rgb(228 195 108);
+    --onPrimary: rgb(61 46 0);
+    --primaryContainer: rgb(44 34 0);
+    --onPrimaryContainer: white;
+    --secondary: rgb(213 197 160);
+    --onSecondary: rgb(57 47 21);
+    --secondaryContainer: rgb(81 70 42);
+    --onSecondaryContainer: rgb(242 225 187);
+    --tertiary: rgb(174 207 173);
+    --onTertiary: rgb(26 54 30);
+    --tertiaryContainer: rgb(48 77 51);
+    --onTertiaryContainer: rgb(201 236 200);
+    --background: rgb(22 19 11);
+    --onBackground: rgb(234 225 212);
+    --surface: rgb(22 19 11);
+    --onSurface: rgb(234 225 212);
+    --outline: rgb(152 144 128);
+    --surfaceVarient: rgb(76 70 57);
+    --onSurfaceVarient: rgb(207 197 180);
+
+    --title-colour: rgba(241, 194, 50, 1);
+
+    --caveat: 'Caveat', cursive;
+
+    /* Warm Liquid Glass Blobs (Gold / Soft Green / Dark Gold) */
+    --blob-color-1: rgba(228, 195, 108, 0.45);
+    --blob-color-2: rgba(174, 207, 173, 0.35);
+    --blob-color-3: rgba(61, 46, 0, 0.25);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-colour) !important;
+    font-family: "Caveat", cursive;
+}
+
+.text-primary {
+    color: white !important;
+}
+
+.bg-primary-container {
+    background-color: var(--primaryContainer) !important;
+    color: var(--onPrimaryContainer);
+}
+
+p {
+    color: var(--onSurface)
+}
+
+#header-title {
+    font-family: var(--caveat);
+    color: var(--title-colour);
+}
+
+.display-6 {
+    font-family: var(--caveat);
+    color: var(--title-colour) !important;
+}
+
+p a {
+    color: var(--onPrimaryContainer);
+}
+
+.card {
+    background-color: var(--primaryContainer);
+    border-color: var(--primaryContainer)
+}
+
+.card-title {
+    color: var(--primary);
+}
+
+.card-text {
+    color: var(--onPrimaryContainer);
+}
+
+.card-img-top {
+    border-radius: 25px;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary);
+    color: var(--onSecondary);
+    border-color: var(--secondary);
+}
+
+.yellow {
+    color: var(--title-colour) !important;
+    font-family: var(--caveat)
+}

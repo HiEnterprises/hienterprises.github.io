@@ -1,0 +1,704 @@
+/* public/assets/css/glass.css */
+
+@font-face {
+    font-family: "Material Symbols Rounded";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/icons.woff2") format("woff2");
+}
+
+/*Variables*/
+:root {
+    --statusbar-pad: env(safe-area-inset-top);
+    --nav-pad-bottom: max(env(safe-area-inset-bottom), 24px);
+
+    --radius-card: 28px;      /* iOS-like card radius */
+    --radius-button: 50rem;   /* Fully rounded pill buttons */
+    --radius-inner: 20px;     /* Rounded inner components */
+
+    /* iOS 26 Glass Colours - Clean & Refined */
+    --primary: #a0c9ff;
+    --onPrimary: #00325a;
+    --primaryContainer: #1b2431;
+    --onPrimaryContainer: #d2e4ff;
+    --secondary: #bbc7db;
+    --onSecondary: #253141;
+    --secondaryContainer: #2a3543;
+    --onSecondaryContainer: #d7e3f8;
+    --background: #0d0f12;
+    --onBackground: #e3e2e6;
+    --surface: #0d0f12;
+    --onSurface: #e3e2e6;
+    --outline: rgba(255, 255, 255, 0.12);
+    --surfaceVarient: rgba(255, 255, 255, 0.03);
+    --onSurfaceVarient: #c3c6cf;
+
+    /* Fonts */
+    --fontPrimary: "Adwaita Sans", sans-serif;
+    
+    /* Spacing Scale */
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+
+    /* Dynamic Liquid Glass Blob default colors (Cyan/Pink/Purple) */
+    --blob-color-1: rgba(59, 130, 246, 0.45);
+    --blob-color-2: rgba(236, 72, 153, 0.35);
+    --blob-color-3: rgba(139, 92, 246, 0.25);
+}
+
+body {
+    background-color: #000000 !important;
+    background-image: none !important;
+    font-family: var(--fontPrimary);
+    color: var(--onBackground);
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Better Typography Hierarchy */
+h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; }
+h2 { font-size: 1.875rem; font-weight: 700; letter-spacing: -0.01em; }
+h3 { font-size: 1.5rem; font-weight: 600; }
+h4 { font-size: 1.25rem; font-weight: 600; }
+h5 { font-size: 1.1rem; font-weight: 500; }
+h6 { font-size: 1rem; font-weight: 500; }
+
+/* --- Organic Blur Blobs (Disabled for Jet Black Theme) --- */
+.blob-container {
+    display: none !important;
+}
+
+.blob {
+    display: none !important;
+}
+
+/* --- Apple-Style Refined Dark Glass Panels (Minimal & Polished) --- */
+.card, .careers-box, .translucentBox, .translucentAboutBox {
+    position: relative;
+    background: rgba(18, 18, 18, 0.65) !important;
+    backdrop-filter: blur(25px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+    border-radius: var(--radius-card) !important;
+    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    padding: var(--spacing-lg) !important;
+}
+
+/* Disabled bleed effect */
+.card::before {
+    display: none !important;
+}
+
+.card:hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(255, 255, 255, 0.16) !important;
+    background: rgba(26, 26, 26, 0.75) !important;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.8), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+.container {
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+/* --- Floating Liquid Glass Navigation Bar (iOS 26 Style) --- */
+.navbar {
+    position: fixed !important;
+    top: 12px !important; /* Slightly reduced offset */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 90% !important;
+    max-width: 1200px !important;
+    background: rgba(13, 15, 18, 0.4) !important; /* Lighter glass */
+    backdrop-filter: blur(40px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(40px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 50rem !important; /* Rounded capsule layout */
+    padding: 0.6rem 1.5rem !important;
+    z-index: 10000 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar .navbar-brand {
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    font-size: 1.1rem !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.25s ease;
+}
+
+.navbar .navbar-brand:hover {
+    opacity: 0.8;
+}
+
+.navbar .navbar-brand img {
+    height: 32px !important;
+    width: auto !important;
+    border-radius: 6px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.navbar .navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+/* Remove desktop pill background, as navbar itself is the glass pill */
+.nav-pill-container {
+    background: transparent !important;
+    border: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .nav-pill-container {
+        flex-direction: row !important;
+        width: auto !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+}
+
+.nav-link {
+    color: #c3c6cf !important;
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    border-radius: 50rem !important;
+    padding: 0.5rem 1rem !important;
+    background: transparent !important;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    transform: translateY(-1px);
+}
+
+.nav-link.active {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Liquid Glass Buttons (iOS 26 Style - Pills with refined glass) */
+.btn-card, .btn-large-cta, .btn-nav-cta {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+    border-radius: var(--radius-button) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(12px) !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    width: 100% !important; /* Full width for cards */
+    display: inline-block !important;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%);
+}
+
+.btn-card:active::before {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    to {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+.btn-nav-cta {
+    width: auto !important; /* Compact button in navbar */
+    padding: 0.5rem 1.25rem !important;
+    background: #ffffff !important;
+    color: #0d0f12 !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1) !important;
+}
+
+.btn-nav-cta:hover {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: #0d0f12 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15) !important;
+}
+
+.btn-card:hover, .btn-large-cta:hover {
+    background: #ffffff !important;
+    color: #0d0f12 !important;
+    border-color: #ffffff !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 32px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Custom Morphing Hamburger Button */
+.mobile-nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 14px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10000;
+}
+
+.mobile-nav-toggle .line {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: center;
+}
+
+.mobile-nav-toggle.open .line-1 {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-nav-toggle.open .line-2 {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.mobile-nav-toggle.open .line-3 {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Responsive Display */
+@media (max-width: 991.98px) {
+    .desktop-nav {
+        display: none !important;
+    }
+    .mobile-nav-toggle {
+        display: flex !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .desktop-nav {
+        display: flex !important;
+    }
+    .mobile-nav-toggle {
+        display: none !important;
+    }
+}
+
+/* --- Overhauled Mobile Menu Overlay (iOS 26 Style) --- */
+.mobile-overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(13, 15, 18, 0.95) !important;
+    backdrop-filter: blur(50px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(50px) saturate(200%) !important;
+    z-index: 9999 !important; /* Render right below navbar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem var(--spacing-lg);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+}
+
+.mobile-overlay-menu.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-overlay-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+}
+
+.mobile-overlay-link {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.mobile-overlay-menu.open .mobile-overlay-link {
+    animation: slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.mobile-overlay-link:hover {
+    transform: scale(1.08);
+    opacity: 1;
+    color: var(--primary);
+}
+
+.mobile-overlay-link.active {
+    color: var(--primary) !important;
+    text-shadow: 0 0 20px rgba(160, 201, 255, 0.4);
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Refined Card Image Formatting (iOS 26 Style) --- */
+.card-img-wrapper {
+    position: relative;
+    border-radius: var(--radius-inner) !important;
+    overflow: hidden;
+    margin: var(--spacing-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-img-top {
+    border-radius: var(--radius-inner) !important;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    width: 100% !important; /* Full width for cards */
+    display: inline-block !important;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%);
+}
+
+.btn-card:active::before {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    to {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+.btn-nav-cta {
+    width: auto !important; /* Compact button in navbar */
+    padding: 0.5rem 1.25rem !important;
+    background: #ffffff !important;
+    color: #0d0f12 !important;
+    border: none !important;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1) !important;
+}
+
+.btn-nav-cta:hover {
+    background: rgba(255, 255, 255, 0.95) !important;
+    color: #0d0f12 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15) !important;
+}
+
+.btn-card:hover, .btn-large-cta:hover {
+    background: #ffffff !important;
+    color: #0d0f12 !important;
+    border-color: #ffffff !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 32px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Custom Morphing Hamburger Button */
+.mobile-nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 14px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10000;
+}
+
+.mobile-nav-toggle .line {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: center;
+}
+
+.mobile-nav-toggle.open .line-1 {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-nav-toggle.open .line-2 {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.mobile-nav-toggle.open .line-3 {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Responsive Display */
+@media (max-width: 991.98px) {
+    .desktop-nav {
+        display: none !important;
+    }
+    .mobile-nav-toggle {
+        display: flex !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .desktop-nav {
+        display: flex !important;
+    }
+    .mobile-nav-toggle {
+        display: none !important;
+    }
+}
+
+/* --- Overhauled Mobile Menu Overlay (iOS 26 Style) --- */
+.mobile-overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(13, 15, 18, 0.95) !important;
+    backdrop-filter: blur(50px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(50px) saturate(200%) !important;
+    z-index: 9999 !important; /* Render right below navbar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem var(--spacing-lg);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+}
+
+.mobile-overlay-menu.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-overlay-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+}
+
+.mobile-overlay-link {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.mobile-overlay-menu.open .mobile-overlay-link {
+    animation: slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.mobile-overlay-link:hover {
+    transform: scale(1.08);
+    opacity: 1;
+    color: var(--primary);
+}
+
+.mobile-overlay-link.active {
+    color: var(--primary) !important;
+    text-shadow: 0 0 20px rgba(160, 201, 255, 0.4);
+}
+
+@keyframes slideInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Refined Card Image Formatting (iOS 26 Style) --- */
+.card-img-wrapper {
+    position: relative;
+    border-radius: var(--radius-inner) !important;
+    overflow: hidden;
+    margin: var(--spacing-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-img-top {
+    border-radius: var(--radius-inner) !important;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.06) !important;
+}
+
+/* --- Brand-Specific Accents & Overrides --- */
+
+/* Root Layout: Default Blue Accents */
+.root-site-container {
+    --primary: #1e90ff;
+    --onPrimary: #002244;
+}
+
+/* HiCafe Layout: Golden/Orange Accents */
+.hicafe-site-container {
+    --primary: #ffd700;
+    --onPrimary: #4a3b00;
+}
+.hicafe-site-container .nav-link:hover,
+.hicafe-site-container .nav-link.active {
+    color: var(--primary) !important;
+    background-color: rgba(255, 215, 0, 0.12) !important;
+}
+.hicafe-site-container .btn-card:hover,
+.hicafe-site-container .btn-large-cta:hover {
+    background: var(--primary) !important;
+    color: var(--onPrimary) !important;
+    box-shadow: 0 8px 24px rgba(255, 215, 0, 0.25) !important;
+}
+
+/* HiOSMobile Layout: Blue Accents */
+.hiosmobile-site-container {
+    --primary: #1e90ff;
+    --onPrimary: #002244;
+}
+.hiosmobile-site-container .nav-link:hover,
+.hiosmobile-site-container .nav-link.active {
+    color: var(--primary) !important;
+    background-color: rgba(30, 144, 255, 0.12) !important;
+}
+.hiosmobile-site-container .btn-card:hover,
+.hiosmobile-site-container .btn-large-cta:hover {
+    background: var(--primary) !important;
+    color: var(--onPrimary) !important;
+    box-shadow: 0 8px 24px rgba(30, 144, 255, 0.25) !important;
+}
+
+/* WorstEastern Layout: Green/Emerald Accents */
+.worsteastern-site-container {
+    --primary: #81c784;
+    --onPrimary: #1b5e20;
+}
+.worsteastern-site-container .nav-link:hover,
+.worsteastern-site-container .nav-link.active {
+    color: var(--primary) !important;
+    background-color: rgba(129, 199, 132, 0.12) !important;
+}
+.worsteastern-site-container .btn-card:hover,
+.worsteastern-site-container .btn-large-cta:hover {
+    background: var(--primary) !important;
+    color: var(--onPrimary) !important;
+    box-shadow: 0 8px 24px rgba(129, 199, 132, 0.25) !important;
+}
+
+/* HiTech Layout: Futuristic Cyan/Magenta Accents */
+.hitech-site-container {
+    --primary: #00e5ff;
+    --onPrimary: #006064;
+}
+.hitech-site-container .nav-link:hover,
+.hitech-site-container .nav-link.active {
+    color: var(--primary) !important;
+    background-color: rgba(0, 229, 255, 0.12) !important;
+}
+.hitech-site-container .btn-card:hover,
+.hitech-site-container .btn-large-cta:hover {
+    background: var(--primary) !important;
+    color: var(--onPrimary) !important;
+    box-shadow: 0 8px 24px rgba(0, 229, 255, 0.25) !important;
+}
+
+/* Mylad Layout: Retro Golden Yellow Accents */
+.mylad-site-container {
+    --primary: #ffeb3b;
+    --onPrimary: #f57f17;
+}
+.mylad-site-container .nav-link:hover,
+.mylad-site-container .nav-link.active {
+    color: var(--primary) !important;
+    background-color: rgba(255, 235, 59, 0.12) !important;
+}
+.mylad-site-container .btn-card:hover,
+.mylad-site-container .btn-large-cta:hover {
+    background: var(--primary) !important;
+    color: var(--onPrimary) !important;
+    box-shadow: 0 8px 24px rgba(255, 235, 59, 0.25) !important;
+}
