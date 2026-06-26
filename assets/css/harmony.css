@@ -20,9 +20,4 @@
     --surface-variant: #43474e;
     --on-surface-variant: #c3c6cf;
     --outline: #8d9199;
-
-    /* Sunset Liquid Glass Blobs (Orange-Gold / Coral Red / Warm Brown) */
-    --blob-color-1: rgba(255, 183, 77, 0.45);
-    --blob-color-2: rgba(244, 81, 30, 0.35);
-    --blob-color-3: rgba(109, 76, 65, 0.25);
 }

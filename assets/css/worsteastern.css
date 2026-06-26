@@ -27,11 +27,6 @@
     /* Font Overrides */
     --font-main: 'Inter', sans-serif;
     --font-header: 'Audiowide', sans-serif; 
-
-    /* Emerald Liquid Glass Blobs (Mint Green / Forest Green / Dark Emerald) */
-    --blob-color-1: rgba(129, 199, 132, 0.45);
-    --blob-color-2: rgba(76, 175, 80, 0.35);
-    --blob-color-3: rgba(46, 125, 50, 0.25);
 }
 
 /* Specific overrides for this theme */
