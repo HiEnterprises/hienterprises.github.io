@@ -4,12 +4,11 @@ import GlassNavbar from '../components/GlassNavbar';
 
 export default function RootLayout() {
   const links = [
-    { to: '/', label: 'Home', end: true },
-    { to: '/blog', label: 'Blog' },
-    { to: '/worsteastern', label: 'weB&B' },
-    { to: '/hicafe', label: 'HiCafe™' },
-    { to: '/brands', label: 'Brands' },
-    { to: '/harmony', label: 'Mobile App', isCta: true },
+    { to: '/', label: 'Home', icon: 'home', end: true },
+    { to: '/worsteastern', label: 'weB&B', icon: 'hotel' },
+    { to: '/hicafe', label: 'HiCafe™', icon: 'restaurant' },
+    { to: '/brands', label: 'Brands', icon: 'apps' },
+    { to: '/hiosmobile', label: 'App', icon: 'mobile', isCta: true },
   ];
 
   return (

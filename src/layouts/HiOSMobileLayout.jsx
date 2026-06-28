@@ -8,11 +8,11 @@ export default function HiOSMobileLayout() {
   useStylesheet('/assets/css/harmony.css');
 
   const links = [
-    { to: '/hiosmobile', label: 'Home', end: true },
-    { to: '/hiosmobile/download', label: 'For Android' },
-    { to: '/hiosmobile/lite', label: 'Lite' },
-    { to: '/hiosmobile/himaterial', label: 'HiMaterial' },
-    { to: '/', label: '← HiEnterprises™' }
+    { to: '/hiosmobile', label: 'Home', icon: 'home', end: true },
+    { to: '/hiosmobile/download', label: 'For Android', icon: 'android' },
+    { to: '/hiosmobile/lite', label: 'For Web', icon: 'web' },
+    { to: '/hiosmobile/himaterial', label: 'HiMaterial', icon: 'architecture' },
+    { to: '/', label: 'Back to HiEnterprises™', icon: 'arrow_back' }
   ];
 
   return (

@@ -22,7 +22,6 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 // Each layout wraps a brand's pages and applies site-specific styling
 import RootLayout from './layouts/RootLayout';
 import HiCafeLayout from './layouts/HiCafeLayout';
-import HarmonyLayout from './layouts/HarmonyLayout';
 import WorstEasternLayout from './layouts/WorstEasternLayout';
 import HiOSMobileLayout from './layouts/HiOSMobileLayout';
 import HiTechLayout from './layouts/HiTechLayout';
@@ -46,7 +45,6 @@ import { Home, Blog, Brands } from './pages/Root/Pages';
 import { HiCafeHome, HiCafeReviews, HiCafeContactUs, HiCafeChef, HiCafeMenu } from './pages/HiCafe/Pages';
 
 // Harmony Mobile App
-import { HarmonyHome, HarmonyAndroid, HarmonyAutoUpdate, HarmonyHiMaterial, HarmonyMacOS, HarmonyWindows } from './pages/Harmony/Pages';
 
 // WorstEastern / weB&B Hotel
 import { WorstEasternHome, WorstEasternRooms, WorstEasternHowToGetThere, WorstEasternHowToReserve, WorstEasternHiOSMobileApp } from './pages/WorstEastern/Pages';
@@ -102,23 +100,6 @@ export default function App() {
           <Route path="chef" element={<HiCafeChef />} />
           <Route path="menu" element={<HiCafeMenu />} />
         </Route>
-
-        {/* ========================================
-            HARMONY - Mobile App
-            Route: /#/harmony
-            NOTE: Some Harmony pages render without the layout wrapper
-                  because they use custom Tailwind styling
-            ======================================== */}
-        <Route path="/harmony" element={<HarmonyLayout />}>
-          <Route index element={<HarmonyHome />} />
-          <Route path="android" element={<HarmonyAndroid />} />
-          <Route path="himaterial" element={<HarmonyHiMaterial />} />
-        </Route>
-
-        {/* These Harmony pages bypass the layout wrapper */}
-        <Route path="/harmony/autoupdate" element={<HarmonyAutoUpdate />} />
-        <Route path="/harmony/macos" element={<HarmonyMacOS />} />
-        <Route path="/harmony/windows" element={<HarmonyWindows />} />
 
         {/* ========================================
             WORSTEASTERN - weB&B Hotel

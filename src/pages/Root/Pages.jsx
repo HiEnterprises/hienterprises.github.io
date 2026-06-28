@@ -228,20 +228,8 @@ export function Home() {
             <p className="text-on-surface-variant fs-5">We collaborate with industry leaders.</p>
           </div>
           <div className="row g-4">
-            <div className="col-md-6 col-lg-4">
-              <div className="card h-100">
-                <div className="card-img-wrapper">
-                  <img src="/assets/pics/brands/hidev.png" className="card-img-top" alt="HiDev" />
-                </div>
-                <div className="card-body text-start">
-                  <h3 className="h5 text-white">HiDev</h3>
-                  <p>HiDev creates a variety of tech experiences, such as the HiOS apps.</p>
-                  <a href="https://github.com/aarjay123/hidev" target="_blank" rel="noopener noreferrer" className="text-primary-custom text-decoration-none fw-bold">Their Website →</a>
-                </div>
-              </div>
-            </div>
 
-            <div className="col-md-6 col-lg-4">
+            <div className="col-md-6 col-lg-6">
               <div className="card h-100">
                 <div className="card-img-wrapper">
                   <img src="/assets/pics/brands/de-ad.png" className="card-img-top" alt="De-Advertisement" />
@@ -254,7 +242,7 @@ export function Home() {
               </div>
             </div>
 
-            <div className="col-md-6 col-lg-4">
+            <div className="col-md-6 col-lg-6">
               <div className="card h-100">
                 <div className="card-img-wrapper">
                   <img src="/assets/pics/brands/swanora.png" className="card-img-top" alt="Swanora" />

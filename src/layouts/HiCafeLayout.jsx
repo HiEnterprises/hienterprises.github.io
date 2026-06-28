@@ -8,13 +8,13 @@ export default function HiCafeLayout() {
   useStylesheet('/assets/css/hicafe.css');
 
   const links = [
-    { to: '/hicafe', label: 'Home', end: true },
-    { to: '/hicafe/reviews', label: 'Reviews' },
-    { to: '/hicafe/contact-us', label: 'Contact Us' },
-    { to: '/hicafe/chef', label: 'Chef' },
-    { to: '/hicafe/menu', label: 'Menu' },
-    { to: '/harmony', label: 'Mobile App' },
-    { to: '/', label: '← Back to HiEnterprises™' }
+    { to: '/hicafe', label: 'Home', icon: 'home', end: true },
+    { to: '/hicafe/reviews', label: 'Reviews', icon: 'message' },
+    { to: '/hicafe/contact-us', label: 'Contact Us', icon: 'call' },
+    { to: '/hicafe/chef', label: 'Chef', icon: 'chef_hat' },
+    { to: '/hicafe/menu', label: 'Menu', icon: 'book' },
+    { to: '/harmony', label: 'Mobile App', icon: 'mobile' },
+    { to: '/', label: 'Back to HiEnterprises™', icon: 'arrow_back' }
   ];
 
   return (
