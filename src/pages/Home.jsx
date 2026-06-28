@@ -76,7 +76,7 @@ export default function Home() {
                   "A No Internet popup keeps appearing, preventing me from
                   actually using the app."
                 </p>
-                <p className="fw-bold mt-auto mb-0">HiOS</p>
+                <p className="fw-bold mt-auto mb-0">HiCafe App</p>
               </div>
               <div className="translucentAboutBox text-center">
                 <div className="text-warning mb-3">★☆☆☆☆</div>
@@ -84,7 +84,7 @@ export default function Home() {
                   "The room was disgusting, Days Inn would be better than this
                   dump."
                 </p>
-                <p className="fw-bold mt-auto mb-0">WorstEastern™️</p>
+                <p className="fw-bold mt-auto mb-0">weB&B</p>
               </div>
               <div className="translucentAboutBox text-center">
                 <div className="text-warning mb-3">★☆☆☆☆</div>
@@ -122,13 +122,13 @@ export default function Home() {
                 imageSrc={hicafe}
                 brandName="The Highland Cafe™"
                 linkTo="/hicafe"
-                buttonText="HiTech HiCafe™"
+                buttonText="Visit HiCafe™"
               />
               <BrandCard
                 imageSrc={cafefiesta}
                 brandName="CafeFiesta™"
                 linkTo="/cafefiesta"
-                buttonText="HiTech CafeFiesta™"
+                buttonText="Visit CafeFiesta™"
               />
               <BrandCard
                 imageSrc={worsteastern}
@@ -164,7 +164,7 @@ export default function Home() {
                 imageSrc={hyped}
                 brandName="HYPED"
                 linkTo="/hyped"
-                buttonText="HYPED"
+                buttonText="Visit HYPED"
               />
               <BrandCard
                 imageSrc={hicola}
@@ -176,7 +176,7 @@ export default function Home() {
                 imageSrc={foodhall}
                 brandName="FoodHall"
                 linkTo="https://sites.google.com/view/hifoodhall"
-                buttonText="FoodHall"
+                buttonText="Visit FoodHall"
               />
               <BrandCard
                 imageSrc={hiparty}
