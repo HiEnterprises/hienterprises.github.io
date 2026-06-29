@@ -1,5 +1,5 @@
 /* assets/css/styles.css */
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:ital,wght@0,100..700;1,100..700&display=swap");
 
 /*Variables*/
 :root {
@@ -22,13 +22,14 @@
     --outline: #8d9199;
     --border-radius-xl: 25px;
     --border-radius-pill: 50rem;
-    
+
     /* iOS 26 Spacing */
     --spacing-xs: 8px;
     --spacing-sm: 12px;
     --spacing-md: 16px;
     --spacing-lg: 24px;
     --spacing-xl: 32px;
+    --glass-tint-dark: rgba(13, 15, 18, 0.4);
 }
 
 /*General resets*/
@@ -45,35 +46,65 @@ body {
     border-radius: 25px !important;
 }
 
-h1, h2, h3, h4, h5, h6 { 
-    color: var(--primary); 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary) !important;
     font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: var(--spacing-md);
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 1.875rem; }
-h3 { font-size: 1.5rem; }
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 1.875rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
 
-a { 
-    text-decoration: none; 
+a {
+    text-decoration: none;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 p {
     font-size: 1rem;
     line-height: 1.7;
+    color: var(--on-background);
+}
+
+.card-body p {
+    color: var(--on-primary-container) !important;
 }
 
 /*Custom Colors*/
-.text-primary-custom { color: var(--primary) !important; }
-.text-on-surface { color: var(--on-surface) !important; }
-.text-on-surface-variant { color: var(--on-surface-variant) !important; }
-.text-outline { color: var(--outline) !important; }
-.bg-surface-variant { background-color: var(--surface-variant) !important; }
-.bg-primary-container { background-color: var(--primary-container) !important; }
-.bg-surface-variant-20 { background-color: rgba(67, 71, 78, 0.2) !important; }
+.text-primary-custom {
+    color: var(--primary) !important;
+}
+.text-on-surface {
+    color: var(--on-surface) !important;
+}
+.text-on-surface-variant {
+    color: var(--on-surface-variant) !important;
+}
+.text-outline {
+    color: var(--outline) !important;
+}
+.bg-surface-variant {
+    background-color: var(--surface-variant) !important;
+}
+.bg-primary-container {
+    background-color: var(--primary-container) !important;
+}
+.bg-surface-variant-20 {
+    background-color: rgba(67, 71, 78, 0.2) !important;
+}
 
 /* Navbar Styling */
 .navbar {
@@ -100,7 +131,8 @@ p {
     border-radius: var(--border-radius-pill);
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
     background-color: rgba(160, 201, 255, 0.1);
     color: var(--primary);
 }
@@ -119,7 +151,7 @@ p {
 /* Desktop Nav Overrides (The Pill Shape) */
 @media (min-width: 992px) {
     .nav-pill-container {
-        background-color: rgba(37, 49, 65, 0.5); 
+        background-color: rgba(37, 49, 65, 0.5);
         border-radius: var(--border-radius-pill);
         padding: 0.5rem 1rem;
         flex-direction: row;
@@ -148,43 +180,74 @@ p {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg');
+    background-image: url("https://thehighlandcafe.github.io/hioswebcore/mobile-sites/hienterprises/pics/backdrop.jpg");
     background-size: cover;
     background-position: center;
     z-index: -2;
+    border-radius: 0px 0px 35px 35px;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--glass-tint-dark);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: none;
     z-index: -1;
+    border-radius: 0px 0px 35px 35px;
 }
 
 /* Animations */
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-30px); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes slideInRight {
-    from { opacity: 0; transform: translateX(30px); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.animate-fade-in { 
-    opacity: 0; 
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; 
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
-.delay-200 { animation-delay: 0.2s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
-.delay-700 { animation-delay: 0.7s; }
+.delay-200 {
+    animation-delay: 0.2s;
+}
+.delay-400 {
+    animation-delay: 0.4s;
+}
+.delay-500 {
+    animation-delay: 0.5s;
+}
+.delay-700 {
+    animation-delay: 0.7s;
+}
 
 /* Cards & Buttons */
 .card {
@@ -196,7 +259,6 @@ p {
     height: 100%;
     color: var(--on-surface);
     backdrop-filter: blur(20px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* FIX: Specific rule for the review quotes to make them brighter */
@@ -215,6 +277,7 @@ p {
     width: 100%;
     object-fit: contain;
     border-radius: var(--radius-card);
+    max-height: 50%;
 }
 
 .rounded {
@@ -264,7 +327,8 @@ footer {
     background-color: var(--primary-container);
     padding: 3rem 0;
     margin-top: 4rem;
-    color: var(--outline);
+    color: var(--on-primary-container) !important;
+    border-radius: 35px 35px 0 0 !important;
 }
 
 /* =========================================
@@ -275,8 +339,13 @@ footer {
     /* Base variables for the nav if not already defined */
     --glass-tint: rgba(13, 15, 18, 0.4);
     --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12);
-    --glass-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    --glass-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    --glass-sheen: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
 }
 
 .unified-top-nav {
@@ -325,16 +394,26 @@ footer {
     width: 100%;
     height: 100%;
     gap: 4px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    border-radius: inherit;
+}
+
+.unified-top-nav ul::-webkit-scrollbar {
+    display: none;
 }
 
 .unified-top-nav ul li {
-    flex: 1;
+    flex: 1 0 auto;
     display: flex;
 }
 
 .unified-top-nav ul li a {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 8px;
@@ -399,11 +478,15 @@ footer {
     margin: 0 !important;
     overflow: hidden;
     width: 100%;
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    background-color: color-mix(in srgb, var(--glass-tint) 40%, transparent) !important;
+    background-color: color-mix(
+        in srgb,
+        var(--glass-tint) 40%,
+        transparent
+    ) !important;
 }
 
 .unified-top-nav .nav-brand-item a:hover {
@@ -419,6 +502,7 @@ footer {
     display: block;
     border-radius: 0;
     transition: opacity 0.3s ease;
+    max-width: 100px;
 }
 
 .brand-text-fallback {
@@ -441,15 +525,15 @@ footer {
     .unified-top-nav ul {
         gap: 4px;
         justify-content: flex-start;
-        
+
         /* Enable fluid horizontal scrolling */
         overflow-x: auto;
         overflow-y: hidden;
         -webkit-overflow-scrolling: touch; /* Native momentum scrolling for iOS */
         scrollbar-width: none; /* Hide scrollbar in Firefox */
-        
+
         /* Match the parent's pill shape to prevent items bleeding over the edges during scroll */
-        border-radius: inherit; 
+        border-radius: inherit;
     }
 
     /* Hide scrollbar in Chrome, Safari, and Edge */
@@ -459,9 +543,9 @@ footer {
 
     .unified-top-nav ul li {
         /* Prevent items from shrinking and set a minimum width for comfortable tapping */
-        flex: 0 0 auto; 
+        flex: 0 0 auto;
         min-width: 72px;
-        flex: 0 0 auto; 
+        flex: 0 0 auto;
         /* 22% ensures that on almost all phones, the 4th or 5th item will be cut off halfway */
         min-width: 22%;
     }
@@ -475,11 +559,79 @@ footer {
 
     .unified-top-nav .nav-label {
         /* Slightly larger font since items are no longer squished */
-        font-size: 0.75rem; 
+        font-size: 0.75rem;
         font-weight: 600;
     }
 
     .unified-top-nav .nav-brand-img {
         max-width: 75px;
     }
+}
+
+/* =========================================
+   LIGHT MODE OVERRIDES
+   ========================================= */
+@media (prefers-color-scheme: light) {
+    :root {
+        /* Swap the dark glass for a frosted white effect */
+        --glass-tint: rgba(255, 255, 255, 0.75);
+        --glass-border: rgba(0, 0, 0, 0.08);
+        --glass-shadow:
+            0 8px 24px rgba(0, 0, 0, 0.06),
+            inset 0 1px 0 rgba(255, 255, 255, 0.6);
+        --glass-sheen: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.6) 0%,
+            rgba(255, 255, 255, 0) 100%
+        );
+
+        /* Darken the text for inactive nav items to ensure readability */
+        --on-primary-container: #1a1c1e;
+    }
+
+    /* Invert hover states for the unified top nav */
+    .unified-top-nav ul li a:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+        color: #000000;
+    }
+
+    /* Invert hover states for the desktop side rail */
+    .side-rail ul li a:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+        color: #000000;
+    }
+
+    /* Ensure brand text is legible on light backgrounds */
+    .brand-text-fallback {
+        color: var(--on-primary-container);
+    }
+
+    /* Specific fix for italic text inside cards on light mode */
+    .card .fst-italic {
+        color: var(--on-surface);
+    }
+}
+
+/*List group*/
+.list-group-item {
+    background-color: var(--tertiary-container) !important;
+    color: var(--on-tertiary-container) !important;
+}
+
+.joinTop {
+    border-radius: 35px 35px 4px 4px !important;
+    margin-bottom: 4px;
+}
+
+.joinBottom {
+    border-radius: 4px 4px 35px 35px !important;
+}
+
+.full {
+    border-radius: 35px !important;
+}
+
+.joinMiddle {
+    border-radius: 4px !important;
+    margin-bottom: 4px;
 }

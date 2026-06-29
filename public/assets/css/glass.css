@@ -12,9 +12,9 @@
     --statusbar-pad: env(safe-area-inset-top);
     --nav-pad-bottom: max(env(safe-area-inset-bottom), 24px);
 
-    --radius-card: 35px;      /* iOS-like card radius */
-    --radius-button: 50rem;   /* Fully rounded pill buttons */
-    --radius-inner: 20px;     /* Rounded inner components */
+    --radius-card: 35px; /* iOS-like card radius */
+    --radius-button: 50rem; /* Fully rounded pill buttons */
+    --radius-inner: 20px; /* Rounded inner components */
 
     /* iOS 26 Glass Colours - Clean & Refined */
     --primary: #a0c9ff;
@@ -35,7 +35,7 @@
 
     /* Fonts */
     --fontPrimary: "Google Sans Flex", sans-serif;
-    
+
     /* Spacing Scale */
     --spacing-xs: 8px;
     --spacing-sm: 12px;
@@ -46,7 +46,6 @@
 }
 
 body {
-    background: #0d0f12 !important;
     font-family: var(--fontPrimary);
     color: var(--onBackground);
     min-height: 100vh;
@@ -58,12 +57,32 @@ body {
 }
 
 /* Better Typography Hierarchy */
-h1 { font-size: 2.5rem; font-weight: 700; letter-spacing: -0.02em; }
-h2 { font-size: 1.875rem; font-weight: 700; letter-spacing: -0.01em; }
-h3 { font-size: 1.5rem; font-weight: 600; }
-h4 { font-size: 1.25rem; font-weight: 600; }
-h5 { font-size: 1.1rem; font-weight: 500; }
-h6 { font-size: 1rem; font-weight: 500; }
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+h5 {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+h6 {
+    font-size: 1rem;
+    font-weight: 500;
+}
 
 /* --- Organic Blur Blobs (Liquid Backlight) --- */
 .blob-container {
@@ -112,18 +131,24 @@ h6 { font-size: 1rem; font-weight: 500; }
 }
 
 @keyframes drift {
-    0% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(50px, -30px) scale(1.1); }
-    66% { transform: translate(-30px, 60px) scale(0.95); }
-    100% { transform: translate(30px, 30px) scale(1.02); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(50px, -30px) scale(1.1);
+    }
+    66% {
+        transform: translate(-30px, 60px) scale(0.95);
+    }
+    100% {
+        transform: translate(30px, 30px) scale(1.02);
+    }
 }
 
 .translucentAboutBox {
-        background-color:
-        var(--tertiaryContainer)
-    ;
+    background-color: var(--tertiaryContainer);
     color: var(--onTertiaryContainer);
-    border: 0.5px solid var(--outline);
+    border: 0.5px solid var(--outline) !important;
     padding: 10px;
     text-align: left;
     margin-left: auto;
@@ -133,12 +158,13 @@ h6 { font-size: 1rem; font-weight: 500; }
 }
 
 /* --- Apple 2026 Liquid Glass Panels (Refined & Minimal) --- */
-.card, .careers-box, .translucentBox {
+.card,
+.careers-box,
+.translucentBox {
     position: relative;
     background: var(--primaryContainer);
     color: var(--onPrimaryContainer);
     border: none;
-    border-radius: var(--radius-card) !important;
     overflow: hidden;
     z-index: 1;
     padding: var(--spacing-lg) !important;
@@ -159,7 +185,9 @@ h6 { font-size: 1rem; font-weight: 500; }
     border-radius: 50rem !important; /* Rounded capsule layout */
     padding: 0.6rem 1.5rem !important;
     z-index: 10000 !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -235,7 +263,9 @@ h6 { font-size: 1rem; font-weight: 500; }
 }
 
 /* Liquid Glass Buttons (iOS 26 Style - Pills with refined glass) */
-.btn-card, .btn-large-cta, .btn-nav-cta {
+.btn-card,
+.btn-large-cta,
+.btn-nav-cta {
     background-color: var(--primary) !important;
     color: var(--on-primary) !important;
     border-radius: var(--radius-button) !important;
@@ -250,7 +280,7 @@ h6 { font-size: 1rem; font-weight: 500; }
 }
 
 .btn-card::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -355,7 +385,9 @@ h6 { font-size: 1rem; font-weight: 500; }
     padding: 2rem var(--spacing-lg);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+    transition:
+        opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        visibility 0.4s;
 }
 
 .mobile-overlay-menu.open {
