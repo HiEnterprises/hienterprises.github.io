@@ -470,29 +470,30 @@ export function HiOSMobileHiMaterial() {
             <div className="translucentBox joinTop">
               <h2 className="display-4 mb-0">HiMaterial Versions</h2>
             </div>
-            <div className="translucentBox joinMiddle text-center">
+            <div className="translucentBox joinMiddle">
               <h2>HiMaterial 1</h2>
               <p className="mb-4">
                 HiMaterial 1 was released in December 2021 and was the first
                 version of our new HiMaterial design language that replaced
                 HiOSUX, which was used on the first version of HiOSDesktop.
               </p>
-              <img
-                className="img-fluid rounded-4 mb-5 justify-content-left"
-                style={{ maxWidth: "18%" }}
-                src="/assets/pics/hiosmobile-site/himaterial/himaterial1.png"
-                alt="v1"
-              />
+              <div className="translucentAboutBox text-center mb-5">
+                <img
+                  className="img-fluid rounded-4"
+                  style={{ maxWidth: "18%" }}
+                  src="/assets/pics/hiosmobile-site/himaterial/himaterial1.png"
+                  alt="v1"
+                />
+              </div>
             </div>
-            /TODO: WAS CONTINUING NEW HICAFE SITE, ON HIMATERIAL PAGE.*/
-            <div className="translucentBox joinMiddle text-center">
-              <h3 className="mt-4">HiMaterial 2</h3>
+            <div className="translucentBox joinMiddle">
+              <h2>HiMaterial 2</h2>
               <p className="mb-4">
                 HiMaterial 2 was the second iteration of our main design
                 language; HiMaterial 2 debuted on HiOSMobile version 1.2, and
                 the new HiOSUnified software.
               </p>
-              <div className="d-flex justify-content-center align-items-center gap-4 flex-wrap mb-5">
+              <div className="translucentAboutBox d-flex justify-content-center align-items-center gap-4 flex-wrap mb-5">
                 <img
                   className="img-fluid rounded-4"
                   style={{ maxWidth: "18%" }}
@@ -508,375 +509,560 @@ export function HiOSMobileHiMaterial() {
                 />
               </div>
             </div>
-            <h3 className="mt-4">HiMaterial 3</h3>
-            <p className="mb-4">
-              HiMaterial 3 was a game changing update to the design language of
-              HiOSMobile. This included the debut of the HiOSMobile dark theme,
-              along with the first opaque card-focused design, that made the app
-              look properly professional for the first time.
-              <br />
-              <br />
-              <b>
-                Wanting to test out HiMaterial 3? Try the legacy version of
-                HiOSMobileWeb!
-              </b>
-              <br />
-              <a
-                href="https://aarjay123.github.io/hiosmobileweb"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary-custom"
-              >
-                HiOSMobileWeb with HiMaterial 3
-              </a>
-            </p>
-            <div className="row mb-5">
-              <div className="col-md-6">
+            <div className="translucentBox joinMiddle">
+              <h2>HiMaterial 3</h2>
+              <p className="mb-4">
+                HiMaterial 3 was a game changing update to the design language
+                of HiOSMobile. This included the debut of the HiOSMobile dark
+                theme, along with the first opaque card-focused design, that
+                made the app look properly professional for the first time.
+                <br />
+                <br />
+                <b>
+                  Wanting to test out HiMaterial 3? Try the legacy version of
+                  HiOSMobileWeb!
+                </b>
+                <br />
+                <a
+                  href="https://aarjay123.github.io/hiosmobileweb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-custom"
+                >
+                  HiOSMobileWeb with HiMaterial 3
+                </a>
+              </p>
+              <div className="translucentAboutBox d-flex justify-content-center align-items-center gap-4 flex-wrap mb-5">
                 <img
-                  className="img-fluid w-100 mb-2 rounded-4"
                   src="/assets/pics/hiosmobile-site/himaterial/himaterial3.1.png"
-                  alt="HiMaterial 3.1"
+                  className="rounded-4"
+                  style={{
+                    height: "700px",
+                    width: "auto",
+                    maxWidth: "100%",
+                  }}
                 />
-              </div>
-              <div className="col-md-6">
+
                 <img
-                  className="img-fluid mb-2 rounded-4"
-                  style={{ maxWidth: "55%" }}
                   src="/assets/pics/hiosmobile-site/himaterial/himaterial3.2.png"
-                  alt="HiMaterial 3.2"
+                  className="rounded-4"
+                  style={{
+                    height: "700px",
+                    width: "auto",
+                    maxWidth: "100%",
+                  }}
                 />
               </div>
             </div>
-            <h3 className="mt-4">HiMaterial 4</h3>
-            <p className="mb-4">
-              HiMaterial 4 had less major design updates, and was a very welcome
-              refinement based on user feedback on HiMaterial 3. This update
-              included a fully light light-mode, and a fully dark dark-mode.
-            </p>
-            <div className="row mb-2">
-              <div className="col">
+            <div className="translucentBox joinMiddle">
+              <h2>HiMaterial 4</h2>
+              <p className="mb-4">
+                HiMaterial 4 had less major design updates, and was a very
+                welcome refinement based on user feedback on HiMaterial 3. This
+                update included a fully light light-mode, and a fully dark
+                dark-mode.
+              </p>
+              <div className="translucentAboutBox row mb-2">
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial4-1.png"
+                    alt="v4"
+                  />
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial4-2.png"
+                    alt="v4"
+                  />
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial4-3.png"
+                    alt="v4"
+                  />
+                </div>
+              </div>
+              <div className="translucentAboutBox">
                 <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial4-1.png"
-                  alt="v4"
+                  className="img-fluid w-100 rounded-4"
+                  src="/assets/pics/hiosmobile-site/himaterial/hiosunified2.png"
+                  alt="unified 2"
                 />
               </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial4-2.png"
-                  alt="v4"
-                />
+              <p className="text-center mt-2">HiOSUnified2</p>
+            </div>
+            <div className="translucentBox joinMiddle">
+              <h2>HiMaterial 5</h2>
+              <p className="mb-4">
+                HiMaterial 5 was a huge update that bridged the gap between
+                Google's Material Design v3, and the HiOSMobile app design. With
+                this new HiMaterial 5 design, it came with the new top
+                navigation back buttons, and the left-aligned titles. This
+                update also brought the new high-quality native buttons, and
+                departs from the png navigation buttons at the bottom and top.
+                We also changed some of our design elements recently to better
+                match the Material 3 guidelines, and we made the CSS design
+                files more streamlined with variables defining colours rather
+                than defining them over and over again for every element. Around
+                the time of creating this iteration of HiMaterial, we also
+                created native Settings, Help Center, and feedback pages. We
+                went through a few different fonts with this design, such as
+                Cantarell and Prompt, but we settled on Outfit since it fitted
+                the rest of the The Highland Cafe™️ Enterprises' design
+                philosophy at the time.
+              </p>
+              <div className="translucentAboutBox row row-cols-1 row-cols-md-3 row-cols-lg-3 mb-2">
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5-1.png"
+                    alt="v5"
+                  />
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5-2.png"
+                    alt="v5"
+                  />
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5-3.png"
+                    alt="v5"
+                  />
+                </div>
               </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial4-3.png"
-                  alt="v4"
-                />
+              <div className="translucentAboutBox row row-cols-1 row-cols-md-3 row-cols-lg-3">
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5-4.png"
+                    alt="v5"
+                  />
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5-5.png"
+                    alt="v5"
+                  />
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5-6.png"
+                    alt="v5"
+                  />
+                </div>
               </div>
             </div>
-            <img
-              className="img-fluid w-100 rounded-4"
-              src="/assets/pics/hiosmobile-site/himaterial/hiosunified2.png"
-              alt="unified 2"
-            />
-            <p className="text-center mt-2 mb-5">HiOSUnified2</p>
-            <h3 className="mt-4">HiMaterial 5</h3>
-            <p className="mb-4">
-              HiMaterial 5 was a huge update that bridged the gap between
-              Google's Material Design v3, and the HiOSMobile app design. With
-              this new HiMaterial 5 design, it came with the new top navigation
-              back buttons, and the left-aligned titles. This update also
-              brought the new high-quality native buttons, and departs from the
-              png navigation buttons at the bottom and top. We also changed some
-              of our design elements recently to better match the Material 3
-              guidelines, and we made the CSS design files more streamlined with
-              variables defining colours rather than defining them over and over
-              again for every element. Around the time of creating this
-              iteration of HiMaterial, we also created native Settings, Help
-              Center, and feedback pages. We went through a few different fonts
-              with this design, such as Cantarell and Prompt, but we settled on
-              Outfit since it fitted the rest of the The Highland Cafe™️
-              Enterprises' design philosophy at the time.
-            </p>
-            <div className="row row-cols-1 row-cols-md-3 row-cols-lg-3 mb-2">
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5-1.png"
-                  alt="v5"
-                />
-              </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5-2.png"
-                  alt="v5"
-                />
-              </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5-3.png"
-                  alt="v5"
-                />
-              </div>
-            </div>
-            <div className="row row-cols-1 row-cols-md-3 row-cols-lg-3 mb-5">
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5-4.png"
-                  alt="v5"
-                />
-              </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5-5.png"
-                  alt="v5"
-                />
-              </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5-6.png"
-                  alt="v5"
-                />
+            <div className="translucentBox joinMiddle">
+              <h2>HiMaterial 5.1</h2>
+              <p className="mb-4">
+                HiMaterial 5.1 was more of a minor update based on HiMaterial 5,
+                with minor but welcome improvements and tweaks to the overall
+                design language. With this design update, we have made tweaks
+                such as changing the new Dashboard screen back to the original
+                Homescreen, changing the button designs, applying custom colours
+                to specific brand pages such as weB&B (formerly WorstEastern)
+                where we changed the theme to green to match the brand's colour
+                scheme, streamlined the HiMaterial CSS files, making all the
+                corners more rounded, and making the design more accessible.
+              </p>
+              <div className="translucentAboutBox row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5_1-1.png"
+                    alt="v5.1"
+                  />
+                  <p className="text-center mt-2">Welcome/Home page</p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5_1-2.png"
+                    alt="v5.1"
+                  />
+                  <p className="text-center mt-2">
+                    Restaurant page with overhauled buttons
+                  </p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5_1-3.png"
+                    alt="v5.1"
+                  />
+                  <p className="text-center mt-2">
+                    Hotel page with new colour scheme
+                  </p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5_1-4.png"
+                    alt="v5.1"
+                  />
+                  <p className="text-center mt-2">
+                    Room Key with more rounded corners
+                  </p>
+                </div>
               </div>
             </div>
-            <h3 className="mt-4">HiMaterial 5.1</h3>
-            <p className="mb-4">
-              HiMaterial 5.1 was more of a minor update based on HiMaterial 5,
-              with minor but welcome improvements and tweaks to the overall
-              design language. With this design update, we have made tweaks such
-              as changing the new Dashboard screen back to the original
-              Homescreen, changing the button designs, applying custom colours
-              to specific brand pages such as weB&B (formerly WorstEastern)
-              where we changed the theme to green to match the brand's colour
-              scheme, streamlined the HiMaterial CSS files, making all the
-              corners more rounded, and making the design more accessible.
-            </p>
-            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 mb-5">
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5_1-1.png"
-                  alt="v5.1"
-                />
-                <p className="text-center mt-2">Welcome/Home page</p>
+            <div className="translucentBox joinMiddle">
+              <h2>HiMaterial 5.2</h2>
+              <p className="mb-4">
+                HiMaterial 5.2 was another minor, but meaningful design language
+                update. We decided to change the bottom navigation bar to be
+                docked to the bottom, but rounded at each corner, to give a more
+                visually pleasing feeling. We also did this because the system
+                navigation bar was black, which didn't look very good with the
+                white floating nav bar in light mode.
+                <br />
+                <br />
+                We also changed the font family of the app and HiOSWebCore to
+                SUSE from Outfit, to make it in line with all of The Highland
+                Cafe™️ Enterprises' other projects.
+                <br />
+                <br />
+                We have also updated some design elements such as the bottom
+                'More' flyout in HiOSMobile Lite to match its Android app
+                counterpart.
+              </p>
+              <div className="translucentAboutBox row row-cols-1 row-cols-md-2 row-cols-lg-4 mb-3">
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-1.png"
+                    alt="v5.2"
+                  />
+                  <p className="text-center mt-2">
+                    Welcome/Home page in HiMaterial v5.2
+                  </p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-2.png"
+                    alt="v5.2"
+                  />
+                  <p className="text-center mt-2">
+                    Updated Restaurant page in HiMaterial v5.2
+                  </p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-3.png"
+                    alt="v5.2"
+                  />
+                  <p className="text-center mt-2">
+                    Updated Hotel page in HiMaterial v5.2
+                  </p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-4.png"
+                    alt="v5.2"
+                  />
+                  <p className="text-center mt-2">
+                    Updated Room Key in HiMaterial v5.2
+                  </p>
+                </div>
               </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5_1-2.png"
-                  alt="v5.1"
-                />
-                <p className="text-center mt-2">
-                  Restaurant page with overhauled buttons
-                </p>
-              </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5_1-3.png"
-                  alt="v5.1"
-                />
-                <p className="text-center mt-2">
-                  Hotel page with new colour scheme
-                </p>
-              </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5_1-4.png"
-                  alt="v5.1"
-                />
-                <p className="text-center mt-2">
-                  Room Key with more rounded corners
-                </p>
-              </div>
-            </div>
-            <h3 className="mt-4">HiMaterial 5.2</h3>
-            <p className="mb-4">
-              HiMaterial 5.2 was another minor, but meaningful design language
-              update. We decided to change the bottom navigation bar to be
-              docked to the bottom, but rounded at each corner, to give a more
-              visually pleasing feeling. We also did this because the system
-              navigation bar was black, which didn't look very good with the
-              white floating nav bar in light mode.
-              <br />
-              <br />
-              We also changed the font family of the app and HiOSWebCore to SUSE
-              from Outfit, to make it in line with all of The Highland Cafe™️
-              Enterprises' other projects.
-              <br />
-              <br />
-              We have also updated some design elements such as the bottom
-              'More' flyout in HiOSMobile Lite to match its Android app
-              counterpart.
-            </p>
-            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 mb-3">
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-1.png"
-                  alt="v5.2"
-                />
-                <p className="text-center mt-2">
-                  Welcome/Home page in HiMaterial v5.2
-                </p>
-              </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-2.png"
-                  alt="v5.2"
-                />
-                <p className="text-center mt-2">
-                  Updated Restaurant page in HiMaterial v5.2
-                </p>
-              </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-3.png"
-                  alt="v5.2"
-                />
-                <p className="text-center mt-2">
-                  Updated Hotel page in HiMaterial v5.2
-                </p>
-              </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-4.png"
-                  alt="v5.2"
-                />
-                <p className="text-center mt-2">
-                  Updated Room Key in HiMaterial v5.2
-                </p>
+              <div className="translucentAboutBox row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-5.png"
+                    alt="v5.2"
+                  />
+                  <p className="text-center mt-2">Modernised Settings page</p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-6.png"
+                    alt="v5.2"
+                  />
+                  <p className="text-center mt-2">Modernised Help Center</p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-7.png"
+                    alt="v5.2"
+                  />
+                  <p className="text-center mt-2">
+                    HiOSMobile Lite - Updated 'More' menu design
+                  </p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-8.png"
+                    alt="v5.2"
+                  />
+                  <p className="text-center mt-2">
+                    HiOSMobile Lite - Updated Settings page design
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 mb-5">
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-5.png"
-                  alt="v5.2"
-                />
-                <p className="text-center mt-2">Modernised Settings page</p>
+            <div className="translucentBox joinMiddle">
+              <h2>HiMaterial 6</h2>
+              <p className="mb-4">
+                HiMaterial 6 was a massive overhaul of HiOSMobile's design
+                language; HiMaterial 6 was designed with inspiration taken from
+                Google's leaked upcoming Material 3 Expressive design, and
+                HiMaterial 2.
+                <br />
+                HiMaterial 6 had all of the refinements made in all of version
+                5's updates, but with the added design changes of 6.
+                <br />
+                <br />
+                This update re-introduced the concept to HiOSCore of a
+                background image with blurred cards, which were last present in
+                HiMaterial 2. There are a list of pre-defined wallpapers, but
+                users can upload their own.
+                <br />
+                <br />
+                The font was also changed back to Outfit, and every component
+                was converted to Bootstrap (from v5.3).
+              </p>
+              <div className="translucentAboutBox row row-cols-1 row-cols-md-2 row-cols-lg-4 mb-4">
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial6/1.png"
+                    alt="v6"
+                  />
+                  <p className="text-center mt-2">
+                    Welcome/Home page in HiMaterial v6
+                  </p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial6/2.png"
+                    alt="v6"
+                  />
+                  <p className="text-center mt-2">
+                    A top-level page, HiMaterial v6
+                  </p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial6/3.png"
+                    alt="v6"
+                  />
+                  <p className="text-center mt-2">A sub-page, HiMaterial v6</p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial6/4.png"
+                    alt="v6"
+                  />
+                  <p className="text-center mt-2">
+                    Updated Hotel page, HiMaterial v6
+                  </p>
+                </div>
               </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-6.png"
-                  alt="v5.2"
-                />
-                <p className="text-center mt-2">Modernised Help Center</p>
-              </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-7.png"
-                  alt="v5.2"
-                />
-                <p className="text-center mt-2">
-                  HiOSMobile Lite - Updated 'More' menu design
-                </p>
-              </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial5_2-8.png"
-                  alt="v5.2"
-                />
-                <p className="text-center mt-2">
-                  HiOSMobile Lite - Updated Settings page design
-                </p>
-              </div>
-            </div>
-            <h3 className="mt-4">HiMaterial 6</h3>
-            <p className="mb-4">
-              HiMaterial 6 was a massive overhaul of HiOSMobile's design
-              language; HiMaterial 6 was designed with inspiration taken from
-              Google's leaked upcoming Material 3 Expressive design, and
-              HiMaterial 2.
-              <br />
-              HiMaterial 6 had all of the refinements made in all of version 5's
-              updates, but with the added design changes of 6.
-              <br />
-              <br />
-              This update re-introduced the concept to HiOSCore of a background
-              image with blurred cards, which were last present in HiMaterial 2.
-              There are a list of pre-defined wallpapers, but users can upload
-              their own.
-              <br />
-              <br />
-              The font was also changed back to Outfit, and every component was
-              converted to Bootstrap (from v5.3).
-            </p>
-            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 mb-4">
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial6/1.png"
-                  alt="v6"
-                />
-                <p className="text-center mt-2">
-                  Welcome/Home page in HiMaterial v6
-                </p>
-              </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial6/2.png"
-                  alt="v6"
-                />
-                <p className="text-center mt-2">
-                  A top-level page, HiMaterial v6
-                </p>
-              </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial6/3.png"
-                  alt="v6"
-                />
-                <p className="text-center mt-2">A sub-page, HiMaterial v6</p>
-              </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial6/4.png"
-                  alt="v6"
-                />
-                <p className="text-center mt-2">
-                  Updated Hotel page, HiMaterial v6
-                </p>
+              <div className="translucentAboutBox row row-cols-1 row-cols-md-2 row-cols-lg-4 mb-4">
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial6/5.png"
+                    alt="v6"
+                  />
+                  <p className="text-center mt-2">
+                    New appearance settings for changing background
+                  </p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial6/6.png"
+                    alt="v6"
+                  />
+                  <p className="text-center mt-2">
+                    Pre-defined background options
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 mb-4">
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial6/5.png"
-                  alt="v6"
-                />
-                <p className="text-center mt-2">
-                  New appearance settings for changing background
-                </p>
+            <div className="translucentBox joinBottom">
+              <h2>HiMaterial 7</h2>
+              <p className="mb-3">
+                HiMaterial 7 was a huge refinement built on top of HiMaterial
+                6's overhaul. We began to build this design update on the last
+                version of the older HiOSWebCore html/css/js codebase, but we
+                completed the new design after building the brand-new HiCafe app
+                from scratch in ReactJS. This update brings back the card and
+                element joins that were present in previous HiMaterial versions,
+                and gives us the technical freedom to look backward to move
+                forward.
+              </p>
+
+              <p className="mb-3">
+                HiMaterial 7 is deeply nostalgic, heavily drawing on the DNA of
+                the classic versions that came before it to build a unified
+                design system that feels both incredibly modern and comforting
+                to anyone who has followed the journey since the beginning.
+              </p>
+
+              <ul className="mb-4">
+                <li className="mb-2">
+                  <strong>The Return of the "Joins":</strong> Deliberately
+                  rediscovering the structural security of{" "}
+                  <strong>HiMaterial 3</strong> and{" "}
+                  <strong>HiMaterial 5</strong>, elements now feel anchored
+                  together. Deeply nested component joins seal modules like
+                  weather and reward trackers inside single parent cards, while
+                  individual actions are fused into smooth, continuous capsule
+                  lists.
+                </li>
+                <li className="mb-2">
+                  <strong>The Reimagined Legacy Backdrop:</strong> The scenic
+                  Montenegrin Lake environment that users fell in love with in{" "}
+                  <strong>HiMaterial 2</strong> makes a sweeping return. It now
+                  acts as a beautifully integrated, layered canvas that
+                  interacts natively with dark and light modes.
+                </li>
+                <li className="mb-2">
+                  <strong>Matured Brand Colorways:</strong> The distinct green
+                  theme for accommodations originally introduced in{" "}
+                  <strong>HiMaterial 5.1</strong> is back. It is now elegantly
+                  restrained, acting as a functional visual anchor inside the
+                  headers of joined booking modules.
+                </li>
+                <li className="mb-2">
+                  <strong>Layout Alignment & Controls:</strong> The prominent
+                  left-aligned headings and native action buttons that defined
+                  our bridge to Material Design 3 in{" "}
+                  <strong>HiMaterial 5</strong> remain the unwavering
+                  foundation. Meanwhile, the bottom-docked navigation from{" "}
+                  <strong>HiMaterial 5.2</strong> has matured to effortlessly
+                  transform into a top tab bar on wider screens.
+                </li>
+              </ul>
+
+              <div className="translucentAboutBox row row-cols-1 row-cols-md-2 row-cols-lg-4 mb-4">
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial7/1.png"
+                    alt="v6"
+                  />
+                  <p className="text-center mt-2">
+                    Welcome/Home page in HiMaterial v7
+                  </p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial7/2.png"
+                    alt="v6"
+                  />
+                  <p className="text-center mt-2">
+                    An expanded widget popup, HiMaterial v7
+                  </p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial7/3.png"
+                    alt="v6"
+                  />
+                  <p className="text-center mt-2">
+                    Updated Restaurant page, HiMaterial v7
+                  </p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial7/4.png"
+                    alt="v6"
+                  />
+                  <p className="text-center mt-2">
+                    Updated Hotel page, HiMaterial v7
+                  </p>
+                </div>
               </div>
-              <div className="col">
-                <img
-                  className="img-fluid w-100 mb-2 rounded-4"
-                  src="/assets/pics/hiosmobile-site/himaterial/himaterial6/6.png"
-                  alt="v6"
-                />
-                <p className="text-center mt-2">
-                  Pre-defined background options
-                </p>
+              <div className="translucentAboutBox row row-cols-1 row-cols-md-2 row-cols-lg-4 mb-4">
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial7/5.png"
+                    alt="v6"
+                  />
+                  <p className="text-center mt-2">Brand new HiRewards page</p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial7/6.png"
+                    alt="v6"
+                  />
+                  <p className="text-center mt-2">
+                    Bottom sheet popup to access Settings and Help
+                  </p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial7/7.png"
+                    alt="v6"
+                  />
+                  <p className="text-center mt-2">
+                    Re-developed Settings page with accounts center
+                  </p>
+                </div>
+                <div className="col">
+                  <img
+                    className="img-fluid w-100 mb-2 rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial7/8.png"
+                    alt="v6"
+                  />
+                  <p className="text-center mt-2">
+                    Re-designed Appearance settings with more customisation
+                    options
+                  </p>
+                </div>
+              </div>
+              <div className="translucentAboutBox row align-items-center">
+                <div className="col-12 col-lg-4 text-center">
+                  <img
+                    className="img-fluid rounded-4"
+                    style={{ maxHeight: "700px" }}
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial7/9.png"
+                    alt="HiMaterial 7 Help Center"
+                  />
+                  <p className="text-center mt-2">
+                    Updated Help Center, HiMaterial v7
+                  </p>
+                </div>
+
+                <div className="col-12 col-lg-8 text-center">
+                  <img
+                    className="img-fluid rounded-4"
+                    src="/assets/pics/hiosmobile-site/himaterial/himaterial7/10.png"
+                    alt="HiMaterial 7 Appearance Settings"
+                  />
+                  <p className="text-center mt-2">
+                    Re-designed navigation for wide-screen devices (like tablets
+                    or desktops), replacing the previous side rail.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="d-grid gap-2 mt-4">
