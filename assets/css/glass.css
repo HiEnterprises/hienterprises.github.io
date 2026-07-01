@@ -16,23 +16,6 @@
     --radius-button: 50rem; /* Fully rounded pill buttons */
     --radius-inner: 20px; /* Rounded inner components */
 
-    /* iOS 26 Glass Colours - Clean & Refined */
-    --primary: #a0c9ff;
-    --onPrimary: #00325a;
-    --primaryContainer: #1b2431;
-    --onPrimaryContainer: #d2e4ff;
-    --secondary: #bbc7db;
-    --onSecondary: #253141;
-    --secondaryContainer: #2a3543;
-    --onSecondaryContainer: #d7e3f8;
-    --background: #0d0f12;
-    --onBackground: #e3e2e6;
-    --surface: #0d0f12;
-    --onSurface: #e3e2e6;
-    --outline: rgba(255, 255, 255, 0.12);
-    --surfaceVarient: rgba(255, 255, 255, 0.03);
-    --onSurfaceVarient: #c3c6cf;
-
     /* Fonts */
     --fontPrimary: "Google Sans Flex", sans-serif;
 
@@ -85,16 +68,6 @@ h6 {
 }
 
 /* --- Organic Blur Blobs (Liquid Backlight) --- */
-.blob-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    z-index: -10;
-    pointer-events: none;
-}
 
 .blob {
     position: absolute;
