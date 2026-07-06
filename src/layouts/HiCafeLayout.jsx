@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import useStylesheet from "../hooks/useStylesheet";
 import GlassNavbar from "../components/GlassNavbar";
 
@@ -13,8 +13,7 @@ export default function HiCafeLayout() {
     { to: "/hicafe/contact-us", label: "Contact Us", icon: "call" },
     { to: "/hicafe/chef", label: "Chef", icon: "chef_hat" },
     { to: "/hicafe/menu", label: "Menu", icon: "book" },
-    { to: "/hiosmobile", label: "App", icon: "mobile" },
-    { to: "/", label: "Back to HiEnterprises™", icon: "arrow_back" },
+    { to: "/hiosmobile", label: "App", icon: "mobile", isCta: true },
   ];
 
   return (
@@ -29,8 +28,37 @@ export default function HiCafeLayout() {
       <Outlet />
 
       <footer className="bg-primary-container py-5 mt-5">
-        <div className="container text-center">
-          <p>&copy; 2017-2025 The Highland Cafe™ Ltd. All Rights Reserved.</p>
+        <div className="container">
+          <div
+            className="translucentBox joinTop"
+            style={{ backgroundColor: "var(--secondaryContainer)" }}
+          >
+            <p className="mb-0 text-center">
+              <i>Visit our parent company's website</i>
+            </p>
+          </div>
+
+          <div
+            className="translucentBox joinBottom"
+            style={{ backgroundColor: "var(--tertiaryContainer)" }}
+          >
+            <Link
+              to="/"
+              className="btn-card"
+              style={{
+                backgroundColor: "var(--tertiary)",
+                color: "var(--onTertiary)",
+              }}
+            >
+              The Highland Cafe™ Enterprises website
+            </Link>
+          </div>
+          <div className="text-center mt-4">
+            <p>
+              Copyright &copy; The Highland Cafe™ Ltd. 2017-2025. All Rights
+              Reserved.
+            </p>
+          </div>
         </div>
       </footer>
     </div>

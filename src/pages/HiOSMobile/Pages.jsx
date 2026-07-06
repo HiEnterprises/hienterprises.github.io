@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export function HiOSMobileHome() {
   return (
     <main>
-      <section className="hero-section" style={{ height: "100vh" }}>
+      <section className="hero-section">
         <div
           className="hero-bg"
           style={{
@@ -24,7 +24,7 @@ export function HiOSMobileHome() {
       </section>
 
       <section className="py-0 container text-start">
-        <div className="animate-fade-in mb-5 mt-5">
+        <div className="animate-fade-in mb-5">
           <h3 className="display-6 fw-bold text-primary-custom">
             Welcome to the greatest digital experience from The Highland Cafe™.
           </h3>
@@ -386,7 +386,7 @@ export function HiOSMobileLite() {
         </div>
       </section>
 
-      <section className="container mt-5">
+      <section className="container">
         <img
           className="img-fluid w-100 rounded-4"
           src="/assets/pics/hiosmobile-site/lite/banner.png"
@@ -439,7 +439,7 @@ export function HiOSMobileHiMaterial() {
       </section>
 
       <section className="py-0 container text-start">
-        <div className="animate-fade-in mb-5 mt-5">
+        <div className="animate-fade-in mb-5">
           <h3 className="display-6 fw-bold text-primary-custom">
             Welcome to the future of UX.
           </h3>

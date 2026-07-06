@@ -1,35 +1,192 @@
 /* assets/css/worsteastern.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 
 :root {
-    /* Color Overrides for Worst Eastern */
-    --primary: #A0D39A;
-    --on-primary: #00325a;
-    --primary-container: #253141;
-    --on-primary-container: #d2e4ff;
-    --secondary: #B9CCB4;
-    --on-secondary: #253141;
-    --secondary-container: #3c4858;
-    --on-secondary-container: #d7e3f8;
-    --tertiary: #d7bde4;
-    --on-tertiary: #3b2947;
-    --tertiary-container: #533f5f;
-    --on-tertiary-container: #f3daff;
-    --background: #10140F;
-    --on-background: #e3e2e6;
-    --surface: #1a1c1e;
-    --on-surface: #e3e2e6;
-    --surface-variant: #43474e;
-    --on-surface-variant: #c3c6cf;
-    --outline: #8d9199;
+    /* ==========================================================================
+       Material 3 Colour Overrides - WorstEastern
+       ========================================================================== */
 
-    /* Font Overrides */
-    --font-main: 'Inter', sans-serif;
-    --font-header: 'Audiowide', sans-serif; 
+    /* Primary */
+    --primary: rgb(58 105 58);
+    --on-primary: rgb(255 255 255);
+    --primary-container: rgb(187 240 181);
+    --on-primary-container: rgb(34 80 36);
+
+    --onPrimary: var(--on-primary);
+    --primaryContainer: var(--primary-container);
+    --onPrimaryContainer: var(--on-primary-container);
+
+    /* Secondary */
+    --secondary: rgb(82 99 79);
+    --on-secondary: rgb(255 255 255);
+    --secondary-container: rgb(213 232 207);
+    --on-secondary-container: rgb(59 75 57);
+
+    --onSecondary: var(--on-secondary);
+    --secondaryContainer: var(--secondary-container);
+    --onSecondaryContainer: var(--on-secondary-container);
+
+    /* Tertiary */
+    --tertiary: rgb(56 101 107);
+    --on-tertiary: rgb(255 255 255);
+    --tertiary-container: rgb(188 235 241);
+    --on-tertiary-container: rgb(31 77 82);
+
+    --onTertiary: var(--on-tertiary);
+    --tertiaryContainer: var(--tertiary-container);
+    --onTertiaryContainer: var(--on-tertiary-container);
+
+    /* Error */
+    --error: rgb(186 26 26);
+    --on-error: rgb(255 255 255);
+    --error-container: rgb(255 218 214);
+    --on-error-container: rgb(147 0 10);
+
+    --onError: var(--on-error);
+    --errorContainer: var(--error-container);
+    --onErrorContainer: var(--on-error-container);
+
+    /* Background & Surface */
+    --background: rgb(247 251 241);
+    --on-background: rgb(24 29 23);
+
+    --surface: rgb(247 251 241);
+    --on-surface: rgb(24 29 23);
+
+    --surface-container: rgb(236 239 230);
+    --surface-container-high: rgb(230 233 224);
+    --surface-container-highest: rgb(224 228 219);
+    --surface-container-low: rgb(241 245 236);
+    --surface-container-lowest: rgb(255 255 255);
+
+    --surface-variant: rgb(222 229 216);
+    --on-surface-variant: rgb(66 73 64);
+
+    --onBackground: var(--on-background);
+    --onSurface: var(--on-surface);
+
+    --surfaceContainer: var(--surface-container);
+    --surfaceContainerHigh: var(--surface-container-high);
+    --surfaceContainerHighest: var(--surface-container-highest);
+    --surfaceContainerLow: var(--surface-container-low);
+    --surfaceContainerLowest: var(--surface-container-lowest);
+
+    --surfaceVariant: var(--surface-variant);
+    --onSurfaceVariant: var(--on-surface-variant);
+
+    /* Outline */
+    --outline: rgb(114 121 111);
+    --outline-variant: rgb(194 201 189);
+
+    --outlineVariant: var(--outline-variant);
+
+    /* ==========================================================================
+       Fonts
+       ========================================================================== */
+
+    --font-main: "Inter", sans-serif;
+    --font-header: "Audiowide", sans-serif;
+
+    --theTitle: rgb(187 240 181);
 }
 
-/* Specific overrides for this theme */
-h1, h2, h3 {
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Primary */
+        --primary: rgb(160 212 155);
+        --on-primary: rgb(8 57 16);
+        --primary-container: rgb(34 80 36);
+        --on-primary-container: rgb(187 240 181);
+
+        --onPrimary: var(--on-primary);
+        --primaryContainer: var(--primary-container);
+        --onPrimaryContainer: var(--on-primary-container);
+
+        /* Secondary */
+        --secondary: rgb(185 204 180);
+        --on-secondary: rgb(37 52 35);
+        --secondary-container: rgb(59 75 57);
+        --on-secondary-container: rgb(213 232 207);
+
+        --onSecondary: var(--on-secondary);
+        --secondaryContainer: var(--secondary-container);
+        --onSecondaryContainer: var(--on-secondary-container);
+
+        /* Tertiary */
+        --tertiary: rgb(161 206 212);
+        --on-tertiary: rgb(0 54 59);
+        --tertiary-container: rgb(31 77 82);
+        --on-tertiary-container: rgb(188 235 241);
+
+        --onTertiary: var(--on-tertiary);
+        --tertiaryContainer: var(--tertiary-container);
+        --onTertiaryContainer: var(--on-tertiary-container);
+
+        /* Error */
+        --error: rgb(255 180 171);
+        --on-error: rgb(105 0 5);
+        --error-container: rgb(147 0 10);
+        --on-error-container: rgb(255 218 214);
+
+        --onError: var(--on-error);
+        --errorContainer: var(--error-container);
+        --onErrorContainer: var(--on-error-container);
+
+        /* Background & Surface */
+        --background: rgb(16 20 15);
+        --on-background: rgb(224 228 219);
+
+        --surface: rgb(16 20 15);
+        --on-surface: rgb(224 228 219);
+
+        --surface-container: rgb(28 33 27);
+        --surface-container-high: rgb(39 43 37);
+        --surface-container-highest: rgb(50 54 48);
+        --surface-container-low: rgb(24 29 23);
+        --surface-container-lowest: rgb(11 15 10);
+
+        --surface-variant: rgb(66 73 64);
+        --on-surface-variant: rgb(194 201 189);
+
+        --onBackground: var(--on-background);
+        --onSurface: var(--on-surface);
+
+        --surfaceContainer: var(--surface-container);
+        --surfaceContainerHigh: var(--surface-container-high);
+        --surfaceContainerHighest: var(--surface-container-highest);
+        --surfaceContainerLow: var(--surface-container-low);
+        --surfaceContainerLowest: var(--surface-container-lowest);
+
+        --surfaceVariant: var(--surface-variant);
+        --onSurfaceVariant: var(--on-surface-variant);
+
+        /* Outline */
+        --outline: rgb(140 147 136);
+        --outline-variant: rgb(66 73 64);
+
+        --outlineVariant: var(--outline-variant);
+    }
+}
+
+/* ==========================================================================
+   Theme Overrides
+   ========================================================================== */
+
+h1,
+h2,
+h3 {
     font-family: var(--font-header);
+}
+
+p {
+    font-family: var(--font-main) !important;
+}
+
+.hero-content-glass p {
+    color: white !important;
+}
+
+.hero-content-glass h1 {
+    color: var(--theTitle) !important;
 }

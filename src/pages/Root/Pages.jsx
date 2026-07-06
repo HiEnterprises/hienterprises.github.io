@@ -7,20 +7,20 @@ export function Home() {
       <section className="hero-section">
         <div className="hero-bg"></div>
         <div className="hero-overlay"></div>
-        <div className="container position-relative z-1">
-          <h1 className="display-1 fw-bold animate-fade-in delay-200">
+        <div className="container position-relative z-1 hero-content-glass">
+          <h1 className="display-3 fw-bold animate-fade-in delay-200">
             The Highland Cafe™
             <br />
-            <span className="text-primary-custom">Enterprises</span>
+            <span>Enterprises</span>
           </h1>
-          <p className="lead mt-4 animate-fade-in delay-500 text-on-primary-container">
+          <p className="lead mt-4 animate-fade-in delay-500">
             Quality Food, At Its Best.
           </p>
         </div>
       </section>
 
       <section className="py-0 container text-start">
-        <div className="animate-fade-in mb-5 mt-5">
+        <div className="animate-fade-in mb-5">
           <h3 className="display-6 fw-bold">
             The Highland Cafe™ is a wonderful organisation based in Birmingham,
             UK.
@@ -438,7 +438,7 @@ export function Home() {
                     />
                   </div>
                   <div className="card-body text-start">
-                    <h3 className="h5 text-white">De-Advertisement Co.</h3>
+                    <h3 className="h5">De-Advertisement Co.</h3>
                     <p>
                       The people which run our astonishingly good customer
                       support services!
@@ -465,7 +465,7 @@ export function Home() {
                     />
                   </div>
                   <div className="card-body text-start">
-                    <h3 className="h5 text-white">Swanora Fashion</h3>
+                    <h3 className="h5">Swanora Fashion</h3>
                     <p>
                       Be U, Be Different. A forward-thinking fashion company.
                     </p>
@@ -489,7 +489,7 @@ export function Home() {
         <div className="container">
           <div className="careers-box d-flex flex-column flex-lg-row align-items-center justify-content-between text-center text-lg-start">
             <div>
-              <h2 className="text-white display-5">Join Our Team</h2>
+              <h2 className="display-5">Join Our Team</h2>
               <p className="mt-3 fs-5" style={{ opacity: 0.8 }}>
                 Wanting to join our wonderful team? We're always looking for new
                 talent.
@@ -575,283 +575,287 @@ export function Brands() {
           }}
         ></div>
         <div className="hero-overlay"></div>
-        <div className="container position-relative z-1">
+        <div className="container position-relative z-1 hero-content-glass">
           <h1 className="display-1 fw-bold animate-fade-in">Our Brands</h1>
         </div>
       </section>
 
-      <section className="py-5 container">
-        <div className="text-center mb-5">
-          <h2>Explore Our Portfolio</h2>
-          <p className="text-on-surface-variant fs-5">
-            We have a lot of brands under our company. Take a look below to
-            explore them.
-          </p>
+      <section className="py-0 container">
+        <div className="animate-fade-in mb-5">
+          <h3 className="display-6 fw-bold">
+            At The Highland Cafe™, we have a lot of brands under our company.
+          </h3>
+          <h3 className="display-6">
+            Take a look below to see our brands and the links to their websites.
+          </h3>
         </div>
 
-        <h3 className="border-bottom border-secondary pb-2 mb-4">
-          Food & Shopping
-        </h3>
-        <div className="row g-4 mb-5">
-          <div className="col-sm-6 col-lg-4 col-xl-3">
-            <div className="card h-100">
-              <div className="card-img-wrapper">
-                <img
-                  src="/assets/pics/brands/hicafe.png"
-                  className="card-img-top"
-                  alt="HiCafe"
-                />
-              </div>
-              <div className="card-body">
-                <h4 className="card-title">HiCafe™</h4>
-                <p>
-                  Our main restaurant brand, the food brand you know and love!
-                </p>
-                <Link to="/hicafe" className="btn btn-card">
-                  Visit HiCafe™
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-4 col-xl-3">
-            <div className="card h-100">
-              <div className="card-img-wrapper">
-                <img
-                  src="/assets/pics/hyped/hyped.png"
-                  className="card-img-top"
-                  alt="HYPED"
-                />
-              </div>
-              <div className="card-body">
-                <h4 className="card-title">HYPED</h4>
-                <p>Elevated energy cafe, nightclub, and restaurant.</p>
-                <Link to="/hyped" className="btn btn-card">
-                  Visit HYPED
-                </Link>
+        <div className="translucentBox joinTop">
+          <h3 className="pb-2 mb-4">Food & Shopping</h3>
+          <div className="row g-4">
+            <div className="col-sm-6 col-lg-4 col-xl-3">
+              <div className="translucentAboutBox h-70">
+                <div className="card-img-wrapper">
+                  <img
+                    src="/assets/pics/brands/hicafe.png"
+                    className="card-img-top"
+                    alt="HiCafe"
+                  />
+                </div>
+                <div className="card-body">
+                  <h4 className="card-title">The Highland Cafe™</h4>
+                  <p>
+                    Our main restaurant brand, the food brand you know and love!
+                  </p>
+                  <Link to="/hicafe" className="btn btn-card">
+                    Visit HiCafe™
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-sm-6 col-lg-4 col-xl-3">
-            <div className="card h-100">
-              <div className="card-img-wrapper">
-                <img
-                  src="/assets/pics/brands/cafefiesta.png"
-                  className="card-img-top"
-                  alt="CafeFiesta"
-                />
-              </div>
-              <div className="card-body">
-                <h4 className="card-title">CafeFiesta™</h4>
-                <p>This is our coffee-focused brand!</p>
-                <Link to="/cafefiesta" className="btn btn-card">
-                  Visit CafeFiesta™
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-4 col-xl-3">
-            <div className="card h-100">
-              <div className="card-img-wrapper">
-                <img
-                  src="/assets/pics/brands/foodhall.png"
-                  className="card-img-top"
-                  alt="FoodHall"
-                />
-              </div>
-              <div className="card-body">
-                <h4 className="card-title">FoodHall™</h4>
-                <p>Our supermarkets. Massive in British, Massive in Quality.</p>
-                <a
-                  href="https://sites.google.com/view/hifoodhall"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-card"
-                >
-                  Visit FoodHall™
-                </a>
+            <div className="col-sm-6 col-lg-4 col-xl-3">
+              <div className="translucentAboutBox h-70">
+                <div className="card-img-wrapper">
+                  <img
+                    src="/assets/pics/hyped/hyped.png"
+                    className="card-img-top"
+                    alt="HYPED"
+                  />
+                </div>
+                <div className="card-body">
+                  <h4 className="card-title">HYPED</h4>
+                  <p>Elevated energy cafe, nightclub, and restaurant.</p>
+                  <Link to="/hyped" className="btn btn-card">
+                    Visit HYPED
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-sm-6 col-lg-4 col-xl-3">
-            <div className="card h-100">
-              <div className="card-img-wrapper">
-                <img
-                  src="/assets/pics/brands/rewards.png"
-                  className="card-img-top"
-                  alt="HiCard"
-                />
-              </div>
-              <div className="card-body">
-                <h4 className="card-title">HiCard</h4>
-                <p>This is our amazing rewards programme and card!</p>
-                <Link to="/hicard" className="btn btn-card">
-                  Visit HiCard
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-4 col-xl-3">
-            <div className="card h-100">
-              <div className="card-img-wrapper">
-                <img
-                  src="/assets/pics/brands/hicola.png"
-                  className="card-img-top"
-                  alt="Highland Cola"
-                />
-              </div>
-              <div className="card-body">
-                <h4 className="card-title">Highland Cola™</h4>
-                <p>This is our company that makes sodas and more!</p>
-                <a
-                  href="https://sites.google.com/view/highlandcola"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-card"
-                >
-                  Visit Highland Cola™
-                </a>
+            <div className="col-sm-6 col-lg-4 col-xl-3">
+              <div className="translucentAboutBox h-70">
+                <div className="card-img-wrapper">
+                  <img
+                    src="/assets/pics/brands/cafefiesta.png"
+                    className="card-img-top"
+                    alt="CafeFiesta"
+                  />
+                </div>
+                <div className="card-body">
+                  <h4 className="card-title">CafeFiesta™</h4>
+                  <p>This is our coffee-focused brand!</p>
+                  <Link to="/cafefiesta" className="btn btn-card">
+                    Visit CafeFiesta™
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <h3 className="border-bottom border-secondary pb-2 mb-4">
-          Hotels & Accommodation
-        </h3>
-        <div className="row g-4 mb-5">
-          <div className="col-sm-6 col-lg-4 col-xl-3">
-            <div className="card h-100">
-              <div className="card-img-wrapper">
-                <img
-                  src="/assets/pics/brands/worsteastern.png"
-                  className="card-img-top"
-                  alt="weB&B"
-                />
+            <div className="col-sm-6 col-lg-4 col-xl-3">
+              <div className="translucentAboutBox h-70">
+                <div className="card-img-wrapper">
+                  <img
+                    src="/assets/pics/brands/foodhall.png"
+                    className="card-img-top"
+                    alt="FoodHall"
+                  />
+                </div>
+                <div className="card-body">
+                  <h4 className="card-title">FoodHall™</h4>
+                  <p>
+                    Our supermarkets. Massive in British, Massive in Quality.
+                  </p>
+                  <a
+                    href="https://sites.google.com/view/hifoodhall"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-card"
+                  >
+                    Visit FoodHall™
+                  </a>
+                </div>
               </div>
-              <div className="card-body">
-                <h4 className="card-title">weB&B</h4>
-                <p>
-                  This is the best hotel experience from The Highland Cafe™!
-                </p>
-                <Link to="/worsteastern" className="btn btn-card">
-                  Visit weB&B
-                </Link>
+            </div>
+            <div className="col-sm-6 col-lg-4 col-xl-3">
+              <div className="translucentAboutBox h-70">
+                <div className="card-img-wrapper">
+                  <img
+                    src="/assets/pics/brands/rewards.png"
+                    className="card-img-top"
+                    alt="HiCard"
+                  />
+                </div>
+                <div className="card-body">
+                  <h4 className="card-title">HiCard</h4>
+                  <p>This is our amazing rewards programme and card!</p>
+                  <Link to="/hicard" className="btn btn-card">
+                    Visit HiCard
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-4 col-xl-3">
+              <div className="translucentAboutBox h-70">
+                <div className="card-img-wrapper">
+                  <img
+                    src="/assets/pics/brands/hicola.png"
+                    className="card-img-top"
+                    alt="Highland Cola"
+                  />
+                </div>
+                <div className="card-body">
+                  <h4 className="card-title">Highland Cola™</h4>
+                  <p>This is our company that makes sodas and more!</p>
+                  <a
+                    href="https://sites.google.com/view/highlandcola"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-card"
+                  >
+                    Visit Highland Cola™
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <h3 className="border-bottom border-secondary pb-2 mb-4">Technology</h3>
-        <div className="row g-4 mb-5">
-          <div className="col-sm-6 col-lg-4 col-xl-3">
-            <div className="card h-100">
-              <div className="card-img-wrapper">
-                <img
-                  src="/assets/pics/brands/hiosmobile.png"
-                  className="card-img-top"
-                  alt="Harmony"
-                />
-              </div>
-              <div className="card-body">
-                <h4 className="card-title">HiCafe App</h4>
-                <p>Download the HiCafe app from here!</p>
-                <Link to="/hiosmobile" className="btn btn-card">
-                  Visit HiCafe app
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-4 col-xl-3">
-            <div className="card h-100">
-              <div className="card-img-wrapper">
-                <img
-                  src="/assets/pics/nuggetdev/nuggetdev.png"
-                  className="card-img-top"
-                  alt="nuggetdev"
-                />
-              </div>
-              <div className="card-body">
-                <h4 className="card-title">nuggetdev</h4>
-                <p>The brains behind our tech experiences.</p>
-                <Link to="/nuggetdev" className="btn btn-card">
-                  Visit nuggetdev
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-4 col-xl-3">
-            <div className="card h-100">
-              <div className="card-img-wrapper">
-                <img
-                  src="/assets/pics/brands/hioswebcore.png"
-                  className="card-img-top"
-                  alt="HarmonyCore"
-                />
-              </div>
-              <div className="card-body">
-                <h4 className="card-title">HiOSCore (Discontinued)</h4>
-                <p>
-                  This is the software that formerly powered all our app
-                  experiences!
-                </p>
-                <a
-                  href="https://hiosbythc.home.blog"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-card"
-                >
-                  Visit HarmonyCore
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col-lg-4 col-xl-3">
-            <div className="card h-100">
-              <div className="card-img-wrapper">
-                <img
-                  src="/assets/pics/brands/hitech.png"
-                  className="card-img-top"
-                  alt="HiTech"
-                />
-              </div>
-              <div className="card-body">
-                <h4 className="card-title">HiTech</h4>
-                <p>
-                  This is our technology brand, the best ever tech to improve
-                  your life!
-                </p>
-                <Link to="/hitech" className="btn btn-card">
-                  Visit HiTech
-                </Link>
+        <div className="translucentBox joinMiddle">
+          <h3 className="pb-2 mb-4">Hotels & Accommodation</h3>
+          <div className="row g-4 mb-5">
+            <div className="col-sm-6 col-lg-4 col-xl-3">
+              <div className="translucentAboutBox h-70">
+                <div className="card-img-wrapper">
+                  <img
+                    src="/assets/pics/brands/worsteastern.png"
+                    className="card-img-top"
+                    alt="weB&B"
+                  />
+                </div>
+                <div className="card-body">
+                  <h4 className="card-title">weB&B</h4>
+                  <p>
+                    This is the best hotel experience from The Highland Cafe™!
+                  </p>
+                  <Link to="/worsteastern" className="btn btn-card">
+                    Visit weB&B
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <h3 className="border-bottom border-secondary pb-2 mb-4">Politics</h3>
-        <div className="row g-4 mb-5">
-          <div className="col-sm-6 col-lg-4 col-xl-3">
-            <div className="card h-100">
-              <div className="card-img-wrapper">
-                <img
-                  src="/assets/pics/brands/hiparty.png"
-                  className="card-img-top"
-                  alt="HiParty"
-                />
+        <div className="translucentBox joinMiddle">
+          <h3 className="pb-2 mb-4">Technology</h3>
+          <div className="row g-4 mb-5">
+            <div className="col-sm-6 col-lg-4 col-xl-3">
+              <div className="translucentAboutBox h-70">
+                <div className="card-img-wrapper">
+                  <img
+                    src="/assets/pics/hiosmobile-site/hicafe2026-playstore.png"
+                    className="card-img-top"
+                    alt="Harmony"
+                  />
+                </div>
+                <div className="card-body">
+                  <h4 className="card-title">HiCafe App</h4>
+                  <p>Download the HiCafe app from here!</p>
+                  <Link to="/hiosmobile" className="btn btn-card">
+                    Visit HiCafe app
+                  </Link>
+                </div>
               </div>
-              <div className="card-body">
-                <h4 className="card-title">HiParty™</h4>
-                <p>
-                  Our brilliant political party. Your Priorities, Our Mission.
-                </p>
-                <a
-                  href="https://sites.google.com/view/thehighlandparty"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-card"
-                >
-                  Visit The Highland Party™
-                </a>
+            </div>
+            <div className="col-sm-6 col-lg-4 col-xl-3">
+              <div className="translucentAboutBox h-70">
+                <div className="card-img-wrapper">
+                  <img
+                    src="/assets/pics/nuggetdev/nuggetdev.png"
+                    className="card-img-top"
+                    alt="nuggetdev"
+                  />
+                </div>
+                <div className="card-body">
+                  <h4 className="card-title">nuggetdev</h4>
+                  <p>The brains behind our tech experiences.</p>
+                  <Link to="/nuggetdev" className="btn btn-card">
+                    Visit nuggetdev
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-4 col-xl-3">
+              <div className="translucentAboutBox h-70">
+                <div className="card-img-wrapper">
+                  <img
+                    src="/assets/pics/brands/hioswebcore.png"
+                    className="card-img-top"
+                    alt="HarmonyCore"
+                  />
+                </div>
+                <div className="card-body">
+                  <h4 className="card-title">HiOSCore</h4>
+                  <p>(Discontinued) The software that powered our apps!</p>
+                  <a
+                    href="https://hiosbythc.home.blog"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-card"
+                  >
+                    Visit HiOSCore
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 col-lg-4 col-xl-3">
+              <div className="translucentAboutBox h-70">
+                <div className="card-img-wrapper">
+                  <img
+                    src="/assets/pics/brands/hitech.png"
+                    className="card-img-top"
+                    alt="HiTech"
+                  />
+                </div>
+                <div className="card-body">
+                  <h4 className="card-title">HiTech</h4>
+                  <p>
+                    This is our technology brand, the best ever tech to improve
+                    your life!
+                  </p>
+                  <Link to="/hitech" className="btn btn-card">
+                    Visit HiTech
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="translucentBox joinBottom">
+          <h3 className="pb-2 mb-4">Politics</h3>
+          <div className="row g-4">
+            <div className="col-sm-6 col-lg-4 col-xl-3">
+              <div className="translucentAboutBox h-70">
+                <div className="card-img-wrapper">
+                  <img
+                    src="/assets/pics/brands/hiparty.png"
+                    className="card-img-top"
+                    alt="HiParty"
+                  />
+                </div>
+                <div className="card-body">
+                  <h4 className="card-title">HiParty™</h4>
+                  <p>
+                    Our brilliant political party. Your Priorities, Our Mission.
+                  </p>
+                  <a
+                    href="https://sites.google.com/view/thehighlandparty"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-card"
+                  >
+                    Visit The Highland Party™
+                  </a>
+                </div>
               </div>
             </div>
           </div>

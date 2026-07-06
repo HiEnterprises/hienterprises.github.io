@@ -137,7 +137,7 @@ h6 {
     position: relative;
     background: var(--primaryContainer);
     color: var(--onPrimaryContainer);
-    border: none;
+    border: 0.5px solid var(--outline);
     overflow: hidden;
     z-index: 1;
     padding: var(--spacing-lg) !important;
@@ -240,7 +240,7 @@ h6 {
 .btn-large-cta,
 .btn-nav-cta {
     background-color: var(--primary) !important;
-    color: var(--on-primary) !important;
+    color: var(--onPrimary) !important;
     border-radius: var(--radius-button) !important;
     padding: 0.75rem 1.5rem !important;
     font-weight: 600 !important;
