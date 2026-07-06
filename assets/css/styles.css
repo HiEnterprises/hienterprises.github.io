@@ -73,7 +73,14 @@
 }
 
 /*General resets*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
     background-color: var(--background);
     color: var(--onBackground);
     font-family: "Adwaita Sans", sans-serif;
@@ -206,15 +213,16 @@ p {
 
 /* Hero Section */
 .hero-section {
-    height: 100vh;
+    height: 60svh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden;
+    overflow: visible;
     color: white;
     padding-top: 80px;
+    position: relative;
 }
 
 .hero-bg {
@@ -235,7 +243,24 @@ p {
     -webkit-backdrop-filter: blur(40px) saturate(180%);
     border: none;
     z-index: -1;
-    border-radius: 0px 0px 35px 35px;
+    border-radius: 0px;
+}
+
+.hero-section + section {
+    padding-top: 56px;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 56px;
+    background: var(--background);
+    border-radius: 35px 35px 0 0;
+    z-index: 2;
+    pointer-events: none;
 }
 
 /* Animations */
@@ -392,18 +417,24 @@ footer {
     position: fixed;
     top: calc(12px + var(--statusbar-pad, 0px));
     left: 50%;
+    right: auto;
+    width: max-content;
+    max-width: calc(100vw - 32px);
+    margin-inline: auto;
     transform: translateX(-50%);
+
     z-index: 1000;
     height: 60px;
-    width: calc(100% - 32px);
-    max-width: 1108px;
+
     padding: 6px 8px;
     box-sizing: border-box;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
-    /* Glass Effect */
+    overflow: hidden;
+
     background-color: var(--glass-tint);
     backdrop-filter: blur(40px) saturate(180%);
     -webkit-backdrop-filter: blur(40px) saturate(180%);
@@ -429,17 +460,23 @@ footer {
     list-style: none;
     margin: 0;
     padding: 0;
+
     display: flex;
     align-items: stretch;
-    width: 100%;
+
+    width: max-content;
+    max-width: 100%;
+    min-width: 0;
     height: 100%;
+
     gap: 4px;
 
     overflow-x: auto;
     overflow-y: hidden;
+    scrollbar-width: none;
+
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    border-radius: inherit;
 }
 
 .unified-top-nav ul::-webkit-scrollbar {
@@ -447,8 +484,9 @@ footer {
 }
 
 .unified-top-nav ul li {
-    flex: 1 0 auto;
     display: flex;
+    flex: 0 0 auto;
+    min-width: 0;
 }
 
 .unified-top-nav ul li a {
@@ -517,7 +555,7 @@ footer {
     padding: 0 !important;
     margin: 0 !important;
     overflow: hidden;
-    width: 100%;
+    width: 86px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -557,36 +595,40 @@ footer {
 
 @media (max-width: 767px) {
     .unified-top-nav {
+        left: 8px;
+        right: 8px;
+        width: auto;
+        max-width: none;
+        transform: none;
         min-height: 70px;
         padding: 4px;
         width: calc(100% - 16px);
+        max-width: 100%; /* Ensures the main container never exceeds the screen */
     }
 
     .unified-top-nav ul {
+        max-width: 100%;
         gap: 4px;
         justify-content: flex-start;
 
         /* Enable fluid horizontal scrolling */
         overflow-x: auto;
         overflow-y: hidden;
-        -webkit-overflow-scrolling: touch; /* Native momentum scrolling for iOS */
-        scrollbar-width: none; /* Hide scrollbar in Firefox */
-
-        /* Match the parent's pill shape to prevent items bleeding over the edges during scroll */
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
         border-radius: inherit;
+
+        /* CRITICAL FLEXBOX FIXES */
+        width: 100%;
+        min-width: 0; /* Allows the flex child to shrink so scrolling works */
     }
 
-    /* Hide scrollbar in Chrome, Safari, and Edge */
     .unified-top-nav ul::-webkit-scrollbar {
         display: none;
     }
 
     .unified-top-nav ul li {
-        /* Prevent items from shrinking and set a minimum width for comfortable tapping */
         flex: 0 0 auto;
-        min-width: 72px;
-        flex: 0 0 auto;
-        /* 22% ensures that on almost all phones, the 4th or 5th item will be cut off halfway */
         min-width: 22%;
     }
 
@@ -598,7 +640,6 @@ footer {
     }
 
     .unified-top-nav .nav-label {
-        /* Slightly larger font since items are no longer squished */
         font-size: 0.75rem;
         font-weight: 600;
     }
