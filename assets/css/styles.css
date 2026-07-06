@@ -1,5 +1,6 @@
 /* assets/css/styles.css */
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 /*Variables*/
 :root {
@@ -83,7 +84,7 @@ body {
     margin: 0;
     background-color: var(--background);
     color: var(--onBackground);
-    font-family: "Adwaita Sans", sans-serif;
+    font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
@@ -216,12 +217,12 @@ p {
     height: 60svh;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     text-align: center;
     overflow: visible;
     color: white;
-    padding-top: 80px;
+    padding-top: 160px;
     position: relative;
 }
 
@@ -238,8 +239,8 @@ p {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background-color: var(--glass-tint-dark);
-    backdrop-filter: blur(40px) saturate(180%);
+    /*background-color: var(--glass-tint-dark);*/
+    backdrop-filter: blur(40px) saturate(200%);
     -webkit-backdrop-filter: blur(40px) saturate(180%);
     border: none;
     z-index: -1;
@@ -261,6 +262,53 @@ p {
     border-radius: 35px 35px 0 0;
     z-index: 2;
     pointer-events: none;
+}
+
+.hero-content-glass {
+    width: 650px;
+    padding: 20px;
+    border-radius: 35px;
+    height: fit-content;
+    max-height: 700px;
+
+    background: var(--hero-glass);
+    /*backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(145%);*/
+
+    border: 1px solid var(--glass-border);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+    margin-inline: auto;
+}
+
+.hero-content-glass h1 {
+    color: var(--primary) !important;
+}
+
+.hero-content-glass p {
+    color: var(--onBackground) !important;
+}
+
+.hero-content-glass h1 {
+    margin-bottom: 0.5rem;
+}
+
+.hero-content-glass .lead {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 767px) {
+    .hero-content-glass {
+        max-width: calc(100vw - 32px);
+        padding: 1.25rem;
+        border-radius: 30px;
+    }
+
+    .hero-content-glass h1 {
+        font-size: clamp(2.4rem, 13vw, 4rem);
+    }
 }
 
 /* Animations */
@@ -389,10 +437,10 @@ p {
     margin-top: 2rem;
 }
 footer {
-    background-color: var(--primary-container);
+    background-color: var(--primaryContainer);
     padding: 3rem 0;
     margin-top: 4rem;
-    color: var(--on-primary-container) !important;
+    color: var(--primary) !important;
     border-radius: 35px 35px 0 0 !important;
 }
 
@@ -411,6 +459,7 @@ footer {
         rgba(255, 255, 255, 0.1) 0%,
         rgba(255, 255, 255, 0) 100%
     );
+    --hero-glass: rgba(18, 22, 28, 0.35);
 }
 
 .unified-top-nav {
@@ -518,8 +567,8 @@ footer {
 
 /* Hover and Active States */
 .unified-top-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
+    background-color: var(--tertiaryContainer) !important;
+    color: var(--onTertiaryContainer) !important;
     transform: translateY(-1px);
 }
 
@@ -527,19 +576,23 @@ footer {
     background-color: var(--primary);
     color: var(--onPrimary);
     font-weight: bold;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.unified-top-nav ul li a.active:hover {
+    background-color: var(--secondary);
+    color: var(--onSecondary);
 }
 
 /* CTA Button Override */
 .unified-top-nav ul li a.nav-cta {
     background-color: var(--tertiary);
-    color: var(--on-tertiary);
+    color: var(--onTertiary) !important;
     font-weight: 600;
 }
 
 .unified-top-nav ul li a.nav-cta:hover {
-    background-color: rgba(255, 255, 255, 0.95);
-    color: #0d0f12;
+    background-color: var(--secondary);
+    color: var(--onSecondary) !important;
 }
 
 .unified-top-nav .nav-label {
@@ -668,6 +721,8 @@ footer {
 
         /* Darken the text for inactive nav items to ensure readability */
         --on-primary-container: #1a1c1e;
+
+        --hero-glass: rgba(255, 255, 255, 0.35);
     }
 
     /* Invert hover states for the unified top nav */
