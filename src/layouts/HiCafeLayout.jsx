@@ -9,6 +9,7 @@ export default function HiCafeLayout() {
 
   const links = [
     { to: "/hicafe", label: "Home", icon: "home", end: true },
+    { to: "/hicafe/barista", label: "Barista", icon: "coffee"},
     { to: "/hicafe/reviews", label: "Reviews", icon: "message" },
     { to: "/hicafe/contact-us", label: "Contact Us", icon: "call" },
     { to: "/hicafe/chef", label: "Chef", icon: "chef_hat" },

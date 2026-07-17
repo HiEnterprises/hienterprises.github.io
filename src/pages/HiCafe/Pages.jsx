@@ -32,10 +32,9 @@ export function HiCafeHome() {
             <h3 className="display-6">Welcome to The Highland Cafe™.</h3>
           </div>
           <img
-            className="img-fluid d-block mx-auto mt-4"
+            className="img-fluid d-block mx-auto mt-4 w-100"
             src="/assets/pics/hicafe/logo.png"
             alt="The Highland Cafe Logo"
-            style={{ maxWidth: "600px" }}
           />
         </div>
       </section>
@@ -107,7 +106,7 @@ export function HiCafeHome() {
               </div>
             </div>
 
-            <div className="text-center mt-5 animate-fade-in">
+            <div className="text-center animate-fade-in mt-4">
               <Link to="/hicafe/reviews" className="btn-card">
                 More Great Reviews!
               </Link>
@@ -162,7 +161,7 @@ export function HiCafeHome() {
                   />
                   <div className="card-body">
                     <h3>Contact us</h3>
-                    <Link to="/hicafe/contact-us" className="btn-card mt-4">
+                    <Link to="/hicafe/contact-us" className="btn-card">
                       Contact us
                     </Link>
                   </div>
@@ -177,7 +176,7 @@ export function HiCafeHome() {
                   />
                   <div className="card-body">
                     <h3>Chef</h3>
-                    <Link to="/hicafe/chef" className="btn-card mt-4">
+                    <Link to="/hicafe/chef" className="btn-card">
                       Chef
                     </Link>
                   </div>
@@ -189,6 +188,73 @@ export function HiCafeHome() {
       </section>
     </main>
   );
+}
+
+export function Barista() {
+  return (
+      <main>
+        <section className="hero-section" style={{ height: "60vh" }}>
+          <div
+            className="hero-bg"
+            style={{
+              backgroundImage:
+                "url('/assets/pics/cafefiesta/backdrop.jpg')",
+            }}
+          ></div>
+          <div className="hero-overlay"></div>
+          <div className="container position-relative z-1 hero-content-glass">
+            <h1 className="display-1 font-caveat text-white animate-fade-in">
+              Barista
+            </h1>
+            <p className="lead mt-2 animate-fade-in delay-200 text-light opacity-75">
+              @ The Highland Cafe™
+            </p>
+          </div>
+      </section>
+
+      <section className="py-0 container">
+        <div className="justify-content-center animate-fade-in">
+          <div className="animate-fade-in mb-5">
+            <h3 className="display-6 fw-bold">
+              Welcome to the best ever coffee experience.
+            </h3>
+            <h3 className="display-6">Welcome to Barista @ The Highland Cafe™.</h3>
+          </div>
+        </div>
+
+        <div className="translucentBox mt-4 full">
+          <h2 className="display-6">What is Barista?</h2>
+          <img className="fluid-img w-100 joinTop" src="/assets/pics/hicafe/barista/1.jpg" style={{ height: "400px", display: "cover" }} />
+          <div className="translucentBox joinBottom" style={{backgroundColor: "var(--secondaryContainer)"}}>
+            <p>Barista by The Highland Cafe™ is not just a reinvention of how coffee is to be experienced -- it is the world's best coffee experience ever.
+              Every adult in the UK has probably had coffee at least once in their lifetimes.
+              Regardless of where or when you had it, you experienced it wrong. <br /><br />We fix that by offering coffee done properly.
+              Our coffee is sourced from wonderful places all across the southern hemisphere, ranging from Somalia all the way to Ethiopia and Burma!!
+              They know how to grow coffee right. Every other coffee comes from the EU which is wrong, coffee needs to come from a place like where we get ours from.
+              That's our HiCafe Brexit Promise (TM) -- 100% produce, never from the EU.
+              <br /> <br />
+              Furthermore, a lot of coffee shops grind their coffee on their premises -- this is bad.
+              The coffee usually goes stale if it is kept in their full bean form until ground.
+              We get our coffee pre-ground to mitigate these big issues.
+              That's why our Brexit promise matters the most.
+              If we got beans from the EU they would be stale but since we get our pre ground coffee from Africa it is very fresh you will not believe how fresh it would be !
+            </p>
+          </div>
+        </div>
+
+        <div className="translucentBox mt-4 full">
+          <h2 className="display-6">Options</h2>
+          <div className="row g-4">
+            <div className="col-sm-6 col-lg-3">
+              <div className="translucentAboutBox">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
 }
 
 export function HiCafeReviews() {

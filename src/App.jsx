@@ -3,17 +3,17 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 /**
  * ROUTING GUIDE
- * 
+ *
  * This app uses Hash Routing (#/) for client-side navigation.
  * Each route section wraps pages in a Layout component that provides:
  * - Site-specific navbar branding
  * - Site-specific CSS styling
  * - Site-specific navigation links
- * 
+ *
  * STRUCTURE:
  * Route path="/brand" → Layout component (e.g., HiCafeLayout)
  *                    → Nested routes for brand pages
- * 
+ *
  * The Layout component handles styling via useStylesheet() hook,
  * which dynamically loads CSS for that brand.
  */
@@ -30,7 +30,7 @@ import MyladLayout from './layouts/MyladLayout';
 // ============ PAGE COMPONENTS ============
 // Naming convention: [BrandName][PageName]
 // All pages for a brand are exported from their Pages.jsx file
-// 
+//
 // To add a new page:
 // 1. Create it in src/pages/[BrandName]/PageName.jsx
 // 2. Export it from pages/[BrandName]/Pages.jsx
@@ -42,7 +42,7 @@ import MyladLayout from './layouts/MyladLayout';
 import { Home, Blog, Brands } from './pages/Root/Pages';
 
 // HiCafe Restaurant
-import { HiCafeHome, HiCafeReviews, HiCafeContactUs, HiCafeChef, HiCafeMenu } from './pages/HiCafe/Pages';
+import { HiCafeHome, Barista, HiCafeReviews, HiCafeContactUs, HiCafeChef, HiCafeMenu } from './pages/HiCafe/Pages';
 
 // Harmony Mobile App
 
@@ -53,16 +53,16 @@ import { WorstEasternHome, WorstEasternRooms, WorstEasternHowToGetThere, WorstEa
 import { HiOSMobileHome, HiOSMobileDownload, HiOSMobileLite, HiOSMobileHiMaterial, HiOSMobileChangelogArchive } from './pages/HiOSMobile/Pages';
 
 // HiTech Electronics
-import { 
+import {
   HiTechHome, HiTechPhones, HiTechTablets, HiTechConsoles, HiTechComputers, HiTechTelevisions,
-  HiTechBuyX, HiTechPurchase, HiTechConfirmPurchase, HiTechThanksPurchase 
+  HiTechBuyX, HiTechPurchase, HiTechConfirmPurchase, HiTechThanksPurchase
 } from './pages/HiTech/Pages';
 
 // MyLad Retro Tech
-import { 
-  MyladHome, MyladMyPhones, MyladRanges, MyladMyPhoneDetail, MyladMyPhoneEDetail, 
-  MyladMyTvRanges, MyladMyTendoRanges, MyladAbout, 
-  MyladBuyX, MyladPurchase, MyladConfirm, MyladThanks, MyladSnakeGame 
+import {
+  MyladHome, MyladMyPhones, MyladRanges, MyladMyPhoneDetail, MyladMyPhoneEDetail,
+  MyladMyTvRanges, MyladMyTendoRanges, MyladAbout,
+  MyladBuyX, MyladPurchase, MyladConfirm, MyladThanks, MyladSnakeGame
 } from './pages/Mylad/Pages';
 
 // Other Brands (landing pages only)
@@ -95,6 +95,7 @@ export default function App() {
             ======================================== */}
         <Route path="/hicafe" element={<HiCafeLayout />}>
           <Route index element={<HiCafeHome />} />
+          <Route path="barista" element={<Barista />} />
           <Route path="reviews" element={<HiCafeReviews />} />
           <Route path="contact-us" element={<HiCafeContactUs />} />
           <Route path="chef" element={<HiCafeChef />} />
@@ -140,7 +141,7 @@ export default function App() {
           <Route path="consoles" element={<HiTechConsoles />} />
           <Route path="computers" element={<HiTechComputers />} />
           <Route path="televisions" element={<HiTechTelevisions />} />
-          
+
           {/* Checkout Flow - supports both new and legacy URL patterns */}
           <Route path="buynow/buyx" element={<HiTechBuyX />} />
           <Route path="buynow/buyx.html" element={<HiTechBuyX />} />
@@ -162,7 +163,7 @@ export default function App() {
           <Route index element={<MyladHome />} />
           <Route path="myphones" element={<MyladMyPhones />} />
           <Route path="mylad-ranges" element={<MyladRanges />} />
-          
+
           {/* Product Detail Pages - supports multiple URL patterns for compatibility */}
           <Route path="myphone" element={<MyladMyPhoneDetail />} />
           <Route path="myphone.html" element={<MyladMyPhoneDetail />} />
@@ -174,7 +175,7 @@ export default function App() {
           <Route path="mytv-ranges" element={<MyladMyTvRanges />} />
           <Route path="mytendo-ranges" element={<MyladMyTendoRanges />} />
           <Route path="about" element={<MyladAbout />} />
-          
+
           {/* Checkout Flow */}
           <Route path="buynow" element={<MyladBuyX />} />
           <Route path="buyx" element={<MyladBuyX />} />
@@ -202,4 +203,3 @@ export default function App() {
     </Router>
   );
 }
-
