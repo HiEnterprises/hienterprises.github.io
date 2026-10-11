@@ -594,3 +594,199 @@ body > header + section.container.mt-5 + section.container.mt-5 {
         transform: translateY(0);
     }
 }
+
+/* =========================================
+   ISOLATED SOLID CARD NAVIGATION
+   (Bypasses all glass.css !important tags)
+   ========================================= */
+
+.cn-header {
+    position: sticky;
+    top: 16px;
+    z-index: 9999;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.cn-navbar {
+    max-width: 1140px;
+    margin: 0 auto;
+    background-color: var(--surface) !important;
+    border: 1px solid var(--outline) !important;
+    border-radius: var(--border-radius-lg) !important;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: var(--shadow-sm) !important;
+    backdrop-filter: none !important;
+}
+
+:root[data-theme="dark"] .cn-navbar,
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .cn-navbar {
+        border-color: rgba(255, 255, 255, 0.12) !important;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35) !important;
+    }
+}
+
+.cn-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    flex-shrink: 0;
+    background: transparent !important;
+}
+
+.cn-brand-logo {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.cn-brand-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary) !important;
+    letter-spacing: -0.01em;
+}
+
+.cn-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent !important;
+}
+
+.cn-item {
+    display: inline-flex;
+    align-items: center;
+}
+
+.cn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    color: var(--onSurface) !important;
+    text-decoration: none;
+    border-radius: 12px !important;
+    background: transparent !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cn-link:hover {
+    background-color: var(--surfaceVarient) !important;
+    color: var(--onSurfaceVarient) !important;
+    transform: none !important;
+}
+
+.cn-link.active {
+    background-color: var(--primaryContainer) !important;
+    color: var(--onPrimaryContainer) !important;
+    box-shadow: none !important;
+}
+
+.cn-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.cn-link-cta {
+    background-color: var(--primary) !important;
+    color: var(--onPrimary) !important;
+    padding: 8px 20px !important;
+    margin-left: 8px;
+    border-radius: var(--border-radius-pill) !important;
+    font-weight: 700 !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.cn-link-cta:hover {
+    background-color: var(--secondary) !important;
+    color: var(--onSecondary) !important;
+}
+
+.cn-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    background-color: var(--surfaceVarient) !important;
+    border: 1px solid var(--outline) !important;
+    border-radius: 12px !important;
+    cursor: pointer;
+    padding: 0;
+}
+
+.cn-toggle-bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--onSurface) !important;
+    border-radius: 2px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .cn-navbar {
+        position: relative;
+        padding: 10px 16px;
+    }
+
+    .cn-toggle {
+        display: flex;
+    }
+
+    .cn-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 12px);
+        left: 0;
+        right: 0;
+        background-color: var(--surface) !important;
+        border: 1px solid var(--outline) !important;
+        border-radius: var(--border-radius-lg) !important;
+        padding: 16px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        box-shadow: var(--shadow-lg) !important;
+    }
+
+    :root[data-theme="dark"] .cn-links,
+    @media (prefers-color-scheme: dark) {
+        :root:not([data-theme="light"]) .cn-links {
+            border-color: rgba(255, 255, 255, 0.12) !important;
+        }
+    }
+
+    .cn-links.is-visible {
+        display: flex;
+    }
+
+    .cn-link {
+        width: 100%;
+        padding: 12px 16px !important;
+        font-size: 1rem !important;
+        box-sizing: border-box;
+    }
+
+    .cn-link-cta {
+        margin-left: 0;
+        margin-top: 8px;
+        justify-content: center;
+    }
+}

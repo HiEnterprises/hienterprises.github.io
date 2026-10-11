@@ -15,7 +15,7 @@ export function HiOSMobileHome() {
         <div className="hero-overlay"></div>
         <div className="container position-relative z-1 text-center">
           <h1 className="display-1 fw-bold text-white animate-fade-in">
-            HiCafe
+            HiOSMobile
           </h1>
           <p className="h3 fw-normal text-on-primary-container mt-3 animate-fade-in delay-200">
             by The Highland Cafe™
@@ -28,7 +28,7 @@ export function HiOSMobileHome() {
           <h3 className="display-6 fw-bold text-primary-custom">
             Welcome to the greatest digital experience from The Highland Cafe™.
           </h3>
-          <h3 className="display-6">Welcome to the HiCafe app.</h3>
+          <h3 className="display-6">Welcome to HiOSMobile.</h3>
         </div>
       </section>
 
@@ -48,7 +48,7 @@ export function HiOSMobileHome() {
                   />
                 </div>
                 <div className="card-body p-4 text-center">
-                  <h3 className="h4 fw-bold mb-3">HiCafe for Android</h3>
+                  <h3 className="h4 fw-bold mb-3">HiOSMobile for Android</h3>
                   <p className="card-text">
                     Our main app for Android! It is the best place to order food
                     and more at The Highland Cafe™ brands!
@@ -57,7 +57,7 @@ export function HiOSMobileHome() {
                     to="/hiosmobile/download"
                     className="btn btn-card px-4 py-2 rounded-pill shadow-sm"
                   >
-                    Download HiCafe
+                    Download HiOSMobile
                   </Link>
                 </div>
               </div>
@@ -73,9 +73,9 @@ export function HiOSMobileHome() {
                   />
                 </div>
                 <div className="card-body p-4 text-center">
-                  <h3 className="h4 fw-bold mb-3">HiCafe for Web</h3>
+                  <h3 className="h4 fw-bold mb-3">HiOSMobile for Web</h3>
                   <p className="card-text">
-                    Do you have an iPhone or a Windows Phone? Try HiCafe for Web
+                    Do you have an iPhone or a Windows Phone? Try HiOSMobile for Web
                     that runs entirely in your browser!
                   </p>
                   <Link
@@ -116,7 +116,7 @@ export function HiOSMobileHome() {
                     marginBottom: "3px",
                   }}
                 >
-                  <span className="fw-semibold fs-5">The HiCafe app</span>
+                  <span className="fw-semibold fs-5">HiOSMobile (2026)</span>
                   <span className="material-symbols-rounded">
                     arrow_forward_ios
                   </span>
@@ -133,7 +133,7 @@ export function HiOSMobileHome() {
                   }}
                 >
                   <span className="fw-semibold fs-5">
-                    HiOSMobile for Android
+                    HiOSMobile (legacy) for Android
                   </span>
                   <span className="material-symbols-rounded">
                     arrow_forward_ios
@@ -168,7 +168,7 @@ export function HiOSMobileHome() {
                     marginBottom: "3px",
                   }}
                 >
-                  <span className="fw-semibold fs-5">HiOSWebCore</span>
+                  <span className="fw-semibold fs-5">HiOSWebCore (legacy)</span>
                   <span className="material-symbols-rounded">
                     arrow_forward_ios
                   </span>
@@ -275,7 +275,7 @@ export function HiOSMobileDownload() {
               <div className="translucentAboutBox">
                 <p className="p-4 mb-0">
                   Check out the latest updates and improvements on our GitHub
-                  repository. We are constantly working to improve the HiCafe
+                  repository. We are constantly working to improve the HiOSMobile
                   app.
                 </p>
               </div>

@@ -9,7 +9,7 @@ export default function WorstEasternLayout() {
 
   const links = [
     { to: "/worsteastern", label: "Home", icon: "home", end: true },
-    { to: "/worsteastern/rooms", label: "Rooms", icon: "room" },
+    { to: "/worsteastern/rooms", label: "Rooms", icon: "hotel" },
     {
       to: "/worsteastern/howtogetthere",
       label: "Staying with us",
@@ -17,13 +17,13 @@ export default function WorstEasternLayout() {
     },
     {
       to: "/worsteastern/how-to-reserve-room",
-      label: "How to Reserve",
+      label: "Reserve",
       icon: "calendar_month",
     },
     {
       to: "/worsteastern/hios-mobile-app",
-      label: "App",
-      icon: "mobile",
+      label: "Get the app",
+      icon: "smartphone",
       isCta: true,
     },
   ];
@@ -33,8 +33,12 @@ export default function WorstEasternLayout() {
       <GlassNavbar
         brandLogo="/assets/pics/worsteastern/logo.png"
         brandName="weB&B"
+        brandTagline="Hotels · Done differently"
         brandLink="/worsteastern"
         links={links}
+        menuTitle="Explore weB&B"
+        variant="brand"
+        theme="worsteastern"
       />
 
       <Outlet />

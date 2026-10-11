@@ -9,12 +9,12 @@ export default function HiCafeLayout() {
 
   const links = [
     { to: "/hicafe", label: "Home", icon: "home", end: true },
-    { to: "/hicafe/barista", label: "Barista", icon: "coffee"},
-    { to: "/hicafe/reviews", label: "Reviews", icon: "message" },
-    { to: "/hicafe/contact-us", label: "Contact Us", icon: "call" },
+    { to: "/hicafe/menu", label: "Menu", icon: "restaurant_menu" },
+    { to: "/hicafe/barista", label: "Barista", icon: "coffee" },
     { to: "/hicafe/chef", label: "Chef", icon: "chef_hat" },
-    { to: "/hicafe/menu", label: "Menu", icon: "book" },
-    { to: "/hiosmobile", label: "App", icon: "mobile", isCta: true },
+    { to: "/hicafe/reviews", label: "Reviews", icon: "reviews" },
+    { to: "/hicafe/contact-us", label: "Visit us", icon: "location_on" },
+    { to: "/hiosmobile", label: "Get the app", icon: "smartphone", isCta: true },
   ];
 
   return (
@@ -22,8 +22,11 @@ export default function HiCafeLayout() {
       <GlassNavbar
         brandLogo="/assets/pics/hicafe/logo.png"
         brandName="The Highland Cafe™"
+        brandTagline="Restaurant · Est. 2017"
         brandLink="/hicafe"
         links={links}
+        variant="brand"
+        theme="hicafe"
       />
 
       <Outlet />

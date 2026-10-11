@@ -9,10 +9,11 @@ export default function HiOSMobileLayout() {
 
   const links = [
     { to: "/hiosmobile", label: "Home", icon: "home", end: true },
-    { to: "/hiosmobile/download", label: "For Android", icon: "android" },
-    { to: "/hiosmobile/lite", label: "For Web", icon: "web" },
-    { to: "/hiosmobile/himaterial", label: "HiMaterial", icon: "architecture" },
-    { to: "/", label: "Back to HiEnterprises™", icon: "arrow_back" },
+    { to: "/hiosmobile/download", label: "Android", icon: "android" },
+    { to: "/hiosmobile/lite", label: "Web", icon: "language" },
+    { to: "/hiosmobile/himaterial", label: "HiMaterial", icon: "design_services" },
+    { to: "/hiosmobile/changelog-archive", label: "Changelog", icon: "history" },
+    { to: "/", label: "HiEnterprises™", icon: "arrow_back", isCta: true },
   ];
 
   return (
@@ -20,8 +21,13 @@ export default function HiOSMobileLayout() {
       <GlassNavbar
         brandLogo="/assets/pics/hiosmobile-site/hicafe2026-playstore.png"
         brandName="HiOSMobile"
+        brandTagline="Mobile experiences"
+        showBrandName
         brandLink="/hiosmobile"
         links={links}
+        menuTitle="HiOSMobile"
+        variant="brand"
+        theme="hiosmobile"
       />
 
       <Outlet />

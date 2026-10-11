@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import useScript from '../../hooks/useScript';
+import GlassNavbar from '../../components/GlassNavbar';
 
 const nuggetdevTailwindConfig = `
   tailwind.config = {
@@ -33,51 +34,30 @@ export function NuggetdevHome() {
   useScript('https://cdn.tailwindcss.com', 'tailwind-cdn');
   useScript(null, 'tailwind-config-nuggetdev', nuggetdevTailwindConfig);
 
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const links = [
+    { to: '/nuggetdev', label: 'Home', icon: 'home', end: true },
+    { to: '/hiosmobile', label: 'HiOSMobile', icon: 'smartphone' },
+    { to: '/hiosmobile/himaterial', label: 'HiMaterial', icon: 'design_services' },
+    { to: 'https://sites.google.com/view/nuggetos', label: 'novaOS', icon: 'terminal', isExternal: true },
+    { to: '/', label: 'HiEnterprises™', icon: 'arrow_back', isCta: true },
+  ];
 
   return (
     <div className="bg-background text-on-background font-sans min-h-screen pb-16">
-      {/* Header / Custom Navbar */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#181c1e]/90 backdrop-blur-md border-b border-outline/10">
-        <nav className="container mx-auto px-4 lg:px-6">
-          <div className="flex justify-between items-center py-3">
-            <Link className="flex items-center gap-2 text-decoration-none" to="/nuggetdev">
-              <img src="/assets/pics/nuggetdev/nuggetdev.png" alt="nuggetdev Logo" className="h-8 w-auto" />
-              <span className="text-2xl font-bold text-primary">nuggetdev</span>
-            </Link>
+      <GlassNavbar
+        brandLogo="/assets/pics/nuggetdev/nuggetdev.png"
+        brandName="nuggetdev"
+        brandTagline="Digital experiences"
+        showBrandName
+        brandLink="/nuggetdev"
+        links={links}
+        menuTitle="nuggetdev"
+        menuSubtitle="Software, systems and digital experiments."
+        variant="brand"
+        theme="nuggetdev"
+      />
 
-            <button 
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-full text-on-primary-container hover:bg-primary/10 focus:outline-none"
-            >
-              <span className="sr-only">Open main menu</span>
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-              </svg>
-            </button>
-
-            <div className="hidden lg:flex lg:items-center lg:space-x-3 bg-primary-container/40 backdrop-blur-sm px-4 py-2 rounded-full border border-outline/10">
-              <Link to="/harmony" className="px-3 py-1 text-sm text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10 text-decoration-none">Harmony</Link>
-              <Link to="/hiosmobile" className="px-3 py-1 text-sm text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10 text-decoration-none">HiOSMobile (Discontinued)</Link>
-              <Link to="/harmony/himaterial" className="px-3 py-1 text-sm text-on-primary-container hover:text-primary transition-colors rounded-full hover:bg-primary/10 text-decoration-none">HiMaterial (Discontinued)</Link>
-              <Link to="/" className="text-xs text-outline hover:text-white transition-colors ml-4 text-decoration-none">← Back to HiEnterprises™</Link>
-            </div>
-          </div>
-
-          {/* Mobile Overlay Menu */}
-          {mobileMenuOpen && (
-            <div className="lg:hidden pb-4 space-y-2 bg-primary-container rounded-2xl p-3 mt-2 border border-outline/15">
-              <Link to="/harmony" className="block px-3 py-2 rounded-xl text-on-primary-container hover:bg-primary/10 hover:text-primary text-decoration-none">Harmony</Link>
-              <Link to="/hiosmobile" className="block px-3 py-2 rounded-xl text-on-primary-container hover:bg-primary/10 hover:text-primary text-decoration-none">HiOSMobile (Discontinued)</Link>
-              <Link to="/harmony/himaterial" className="block px-3 py-2 rounded-xl text-on-primary-container hover:bg-primary/10 hover:text-primary text-decoration-none">HiMaterial (Discontinued)</Link>
-              <hr className="border-outline/30 my-2" />
-              <Link to="/" className="block px-3 py-2 rounded-xl text-outline hover:bg-primary/10 text-decoration-none">← Back to HiEnterprises™</Link>
-            </div>
-          )}
-        </nav>
-      </header>
-
-      <main style={{ marginTop: '70px' }}>
+      <main>
         {/* Hero Banner */}
         <section className="relative h-[50vh] flex items-center justify-center text-center text-white p-4 overflow-hidden">
           <div className="absolute inset-0 bg-black/60 z-10"></div>

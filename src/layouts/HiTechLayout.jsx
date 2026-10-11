@@ -8,13 +8,13 @@ export default function HiTechLayout() {
   useStylesheet('/hitech/css/style.css');
 
   const links = [
-    { to: '/hitech', label: 'Home', end: true },
-    { to: '/hitech/phones', label: 'Phones' },
-    { to: '/hitech/tablets', label: 'Tablets' },
-    { to: '/hitech/consoles', label: 'Consoles' },
-    { to: '/hitech/computers', label: 'Computers' },
-    { to: '/hitech/televisions', label: 'TVs' },
-    { to: '/', label: '← HiEnterprises™' }
+    { to: '/hitech', label: 'Home', icon: 'home', end: true },
+    { to: '/hitech/phones', label: 'Phones', icon: 'smartphone' },
+    { to: '/hitech/tablets', label: 'Tablets', icon: 'tablet' },
+    { to: '/hitech/consoles', label: 'Consoles', icon: 'sports_esports' },
+    { to: '/hitech/computers', label: 'Computers', icon: 'computer' },
+    { to: '/hitech/televisions', label: 'TVs', icon: 'tv' },
+    { to: '/', label: 'HiEnterprises™', icon: 'arrow_back', isCta: true }
   ];
 
   return (
@@ -22,8 +22,13 @@ export default function HiTechLayout() {
       <GlassNavbar
         brandLogo="/assets/pics/hitech/longlogo.png"
         brandName="HiTech"
+        brandTagline="Smart tech · Less nonsense"
         brandLink="/hitech"
         links={links}
+        menuTitle="Shop HiTech"
+        menuSubtitle="Find your next piece of technology."
+        variant="brand"
+        theme="hitech"
       />
 
       <Outlet />

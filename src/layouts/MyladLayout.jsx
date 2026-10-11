@@ -8,13 +8,13 @@ export default function MyladLayout() {
   useStylesheet('/mylad/css/style.css');
 
   const links = [
-    { to: '/mylad', label: 'HOME', end: true },
-    { to: '/mylad/myphones', label: 'MyPhone Ranges' },
-    { to: '/mylad/mylad-ranges', label: 'MyLad Ranges' },
-    { to: '/mylad/mytv-ranges', label: 'MyTV Ranges' },
-    { to: '/mylad/mytendo-ranges', label: 'MyTendo Ranges' },
-    { to: '/mylad/about', label: 'ABOUT' },
-    { to: '/', label: '← HiEnterprises' }
+    { to: '/mylad', label: 'Home', icon: 'home', end: true },
+    { to: '/mylad/myphones', label: 'MyPhone', icon: 'smartphone' },
+    { to: '/mylad/mylad-ranges', label: 'MyLad', icon: 'devices' },
+    { to: '/mylad/mytv-ranges', label: 'MyTV', icon: 'tv' },
+    { to: '/mylad/mytendo-ranges', label: 'MyTendo', icon: 'sports_esports' },
+    { to: '/mylad/about', label: 'About', icon: 'info' },
+    { to: '/', label: 'HiEnterprises', icon: 'arrow_back', isCta: true }
   ];
 
   return (
@@ -22,8 +22,12 @@ export default function MyladLayout() {
       <GlassNavbar
         brandLogo="/mylad/pics/logo.png"
         brandName="MyLad"
+        brandTagline="Technology from another era"
         brandLink="/mylad"
         links={links}
+        menuTitle="The MyLad range"
+        variant="brand"
+        theme="mylad"
       />
       
       <Outlet />
