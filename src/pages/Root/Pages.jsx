@@ -7,8 +7,8 @@ export function Home() {
       <section className="hero-section">
         <div className="hero-bg"></div>
         <div className="hero-overlay"></div>
-        <div className="container position-relative z-1 hero-content-glass">
-          <h1 className="display-3 fw-bold animate-fade-in delay-200">
+        <div className="container position-relative z-1">
+          <h1 className="heroText display-3 fw-bold animate-fade-in delay-200">
             The Highland Cafe™
             <br />
             <span>Enterprises</span>

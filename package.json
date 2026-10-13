@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/hienterprises/hienterprises.github.io#readme",
   "dependencies": {
+    "@fontsource-variable/noto-sans": "^5.3.0",
     "@fontsource/adwaita-sans": "^5.2.1",
     "@fontsource/inter": "^5.2.8",
     "@vitejs/plugin-react": "^6.0.2",
